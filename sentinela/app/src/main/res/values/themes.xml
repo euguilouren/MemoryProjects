@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema base. O Compose aplica o Material You por cima. -->
+    <style name="Theme.Sentinela" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">#0E1512</item>
+        <item name="android:windowBackground">#0E1512</item>
+    </style>
+</resources>
