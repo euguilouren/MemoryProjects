@@ -15,4 +15,4 @@ A separação segue a virada de 2026-06-13: **código de projeto sai do cérebro
 
 ## Histórico
 
-A transferência inicial veio do MemoryCode em 2026-06-14 — ver [`README-TRANSFERENCIA.md`](README-TRANSFERENCIA.md) para o registro da migração.
+A transferência inicial dos projetos veio do MemoryCode em 2026-06-14 (separação cérebro × projetos). O registro permanente da migração — decisões, causa-raiz e lições — fica no MemoryCode, em `registros/projetos/` e no diário `registros/diario/2026-06-14.md`.
