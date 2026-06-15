@@ -1,0 +1,25 @@
+# Android / Gradle — artefatos de build (nunca versionar)
+*.iml
+.gradle/
+build/
+**/build/
+captures/
+.cxx/
+
+# IDEs
+.idea/
+*.ipr
+*.iws
+
+# Configuração local e SEGREDOS (jamais versionar)
+local.properties
+*.keystore
+*.jks
+*.apk
+*.aab
+.env
+.env.*
+
+# Sistema
+.DS_Store
+Thumbs.db
