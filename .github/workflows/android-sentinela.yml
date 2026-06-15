@@ -34,7 +34,7 @@ jobs:
         working-directory: sentinela
         run: gradle assembleRelease --no-daemon --stacktrace
 
-      - name: Renomear APK
+      - name: Preparar APK (copiar para a raiz)
         run: cp sentinela/app/build/outputs/apk/release/app-release.apk sentinela.apk
 
       - name: Publicar APK como artefato (baixável na aba Actions)

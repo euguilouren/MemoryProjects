@@ -25,6 +25,8 @@ App Android pessoal, focado em **privacidade e proteção**, instalado por sidel
 
 Kotlin 1.9.24 + Jetpack Compose (Material 3). minSdk 30, targetSdk 34, AGP 8.5, Gradle 8.7, JDK 17. Sem backend. Release **não-depurável**; R8 desligado até validação no aparelho.
 
+**Versão atual:** 1.1 (`versionCode 2`). O cadeado de apps (Acessibilidade/overlay) segue como evolução futura.
+
 ## Build
 
 CI em GitHub Actions (`.github/workflows/android-sentinela.yml`) compila `assembleRelease` e publica o APK como artefato. Tag `v*` anexa ao Release.
