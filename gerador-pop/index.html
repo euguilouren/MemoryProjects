@@ -230,7 +230,7 @@ function lerLogo(input){
   r.readAsDataURL(f);
 }
 function limparLogo(){ logoData=""; g("logoFile").value=""; render(); }
-const esc = s => String(s||"").replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const esc = s => String(s||"").replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const g = id => document.getElementById(id);
 
 function addPasso(acao="",resp="",detalhe=""){
@@ -376,9 +376,12 @@ function abrirCatalogo(){
   g("catalogo-lista").innerHTML = empresas.length ? empresas.map(e=>`
     <div class="empresa-grupo"><div class="e-nome">${esc(e)}</div>
       ${porEmp[e].map(p=>`<div class="pop-item">
-        <span class="t" onclick="carregar('${p._id}')">${esc(p.titulo)} <small>${p.codigo?esc(p.codigo)+" · ":""}v${esc(p.versao||"1.0")}</small></span>
-        <button onclick="excluir('${p._id}')">excluir</button></div>`).join("")}
+        <span class="t" data-carregar="${esc(p._id)}">${esc(p.titulo)} <small>${p.codigo?esc(p.codigo)+" · ":""}v${esc(p.versao||"1.0")}</small></span>
+        <button data-excluir="${esc(p._id)}">excluir</button></div>`).join("")}
     </div>`).join("") : '<p style="color:var(--muted)">Nenhum POP salvo ainda. Preencha e clique em “Salvar no catálogo”.</p>';
+  // handlers por delegação: o id vem do dataset já decodificado pelo DOM — não injeta dado do usuário em JS inline
+  g("catalogo-lista").querySelectorAll("[data-carregar]").forEach(el=> el.onclick=()=>carregar(el.dataset.carregar));
+  g("catalogo-lista").querySelectorAll("[data-excluir]").forEach(el=> el.onclick=()=>excluir(el.dataset.excluir));
   g("catalogo").style.display="flex";
 }
 function fecharCatalogo(){ g("catalogo").style.display="none"; }
