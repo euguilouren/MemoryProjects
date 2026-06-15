@@ -28,6 +28,10 @@ jobs:
       - name: Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Testes unitários (rede de segurança do cofre)
+        working-directory: sentinela
+        run: ./gradlew :app:testDebugUnitTest --no-daemon --stacktrace
+
       - name: Build release APK (não-depurável) via wrapper
         working-directory: sentinela
         run: ./gradlew assembleRelease --no-daemon --stacktrace
