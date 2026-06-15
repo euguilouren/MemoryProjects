@@ -11,10 +11,15 @@ A separação segue a virada de 2026-06-13: **código de projeto sai do cérebro
 
 ## Desenvolvimento (Claude Code na web)
 
-- **`scripts/setup.sh`** — prepara o ambiente (idempotente; roda no `SessionStart` via `.claude/settings.json`): instala o **Android SDK** (platform-34, build-tools 34), escreve `sentinela/local.properties`, aquece o Gradle e deixa o **gerador-pop** pronto. Tolerante a falha — não derruba a sessão.
-- **`scripts/test.sh`** — a **rede de segurança**: compila o sentinela (`assembleDebug`) + testes unitários JVM e valida a sintaxe do JS do gerador-pop. É o gate que o `revisor-de-codigo` (portão de clean code do MemoryCode) roda **antes e depois** de refatorar.
+Cada projeto carrega o próprio ferramental (nada solto na raiz):
 
-> **Rede:** compilar o sentinela exige que a **política de rede do ambiente** libere os repositórios do Android/Gradle — `dl.google.com`, `maven.google.com`, `services.gradle.org`, `repo.maven.apache.org`, `plugins.gradle.org`. Sem isso, o `setup.sh` avisa e pula o sentinela; o check do gerador-pop roda offline.
+- **`sentinela/setup.sh`** — prepara o build do app (idempotente; roda no `SessionStart` via `.claude/settings.json`): instala o **Android SDK** (platform-34, build-tools 34), escreve `sentinela/local.properties` e aquece o Gradle. Tolerante a falha — não derruba a sessão.
+- **`sentinela/test.sh`** — rede de segurança do app: compila (`assembleDebug`) + testes unitários JVM do cofre AES-256.
+- **`gerador-pop/check.sh`** — rede de segurança do gerador: valida a sintaxe do JS embutido (offline).
+
+Esses scripts de teste são o gate que o `revisor-de-codigo` (portão de clean code do MemoryCode) roda **antes e depois** de refatorar.
+
+> **Rede:** compilar o sentinela exige que a **política de rede do ambiente** libere os repositórios do Android/Gradle — `dl.google.com`, `maven.google.com`, `services.gradle.org`, `repo.maven.apache.org`, `plugins.gradle.org`. Sem isso, o `setup.sh` avisa e pula o build; o `check.sh` do gerador-pop roda offline.
 
 ## CI
 
