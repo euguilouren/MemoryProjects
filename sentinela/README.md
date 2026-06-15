@@ -29,6 +29,7 @@ Kotlin 1.9.24 + Jetpack Compose (Material 3). minSdk 30, targetSdk 34, AGP 8.5, 
 
 ## Build
 
-CI em GitHub Actions (`.github/workflows/android-sentinela.yml`) compila `assembleRelease` e publica o APK como artefato. Tag `v*` anexa ao Release.
+- **Local:** `cd sentinela && ./gradlew assembleRelease` (Gradle wrapper fixado em 8.7 — não precisa instalar Gradle).
+- **CI:** GitHub Actions (`.github/workflows/android-sentinela.yml`) compila via wrapper e publica o APK como artefato; tag `v*` anexa ao Release.
 
-Criado por Luan Guilherme Lourenço.
+Criado por Luan Guilherme Lourenço. Uso sujeito à [LICENSE](../LICENSE) (proprietária — todos os direitos reservados).

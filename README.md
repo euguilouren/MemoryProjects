@@ -13,6 +13,10 @@ A separação segue a virada de 2026-06-13: **código de projeto sai do cérebro
 
 - `.github/workflows/android-sentinela.yml` — compila o APK do Sentinela (paths `sentinela/**`, working-directory `sentinela`).
 
+## Licença
+
+Proprietária — todos os direitos reservados. Ver [`LICENSE`](LICENSE). Código público para visualização/portfólio; uso requer autorização do autor.
+
 ## Histórico
 
 A transferência inicial dos projetos veio do MemoryCode em 2026-06-14 (separação cérebro × projetos). O registro permanente da migração — decisões, causa-raiz e lições — fica no MemoryCode, em `registros/projetos/` e no diário `registros/diario/2026-06-14.md`.
