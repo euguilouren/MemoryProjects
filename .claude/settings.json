@@ -3,8 +3,9 @@
   "model": "claude-fable-5",
   "permissions": {
     "allow": [
-      "Bash(bash scripts/setup.sh)",
-      "Bash(bash scripts/test.sh)",
+      "Bash(bash sentinela/setup.sh)",
+      "Bash(bash sentinela/test.sh)",
+      "Bash(bash gerador-pop/check.sh)",
       "Bash(./gradlew:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
@@ -26,7 +27,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash scripts/setup.sh",
+            "command": "bash sentinela/setup.sh",
             "timeout": 600
           }
         ]
