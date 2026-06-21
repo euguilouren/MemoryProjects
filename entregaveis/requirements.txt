@@ -1,0 +1,12 @@
+# Dependencias do gerador de entregaveis. Minimo necessario para o pipeline
+# conteudo -> forma -> PDF. Instale com: pip install -r requirements.txt
+#
+# Por que cada uma (ancora: geracao-de-documentos-e-apresentacoes.md):
+weasyprint>=60        # HTML/CSS -> PDF com CSS Paged Media (relatorio e deck)
+jinja2>=3.1           # injeta o conteudo nos templates (separa conteudo x forma)
+markdown>=3.5         # converte o conteudo Markdown do relatorio em HTML
+
+# Para .pptx/.docx NATIVOS (editaveis no Office), descomente conforme o caso.
+# O scaffold entrega PDF; estes sao o caminho da nota para Office nativo:
+# python-pptx>=0.6     # deck .pptx via template mestre (placeholders)
+# python-docx>=1.1     # documento .docx via estilos/template

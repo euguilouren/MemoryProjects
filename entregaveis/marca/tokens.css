@@ -1,0 +1,45 @@
+/* GERADO por gerar.py sincronizar-tokens a partir de tokens.json. */
+/* Nao edite a mao: ajuste o JSON (fonte unica) e regenere.        */
+:root {
+  --cor-primaria: #1F3A5F;
+  --cor-primaria-clara: #345B8C;
+  --cor-secundaria: #3E7CB1;
+  --cor-acento: #E08A3C;
+  --cor-neutro-900: #1A1D21;
+  --cor-neutro-700: #3A3F46;
+  --cor-neutro-500: #6B7280;
+  --cor-neutro-300: #C9CED6;
+  --cor-neutro-100: #EEF1F5;
+  --cor-neutro-000: #FFFFFF;
+  --cor-sucesso: #2E7D52;
+  --cor-alerta: #B8860B;
+  --cor-erro: #B23A3A;
+  --cor-texto: #1A1D21;
+  --cor-texto-suave: #6B7280;
+  --cor-fundo: #FFFFFF;
+  --cor-fundo-suave: #EEF1F5;
+  --fonte-display: Georgia, 'Times New Roman', serif;
+  --fonte-corpo: 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --fonte-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --peso-corpo: 400;
+  --peso-destaque: 600;
+  --peso-titulo: 700;
+  --altura-linha-corpo: 1.55;
+  --altura-linha-titulo: 1.15;
+  --fonte-xs: 0.75rem;
+  --fonte-sm: 0.875rem;
+  --fonte-base: 1rem;
+  --fonte-lg: 1.25rem;
+  --fonte-xl: 1.75rem;
+  --fonte-2xl: 2.5rem;
+  --fonte-3xl: 3.5rem;
+  --esp-xs: 4px;
+  --esp-sm: 8px;
+  --esp-md: 16px;
+  --esp-lg: 24px;
+  --esp-xl: 40px;
+  --esp-2xl: 64px;
+  --pagina-margem: 20mm;
+  --pagina-largura-coluna: 165mm;
+  --raio-borda: 4px;
+}

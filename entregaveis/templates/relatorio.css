@@ -1,0 +1,170 @@
+/*
+ * relatorio.css - forma do relatorio PDF (leitura longa) para WeasyPrint.
+ *
+ * Usa CSS Paged Media (@page, margin boxes, counter(page)) - recurso que
+ * WeasyPrint implementa e o navegador nao tem. So consome os tokens de
+ * marca/tokens.css; nenhuma cor/fonte cravada aqui.
+ *
+ * Ancoras:
+ *  - geracao-de-documentos-e-apresentacoes.md (WeasyPrint, CSS Paged Media,
+ *    conteudo x forma)
+ *  - design-de-apresentacoes-e-marca.md (capa, grid de pagina, medida de
+ *    leitura confortavel, hierarquia de secao por estilos, rodape com marca)
+ */
+
+/* ----------------------------------------------------------------------------
+   Geometria da pagina + cabecalho/rodape corrente (margin boxes)
+---------------------------------------------------------------------------- */
+@page {
+  size: A4;
+  margin: var(--pagina-margem);
+
+  /* Rodape corrente: marca a esquerda, paginacao "X / Y" a direita. */
+  @bottom-left {
+    content: var(--rodape-assinatura, "");
+    font-family: var(--fonte-corpo);
+    font-size: var(--fonte-xs);
+    color: var(--cor-texto-suave);
+  }
+  @bottom-right {
+    content: counter(page) " / " counter(pages);
+    font-family: var(--fonte-corpo);
+    font-size: var(--fonte-xs);
+    color: var(--cor-texto-suave);
+  }
+}
+
+/* A capa nao leva cabecalho/rodape nem paginacao visivel. */
+@page capa {
+  margin: 0;
+  @bottom-left { content: ""; }
+  @bottom-right { content: ""; }
+}
+
+/* ----------------------------------------------------------------------------
+   Tipografia base de leitura
+---------------------------------------------------------------------------- */
+html {
+  font-family: var(--fonte-corpo);
+  font-size: 11pt;            /* corpo impresso confortavel (10-12pt) */
+  color: var(--cor-texto);
+  line-height: var(--altura-linha-corpo);
+}
+
+body { margin: 0; }
+
+p { margin: 0 0 var(--esp-md); text-align: justify; }
+
+/* Hierarquia de secao por ESTILOS (nao tamanho ad hoc). */
+h1, h2, h3 {
+  font-family: var(--fonte-display);
+  line-height: var(--altura-linha-titulo);
+  color: var(--cor-primaria);
+  margin: var(--esp-xl) 0 var(--esp-sm);
+}
+h1 { font-size: var(--fonte-2xl); }
+h2 {
+  font-size: var(--fonte-xl);
+  border-bottom: 2px solid var(--cor-neutro-300);
+  padding-bottom: var(--esp-xs);
+}
+h3 { font-size: var(--fonte-lg); color: var(--cor-primaria-clara); }
+
+/* Evita titulo orfao no fim da pagina. */
+h1, h2, h3 { break-after: avoid; }
+
+a { color: var(--cor-secundaria); text-decoration: none; }
+strong { font-weight: var(--peso-destaque); }
+
+/* ----------------------------------------------------------------------------
+   Capa
+---------------------------------------------------------------------------- */
+.capa {
+  page: capa;
+  break-after: page;
+  height: 297mm;                  /* altura A4 */
+  box-sizing: border-box;
+  padding: var(--pagina-margem);
+  background: var(--cor-primaria);
+  color: var(--cor-neutro-000);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.capa__marca {
+  font-family: var(--fonte-corpo);
+  font-size: var(--fonte-sm);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: auto;             /* empurra a marca para o topo */
+}
+.capa__titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--fonte-3xl);
+  line-height: var(--altura-linha-titulo);
+  margin: 0 0 var(--esp-md);
+}
+.capa__subtitulo {
+  font-size: var(--fonte-lg);
+  color: var(--cor-neutro-100);
+  margin: 0 0 var(--esp-lg);
+}
+.capa__meta {
+  font-size: var(--fonte-sm);
+  color: var(--cor-neutro-100);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: var(--esp-md);
+}
+/* Faixa de acento (10% da paleta): pontua sem dominar. */
+.capa__titulo::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 5px;
+  background: var(--cor-acento);
+  margin-top: var(--esp-md);
+}
+
+/* ----------------------------------------------------------------------------
+   Corpo do relatorio: coluna de leitura confortavel
+---------------------------------------------------------------------------- */
+.conteudo { max-width: var(--pagina-largura-coluna); }
+
+ul, ol { margin: 0 0 var(--esp-md) var(--esp-lg); }
+li { margin-bottom: var(--esp-xs); }
+
+/* Tabelas numeradas/legiveis, sem grade pesada (dado-tinta). */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--esp-md) 0;
+  font-size: var(--fonte-sm);
+}
+th, td {
+  text-align: left;
+  padding: var(--esp-sm);
+  border-bottom: 1px solid var(--cor-neutro-300);
+}
+th {
+  font-family: var(--fonte-corpo);
+  font-weight: var(--peso-titulo);
+  color: var(--cor-primaria);
+  background: var(--cor-fundo-suave);
+}
+
+/* Caixa de destaque (callout) na cor de acento, uso pontual. */
+.destaque {
+  border-left: 4px solid var(--cor-acento);
+  background: var(--cor-fundo-suave);
+  padding: var(--esp-md);
+  margin: var(--esp-md) 0;
+  border-radius: var(--raio-borda);
+}
+
+figure { margin: var(--esp-md) 0; }
+figcaption {
+  font-size: var(--fonte-xs);
+  color: var(--cor-texto-suave);
+  margin-top: var(--esp-xs);
+}
