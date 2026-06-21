@@ -1,0 +1,4 @@
+# Artefatos gerados (PDF/HTML de saida) - reproduziveis, nao versionados.
+saida/
+__pycache__/
+*.pyc

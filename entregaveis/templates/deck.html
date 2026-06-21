@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+  deck.html - template Jinja2 da apresentacao (slides 16:9 -> PDF).
+
+  Injeta o CONTEUDO na FORMA. Cada item de `slides` vira um <section.slide>.
+  Tipos suportados (campo `tipo`):
+    - "capa":     titulo + subtitulo sobre fundo de marca
+    - "topicos":  titulo (afirmacao) + lista de bullets (regra 6x6)
+    - "destaque": um numero/frase grande + legenda (dado-tinta)
+    - "texto":    titulo + paragrafo livre (html)
+
+  A marca vem dos tokens e do deck.css; nada cravado aqui.
+
+  Variaveis esperadas (ver gerar.py / exemplo-deck.json):
+    deck.titulo, deck.subtitulo, deck.autor, deck.data, marca.nome, slides[]
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>{{ deck.titulo }}</title>
+  <link rel="stylesheet" href="{{ tokens_css }}">
+  <link rel="stylesheet" href="{{ deck_css }}">
+</head>
+<body>
+
+  <!-- Slide de capa -->
+  <section class="slide slide--capa">
+    <div class="slide__marca">{{ marca.nome }}</div>
+    <h1 class="slide__titulo">{{ deck.titulo }}</h1>
+    {% if deck.subtitulo %}<p class="slide__subtitulo">{{ deck.subtitulo }}</p>{% endif %}
+  </section>
+
+  {% for slide in slides %}
+  {% if slide.tipo == "destaque" %}
+  <section class="slide slide--destaque">
+    <div class="slide__numero">{{ slide.numero }}</div>
+    <div class="slide__legenda">{{ slide.legenda }}</div>
+    <div class="slide__rodape"><span>{{ marca.nome }}</span><span>{{ loop.index }}</span></div>
+  </section>
+  {% else %}
+  <section class="slide">
+    <h2 class="slide__titulo">{{ slide.titulo }}</h2>
+    <div class="slide__corpo">
+      {% if slide.tipo == "topicos" %}
+      <ul>
+        {% for ponto in slide.pontos %}<li>{{ ponto }}</li>{% endfor %}
+      </ul>
+      {% elif slide.tipo == "texto" %}
+      {{ slide.html | safe }}
+      {% endif %}
+    </div>
+    <div class="slide__rodape"><span>{{ marca.nome }}</span><span>{{ loop.index }}</span></div>
+  </section>
+  {% endif %}
+  {% endfor %}
+
+</body>
+</html>

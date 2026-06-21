@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+  relatorio.html - template Jinja2 do relatorio PDF.
+
+  Recebe o CONTEUDO (dados) e o injeta na FORMA. Nao traz texto de negocio
+  cravado: tudo vem das variaveis (doc.*, secoes). A marca esta nos tokens e no
+  relatorio.css, nunca aqui.
+
+  Variaveis esperadas (ver gerar.py / exemplo.json):
+    doc.titulo, doc.subtitulo, doc.autor, doc.data, marca.nome,
+    marca.assinatura_rodape, secoes[] = {titulo, html}
+
+  A variavel `rodape_assinatura` alimenta o @bottom-left do relatorio.css via
+  --rodape-assinatura no <style> abaixo.
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>{{ doc.titulo }}</title>
+  <link rel="stylesheet" href="{{ tokens_css }}">
+  <link rel="stylesheet" href="{{ relatorio_css }}">
+  <style>
+    /* Injeta a assinatura do rodape como variavel consumida pelo @page. */
+    :root { --rodape-assinatura: "{{ marca.assinatura_rodape }}"; }
+  </style>
+</head>
+<body>
+
+  <section class="capa">
+    <div class="capa__marca">{{ marca.nome }}</div>
+    <h1 class="capa__titulo">{{ doc.titulo }}</h1>
+    {% if doc.subtitulo %}<p class="capa__subtitulo">{{ doc.subtitulo }}</p>{% endif %}
+    <div class="capa__meta">
+      {% if doc.autor %}{{ doc.autor }} &middot; {% endif %}{{ doc.data }}
+    </div>
+  </section>
+
+  <main class="conteudo">
+    {% for secao in secoes %}
+    {% if secao.titulo %}<h2>{{ secao.titulo }}</h2>{% endif %}
+    {{ secao.html | safe }}
+    {% endfor %}
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "_meta": "CONTEUDO de demonstracao do deck (so texto/dados). Trocar isto nao altera a forma (deck.html/deck.css).",
+  "deck": {
+    "titulo": "Maturidade digital: o ganho esta na integracao",
+    "subtitulo": "Diagnostico e roteiro em tres ondas - 2026",
+    "autor": "Equipe de Consultoria",
+    "data": "2026-06-20"
+  },
+  "slides": [
+    {
+      "tipo": "topicos",
+      "titulo": "A base existe, falta integracao entre os sistemas",
+      "pontos": [
+        "Infraestrutura adequada, mas sistemas em silos",
+        "Decisoes presas a planilhas isoladas",
+        "Lideranca disposta a investir"
+      ]
+    },
+    {
+      "tipo": "destaque",
+      "numero": "2,2 / 5",
+      "legenda": "A dimensao Dados e o gargalo - menor nota do diagnostico"
+    },
+    {
+      "tipo": "topicos",
+      "titulo": "Tres ondas evoluem a maturidade sem big bang",
+      "pontos": [
+        "Onda 1 (0-3 meses): fonte unica de dados",
+        "Onda 2 (3-9 meses): automatizar processos de maior atrito",
+        "Onda 3 (9-18 meses): cultura de decisao por dados"
+      ]
+    },
+    {
+      "tipo": "texto",
+      "titulo": "Comece pela integracao de dados: menor esforco, maior efeito",
+      "html": "<p>A integracao de dados destrava as demais dimensoes e entrega resultado visivel ja no primeiro trimestre.</p>"
+    }
+  ]
+}

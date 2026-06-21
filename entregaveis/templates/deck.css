@@ -1,0 +1,112 @@
+/*
+ * deck.css - forma da apresentacao (slides 16:9) para WeasyPrint.
+ *
+ * Cada slide e uma pagina paisagem de proporcao 16:9. Uma ideia por slide,
+ * hierarquia visual forte, na marca. So consome os tokens; nada cravado.
+ *
+ * Ancoras:
+ *  - design-de-apresentacoes-e-marca.md (uma ideia por slide, titulo = afirmacao,
+ *    hierarquia, espaco em branco ativo, regra 6x6, par tipografico)
+ *  - geracao-de-documentos-e-apresentacoes.md (HTML/CSS -> PDF via WeasyPrint;
+ *    para .pptx nativo, usar python-pptx com template mestre)
+ *
+ * Nota: para projecao/edicao em PowerPoint nativo (.pptx), o caminho da nota e
+ * python-pptx + template mestre. Este deck em HTML/CSS gera um PDF 16:9
+ * versionavel - ideal para o scaffold.
+ */
+
+/* Slide = pagina paisagem 254mm x 142.875mm (proporcao 16:9), sem margem. */
+@page deck {
+  size: 254mm 142.875mm;
+  margin: 0;
+}
+
+html {
+  font-family: var(--fonte-corpo);
+  color: var(--cor-texto);
+}
+body { margin: 0; }
+
+.slide {
+  page: deck;
+  break-after: page;
+  width: 254mm;
+  height: 142.875mm;
+  box-sizing: border-box;
+  padding: var(--esp-2xl);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.slide:last-child { break-after: auto; }
+
+/* Numero do slide + marca no rodape (identidade discreta). */
+.slide__rodape {
+  position: absolute;
+  bottom: var(--esp-lg);
+  left: var(--esp-2xl);
+  right: var(--esp-2xl);
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fonte-xs);
+  color: var(--cor-texto-suave);
+}
+
+/* O titulo do slide e a AFIRMACAO (a mensagem), nao o rotulo do tema. */
+.slide__titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--fonte-2xl);
+  line-height: var(--altura-linha-titulo);
+  color: var(--cor-primaria);
+  margin: 0 0 var(--esp-lg);
+}
+.slide__titulo::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 5px;
+  background: var(--cor-acento);
+  margin-top: var(--esp-md);
+}
+
+.slide__corpo {
+  font-size: var(--fonte-lg);
+  line-height: var(--altura-linha-corpo);
+  max-width: 80%;
+}
+.slide__corpo ul { margin: 0; padding-left: var(--esp-lg); }
+.slide__corpo li { margin-bottom: var(--esp-md); }
+
+/* --- Slide de capa (invertido: fundo de marca) --- */
+.slide--capa {
+  background: var(--cor-primaria);
+  color: var(--cor-neutro-000);
+}
+.slide--capa .slide__titulo { color: var(--cor-neutro-000); font-size: var(--fonte-3xl); }
+.slide--capa .slide__subtitulo {
+  font-size: var(--fonte-xl);
+  color: var(--cor-neutro-100);
+}
+.slide--capa .slide__marca {
+  font-size: var(--fonte-sm);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: var(--esp-xl);
+}
+
+/* --- Slide de destaque (um numero/frase grande, dado-tinta) --- */
+.slide--destaque { background: var(--cor-fundo-suave); }
+.slide--destaque .slide__numero {
+  font-family: var(--fonte-display);
+  font-size: var(--fonte-3xl);
+  color: var(--cor-acento);
+  line-height: 1;
+}
+.slide--destaque .slide__legenda {
+  font-size: var(--fonte-xl);
+  color: var(--cor-primaria);
+  margin-top: var(--esp-md);
+}
