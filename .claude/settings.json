@@ -3,6 +3,8 @@
   "model": "claude-fable-5",
   "permissions": {
     "allow": [
+      "Bash(bash entregaveis/setup.sh)",
+      "Bash(bash entregaveis/check.sh)",
       "Bash(bash sentinela/setup.sh)",
       "Bash(bash sentinela/test.sh)",
       "Bash(bash gerador-pop/check.sh)",
@@ -25,6 +27,11 @@
     "SessionStart": [
       {
         "hooks": [
+          {
+            "type": "command",
+            "command": "bash entregaveis/setup.sh",
+            "timeout": 300
+          },
           {
             "type": "command",
             "command": "bash sentinela/setup.sh",
