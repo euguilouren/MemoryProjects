@@ -132,3 +132,20 @@ falha: pula o que depende de dependencia/rede sem derrubar. Idempotente.
   narrativa, hierarquia, identidade (paleta 60-30-10, tipografia, brand guidelines).
 - `conhecimento/engenharia-de-software/publicacao-sharepoint-microsoft-graph.md`
   - publicar o entregavel no M365 via Graph (passo seguinte).
+
+## Ambiente sempre preparado
+
+O `entregaveis/setup.sh` roda no **SessionStart** (`.claude/settings.json`): a cada
+sessao, garante as dependencias Python do pipeline (idempotente — pula se ja
+presentes; **tolerante a falha** — nunca derruba a sessao). Assim o `gerar.py`
+roda "de fabrica".
+
+Duas camadas de "preparado":
+- **No repo (versionado, automatico):** este `setup.sh` + o hook de SessionStart.
+- **No ambiente (config do dono, uma vez):** para o PDF real, a **politica de rede**
+  do ambiente web precisa liberar `pypi.org` e `files.pythonhosted.org`, e o WeasyPrint
+  exige libs de sistema (`libpango`/`cairo`). Se faltarem, o pipeline degrada para
+  HTML intermediario com aviso claro (ver a saida do `setup.sh`/`check.sh`).
+
+Padrao para um projeto NOVO: crie o `setup.sh`/`test.sh` na pasta do projeto e
+adicione-os ao SessionStart, no mesmo molde (checa -> instala -> tolera -> avisa).
