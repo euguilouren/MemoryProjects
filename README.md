@@ -6,24 +6,16 @@ A separação segue a virada de 2026-06-13: **código de projeto sai do cérebro
 
 ## Projetos
 
-- **`sentinela/`** — app Android (Kotlin + Jetpack Compose) de privacidade e proteção: cofre AES-256 e detector de postura de segurança. Origem: MemoryCode `projetos/sentinela/`.
-- **`gerador-pop/`** — app HTML standalone que gera Procedimento Operacional Padrão (POP). Pode ser servido direto pelo GitHub Pages. Origem: MemoryCode `docs/gerador-pop/`.
+- **`entregaveis/`** — pipeline reproduzível de **geração de entregáveis na marca** (PDF, deck, documento), separando conteúdo (do cérebro) de forma (template/tokens). É a **camada de renderização** dos entregáveis do ecossistema e a fundação do estúdio de apresentações em construção.
 
 ## Desenvolvimento (Claude Code na web)
 
 Cada projeto carrega o próprio ferramental (nada solto na raiz):
 
-- **`sentinela/setup.sh`** — prepara o build do app (idempotente; roda no `SessionStart` via `.claude/settings.json`): instala o **Android SDK** (platform-34, build-tools 34), escreve `sentinela/local.properties` e aquece o Gradle. Tolerante a falha — não derruba a sessão.
-- **`sentinela/test.sh`** — rede de segurança do app: compila (`assembleDebug`) + testes unitários JVM do cofre AES-256.
-- **`gerador-pop/check.sh`** — rede de segurança do gerador: valida a sintaxe do JS embutido (offline).
+- **`entregaveis/setup.sh`** — prepara o ambiente do pipeline (idempotente; roda no `SessionStart` via `.claude/settings.json`): instala as dependências de geração (ver `entregaveis/requirements.txt`). Tolerante a falha — não derruba a sessão.
+- **`entregaveis/check.sh`** — rede de segurança do pipeline: valida o ambiente e a geração antes de entregar.
 
-Esses scripts de teste são o gate que o `revisor-de-codigo` (portão de clean code do MemoryCode) roda **antes e depois** de refatorar.
-
-> **Rede:** compilar o sentinela exige que a **política de rede do ambiente** libere os repositórios do Android/Gradle — `dl.google.com`, `maven.google.com`, `services.gradle.org`, `repo.maven.apache.org`, `plugins.gradle.org`. Sem isso, o `setup.sh` avisa e pula o build; o `check.sh` do gerador-pop roda offline.
-
-## CI
-
-- `.github/workflows/android-sentinela.yml` — compila o APK do Sentinela (paths `sentinela/**`, working-directory `sentinela`).
+Esses scripts são o gate que o `revisor-de-codigo` (portão de clean code do MemoryCode) roda **antes e depois** de refatorar.
 
 ## Licença
 
@@ -31,4 +23,4 @@ Proprietária — todos os direitos reservados. Ver [`LICENSE`](LICENSE). Códig
 
 ## Histórico
 
-A transferência inicial dos projetos veio do MemoryCode em 2026-06-14 (separação cérebro × projetos). O registro permanente da migração — decisões, causa-raiz e lições — fica no MemoryCode, em `registros/projetos/` e no diário `registros/diario/2026-06-14.md`.
+A transferência inicial dos projetos veio do MemoryCode em 2026-06-14 (separação cérebro × projetos). Em **2026-06-23**, os projetos legados dormentes **`sentinela/`** (app Android) e **`gerador-pop/`** (gerador de POP em HTML) foram **arquivados** (removidos da árvore ativa) para abrir espaço a novos projetos — o histórico e o código permanecem recuperáveis no Git, e os registros permanentes (decisões, causa-raiz, lições) ficam no MemoryCode em `registros/projetos/` (`sentinela.md`, `gerador-pop.md`).
