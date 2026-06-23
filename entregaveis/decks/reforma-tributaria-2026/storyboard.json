@@ -1,0 +1,188 @@
+{
+  "_meta": {
+    "projeto": "Reforma Tributaria 2026 na pratica",
+    "etapa": "camada 3 do pipeline - storyboard outline-first (GATE HUMANO: aprovar antes de detalhar conteudo/design/render)",
+    "data": "2026-06-23",
+    "regra": "Cada slide = 1 ideia + titulo-afirmacao. Lendo SO os titulos, a tese se sustenta em 30s.",
+    "tese": "A Reforma ja comecou - em 2026 voce ainda erra de graca; em 2027, nao.",
+    "arco": "SCR (Situacao -> Complicacao -> Resolucao), modelo Minto executivo",
+    "ressalva_global": "Conteudo educativo. Numeros sao de referencia das notas-fonte (2026-06) e devem ser revalidados na fonte oficial; nao substitui contador.",
+    "total_slides": 12
+  },
+
+  "teste_dos_titulos_apenas": [
+    "1. Reforma Tributaria 2026 na pratica: o que fazer agora",
+    "2. Cinco impostos viram dois: a conta fica mais simples",
+    "3. Nao e 2033 - a Reforma ja entrou em vigor em janeiro de 2026",
+    "4. 2026 e fase de teste: ja vale, mas quase nada e cobrado",
+    "5. Pense nela como um lancamento por etapas - liga, observa, depois cobra",
+    "6. Ate agosto/2026 voce ainda erra de graca - a multa esta suspensa",
+    "7. Em 2027 a rede de protecao sai: PIS/COFINS acabam e a CBS fica cheia",
+    "8. A sua nota fiscal ja mudou: os campos novos sao obrigatorios hoje",
+    "9. No Simples Nacional puro? Em 2026 voce esta dispensado - mas a escolha vem em 2027",
+    "10. Faca isto ainda em 2026: quatro acoes que dependem de voce",
+    "11. A janela e curta - comece pela nota fiscal e pelos creditos de PIS/COFINS",
+    "12. O recado: aja em 2026 e leve estas perguntas ao seu contador"
+  ],
+
+  "slides": [
+    {
+      "n": 1,
+      "secao_scr": "abertura",
+      "titulo": "Reforma Tributaria 2026 na pratica: o que a sua empresa precisa fazer agora",
+      "ideia_unica": "Capa - posiciona o deck como orientacao pratica, nao aula teorica.",
+      "prova_ou_conteudo": "Subtitulo: 'A maior mudanca tributaria em decadas ja comecou - e parte das acoes e sua, ainda este ano.' Topo: tese, publico (donos e gestores de PME) e acao (sair com uma lista do que fazer em 2026).",
+      "visual_sugerido": "capa",
+      "layout_pipeline": "capa (EXISTE)",
+      "nota_fonte": "reforma-tributaria.md (Resumo); lancar-uma-lei-como-um-deploy.md (enquadramento)"
+    },
+    {
+      "n": 2,
+      "secao_scr": "situacao",
+      "titulo": "Cinco impostos viram dois: a conta fica mais simples",
+      "ideia_unica": "O QUE e a Reforma, sem jargao: PIS, COFINS, IPI, ICMS e ISS dao lugar a CBS (federal) + IBS (estados/municipios), mais um Imposto Seletivo sobre produtos nocivos.",
+      "prova_ou_conteudo": "De um lado os 5 que saem; do outro CBS + IBS (o 'IVA dual') + IS. Mensagem: menos guias, credito amplo, imposto cobrado no destino.",
+      "visual_sugerido": "comparacao lado a lado (SAI -> ENTRA), duas colunas",
+      "layout_pipeline": "LACUNA: 'comparacao' (2 colunas SAI/ENTRA) nao existe - hoje so 'topicos'. Fallback: 'topicos' com 'Sai: ... / Entra: ...'.",
+      "nota_fonte": "reforma-tributaria.md (tabela 'O que muda', secao Principios)"
+    },
+    {
+      "n": 3,
+      "secao_scr": "situacao",
+      "titulo": "Nao e 2033 - a Reforma ja entrou em vigor em janeiro de 2026",
+      "ideia_unica": "Quebra o vies 'isso e la pra frente': a transicao vai de 2026 a 2033, mas o relogio ja esta correndo.",
+      "prova_ou_conteudo": "Linha do tempo: 2026 fase de teste -> 2027 CBS cheia / PIS-COFINS extintos / IS entra -> 2029-2032 ICMS e ISS reduzem em rampa -> 2033 sistema novo pleno.",
+      "visual_sugerido": "timeline horizontal (marcos por ano)",
+      "layout_pipeline": "LACUNA: 'timeline' nao existe. Fallback: 'topicos' com cada ano como bullet (perde o efeito visual de rampa).",
+      "nota_fonte": "reforma-tributaria.md (tabela 'Cronograma de transicao')"
+    },
+    {
+      "n": 4,
+      "secao_scr": "situacao",
+      "titulo": "2026 e fase de teste: ja vale juridicamente, mas quase nada e cobrado",
+      "ideia_unica": "Em 2026 a aliquota e simbolica (CBS 0,9% + IBS 0,1%) e a apuracao e so informativa - nao ha recolhimento efetivo.",
+      "prova_ou_conteudo": "Big number: '0,9% + 0,1%' com legenda 'aliquota simbolica - apuracao apenas informativa em 2026 (Ato Conjunto RFB/CGIBS no 1/2025)'.",
+      "visual_sugerido": "big-number (destaque) com legenda",
+      "layout_pipeline": "destaque (EXISTE)",
+      "nota_fonte": "reforma-tributaria.md (linha 2026 do cronograma)"
+    },
+    {
+      "n": 5,
+      "secao_scr": "situacao->ponte",
+      "titulo": "Pense nela como um lancamento por etapas: liga, observa e so depois cobra",
+      "ideia_unica": "A analogia que destrava o publico leigo - a Reforma e um 'deploy faseado'. O que sobe devagar nao e o imposto, e a CONSEQUENCIA.",
+      "prova_ou_conteudo": "Texto curto: assim como um app novo entra primeiro para poucos e so vira padrao depois de testado, a Reforma separa 'esta valendo' de 'esta sendo cobrado'. 2026 e o periodo de observar e ajustar.",
+      "visual_sugerido": "citacao / frase-conceito centralizada (texto enxuto, sem bullets)",
+      "layout_pipeline": "LACUNA: 'citacao' (frase grande centralizada, sem titulo-rotulo no topo) nao existe. Fallback: 'texto' (titulo + paragrafo) - aceitavel, mas menos impactante que uma citacao desenhada.",
+      "nota_fonte": "lancar-uma-lei-como-um-deploy.md (tese e 'a variavel que se rampa nao e o trafego - e a consequencia')"
+    },
+    {
+      "n": 6,
+      "secao_scr": "complicacao (parte boa)",
+      "titulo": "Ate cerca de agosto/2026 voce ainda erra de graca: a multa esta suspensa",
+      "ideia_unica": "Existe um periodo educativo - errar o preenchimento dos campos novos nao gera multa nessa janela. E o ativo a usar AGORA.",
+      "prova_ou_conteudo": "Big number / destaque: 'Sem multa ate ~ago/2026' com legenda 'RFB nao aplica penalidade antes de 90 dias apos o regulamento (reafirmado abr/2026). Confirmar a data-limite na fonte oficial.'",
+      "visual_sugerido": "big-number (destaque) com legenda e ressalva",
+      "layout_pipeline": "destaque (EXISTE)",
+      "nota_fonte": "reforma-tributaria.md (secao 'Periodo educativo: sem multas em 2026')"
+    },
+    {
+      "n": 7,
+      "secao_scr": "complicacao (a tensao)",
+      "titulo": "Em 2027 a rede de protecao sai: PIS e COFINS acabam e a CBS fica cheia",
+      "ideia_unica": "O custo de nao agir agora: em 2027 a janela fecha. PIS/COFINS extintos, CBS entra com aliquota plena (~8,8%, valor de referencia), IS comeca.",
+      "prova_ou_conteudo": "Comparacao 2026 (simbolico/sem multa) vs 2027 (cobranca real). Destacar 'CBS ~8,8% - valor de referencia, a ser fixado pelo Senado'.",
+      "visual_sugerido": "comparacao lado a lado (2026 vs 2027) OU topicos de contraste",
+      "layout_pipeline": "LACUNA: 'comparacao' (2 colunas) nao existe. Fallback: 'topicos' com '2026: ... / 2027: ...'.",
+      "nota_fonte": "reforma-tributaria.md (linha 2027 do cronograma; aliquotas consolidadas)"
+    },
+    {
+      "n": 8,
+      "secao_scr": "resolucao (o concreto que ja pesa)",
+      "titulo": "A sua nota fiscal ja mudou: os campos novos sao obrigatorios hoje",
+      "ideia_unica": "A mudanca mais imediata e operacional: desde jan/2026, a NF-e tem campos de CBS/IBS obrigatorios (fora do Simples) - e a falta pode rejeitar a nota.",
+      "prova_ou_conteudo": "Bullets: campos CBS/IBS obrigatorios na NF-e desde jan/2026 para quem nao e Simples; ausencia pode gerar rejeicao da nota; e o emissor/ERP que precisa estar adequado.",
+      "visual_sugerido": "topicos (3 bullets)",
+      "layout_pipeline": "topicos (EXISTE)",
+      "nota_fonte": "obrigacoes-acessorias.md (secao 'Atencao 2026'); reforma-tributaria.md (impacto pratico)"
+    },
+    {
+      "n": 9,
+      "secao_scr": "resolucao (recorte por publico)",
+      "titulo": "No Simples Nacional puro? Em 2026 voce esta dispensado - mas a escolha chega em 2027",
+      "ideia_unica": "Recado direcionado a boa parte do publico PME: optante do Simples puro nao preenche CBS/IBS na NF-e em 2026, mas em 2027 escolhe entre Simples unificado e Simples hibrido.",
+      "prova_ou_conteudo": "Dois caminhos para 2027: Unificado (tudo no DAS, simples, sem gerar credito ao cliente) vs Hibrido (IBS/CBS por fora, gera credito - bom se seus clientes sao PJ).",
+      "visual_sugerido": "comparacao lado a lado (Unificado vs Hibrido)",
+      "layout_pipeline": "LACUNA: 'comparacao' (2 colunas) nao existe. Fallback: 'topicos'.",
+      "nota_fonte": "simples-nacional.md (secao Reforma; regime hibrido); reforma-tributaria.md (Simples na transicao)"
+    },
+    {
+      "n": 10,
+      "secao_scr": "resolucao (a entrega central)",
+      "titulo": "Faca isto ainda em 2026: quatro acoes que dependem de voce",
+      "ideia_unica": "O nucleo da acao desejada - a lista pratica do que o dono/gestor faz este ano.",
+      "prova_ou_conteudo": "Checklist: (1) Adequar emissor de NF-e / ERP aos campos CBS/IBS; (2) Revisar cadastro de produtos e classificacao fiscal/CNAE; (3) Mapear creditos de PIS/COFINS a aproveitar antes de 2027; (4) Conversar com o contador sobre regime e precificacao (e, no Simples, sobre hibrido).",
+      "visual_sugerido": "checklist numerado (4 itens acionaveis)",
+      "layout_pipeline": "LACUNA: 'checklist' (itens numerados/marcaveis) nao existe; hoje so 'topicos' (bullets). Fallback: 'topicos' (funciona, mas perde a leitura de 'lista de tarefas').",
+      "nota_fonte": "reforma-tributaria.md (secao 'Impacto pratico - o que fazer em 2026')"
+    },
+    {
+      "n": 11,
+      "secao_scr": "resolucao (prioridade)",
+      "titulo": "A janela e curta - comece pela nota fiscal e pelos creditos de PIS/COFINS",
+      "ideia_unica": "Se nao da pra fazer tudo, priorize: o que tem prazo e o que se perde. NF-e (rejeicao ja hoje) e creditos de PIS/COFINS (somem em 2027) vem primeiro.",
+      "prova_ou_conteudo": "Texto curto de priorizacao: a NF-e tem efeito imediato (rejeicao); o credito de PIS/COFINS e dinheiro que evapora apos a extincao em 2027. As demais acoes vem na sequencia.",
+      "visual_sugerido": "texto (titulo + paragrafo de priorizacao)",
+      "layout_pipeline": "texto (EXISTE)",
+      "nota_fonte": "reforma-tributaria.md (impacto pratico; cronograma 2027); obrigacoes-acessorias.md (rejeicao de NF-e)"
+    },
+    {
+      "n": 12,
+      "secao_scr": "o pedido (call to action)",
+      "titulo": "O recado: aja em 2026 e leve estas perguntas ao seu contador",
+      "ideia_unica": "Fecha com a tese e converte em conversa concreta com o contador - a acao que tira o publico da sala em movimento.",
+      "prova_ou_conteudo": "Reafirma a tese ('em 2026 erra de graca; em 2027, nao') + 3 perguntas para o contador: meu emissor ja esta adequado? Tenho creditos de PIS/COFINS a aproveitar? No meu caso, qual regime/estrategia para 2027? Ressalva: orientacao educativa, valide tudo com seu contador.",
+      "visual_sugerido": "fechamento (texto/citacao com call to action) + 3 perguntas",
+      "layout_pipeline": "texto (EXISTE) com a tese em destaque. Opcional: usar a citacao se construirmos o layout.",
+      "nota_fonte": "reforma-tributaria.md (impacto pratico; ressalva 'confirmar com contador'); lancar-uma-lei-como-um-deploy.md (insight pratico: usar a janela)"
+    }
+  ],
+
+  "layouts_necessarios_que_talvez_faltem_no_pipeline": [
+    {
+      "layout": "comparacao (2 colunas lado a lado)",
+      "usado_em": [2, 7, 9],
+      "por_que": "SAI->ENTRA (5 impostos viram 2), 2026 vs 2027, Simples Unificado vs Hibrido. E o coracao didatico do deck.",
+      "fallback_atual": "tipo 'topicos' com prefixos 'Sai:/Entra:' - funciona, mas sem o impacto visual de duas colunas.",
+      "recomendacao": "Construir tipo 'comparacao' no deck.html/deck.css antes do render (alto retorno, reutilizavel)."
+    },
+    {
+      "layout": "timeline (linha do tempo horizontal por marcos)",
+      "usado_em": [3],
+      "por_que": "O cronograma 2026->2033 e o que mata o vies 'isso e 2033'; a rampa visual comunica melhor que bullets.",
+      "fallback_atual": "tipo 'topicos' com um bullet por ano.",
+      "recomendacao": "Construir tipo 'timeline'; util para muitos decks futuros."
+    },
+    {
+      "layout": "checklist (itens numerados / lista de acoes)",
+      "usado_em": [10],
+      "por_que": "Slide 10 e a acao desejada - precisa LER como 'lista de tarefas', nao como bullets genericos.",
+      "fallback_atual": "tipo 'topicos'.",
+      "recomendacao": "Variante leve do 'topicos' com numeracao/checkbox - baixo esforco."
+    },
+    {
+      "layout": "citacao / frase-conceito centralizada (sem titulo-rotulo)",
+      "usado_em": [5, 12],
+      "por_que": "A analogia do 'deploy faseado' e o call-to-action final ganham forca como frase grande centralizada.",
+      "fallback_atual": "tipo 'texto' (titulo + paragrafo).",
+      "recomendacao": "Opcional - 'texto' ja cobre; construir so se quisermos o efeito editorial."
+    }
+  ],
+
+  "decisoes_pendentes_para_o_gate": [
+    "Aprovar a tese e o arco SCR.",
+    "Aprovar a sequencia de 12 titulos (a historia lendo so os titulos).",
+    "Decidir: construimos os layouts 'comparacao', 'timeline' e 'checklist' antes do render, ou renderizamos com os fallbacks ('topicos'/'texto') nesta primeira versao?",
+    "Confirmar se o publico inclui muitos optantes do Simples (slide 9 pode ganhar mais peso) ou e majoritariamente Lucro Presumido/Real (slide 8 ganha peso)."
+  ]
+}

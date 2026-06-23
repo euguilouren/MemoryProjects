@@ -1,5 +1,5 @@
 {
-  "_meta": "CONTEUDO de demonstracao do deck (so texto/dados). Trocar isto nao altera a forma (deck.html/deck.css).",
+  "_meta": "CONTEUDO de demonstracao do deck (so texto/dados). Trocar isto nao altera a forma (deck.html/deck.css). Exercita todos os tipos de slide para o smoke test do check.sh: topicos, destaque, comparacao, timeline, checklist, texto.",
   "deck": {
     "titulo": "Maturidade digital: o ganho esta na integracao",
     "subtitulo": "Diagnostico e roteiro em tres ondas - 2026",
@@ -22,13 +22,57 @@
       "legenda": "A dimensao Dados e o gargalo - menor nota do diagnostico"
     },
     {
-      "tipo": "topicos",
+      "tipo": "comparacao",
+      "titulo": "Sistemas em silos viram uma fonte unica de dados",
+      "intro": "A integracao nao troca as ferramentas; conecta as que ja existem em torno de um dado confiavel.",
+      "esquerda": {
+        "titulo": "Hoje (silos)",
+        "itens": [
+          "Cada area com sua planilha",
+          "Numeros que nao batem entre relatorios",
+          "Retrabalho de consolidacao manual"
+        ]
+      },
+      "direita": {
+        "titulo": "Depois (integrado)",
+        "itens": [
+          "Fonte unica de dados",
+          "Indicadores consistentes em toda a empresa",
+          "Decisao em cima do mesmo numero"
+        ]
+      },
+      "rodape_nota": "A integracao destrava as demais dimensoes da maturidade."
+    },
+    {
+      "tipo": "timeline",
       "titulo": "Tres ondas evoluem a maturidade sem big bang",
-      "pontos": [
-        "Onda 1 (0-3 meses): fonte unica de dados",
-        "Onda 2 (3-9 meses): automatizar processos de maior atrito",
-        "Onda 3 (9-18 meses): cultura de decisao por dados"
-      ]
+      "intro": "O roteiro sobe em rampa: cada onda entrega valor antes da proxima comecar.",
+      "marcos": [
+        {
+          "ano": "0-3 m",
+          "texto": "Onda 1: fonte unica de dados."
+        },
+        {
+          "ano": "3-9 m",
+          "texto": "Onda 2: automatizar os processos de maior atrito."
+        },
+        {
+          "ano": "9-18 m",
+          "texto": "Onda 3: cultura de decisao por dados."
+        }
+      ],
+      "rodape_nota": "Horizonte de referencia - ajustar ao ritmo da empresa."
+    },
+    {
+      "tipo": "checklist",
+      "titulo": "Comece ainda neste trimestre: tres passos seus",
+      "intro": "O nucleo da acao: o que destrava a Onda 1 e depende da lideranca, nao do fornecedor.",
+      "itens": [
+        "Eleger a fonte unica de dados e o dono do indicador.",
+        "Mapear os processos de maior atrito para a Onda 2.",
+        "Patrocinar o piloto e comunicar o porque ao time."
+      ],
+      "rodape_nota": "Sem patrocinio do topo, a integracao para no meio do caminho."
     },
     {
       "tipo": "texto",

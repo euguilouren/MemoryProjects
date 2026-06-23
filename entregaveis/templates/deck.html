@@ -4,10 +4,19 @@
 
   Injeta o CONTEUDO na FORMA. Cada item de `slides` vira um <section.slide>.
   Tipos suportados (campo `tipo`):
-    - "capa":     titulo + subtitulo sobre fundo de marca
-    - "topicos":  titulo (afirmacao) + lista de bullets (regra 6x6)
-    - "destaque": um numero/frase grande + legenda (dado-tinta)
-    - "texto":    titulo + paragrafo livre (html)
+    - "capa":       titulo + subtitulo sobre fundo de marca
+    - "topicos":    titulo (afirmacao) + lista de bullets (regra 6x6)
+    - "destaque":   um numero/frase grande + legenda (dado-tinta)
+    - "texto":      titulo + paragrafo livre (html)
+    - "comparacao": titulo + duas colunas lado a lado (esquerda/direita),
+                    cada uma com seu sub-titulo + itens. Ideal p/ SAI->ENTRA,
+                    antes/depois, opcao A vs B.
+    - "timeline":   titulo + marcos horizontais (ano + texto), linha do tempo.
+    - "checklist":  titulo + itens numerados (lista de acoes / tarefas).
+
+  Campos opcionais comuns (qualquer tipo com titulo):
+    - intro:        paragrafo curto sob o titulo (contexto da ideia).
+    - rodape_nota:  fonte/ressalva discreta no pe do slide (acima do rodape).
 
   A marca vem dos tokens e do deck.css; nada cravado aqui.
 
@@ -38,17 +47,57 @@
     <div class="slide__rodape"><span>{{ marca.nome }}</span><span>{{ loop.index }}</span></div>
   </section>
   {% else %}
-  <section class="slide">
+  <section class="slide slide--{{ slide.tipo }}">
     <h2 class="slide__titulo">{{ slide.titulo }}</h2>
+    {% if slide.intro %}<p class="slide__intro">{{ slide.intro }}</p>{% endif %}
     <div class="slide__corpo">
       {% if slide.tipo == "topicos" %}
       <ul>
         {% for ponto in slide.pontos %}<li>{{ ponto }}</li>{% endfor %}
       </ul>
+
       {% elif slide.tipo == "texto" %}
       {{ slide.html | safe }}
+
+      {% elif slide.tipo == "comparacao" %}
+      <div class="comparacao">
+        <div class="comparacao__coluna comparacao__coluna--esquerda">
+          {% if slide.esquerda.titulo %}<h3 class="comparacao__titulo">{{ slide.esquerda.titulo }}</h3>{% endif %}
+          <ul>
+            {% for item in slide.esquerda.itens %}<li>{{ item }}</li>{% endfor %}
+          </ul>
+        </div>
+        <div class="comparacao__seta" aria-hidden="true">&rarr;</div>
+        <div class="comparacao__coluna comparacao__coluna--direita">
+          {% if slide.direita.titulo %}<h3 class="comparacao__titulo">{{ slide.direita.titulo }}</h3>{% endif %}
+          <ul>
+            {% for item in slide.direita.itens %}<li>{{ item }}</li>{% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      {% elif slide.tipo == "timeline" %}
+      <ol class="timeline">
+        {% for marco in slide.marcos %}
+        <li class="timeline__marco">
+          <div class="timeline__ano">{{ marco.ano }}</div>
+          <div class="timeline__texto">{{ marco.texto }}</div>
+        </li>
+        {% endfor %}
+      </ol>
+
+      {% elif slide.tipo == "checklist" %}
+      <ol class="checklist">
+        {% for item in slide.itens %}
+        <li class="checklist__item">
+          <span class="checklist__num">{{ loop.index }}</span>
+          <span class="checklist__texto">{{ item }}</span>
+        </li>
+        {% endfor %}
+      </ol>
       {% endif %}
     </div>
+    {% if slide.rodape_nota %}<p class="slide__fonte slide__fonte--pe">{{ slide.rodape_nota }}</p>{% endif %}
     <div class="slide__rodape"><span>{{ marca.nome }}</span><span>{{ loop.index }}</span></div>
   </section>
   {% endif %}

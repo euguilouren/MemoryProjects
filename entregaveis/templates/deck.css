@@ -42,6 +42,31 @@ body { margin: 0; }
 }
 .slide:last-child { break-after: auto; }
 
+/* Layouts densos (comparacao/timeline/checklist): conteudo flui do topo (nao
+   centralizado), titulo/intro compactos para caber em UMA pagina 16:9, e folga
+   no pe (--esp-2xl) para o conteudo nao colidir com o rodape da marca. */
+.slide--comparacao,
+.slide--timeline,
+.slide--checklist {
+  justify-content: flex-start;
+  padding-top: var(--esp-xl);
+  padding-bottom: var(--esp-2xl);
+}
+.slide--comparacao .slide__titulo,
+.slide--timeline .slide__titulo,
+.slide--checklist .slide__titulo,
+.slide--comparacao .slide__intro,
+.slide--timeline .slide__intro,
+.slide--checklist .slide__intro { margin-bottom: var(--esp-md); }
+.slide--comparacao .slide__corpo,
+.slide--timeline .slide__corpo,
+.slide--checklist .slide__corpo { max-width: 100%; }
+/* So nos densos a nota de fonte e empurrada ao pe (item flex final); nos demais
+   tipos ela fica logo abaixo do corpo (ver .slide__fonte--pe). */
+.slide--comparacao .slide__fonte--pe,
+.slide--timeline .slide__fonte--pe,
+.slide--checklist .slide__fonte--pe { margin-top: auto; }
+
 /* Numero do slide + marca no rodape (identidade discreta). */
 .slide__rodape {
   position: absolute;
@@ -109,4 +134,152 @@ body { margin: 0; }
   font-size: var(--fonte-xl);
   color: var(--cor-primaria);
   margin-top: var(--esp-md);
+  max-width: 80%;
+}
+
+/* --- Elementos comuns aos layouts com titulo (intro + fonte/ressalva) --- */
+/* Paragrafo curto de contexto sob o titulo - situa o layout, nao vira corpo. */
+.slide__intro {
+  font-size: var(--fonte-lg);
+  line-height: var(--altura-linha-corpo);
+  color: var(--cor-texto);
+  max-width: 85%;
+  margin: 0 0 var(--esp-lg);
+}
+/* Fonte/ressalva discreta - cumpre "dado com fonte" sem competir com a
+   mensagem. cor-texto-suave (#6B7280) sobre fundo claro mantem contraste AA. */
+.slide__fonte {
+  font-size: var(--fonte-xs);
+  line-height: var(--altura-linha-corpo);
+  color: var(--cor-texto-suave);
+}
+/* Nota de fonte no fluxo (nao absoluta), separada do corpo. Nos layouts densos
+   ela e empurrada ao pe por margin-top:auto (ver bloco dos densos acima); nos
+   demais tipos fica logo abaixo do corpo com este espacamento. */
+.slide__fonte--pe {
+  margin: var(--esp-lg) 0 0;
+}
+
+/* --- Layout "comparacao": duas colunas lado a lado (SAI->ENTRA, A vs B) --- */
+.comparacao {
+  display: flex;
+  align-items: stretch;
+  gap: var(--esp-lg);
+}
+.comparacao__coluna {
+  flex: 1 1 0;
+  background: var(--cor-fundo-suave);
+  border-top: 5px solid var(--cor-secundaria);
+  border-radius: var(--raio-borda);
+  padding: var(--esp-md) var(--esp-lg);
+}
+/* A coluna da direita (o "ENTRA"/novo) e o foco: recebe o acento da marca. */
+.comparacao__coluna--direita { border-top-color: var(--cor-acento); }
+.comparacao__titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--fonte-lg);
+  color: var(--cor-primaria);
+  margin: 0 0 var(--esp-md);
+}
+.comparacao__coluna ul { margin: 0; padding-left: var(--esp-lg); }
+.comparacao__coluna li {
+  font-size: var(--fonte-base);
+  line-height: var(--altura-linha-corpo);
+  margin-bottom: var(--esp-sm);
+}
+/* Seta entre as colunas: comunica a direcao (sai -> entra, antes -> depois). */
+.comparacao__seta {
+  display: flex;
+  align-items: center;
+  font-family: var(--fonte-display);
+  font-size: var(--fonte-2xl);
+  color: var(--cor-acento);
+  flex: 0 0 auto;
+}
+
+/* --- Layout "timeline": linha do tempo horizontal por marcos --- */
+.timeline {
+  display: flex;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.timeline__marco {
+  flex: 1 1 0;
+  position: relative;
+  padding: var(--esp-xl) var(--esp-md) 0;
+  text-align: center;
+}
+/* A trilha horizontal: uma linha que atravessa todos os marcos. */
+.timeline__marco::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--cor-neutro-300);
+}
+.timeline__marco:first-child::before { left: 50%; }
+.timeline__marco:last-child::before { right: 50%; }
+/* O no (bolinha) sobre a trilha, no acento da marca. */
+.timeline__marco::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--cor-acento);
+  border: 3px solid var(--cor-fundo);
+}
+.timeline__ano {
+  font-family: var(--fonte-display);
+  font-size: var(--fonte-xl);
+  font-weight: var(--peso-titulo);
+  color: var(--cor-primaria);
+  margin-bottom: var(--esp-sm);
+}
+.timeline__texto {
+  font-size: var(--fonte-sm);
+  line-height: var(--altura-linha-corpo);
+  color: var(--cor-texto);
+}
+
+/* --- Layout "checklist": itens numerados (lista de acoes) --- */
+.checklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.checklist__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--esp-md);
+  margin-bottom: var(--esp-md);
+}
+/* O numero em "selo" deixa claro que e uma lista de tarefas, nao bullets. */
+.checklist__num {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--cor-acento);
+  color: var(--cor-neutro-000);
+  font-family: var(--fonte-display);
+  font-size: var(--fonte-lg);
+  font-weight: var(--peso-titulo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.checklist__texto {
+  font-size: var(--fonte-lg);
+  line-height: var(--altura-linha-corpo);
+  color: var(--cor-texto);
+  padding-top: 4px;
 }

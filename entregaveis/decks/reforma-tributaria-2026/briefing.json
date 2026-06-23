@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "projeto": "Reforma Tributaria 2026 na pratica",
+    "etapa": "intake (camada 1 do pipeline do estudio de apresentacoes)",
+    "data": "2026-06-23",
+    "estudio": "criador-de-apresentacoes (dogfood: primeiro uso real)",
+    "nota": "Conteudo educativo/orientativo. NAO substitui contador. Todo numero e alcado das notas-fonte do MemoryCode e deve ser revalidado na fonte oficial antes de o publico agir."
+  },
+
+  "tema": "Reforma Tributaria 2026 na pratica - o que a sua empresa precisa fazer agora",
+
+  "objetivo_real": "Tirar o dono/gestor da paralisia ('e complicado, deixa pra depois') e leva-lo a agir DENTRO da janela barata de 2026, antes que erro vire multa.",
+
+  "acao_desejada": "Sair com uma lista clara e curta de acoes praticas para tomar AINDA EM 2026 (adequar emissor de NF-e, revisar cadastro/CNAE, mapear creditos de PIS/COFINS, conversar com o contador sobre regime), sabendo o que ja e obrigatorio hoje e o que muda em 2027.",
+
+  "publico": {
+    "quem": "Donos de pequenas e medias empresas e gestores financeiros NAO-especialistas em fiscal.",
+    "nivel_fiscal": "baixo - nao dominam jargao (CBS, IBS, nao-cumulatividade, Fator R).",
+    "o_que_temem": "Multa, complexidade, custo de adequacao, e ficar para tras.",
+    "o_que_precisam": "Linguagem acessivel, analogia concreta, e um passo a passo do que fazer este ano.",
+    "vies_a_combater": "'Isso so vale la em 2033' e 'meu contador resolve' - ambos atrasam acoes que sao do dono/gestor agora."
+  },
+
+  "tom_e_uso": {
+    "tom": "Consultoria orientativa, calma e pratica - tranquiliza (ha janela sem multa) mas cria urgencia honesta (a janela fecha).",
+    "uso": "Apresentacao ao vivo ou enviada; ~12 slides.",
+    "idioma": "pt-BR",
+    "sem_emojis": true
+  },
+
+  "restricoes_de_marca": {
+    "fonte": "pipeline entregaveis do MemoryProjects (entregaveis/marca/tokens.json)",
+    "primaria_navy": "#1F3A5F",
+    "acento_amber": "#E08A3C",
+    "proporcao": "60-30-10, contraste WCAG AA",
+    "tipografia": "par display (Georgia) + corpo (Helvetica/Arial)",
+    "deck": "16:9"
+  },
+
+  "materiais_fornecidos": [
+    "Briefing textual do dono (tema, objetivo, publico, tom, marca).",
+    "Sem logo/dashboard/PDF anexado nesta rodada - intake puramente textual; identidade vem da marca-padrao do pipeline."
+  ],
+
+  "lacunas_preenchidas_por_inferencia": [
+    "Numero de slides: dono pediu 10-14; fixado em ~12.",
+    "Sem dado proprio da empresa do publico -> deck e generico/educativo, nao um diagnostico de um CNPJ especifico (isso seria outro entregavel).",
+    "Acao desejada detalhada a partir da secao 'O que fazer em 2026' da nota-fonte reforma-tributaria.md."
+  ],
+
+  "fora_de_escopo": [
+    "Calculo de carga tributaria de uma empresa especifica (seria a skill calculadora-fiscal-trabalhista).",
+    "Recomendacao definitiva de regime para um CNPJ (seria consultor-financeiro-contabil + contador).",
+    "Render PDF/PPTX - esta etapa PARA no gate do storyboard."
+  ],
+
+  "notas_fonte": [
+    "MemoryCode/conhecimento/contabilidade/fiscal/reforma-tributaria.md",
+    "MemoryCode/conhecimento/sinteses/lancar-uma-lei-como-um-deploy.md",
+    "MemoryCode/conhecimento/contabilidade/fiscal/simples-nacional.md",
+    "MemoryCode/conhecimento/contabilidade/fiscal/obrigacoes-acessorias.md"
+  ]
+}
