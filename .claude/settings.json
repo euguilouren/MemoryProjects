@@ -5,10 +5,6 @@
     "allow": [
       "Bash(bash entregaveis/setup.sh)",
       "Bash(bash entregaveis/check.sh)",
-      "Bash(bash sentinela/setup.sh)",
-      "Bash(bash sentinela/test.sh)",
-      "Bash(bash gerador-pop/check.sh)",
-      "Bash(./gradlew:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git status:*)",
@@ -31,11 +27,6 @@
             "type": "command",
             "command": "bash entregaveis/setup.sh",
             "timeout": 300
-          },
-          {
-            "type": "command",
-            "command": "bash sentinela/setup.sh",
-            "timeout": 600
           }
         ]
       }
