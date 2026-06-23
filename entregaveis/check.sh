@@ -89,8 +89,17 @@ sys.exit(1 if problemas else 0)
 PY
 if [ $? -ne 0 ]; then falhou=1; fi
 
+# 1b) Sintaxe do gerar-pptx.py (caminho PPTX, aditivo ao PDF).
+log "1b/6 Compilando gerar-pptx.py (py_compile)..."
+if python3 -m py_compile "$DIR/gerar-pptx.py"; then
+  log "  OK: gerar-pptx.py sem erro de sintaxe."
+else
+  warn "  FALHA: erro de sintaxe em gerar-pptx.py."
+  falhou=1
+fi
+
 # 5) Render de fumaca - SO se as libs existirem (degrada com aviso).
-log "5/5 Render de fumaca (se as libs existirem)..."
+log "5/6 Render de fumaca PDF (se as libs existirem)..."
 if python3 -c "import jinja2, weasyprint" >/dev/null 2>&1; then
   if ( cd "$DIR" && python3 gerar.py demo ); then
     log "  OK: relatorio e deck renderizados em saida/."
@@ -108,6 +117,52 @@ elif python3 -c "import jinja2" >/dev/null 2>&1; then
   fi
 else
   warn "  jinja2/weasyprint ausentes. Render pulado (instale requirements.txt para o PDF)."
+fi
+
+# 6) Smoke do PPTX NATIVO - SO se python-pptx existir (degrada sem quebrar).
+#    Gera o .pptx do exemplo, REABRE com python-pptx e confere: N slides, e que
+#    o slide do grafico tem um CHART NATIVO (nao imagem) com eixo de valor min=0.
+log "6/6 Smoke do PPTX nativo (se python-pptx existir)..."
+if python3 -c "import pptx" >/dev/null 2>&1; then
+  if ( cd "$DIR" && python3 gerar-pptx.py >/dev/null ) && python3 - "$DIR" <<'PY'
+import sys
+from pathlib import Path
+from pptx import Presentation
+from pptx.enum.shapes import MSO_SHAPE_TYPE
+
+saida = Path(sys.argv[1]) / "saida" / "deck.pptx"
+pres = Presentation(str(saida))
+slides = list(pres.slides)
+if len(slides) < 2:
+    print(f"  FALHA: deck com {len(slides)} slides (esperado >= 2).")
+    sys.exit(1)
+
+# Chart do tipo grafico deve ser NATIVO (GraphicFrame com chart), nao imagem.
+charts = [sh for s in slides for sh in s.shapes if sh.has_chart]
+if not charts:
+    print("  FALHA: nenhum chart nativo (o grafico virou imagem?).")
+    sys.exit(1)
+imgs = [sh for s in slides for sh in s.shapes
+        if sh.shape_type == MSO_SHAPE_TYPE.PICTURE]
+if imgs:
+    print(f"  FALHA: {len(imgs)} imagem(ns) no deck - deveria ser tudo nativo.")
+    sys.exit(1)
+
+va = charts[0].chart.value_axis
+if va.minimum_scale not in (0, 0.0):
+    print(f"  FALHA: eixo de valor min={va.minimum_scale} (regua: deve ser 0).")
+    sys.exit(1)
+
+print(f"  OK: {len(slides)} slides; chart NATIVO com eixo min=0; 0 imagens.")
+PY
+  then
+    log "  OK: PPTX gerado e reaberto - slides + chart nativo (min=0) conferidos."
+  else
+    warn "  FALHA: smoke do PPTX quebrou."
+    falhou=1
+  fi
+else
+  warn "  python-pptx ausente. Smoke do PPTX pulado (pip install -r requirements.txt)."
 fi
 
 if [ "$falhou" -eq 0 ]; then

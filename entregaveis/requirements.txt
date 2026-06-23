@@ -5,8 +5,7 @@
 weasyprint>=60        # HTML/CSS -> PDF com CSS Paged Media (relatorio e deck)
 jinja2>=3.1           # injeta o conteudo nos templates (separa conteudo x forma)
 markdown>=3.5         # converte o conteudo Markdown do relatorio em HTML
+python-pptx>=0.6      # deck .pptx NATIVO editavel (gerar-pptx.py) - formas/chart nativos
 
-# Para .pptx/.docx NATIVOS (editaveis no Office), descomente conforme o caso.
-# O scaffold entrega PDF; estes sao o caminho da nota para Office nativo:
-# python-pptx>=0.6     # deck .pptx via template mestre (placeholders)
+# Para .docx NATIVO (editavel no Word), descomente quando o caminho existir:
 # python-docx>=1.1     # documento .docx via estilos/template
