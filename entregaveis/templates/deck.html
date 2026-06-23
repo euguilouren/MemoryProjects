@@ -13,6 +13,22 @@
                     antes/depois, opcao A vs B.
     - "timeline":   titulo + marcos horizontais (ano + texto), linha do tempo.
     - "checklist":  titulo + itens numerados (lista de acoes / tarefas).
+    - "processo":   titulo + etapas LOGICAS em sequencia horizontal com seta
+                    ambar entre elas (rotulo + 1 linha). Diferente do timeline:
+                    e fluxo logico, nao cronologia datada.
+    - "grafico":    titulo + grafico de BARRAS honesto em CSS puro (sem libs JS,
+                    sem dependencia externa). barras = [{rotulo, valor}],
+                    `unidade` opcional. `maximo` opcional: o TETO da escala (ex.:
+                    5 numa nota 0-5) - quando a escala tem um maximo de dominio,
+                    informe-o para que a barra cheia signifique o teto, nao apenas
+                    o maior valor do conjunto. Sem `maximo`, normaliza pelo maior
+                    valor (comparacao relativa). Honestidade (ancora: MemoryCode/
+                    conhecimento/sinteses/o-grafico-convence-antes-do-numero.md):
+                    base no ZERO, altura proporcional ao valor, rotulo do valor
+                    em cada barra, sem 3D/distorcao de area. Uma barra pode ter
+                    "destaque": true para virar a mensagem (ambar).
+    - "kpis":       titulo + 2 a 4 big-numbers lado a lado (o `destaque` no
+                    plural): cada KPI = numero grande + legenda curta.
 
   Campos opcionais comuns (qualquer tipo com titulo):
     - intro:        paragrafo curto sob o titulo (contexto da ideia).
@@ -95,6 +111,62 @@
         </li>
         {% endfor %}
       </ol>
+
+      {% elif slide.tipo == "processo" %}
+      <ol class="processo">
+        {% for etapa in slide.etapas %}
+        <li class="processo__etapa">
+          <div class="processo__num">{{ loop.index }}</div>
+          <div class="processo__rotulo">{{ etapa.rotulo }}</div>
+          {% if etapa.texto %}<div class="processo__texto">{{ etapa.texto }}</div>{% endif %}
+        </li>
+        {% if not loop.last %}<li class="processo__seta" aria-hidden="true">&rarr;</li>{% endif %}
+        {% endfor %}
+      </ol>
+
+      {% elif slide.tipo == "grafico" %}
+      {# Barra honesta: base no ZERO, altura proporcional ao TETO da escala,
+         rotulo do valor em cada barra, sem 3D/area enganosa.
+         Ancora: o-grafico-convence-antes-do-numero.md (comprimento decodifica
+         melhor que area; cor como excecao destaca a mensagem).
+         Teto = slide.maximo quando a escala tem maximo de dominio (ex.: 5 numa
+         nota 0-5), senao o maior valor do conjunto. Isto evita o engano de a
+         barra cheia parecer o teto da escala quando e so o maior do conjunto. #}
+      {% set valores = slide.barras | map(attribute="valor") | list %}
+      {% set maximo = slide.maximo if slide.maximo else (valores | max) %}
+      <div class="grafico">
+        <div class="grafico__plano">
+          {% for barra in slide.barras %}
+          {# altura em % da AREA DE PLOTAGEM; teto => 100%. Escala comum, base
+             sempre no zero: valor 0 => sem barra, teto => topo. Limita a 100%
+             para um valor acima do teto informado nao estourar a area (o que
+             distorceria a comparacao visual). #}
+          {% set bruto = (barra.valor / maximo * 100) if maximo else 0 %}
+          {% set altura = [bruto, 100] | min %}
+          <div class="grafico__col{% if barra.destaque %} grafico__col--destaque{% endif %}">
+            <div class="grafico__barra" style="height: {{ '%.1f' | format(altura) }}%;">
+              <span class="grafico__valor">{{ barra.valor }}{% if slide.unidade %}{{ slide.unidade }}{% endif %}</span>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="grafico__base" aria-hidden="true"></div>
+        <div class="grafico__rotulos">
+          {% for barra in slide.barras %}
+          <div class="grafico__rotulo">{{ barra.rotulo }}</div>
+          {% endfor %}
+        </div>
+      </div>
+
+      {% elif slide.tipo == "kpis" %}
+      <div class="kpis">
+        {% for kpi in slide.itens %}
+        <div class="kpis__item">
+          <div class="kpis__numero">{{ kpi.numero }}</div>
+          <div class="kpis__legenda">{{ kpi.legenda }}</div>
+        </div>
+        {% endfor %}
+      </div>
       {% endif %}
     </div>
     {% if slide.rodape_nota %}<p class="slide__fonte slide__fonte--pe">{{ slide.rodape_nota }}</p>{% endif %}

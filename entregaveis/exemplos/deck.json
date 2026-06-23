@@ -1,5 +1,5 @@
 {
-  "_meta": "CONTEUDO de demonstracao do deck (so texto/dados). Trocar isto nao altera a forma (deck.html/deck.css). Exercita todos os tipos de slide para o smoke test do check.sh: topicos, destaque, comparacao, timeline, checklist, texto.",
+  "_meta": "CONTEUDO de demonstracao do deck (so texto/dados). Trocar isto nao altera a forma (deck.html/deck.css). Exercita todos os tipos de slide para o smoke test do check.sh: topicos, destaque, comparacao, timeline, checklist, texto, processo, grafico, kpis.",
   "deck": {
     "titulo": "Maturidade digital: o ganho esta na integracao",
     "subtitulo": "Diagnostico e roteiro em tres ondas - 2026",
@@ -20,6 +20,44 @@
       "tipo": "destaque",
       "numero": "2,2 / 5",
       "legenda": "A dimensao Dados e o gargalo - menor nota do diagnostico"
+    },
+    {
+      "tipo": "grafico",
+      "titulo": "Dados e a dimensao mais baixa do diagnostico",
+      "intro": "Cinco dimensoes da maturidade, na mesma escala (0 a 5). A barra ambar marca o gargalo a destravar primeiro.",
+      "unidade": "",
+      "maximo": 5,
+      "barras": [
+        { "rotulo": "Infra", "valor": 3.8 },
+        { "rotulo": "Processos", "valor": 3.1 },
+        { "rotulo": "Pessoas", "valor": 3.4 },
+        { "rotulo": "Dados", "valor": 2.2, "destaque": true },
+        { "rotulo": "Cultura", "valor": 2.9 }
+      ],
+      "rodape_nota": "Fonte: diagnostico de maturidade (escala 0 a 5)."
+    },
+    {
+      "tipo": "kpis",
+      "titulo": "Tres numeros resumem a oportunidade",
+      "intro": "O custo do status quo e o tamanho do ganho, lado a lado.",
+      "itens": [
+        { "numero": "12h", "legenda": "por semana em consolidacao manual de planilhas" },
+        { "numero": "5", "legenda": "relatorios que nao batem entre si hoje" },
+        { "numero": "1", "legenda": "fonte unica de dados ao fim da Onda 1" }
+      ],
+      "rodape_nota": "Estimativas do diagnostico - validar com as areas."
+    },
+    {
+      "tipo": "processo",
+      "titulo": "Da planilha isolada a decisao por dados, em quatro passos",
+      "intro": "O fluxo logico da integracao - cada etapa habilita a seguinte (nao e cronograma, e encadeamento).",
+      "etapas": [
+        { "rotulo": "Coletar", "texto": "Reunir as fontes hoje dispersas em silos." },
+        { "rotulo": "Integrar", "texto": "Conectar numa fonte unica e confiavel." },
+        { "rotulo": "Padronizar", "texto": "Indicadores com a mesma definicao." },
+        { "rotulo": "Decidir", "texto": "Decisao sobre o mesmo numero." }
+      ],
+      "rodape_nota": "Fluxo logico - o ritmo de cada passo esta no roteiro em ondas."
     },
     {
       "tipo": "comparacao",

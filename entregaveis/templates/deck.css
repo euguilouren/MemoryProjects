@@ -47,7 +47,10 @@ body { margin: 0; }
    no pe (--esp-2xl) para o conteudo nao colidir com o rodape da marca. */
 .slide--comparacao,
 .slide--timeline,
-.slide--checklist {
+.slide--checklist,
+.slide--processo,
+.slide--grafico,
+.slide--kpis {
   justify-content: flex-start;
   padding-top: var(--esp-xl);
   padding-bottom: var(--esp-2xl);
@@ -55,17 +58,29 @@ body { margin: 0; }
 .slide--comparacao .slide__titulo,
 .slide--timeline .slide__titulo,
 .slide--checklist .slide__titulo,
+.slide--processo .slide__titulo,
+.slide--grafico .slide__titulo,
+.slide--kpis .slide__titulo,
 .slide--comparacao .slide__intro,
 .slide--timeline .slide__intro,
-.slide--checklist .slide__intro { margin-bottom: var(--esp-md); }
+.slide--checklist .slide__intro,
+.slide--processo .slide__intro,
+.slide--grafico .slide__intro,
+.slide--kpis .slide__intro { margin-bottom: var(--esp-md); }
 .slide--comparacao .slide__corpo,
 .slide--timeline .slide__corpo,
-.slide--checklist .slide__corpo { max-width: 100%; }
+.slide--checklist .slide__corpo,
+.slide--processo .slide__corpo,
+.slide--grafico .slide__corpo,
+.slide--kpis .slide__corpo { max-width: 100%; }
 /* So nos densos a nota de fonte e empurrada ao pe (item flex final); nos demais
    tipos ela fica logo abaixo do corpo (ver .slide__fonte--pe). */
 .slide--comparacao .slide__fonte--pe,
 .slide--timeline .slide__fonte--pe,
-.slide--checklist .slide__fonte--pe { margin-top: auto; }
+.slide--checklist .slide__fonte--pe,
+.slide--processo .slide__fonte--pe,
+.slide--grafico .slide__fonte--pe,
+.slide--kpis .slide__fonte--pe { margin-top: auto; }
 
 /* Numero do slide + marca no rodape (identidade discreta). */
 .slide__rodape {
@@ -282,4 +297,183 @@ body { margin: 0; }
   line-height: var(--altura-linha-corpo);
   color: var(--cor-texto);
   padding-top: 4px;
+}
+
+/* --- Layout "processo": etapas LOGICAS em sequencia com seta ambar --- */
+/* Diferente da timeline (cronologia): aqui a ordem e logica (passo 1->2->3),
+   por isso cada etapa traz um selo numerado, nao um ano, e a seta marca o
+   encadeamento causal entre os passos. */
+/* Layout em tabela (nao flex) de proposito: o WeasyPrint distribui largura de
+   colunas e QUEBRA o texto dentro de cada celula de forma confiavel; com flexbox
+   aninhado, o texto da etapa vira max-content e invade a coluna vizinha. */
+.processo {
+  display: table;
+  width: 100%;
+  table-layout: fixed;        /* colunas de etapa com a mesma largura */
+  border-collapse: separate;
+  border-spacing: var(--esp-xs) 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.processo__etapa {
+  display: table-cell;
+  vertical-align: top;
+  background: var(--cor-fundo-suave);
+  border-top: 5px solid var(--cor-secundaria);
+  border-radius: var(--raio-borda);
+  padding: var(--esp-md) var(--esp-md) var(--esp-lg);
+  text-align: center;
+}
+/* O selo numerado deixa claro que e PASSO (ordem logica), nao data. */
+.processo__num {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--cor-acento);
+  color: var(--cor-neutro-000);
+  font-family: var(--fonte-display);
+  font-size: var(--fonte-lg);
+  font-weight: var(--peso-titulo);
+  line-height: 34px;          /* centra o numero verticalmente sem flex */
+  text-align: center;
+  margin: 0 auto var(--esp-md);
+}
+.processo__rotulo {
+  font-family: var(--fonte-display);
+  font-size: var(--fonte-lg);
+  font-weight: var(--peso-titulo);
+  color: var(--cor-primaria);
+  margin-bottom: var(--esp-sm);
+}
+.processo__texto {
+  font-size: var(--fonte-sm);
+  line-height: var(--altura-linha-corpo);
+  color: var(--cor-texto);
+}
+/* A seta ambar entre as etapas (celula estreita): comunica o encadeamento. */
+.processo__seta {
+  display: table-cell;
+  vertical-align: middle;
+  width: 1%;                  /* table-layout:fixed -> coluna so do tamanho da seta */
+  white-space: nowrap;
+  font-family: var(--fonte-display);
+  font-size: var(--fonte-2xl);
+  color: var(--cor-acento);
+  padding: 0 var(--esp-xs);
+}
+
+/* --- Layout "grafico": barras HONESTAS em CSS puro (sem libs, sem 3D) --- */
+/* Ancora: o-grafico-convence-antes-do-numero.md. Barra (comprimento) decodifica
+   melhor que pizza (angulo) ou bolha (area). Regras anti-engano embutidas:
+   - BASE NO ZERO: a area de plotagem comeca na linha de base (.grafico__base);
+     a altura de cada barra e proporcional ao valor sobre o TETO da escala
+     (slide.maximo ou o maior valor), entao 0 -> sem barra e o teto -> topo.
+     Sem eixo truncado.
+   - SEM 3D / SEM AREA: barras retangulares chapadas; o olho compara comprimento.
+   - COR COMO EXCECAO: as barras sao secundarias (neutras); so a barra-mensagem
+     recebe o acento (.grafico__col--destaque). "Tudo colorido nao destaca nada." */
+.grafico {
+  /* Largura maxima de uma coluna (e do seu rotulo): impede que poucas barras
+     fiquem largas demais. Definido uma vez aqui para coluna e rotulo nao
+     dessincronizarem (eles precisam alinhar). */
+  --grafico-col-largura-max: 22%;
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--esp-md);
+}
+/* AREA DE PLOTAGEM: altura DEFINIDA (nao flex-grow). Isto e proposital: o
+   WeasyPrint so resolve a `height: X%` de uma barra quando o pai tem altura
+   DEFINIDA - uma altura derivada de flex (1 1 auto) e tratada como `auto` e a
+   barra colapsa para zero. Com a area fixa, a barra de % e honesta: 100% = topo
+   da area, e o ZERO fica no fundo (.grafico__base, logo abaixo). Mesma escala,
+   mesma base para todas as barras. 56mm deixa folga p/ titulo+intro acima e
+   base+rotulos+nota+rodape abaixo, dentro do slide 16:9 (142.875mm) sem clipar. */
+.grafico__plano {
+  display: flex;
+  align-items: flex-end;      /* barras crescem A PARTIR DA BASE (zero) */
+  justify-content: space-around;
+  gap: var(--esp-lg);
+  height: 56mm;
+}
+.grafico__col {
+  flex: 1 1 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  max-width: var(--grafico-col-largura-max);
+}
+/* A barra: height em % da area de plotagem (calculado no template = valor/teto).
+   Largura cheia da coluna; canto superior arredondado so para acabamento. */
+.grafico__barra {
+  width: 100%;
+  background: var(--cor-secundaria);
+  border-radius: var(--raio-borda) var(--raio-borda) 0 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.grafico__valor {
+  position: absolute;
+  top: -1.6em;                /* rotulo do valor logo acima do topo da barra */
+  font-family: var(--fonte-display);
+  font-size: var(--fonte-lg);
+  font-weight: var(--peso-titulo);
+  color: var(--cor-primaria);
+  white-space: nowrap;
+}
+/* A barra-mensagem: unico elemento no acento da marca (a unica coisa a lembrar). */
+.grafico__col--destaque .grafico__barra { background: var(--cor-acento); }
+.grafico__col--destaque .grafico__valor { color: var(--cor-acento); }
+/* A linha de base = o ZERO honesto, visivel sob todas as barras (sem eixo
+   truncado: o que se ve comeca no zero). */
+.grafico__base {
+  height: 3px;
+  background: var(--cor-neutro-300);
+}
+.grafico__rotulos {
+  display: flex;
+  justify-content: space-around;
+  gap: var(--esp-lg);
+  margin-top: var(--esp-sm);
+}
+.grafico__rotulo {
+  flex: 1 1 0;
+  max-width: var(--grafico-col-largura-max);
+  font-size: var(--fonte-sm);
+  line-height: var(--altura-linha-corpo);
+  color: var(--cor-texto);
+  text-align: center;
+}
+
+/* --- Layout "kpis": varios big-numbers lado a lado (destaque no plural) --- */
+.kpis {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: var(--esp-lg);
+}
+.kpis__item {
+  flex: 1 1 0;
+  background: var(--cor-fundo-suave);
+  border-radius: var(--raio-borda);
+  border-top: 5px solid var(--cor-acento);
+  padding: var(--esp-lg) var(--esp-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.kpis__numero {
+  font-family: var(--fonte-display);
+  font-size: var(--fonte-3xl);
+  line-height: 1;
+  color: var(--cor-acento);
+}
+.kpis__legenda {
+  font-size: var(--fonte-base);
+  line-height: var(--altura-linha-corpo);
+  color: var(--cor-primaria);
+  margin-top: var(--esp-md);
 }
