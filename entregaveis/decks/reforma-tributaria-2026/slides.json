@@ -1,0 +1,166 @@
+{
+  "_meta": {
+    "projeto": "Reforma Tributaria 2026 na pratica",
+    "etapa": "camada 4 do pipeline - conteudo final por slide (pos-gate do storyboard)",
+    "data": "2026-06-23",
+    "tese": "A Reforma ja comecou - em 2026 voce ainda erra de graca; em 2027, nao.",
+    "arco": "SCR (Situacao -> Complicacao -> Resolucao), modelo Minto executivo",
+    "regra": "1 ideia/slide, titulo-afirmacao (o titulo = o aprovado no gate, nao reescrito). Numeros sao de referencia das notas-fonte (MemoryCode, verificado 2026-06) e devem ser revalidados na fonte oficial; nao substitui contador.",
+    "notas_fonte": [
+      "MemoryCode/conhecimento/contabilidade/fiscal/reforma-tributaria.md",
+      "MemoryCode/conhecimento/contabilidade/fiscal/simples-nacional.md",
+      "MemoryCode/conhecimento/contabilidade/fiscal/obrigacoes-acessorias.md",
+      "MemoryCode/conhecimento/sinteses/lancar-uma-lei-como-um-deploy.md"
+    ],
+    "ressalva_global": "Conteudo educativo/orientativo. Todo numero/data e valor de referencia das notas-fonte e deve ser confirmado na fonte oficial / validado com contador antes de o publico agir."
+  },
+
+  "deck": {
+    "titulo": "Reforma Tributaria 2026 na pratica",
+    "subtitulo": "A maior mudanca tributaria em decadas ja comecou - e parte das acoes e sua, ainda este ano. Para donos e gestores de PME: saia com uma lista do que fazer em 2026.",
+    "autor": "Estudio de Apresentacoes",
+    "data": "2026-06-23"
+  },
+
+  "slides": [
+    {
+      "n": 2,
+      "tipo": "comparacao",
+      "titulo": "Cinco impostos viram dois: a conta fica mais simples",
+      "intro": "A EC 132/2023 troca cinco tributos sobre consumo por um IVA dual (CBS + IBS), mais um Imposto Seletivo sobre o que faz mal a saude ou ao meio ambiente.",
+      "esquerda": {
+        "titulo": "Saem (5 tributos)",
+        "itens": [
+          "PIS e COFINS (federais)",
+          "IPI (reducao gradual)",
+          "ICMS (estadual)",
+          "ISS (municipal)"
+        ]
+      },
+      "direita": {
+        "titulo": "Entram (IVA dual + IS)",
+        "itens": [
+          "CBS - Contribuicao sobre Bens e Servicos (federal)",
+          "IBS - Imposto sobre Bens e Servicos (estados + municipios)",
+          "IS - Imposto Seletivo (sobre produtos nocivos)"
+        ]
+      },
+      "rodape_nota": "Menos guias, credito amplo (nao-cumulatividade plena) e imposto cobrado no destino. Fonte: reforma-tributaria.md (LC 214/2025 e LC 227/2026)."
+    },
+    {
+      "n": 3,
+      "tipo": "timeline",
+      "titulo": "Nao e 2033: a Reforma ja entrou em vigor em janeiro de 2026",
+      "intro": "A transicao vai de 2026 a 2033, mas o relogio ja esta correndo - o sistema novo nao chega de uma vez, ele sobe em rampa.",
+      "marcos": [
+        { "ano": "2026", "texto": "Fase de teste: CBS/IBS valem juridicamente, apuracao so informativa." },
+        { "ano": "2027", "texto": "PIS/COFINS extintos. CBS cheia. Imposto Seletivo entra." },
+        { "ano": "2029-32", "texto": "ICMS e ISS reduzem em rampa (10% -> 100%)." },
+        { "ano": "2033", "texto": "ICMS e ISS extintos. IBS pleno. Sistema novo 100%." }
+      ],
+      "rodape_nota": "Fonte: reforma-tributaria.md (cronograma de transicao, verificado 2026-06). Confirmar marcos na fonte oficial."
+    },
+    {
+      "n": 4,
+      "tipo": "destaque",
+      "numero": "0,9% + 0,1%",
+      "legenda": "Aliquota simbolica em 2026 (CBS 0,9% + IBS 0,1%): a apuracao e apenas informativa - nao ha recolhimento efetivo. Fonte: reforma-tributaria.md / Ato Conjunto RFB-CGIBS no 1/2025. Valor de referencia - confirmar na fonte oficial."
+    },
+    {
+      "n": 5,
+      "tipo": "texto",
+      "titulo": "Pense nela como um lancamento por etapas: liga, observa e so depois cobra",
+      "html": "<p>Assim como um aplicativo novo entra primeiro para poucos e so vira padrao depois de testado, a Reforma separa <strong>'esta valendo'</strong> de <strong>'esta sendo cobrado'</strong>. As notas fiscais ja passam pelo sistema novo, mas o que sobe devagar nao e o imposto - e a <strong>consequencia</strong>.</p><p>2026 e o periodo de observar e ajustar com baixo custo. Quem usa a janela chega a cobranca com o erro corrigido; quem ignora, chega com o erro intacto.</p><p class=\"slide__fonte\">Fonte: sintese lancar-uma-lei-como-um-deploy.md (a variavel que se rampa nao e o trafego - e a consequencia).</p>"
+    },
+    {
+      "n": 6,
+      "tipo": "destaque",
+      "numero": "Sem multa ate ~ago/2026",
+      "legenda": "Periodo educativo: errar o preenchimento dos campos novos da NF-e nao gera multa nesta janela. A RFB reafirmou (abr/2026) que nao aplica penalidade antes de 90 dias apos o regulamento. Fonte: reforma-tributaria.md. Confirmar a data-limite exata na fonte oficial."
+    },
+    {
+      "n": 7,
+      "tipo": "comparacao",
+      "titulo": "Em 2027 a rede de protecao sai: PIS e COFINS acabam e a CBS fica cheia",
+      "intro": "O custo de nao agir agora: em 2027 a janela fecha e a cobranca passa a valer de verdade.",
+      "esquerda": {
+        "titulo": "2026 (a janela)",
+        "itens": [
+          "Aliquota simbolica: 0,9% + 0,1%",
+          "Apuracao apenas informativa",
+          "Sem multa no periodo educativo",
+          "PIS/COFINS ainda em vigor"
+        ]
+      },
+      "direita": {
+        "titulo": "2027 (a cobranca)",
+        "itens": [
+          "PIS e COFINS extintos (1o/jan/2027)",
+          "CBS com aliquota cheia (~8,8%, valor de referencia)",
+          "Imposto Seletivo entra em vigor",
+          "Erro de preenchimento ja gera consequencia"
+        ]
+      },
+      "rodape_nota": "CBS ~8,8% e valor de referencia, a ser fixado pelo Senado ainda em 2026. Fonte: reforma-tributaria.md (linha 2027 do cronograma). Confirmar na fonte oficial."
+    },
+    {
+      "n": 8,
+      "tipo": "topicos",
+      "titulo": "A sua nota fiscal ja mudou: os campos novos sao obrigatorios hoje",
+      "pontos": [
+        "Desde jan/2026, a NF-e tem campos de CBS/IBS obrigatorios para empresas fora do Simples Nacional.",
+        "A ausencia do preenchimento pode gerar rejeicao da nota - efeito imediato e operacional.",
+        "Quem precisa estar adequado e o emissor / ERP: e ajuste de sistema, nao so de contabilidade."
+      ],
+      "rodape_nota": "Fonte: obrigacoes-acessorias.md (Atencao 2026); reforma-tributaria.md (impacto pratico)."
+    },
+    {
+      "n": 9,
+      "tipo": "comparacao",
+      "titulo": "No Simples Nacional puro? Em 2026 voce esta dispensado - mas a escolha chega em 2027",
+      "intro": "Optante do Simples puro nao preenche CBS/IBS na NF-e em 2026. Mas em 2027 voce entra no sistema e escolhe entre dois caminhos.",
+      "esquerda": {
+        "titulo": "Simples Unificado (padrao)",
+        "itens": [
+          "IBS e CBS dentro do DAS",
+          "Simplicidade mantida: uma guia",
+          "Nao gera credito para o comprador"
+        ]
+      },
+      "direita": {
+        "titulo": "Simples Hibrido (opcional)",
+        "itens": [
+          "IBS e CBS apurados 'por fora' do DAS",
+          "Mais passos, regime regular",
+          "Gera credito ao cliente - bom se seus clientes sao PJ"
+        ]
+      },
+      "rodape_nota": "Decisao para 2027, aguardando regulamentacao. Fonte: simples-nacional.md (Reforma; regime hibrido). Validar com contador qual caminho serve ao seu caso."
+    },
+    {
+      "n": 10,
+      "tipo": "checklist",
+      "titulo": "Faca isto ainda em 2026: quatro acoes que dependem de voce",
+      "intro": "O nucleo da acao: estas quatro nao sao do seu contador - sao suas, e cabem na janela barata de 2026.",
+      "itens": [
+        "Adequar o emissor de NF-e / ERP aos campos obrigatorios de CBS/IBS.",
+        "Revisar o cadastro de produtos e a classificacao fiscal / CNAE.",
+        "Mapear creditos de PIS/COFINS a aproveitar antes da extincao em 2027.",
+        "Conversar com o contador sobre regime e precificacao (e, no Simples, sobre o hibrido)."
+      ],
+      "rodape_nota": "Fonte: reforma-tributaria.md (Impacto pratico - o que fazer em 2026)."
+    },
+    {
+      "n": 11,
+      "tipo": "texto",
+      "titulo": "A janela e curta: comece pela nota fiscal e pelos creditos de PIS/COFINS",
+      "html": "<p>Se nao da para fazer tudo de uma vez, priorize o que tem prazo e o que se perde:</p><p><strong>1. Nota fiscal</strong> - tem efeito imediato: a falta dos campos novos pode rejeitar a nota ja hoje.</p><p><strong>2. Creditos de PIS/COFINS</strong> - e dinheiro que evapora apos a extincao em 2027. Mapeie antes que a porta feche.</p><p>As demais acoes (cadastro, regime) vem na sequencia, mas estas duas sao as que doem se ficarem para depois.</p><p class=\"slide__fonte\">Fonte: reforma-tributaria.md (impacto pratico; cronograma 2027); obrigacoes-acessorias.md (rejeicao de NF-e).</p>"
+    },
+    {
+      "n": 12,
+      "tipo": "texto",
+      "titulo": "O recado: aja em 2026 e leve estas perguntas ao seu contador",
+      "html": "<blockquote><p>Em 2026 voce ainda erra de graca; em 2027, nao. A janela existe - mas e curta, e a rede de protecao sai.</p></blockquote><p>Tres perguntas para levar ao seu contador esta semana:</p><p><strong>1.</strong> Meu emissor de NF-e ja esta adequado aos campos de CBS/IBS?<br><strong>2.</strong> Tenho creditos de PIS/COFINS a aproveitar antes de 2027?<br><strong>3.</strong> No meu caso, qual regime e estrategia de precificacao para 2027 (e, no Simples, unificado ou hibrido)?</p><p class=\"slide__fonte\">Orientacao educativa - valide tudo com seu contador. Fonte: reforma-tributaria.md; sintese lancar-uma-lei-como-um-deploy.md.</p>"
+    }
+  ]
+}

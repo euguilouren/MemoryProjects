@@ -1,9 +1,13 @@
 # entregaveis - gerador de PDF/deck na marca
 
-Pacote reproduzivel que produz **relatorio (PDF)** e **apresentacao (deck 16:9)**
-on-brand a partir de conteudo estruturado. E o scaffold que o agente
+Pacote reproduzivel que produz **relatorio (PDF)**, **apresentacao (deck 16:9)** em
+**PDF**, **.pptx nativo** e **deck web interativo (reveal.js)** on-brand a partir do
+**mesmo** conteudo estruturado. E o scaffold que o agente
 `criador-de-documentos-e-apresentacoes` (`/criar-documento`) usa para entregar
 documentos formatados, versionados e consistentes.
+
+O `slides.json` e o contrato unico: gera **PDF** (`gerar.py`), **.pptx**
+(`gerar-pptx.py`) e **.html web** (`gerar-web.py`) sem reescrever conteudo.
 
 ## Principio central: separar CONTEUDO de FORMA
 
@@ -33,10 +37,14 @@ entregaveis/
   exemplos/
     relatorio.md       # conteudo de demonstracao (front-matter + Markdown)
     deck.json          # conteudo de demonstracao (slides estruturados)
-  gerar.py             # motor: injeta conteudo nos templates e renderiza PDF (WeasyPrint)
-  requirements.txt     # weasyprint, jinja2, markdown (minimo)
+  vendor/
+    reveal.js/         # reveal.js vendorizado (MIT): reveal.js + reveal.css + LICENSE + VERSION
+  gerar.py             # motor PDF: injeta conteudo nos templates e renderiza (WeasyPrint)
+  gerar-pptx.py        # motor PPTX: mesmo slides.json em .pptx NATIVO (python-pptx)
+  gerar-web.py         # motor WEB: mesmo slides.json em .html AUTOCONTIDO (reveal.js inline)
+  requirements.txt     # weasyprint, jinja2, markdown, python-pptx (gerar-web nao tem dep externa)
   check.sh             # rede de seguranca offline + render de fumaca (tolerante a falha)
-  saida/               # PDFs gerados (nao versionado)
+  saida/               # PDFs/PPTX/HTML gerados (nao versionado)
 ```
 
 ## Como usar
@@ -61,7 +69,41 @@ python3 entregaveis/gerar.py demo
 
 # usando seu proprio conteudo e destino
 python3 entregaveis/gerar.py relatorio --dados meu-conteudo.md --saida saida/meu.pdf
+
+# deck WEB interativo (reveal.js) - um .html AUTOCONTIDO do mesmo slides.json
+python3 entregaveis/gerar-web.py                       # saida/deck.html
+python3 entregaveis/gerar-web.py --dados meu-deck.json --saida saida/meu-deck.html
 ```
+
+### Temas (restyle por cor)
+
+Os 3 motores aceitam `--tema NOME` para trocar SO o **visual** (cores), sem tocar
+no conteudo nem no layout/contrato `slides.json` (paridade "restyle" do Gamma). A
+paleta vem de `marca/tokens.json` (bloco `temas`):
+
+- **`claro`** (default; tambem o comportamento sem `--tema`): navy `#1F3A5F` +
+  ambar `#E08A3C` sobre fundo claro - a marca de hoje, **byte-a-byte**.
+- **`escuro`**: fundo escuro acessivel (texto principal >= 4,5:1 WCAG AA), ambar
+  mantido como acento, navy "subido" para azul claro legivel sobre o escuro.
+
+```bash
+python3 entregaveis/gerar.py deck       --tema escuro --saida saida/deck-escuro.pdf
+python3 entregaveis/gerar-pptx.py       --tema escuro --saida saida/deck-escuro.pptx
+python3 entregaveis/gerar-web.py        --tema escuro --saida saida/deck-escuro.html
+python3 entregaveis/gerar.py relatorio  --tema escuro --saida saida/relatorio-escuro.pdf
+```
+
+Tema inexistente falha com erro claro listando os disponiveis (nunca silencioso).
+Para criar um tema novo, basta adicionar uma entrada em `temas` no `tokens.json`
+com as cores que diferem do default - nenhum codigo muda.
+
+O **deck web** (`gerar-web.py`) emite **um unico .html autocontido**: o reveal.js
+(`vendor/reveal.js/`, MIT) e o tema da marca ficam **embutidos inline** no arquivo.
+Por que vendorizado e inline, nao CDN: o deck abre **offline** (`file://`), nao
+depende de rede em runtime e e trivial de hospedar - basta jogar o `.html` no
+GitHub Pages (ou abrir no navegador). Setas/espaco navegam; `?print-pdf` no fim da
+URL ativa o modo de impressao do reveal. Diferente dos outros motores, **nao tem
+dependencia Python externa** (so a stdlib).
 
 Sem WeasyPrint instalado, `gerar.py` **nao quebra**: grava o HTML intermediario
 ao lado da saida e avisa como instalar a lib. Util para inspecionar a forma
@@ -119,9 +161,13 @@ antes de ser entregue.
 bash entregaveis/check.sh
 ```
 
-Valida offline (sintaxe de `gerar.py`, JSON dos tokens e exemplos, HTML/CSS
-bem-formados) e, se as libs existirem, faz um render de fumaca. Tolerante a
-falha: pula o que depende de dependencia/rede sem derrubar. Idempotente.
+Valida offline (sintaxe de `gerar.py`/`gerar-pptx.py`/`gerar-web.py`, JSON dos
+tokens e exemplos, HTML/CSS bem-formados) e faz render de fumaca: PDF/PPTX **se as
+libs existirem** (degrada com aviso), e o **deck web sempre** (sem dep externa) -
+reabrindo o `.html` para conferir HTML bem-formado, **0 byte de controle** (NUL
+quebra o site), N `<section>` e a **honestidade do grafico** no DOM (rotulo de
+valor em cada barra, a barra de maior valor nao toca o topo quando `maximo` > o
+maior valor, e a cor ambar isolada a 1 barra). Tolerante a falha; idempotente.
 
 ## Notas-fonte (cerebro / MemoryCode)
 

@@ -18,6 +18,9 @@
 @page {
   size: A4;
   margin: var(--pagina-margem);
+  /* Fundo da pagina vem do token (restyle por tema): 'claro' = #FFFFFF (= branco
+     de hoje, sem regressao); 'escuro' = superficie escura para o texto legivel. */
+  background: var(--cor-fundo);
 
   /* Rodape corrente: marca a esquerda, paginacao "X / Y" a direita. */
   @bottom-left {
@@ -49,6 +52,7 @@ html {
   font-size: 11pt;            /* corpo impresso confortavel (10-12pt) */
   color: var(--cor-texto);
   line-height: var(--altura-linha-corpo);
+  background: var(--cor-fundo);
 }
 
 body { margin: 0; }
@@ -85,8 +89,10 @@ strong { font-weight: var(--peso-destaque); }
   height: 297mm;                  /* altura A4 */
   box-sizing: border-box;
   padding: var(--pagina-margem);
-  background: var(--cor-primaria);
-  color: var(--cor-neutro-000);
+  /* Capa via fallback de var(): no 'claro' os --cor-capa-* nao existem -> cai em
+     primaria/neutro-000 (byte-identico); no 'escuro' usa a capa escura legivel. */
+  background: var(--cor-capa-fundo, var(--cor-primaria));
+  color: var(--cor-capa-texto, var(--cor-neutro-000));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -107,12 +113,12 @@ strong { font-weight: var(--peso-destaque); }
 }
 .capa__subtitulo {
   font-size: var(--fonte-lg);
-  color: var(--cor-neutro-100);
+  color: var(--cor-capa-subtitulo, var(--cor-neutro-100));
   margin: 0 0 var(--esp-lg);
 }
 .capa__meta {
   font-size: var(--fonte-sm);
-  color: var(--cor-neutro-100);
+  color: var(--cor-capa-subtitulo, var(--cor-neutro-100));
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: var(--esp-md);
 }

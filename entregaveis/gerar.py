@@ -31,6 +31,8 @@ import json
 import sys
 from pathlib import Path
 
+import tema as _tema
+
 RAIZ = Path(__file__).resolve().parent
 DIR_MARCA = RAIZ / "marca"
 DIR_TEMPLATES = RAIZ / "templates"
@@ -152,16 +154,26 @@ def _ambiente_jinja():
     )
 
 
-def _refs_css() -> dict:
-    """URLs file:// absolutas dos CSS, para WeasyPrint resolver os <link>."""
+def _caminho_tokens_css(tema: str | None) -> Path:
+    """Arquivo de tokens.css do tema. Para o default ('claro'/None) e o
+    marca/tokens.css de sempre (byte-a-byte). Para outro tema, e o
+    marca/tokens-<tema>.css (derivado da mesma fonte, so com a paleta trocada)."""
+    if tema is None or tema == _tema.TEMA_PADRAO:
+        return TOKENS_CSS
+    return DIR_MARCA / f"tokens-{tema}.css"
+
+
+def _refs_css(tema: str | None = None) -> dict:
+    """URLs file:// absolutas dos CSS, para WeasyPrint resolver os <link>. O
+    tokens.css varia com o tema (a paleta); relatorio/deck.css so consomem var()."""
     return {
-        "tokens_css": TOKENS_CSS.resolve().as_uri(),
+        "tokens_css": _caminho_tokens_css(tema).resolve().as_uri(),
         "relatorio_css": (DIR_TEMPLATES / "relatorio.css").resolve().as_uri(),
         "deck_css": (DIR_TEMPLATES / "deck.css").resolve().as_uri(),
     }
 
 
-def montar_html_relatorio(dados: Path) -> str:
+def montar_html_relatorio(dados: Path, tema: str | None = None) -> str:
     meta, corpo = ler_front_matter_md(dados)
     contexto = {
         "doc": {
@@ -172,18 +184,54 @@ def montar_html_relatorio(dados: Path) -> str:
         },
         "marca": carregar_marca(),
         "secoes": markdown_para_secoes(corpo),
-        **_refs_css(),
+        **_refs_css(tema),
     }
     return _ambiente_jinja().get_template("relatorio.html").render(**contexto)
 
 
-def montar_html_deck(dados: Path) -> str:
+def _como_numero(valor):
+    """Converte para float quando der (aceita o "5"/"3.8" que o JSON pode trazer);
+    devolve None quando nao e numero. Evita o `valor > maximo` cru, que estoura
+    (TypeError) ao misturar str e num e compara string lexicograficamente
+    ("10" > "5" e False) - falso negativo silencioso."""
+    try:
+        return float(valor)
+    except (TypeError, ValueError):
+        return None
+
+
+def _avisar_estouro_grafico(slides: list) -> None:
+    """O template clampa a barra a 100% quando `valor > maximo`: honesto com a
+    ESCALA, mas esconde que o dado estourou o teto declarado. Jinja nao loga,
+    entao o aviso sai daqui (stderr, nao quebra o render) antes do render do PDF.
+    Sem `maximo` o teto e o maior do conjunto - nao ha estouro possivel."""
+    for slide in slides:
+        if slide.get("tipo") != "grafico":
+            continue
+        maximo = _como_numero(slide.get("maximo"))
+        if maximo is None:
+            continue
+        titulo = slide.get("titulo", "")
+        for barra in slide.get("barras", []):
+            valor = _como_numero(barra.get("valor"))
+            if valor is not None and valor > maximo:
+                print(
+                    f"[aviso] grafico '{titulo}': valor {barra.get('valor')} de "
+                    f"'{barra.get('rotulo', '')}' excede o maximo declarado "
+                    f"({maximo:g}) - barra limitada a 100%, escala pode enganar",
+                    file=sys.stderr,
+                )
+
+
+def montar_html_deck(dados: Path, tema: str | None = None) -> str:
     bruto = json.loads(dados.read_text(encoding="utf-8"))
+    slides = bruto.get("slides", [])
+    _avisar_estouro_grafico(slides)
     contexto = {
         "deck": bruto.get("deck", {}),
-        "slides": bruto.get("slides", []),
+        "slides": slides,
         "marca": carregar_marca(),
-        **_refs_css(),
+        **_refs_css(tema),
     }
     return _ambiente_jinja().get_template("deck.html").render(**contexto)
 
@@ -258,22 +306,46 @@ def _vars_css_de_tokens(tokens: dict) -> list[tuple[str, str]]:
     return pares
 
 
-def sincronizar_tokens() -> None:
-    """Regenera marca/tokens.css a partir de marca/tokens.json, mantendo o JSON
-    como fonte unica. Os nomes das custom properties batem exatamente com os que
-    os templates consomem (ver _vars_css_de_tokens). Idempotente."""
+def sincronizar_tokens(tema: str | None = None) -> Path:
+    """Regenera o tokens.css do tema a partir de marca/tokens.json, mantendo o
+    JSON como fonte unica. Os nomes das custom properties batem exatamente com os
+    que os templates consomem (ver _vars_css_de_tokens). Idempotente.
+
+    - tema None/'claro': escreve marca/tokens.css com a paleta default. Como o
+      tema 'claro' nao tem override, o CSS sai BYTE-A-BYTE igual ao de hoje (so o
+      bloco `cor` alimenta as --cor-*, e ele e o de topo). Zero regressao no PDF.
+    - tema 'escuro' (ou outro): escreve marca/tokens-<tema>.css com a paleta do
+      tema (so as --cor-* mudam; tipografia/espacamento/layout ficam iguais).
+
+    Devolve o caminho do CSS escrito.
+    """
     tokens = json.loads(TOKENS_JSON.read_text(encoding="utf-8"))
-    linhas = [
-        "/* GERADO por gerar.py sincronizar-tokens a partir de tokens.json. */",
-        "/* Nao edite a mao: ajuste o JSON (fonte unica) e regenere.        */",
-        ":root {",
-    ]
-    for nome, valor in _vars_css_de_tokens(tokens):
+    tokens_efetivos = _tema.aplicar_tema(tokens, tema)  # so 'cor' muda; resto igual
+    destino = _caminho_tokens_css(tema)
+
+    rotulo_tema = tema or _tema.TEMA_PADRAO
+    if tema is None or tema == _tema.TEMA_PADRAO:
+        # Cabecalho do default IDENTICO ao historico: o tokens.css 'claro' precisa
+        # sair byte-a-byte igual ao de hoje (prova de zero regressao no PDF).
+        linhas = [
+            "/* GERADO por gerar.py sincronizar-tokens a partir de tokens.json. */",
+            "/* Nao edite a mao: ajuste o JSON (fonte unica) e regenere.        */",
+            ":root {",
+        ]
+    else:
+        linhas = [
+            "/* GERADO por gerar.py sincronizar-tokens a partir de tokens.json. */",
+            f"/* Tema: {rotulo_tema} (restyle por cor). Nao edite a mao.         */",
+            ":root {",
+        ]
+    for nome, valor in _vars_css_de_tokens(tokens_efetivos):
         linhas.append(f"  --{nome}: {valor};")
     linhas.append("}")
 
-    TOKENS_CSS.write_text("\n".join(linhas) + "\n", encoding="utf-8")
-    print(f"[gerar] tokens.css sincronizado a partir de {TOKENS_JSON.name}")
+    destino.write_text("\n".join(linhas) + "\n", encoding="utf-8")
+    print(f"[gerar] {destino.name} sincronizado a partir de {TOKENS_JSON.name} "
+          f"(tema: {rotulo_tema})")
+    return destino
 
 
 def _resolver_saida(caminho: Path) -> Path:
@@ -301,6 +373,26 @@ def _abortar_dependencia(nome: str) -> None:
     sys.exit(2)
 
 
+def _validar_tema(tema: str | None) -> None:
+    """Falha cedo e com clareza (lista os temas) se o tema nao existir - nunca
+    silencioso. Default ('claro'/None) sempre passa."""
+    tokens = json.loads(TOKENS_JSON.read_text(encoding="utf-8"))
+    try:
+        _tema.resolver_cor(tokens, tema)
+    except _tema.TemaInexistente as e:
+        print(f"[gerar] ERRO: {e}", file=sys.stderr)
+        sys.exit(2)
+
+
+def _garantir_tokens_css(tema: str | None) -> None:
+    """Para um tema nao-default, regenera marca/tokens-<tema>.css antes do render
+    (o PDF le esse arquivo via <link>). Para o default, NAO toca em marca/tokens.css
+    - ele e versionado e ja esta sincronizado; reescrever a cada render seria efeito
+    colateral desnecessario e arriscaria divergir do historico."""
+    if tema is not None and tema != _tema.TEMA_PADRAO:
+        sincronizar_tokens(tema)
+
+
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
@@ -314,27 +406,38 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument("--dados", type=Path, help="arquivo de conteudo (md/json)")
     parser.add_argument("--saida", type=Path, help="caminho do PDF de saida")
+    parser.add_argument(
+        "--tema", default=None,
+        help="tema de cor (restyle): ausente ou 'claro' = paleta atual; "
+             "'escuro' = fundo escuro acessivel. So muda cor, nao o layout.",
+    )
     args = parser.parse_args(argv)
 
+    # Valida o tema cedo (erro claro com a lista, nunca silencioso).
+    _validar_tema(args.tema)
+
     if args.comando == "sincronizar-tokens":
-        sincronizar_tokens()
+        sincronizar_tokens(args.tema)
         return 0
 
     if args.comando == "relatorio":
+        _garantir_tokens_css(args.tema)
         dados = args.dados or RAIZ / "exemplos" / "relatorio.md"
         saida = _resolver_saida(args.saida or DIR_SAIDA / "relatorio.pdf")
-        renderizar_pdf(montar_html_relatorio(dados), saida)
+        renderizar_pdf(montar_html_relatorio(dados, args.tema), saida)
         return 0
 
     if args.comando == "deck":
+        _garantir_tokens_css(args.tema)
         dados = args.dados or RAIZ / "exemplos" / "deck.json"
         saida = _resolver_saida(args.saida or DIR_SAIDA / "deck.pdf")
-        renderizar_pdf(montar_html_deck(dados), saida)
+        renderizar_pdf(montar_html_deck(dados, args.tema), saida)
         return 0
 
     if args.comando == "demo":
-        renderizar_pdf(montar_html_relatorio(RAIZ / "exemplos" / "relatorio.md"), DIR_SAIDA / "relatorio.pdf")
-        renderizar_pdf(montar_html_deck(RAIZ / "exemplos" / "deck.json"), DIR_SAIDA / "deck.pdf")
+        _garantir_tokens_css(args.tema)
+        renderizar_pdf(montar_html_relatorio(RAIZ / "exemplos" / "relatorio.md", args.tema), DIR_SAIDA / "relatorio.pdf")
+        renderizar_pdf(montar_html_deck(RAIZ / "exemplos" / "deck.json", args.tema), DIR_SAIDA / "deck.pdf")
         return 0
 
     return 1
