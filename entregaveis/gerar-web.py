@@ -407,18 +407,23 @@ def _corpo_grafico(slide: dict) -> str:
     Ancora: o-grafico-convence-antes-do-numero.md (base no zero, cor como excecao)."""
     _avisar_estouro_grafico(slide)
     barras = slide.get("barras", [])
-    valores = [b.get("valor", 0) for b in barras]
-    teto = slide.get("maximo") or (max(valores) if valores else 0)
+    # Coage para numero antes da matematica (o JSON pode trazer "3.8"; valor
+    # nao-numerico vira 0). Sem isto, `valor / teto` estoura (str/str) ou o
+    # `max()` compara string lexicograficamente. O PPTX ja coage com float().
+    valores = [_como_numero(b.get("valor")) or 0 for b in barras]
+    teto = _como_numero(slide.get("maximo")) or (max(valores) if valores else 0)
     unidade = slide.get("unidade", "")
 
     cols: list[str] = []
     rotulos: list[str] = []
     for barra in barras:
-        valor = barra.get("valor", 0)
+        valor = _como_numero(barra.get("valor")) or 0
         bruto = (valor / teto * 100) if teto else 0
         altura = min(bruto, 100)
         destaque = " grafico__col--destaque" if barra.get("destaque") else ""
-        rotulo_valor = f"{esc(valor)}{esc(unidade)}" if unidade else esc(valor)
+        # rotulo mostra o que o autor escreveu (fidelidade); a matematica usa o numero.
+        valor_rotulo = barra.get("valor", 0)
+        rotulo_valor = f"{esc(valor_rotulo)}{esc(unidade)}" if unidade else esc(valor_rotulo)
         cols.append(
             f'<div class="grafico__col{destaque}">'
             f'<div class="grafico__barra" style="height: {altura:.1f}%;">'

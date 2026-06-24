@@ -495,7 +495,9 @@ def render_grafico(slide, m: Marca, dados: dict) -> None:
         return
 
     rotulos = [str(b.get("rotulo", "")) for b in barras]
-    valores = [float(b.get("valor", 0)) for b in barras]
+    # coage com seguranca: "3.8" -> 3.8, valor invalido ("abc") -> 0 (nao crasha
+    # como o float() cru fazia). Alinhado ao web/PDF e ao _avisar_estouro_grafico.
+    valores = [_como_numero(b.get("valor")) or 0 for b in barras]
 
     chart_data = CategoryChartData()
     chart_data.categories = rotulos
@@ -516,8 +518,9 @@ def render_grafico(slide, m: Marca, dados: dict) -> None:
     # --- Eixo de valor: HONESTIDADE. Minimo SEMPRE 0; maximo = `maximo` ou auto.
     eixo_valor = chart.value_axis
     eixo_valor.minimum_scale = 0.0
-    if dados.get("maximo") is not None:
-        eixo_valor.maximum_scale = float(dados["maximo"])
+    _maximo = _como_numero(dados.get("maximo"))
+    if _maximo is not None:
+        eixo_valor.maximum_scale = _maximo
     eixo_valor.has_major_gridlines = True
     eixo_valor.major_gridlines.format.line.color.rgb = m.neutro_300
     eixo_valor.major_gridlines.format.line.width = Pt(0.5)

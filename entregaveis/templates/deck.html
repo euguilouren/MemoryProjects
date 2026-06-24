@@ -132,8 +132,11 @@
          Teto = slide.maximo quando a escala tem maximo de dominio (ex.: 5 numa
          nota 0-5), senao o maior valor do conjunto. Isto evita o engano de a
          barra cheia parecer o teto da escala quando e so o maior do conjunto. #}
-      {% set valores = slide.barras | map(attribute="valor") | list %}
-      {% set maximo = slide.maximo if slide.maximo else (valores | max) %}
+      {# coage p/ numero: ausente->0 (default), "3.8"->3.8 e "abc"->0 (float). Espelha gerar-web.py. -#}
+      {% set valores = slide.barras | map(attribute="valor", default=0) | map("float", 0) | list %}
+      {#- coage maximo ANTES de testar: "abc"|float==0 (falsy) cai p/ o maior do conjunto, como _como_numero(...) or max() no .py. Testar slide.maximo cru daria True p/ "abc" e zeraria as barras. -#}
+      {% set _maximo = slide.maximo | default(0) | float(0) %}
+      {% set maximo = _maximo if _maximo else (valores | max) %}
       <div class="grafico">
         <div class="grafico__plano">
           {% for barra in slide.barras %}
@@ -141,7 +144,7 @@
              sempre no zero: valor 0 => sem barra, teto => topo. Limita a 100%
              para um valor acima do teto informado nao estourar a area (o que
              distorceria a comparacao visual). #}
-          {% set bruto = (barra.valor / maximo * 100) if maximo else 0 %}
+          {% set bruto = ((barra.valor | default(0) | float(0)) / maximo * 100) if maximo else 0 %}
           {% set altura = [bruto, 100] | min %}
           <div class="grafico__col{% if barra.destaque %} grafico__col--destaque{% endif %}">
             <div class="grafico__barra" style="height: {{ '%.1f' | format(altura) }}%;">
