@@ -54,6 +54,8 @@ import json
 import sys
 from pathlib import Path
 
+import tema as _tema
+
 RAIZ = Path(__file__).resolve().parent
 DIR_MARCA = RAIZ / "marca"
 DIR_SAIDA = RAIZ / "saida"
@@ -107,15 +109,35 @@ def tema_css(tokens: dict) -> str:
     def c(chave: str, padrao: str) -> str:
         return cor.get(chave, padrao)
 
+    # Capa (bloco invertido de marca). Tokens do tema sao a fonte unica (como no
+    # PDF, que le var(--cor-capa-*)): cada cor vem da chave 'capa_*' do tema e, na
+    # ausencia, cai no neutro historico desta capa. No 'claro' (sem 'capa_*') isso
+    # resolve para primaria/neutro_000/neutro_100 = os bytes de hoje; no 'escuro' o
+    # tema define 'capa_*' e a capa fica legivel sem hardcode literal aqui.
+    capa_fundo = cor.get("capa_fundo", c("primaria", "#1F3A5F"))
+    capa_texto = cor.get("capa_texto", c("neutro_000", "#FFFFFF"))
+    capa_subtitulo = cor.get("capa_subtitulo", c("neutro_100", "#EEF1F5"))
+
     # Familias e raio vem dos tokens; o restante usa a escala tipografica deles.
     fonte_display = tipo.get("fonte_display", "Georgia, serif")
     fonte_corpo = tipo.get("fonte_corpo", "Arial, sans-serif")
     raio = layout.get("raio_borda", "4px")
 
+    # Fundo da area de slides (restyle por tema). O reveal.css ja pinta
+    # .reveal-viewport de #fff. So SOBRESCREVEMOS quando o token de fundo difere
+    # desse branco (ex.: tema 'escuro'): assim o tema 'claro' (#FFFFFF) sai
+    # BYTE-A-BYTE igual ao de hoje (regra nao emitida), e o 'escuro' ganha a
+    # superficie escura para os slides nao boiarem no branco do vendor.
+    fundo = c('fundo', '#FFFFFF')
+    if fundo.strip().upper() not in ("#FFFFFF", "#FFF", "WHITE"):
+        viewport_bg = f".reveal-viewport {{ background-color: {fundo}; }}\n"
+    else:
+        viewport_bg = ""
+
     return f"""
 /* Tema da marca para reveal.js - GERADO por gerar-web.py a partir de tokens.json.
    Espelha o deck.css (mesma marca), adaptado ao .reveal (16:9, tema claro). */
-.reveal {{
+{viewport_bg}.reveal {{
   font-family: {fonte_corpo};
   color: {c('texto', '#1A1D21')};
   font-size: 34px;
@@ -185,7 +207,7 @@ def tema_css(tokens: dict) -> str:
 }}
 
 /* --- Capa (invertido: fundo de marca) --- */
-.slide--capa {{ background: {c('primaria', '#1F3A5F')}; color: {c('neutro_000', '#FFFFFF')}; text-align: center; align-items: center; }}
+.slide--capa {{ background: {capa_fundo}; color: {capa_texto}; text-align: center; align-items: center; }}
 .slide--capa .slide__marca {{
   font-size: {escala.get('sm', '0.875rem')};
   letter-spacing: 0.15em;
@@ -193,9 +215,9 @@ def tema_css(tokens: dict) -> str:
   opacity: 0.85;
   margin-bottom: 40px;
 }}
-.slide--capa .slide__titulo {{ color: {c('neutro_000', '#FFFFFF')}; font-size: {escala.get('3xl', '3.5rem')}; }}
+.slide--capa .slide__titulo {{ color: {capa_texto}; font-size: {escala.get('3xl', '3.5rem')}; }}
 .slide--capa .slide__titulo::after {{ margin-left: auto; margin-right: auto; }}
-.slide--capa .slide__subtitulo {{ font-size: {escala.get('xl', '1.75rem')}; color: {c('neutro_100', '#EEF1F5')}; }}
+.slide--capa .slide__subtitulo {{ font-size: {escala.get('xl', '1.75rem')}; color: {capa_subtitulo}; }}
 
 /* --- Destaque (um numero grande, dado-tinta) --- */
 .slide--destaque {{ background: {c('fundo_suave', '#EEF1F5')}; }}
@@ -610,9 +632,22 @@ def main(argv: list[str] | None = None) -> int:
         default=DIR_SAIDA / "deck.html",
         help="caminho do .html de saida. Padrao: saida/deck.html",
     )
+    parser.add_argument(
+        "--tema", default=None,
+        help="tema de cor (restyle): ausente ou 'claro' = paleta atual; "
+             "'escuro' = fundo escuro acessivel. So muda cor, nao o layout.",
+    )
     args = parser.parse_args(argv)
 
     tokens = carregar_tokens()
+    # Valida e aplica o tema: so o bloco 'cor' muda; layout/tipografia/contrato
+    # ficam iguais. Erro claro (lista os temas) se o tema nao existir.
+    try:
+        tokens = _tema.aplicar_tema(tokens, args.tema)
+    except _tema.TemaInexistente as e:
+        print(f"[gerar-web] ERRO: {e}", file=sys.stderr)
+        return 2
+
     deck, slides = carregar_deck(args.dados)
     html = montar_html(deck, slides, tokens)
 

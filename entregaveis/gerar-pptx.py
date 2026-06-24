@@ -43,6 +43,8 @@ import re
 import sys
 from pathlib import Path
 
+import tema as _tema
+
 RAIZ = Path(__file__).resolve().parent
 DIR_MARCA = RAIZ / "marca"
 DIR_SAIDA = RAIZ / "saida"
@@ -83,6 +85,18 @@ class Marca:
 
         self.primaria = _rgb(cor.get("primaria", "#1F3A5F"))
         self.primaria_clara = _rgb(cor.get("primaria_clara", "#345B8C"))
+        # Fundo da CAPA: por padrao a primaria (capa navy de hoje). Um tema pode
+        # sobrescrever com `capa_fundo` quando a primaria deixa de servir de fundo
+        # (no escuro a primaria virou azul claro -> branco sobre ela seria ilegivel,
+        # entao capa_fundo da o fundo escuro). Sem a chave, capa = primaria (claro
+        # identico). A cor do TITULO/marca na capa segue clara (branco/acento).
+        self.capa_fundo = _rgb(cor.get("capa_fundo", cor.get("primaria", "#1F3A5F")))
+        # Subtitulo/autor da capa: por padrao neutro_300 (cinza claro sobre o navy
+        # de hoje = identico). Num tema com capa dedicada, segue 'capa_subtitulo'
+        # para nao herdar um neutro_300 que ficou ESCURO (ilegivel na capa escura).
+        self.capa_subtitulo = _rgb(
+            cor.get("capa_subtitulo", cor.get("neutro_300", "#C9CED6"))
+        )
         self.secundaria = _rgb(cor.get("secundaria", "#3E7CB1"))
         self.acento = _rgb(cor.get("acento", "#E08A3C"))
         self.texto = _rgb(cor.get("texto", "#1A1D21"))
@@ -228,8 +242,9 @@ def _add_rodape_marca(slide, m: Marca) -> None:
 # Renderizadores por tipo de slide
 # ---------------------------------------------------------------------------
 def render_capa(slide, m: Marca, deck: dict, dados: dict) -> None:
-    # Faixa navy de fundo cheia (capa = bloco de marca).
-    fundo = _retangulo(slide, 0, 0, LARGURA_SLIDE_IN, ALTURA_SLIDE_IN, m.primaria)
+    # Faixa de fundo cheia (capa = bloco de marca). No claro = navy primaria; no
+    # escuro = capa_fundo (fundo escuro), para o titulo branco ficar legivel.
+    fundo = _retangulo(slide, 0, 0, LARGURA_SLIDE_IN, ALTURA_SLIDE_IN, m.capa_fundo)
     fundo.line.fill.background()
 
     if m.nome:
@@ -246,7 +261,7 @@ def render_capa(slide, m: Marca, deck: dict, dados: dict) -> None:
 
     subtitulo = dados.get("subtitulo") or deck.get("subtitulo", "")
     if subtitulo:
-        _paragrafo(tf, subtitulo, tamanho=20, cor=m.neutro_300,
+        _paragrafo(tf, subtitulo, tamanho=20, cor=m.capa_subtitulo,
                    fonte=m.fonte_corpo, espaco_antes=14)
 
     # Autor / data no pe.
@@ -256,7 +271,7 @@ def render_capa(slide, m: Marca, deck: dict, dados: dict) -> None:
     if linha:
         _, tf = _caixa_texto(slide, MARGEM_IN, ALTURA_SLIDE_IN - 1.0,
                              LARGURA_SLIDE_IN - 2 * MARGEM_IN, 0.5)
-        _paragrafo(tf, linha, tamanho=13, cor=m.neutro_300, fonte=m.fonte_corpo,
+        _paragrafo(tf, linha, tamanho=13, cor=m.capa_subtitulo, fonte=m.fonte_corpo,
                    novo=False)
 
 
@@ -602,9 +617,10 @@ RENDERIZADORES = {
 # ---------------------------------------------------------------------------
 # Montagem do deck
 # ---------------------------------------------------------------------------
-def montar_pptx(dados_path: Path, saida: Path) -> int:
+def montar_pptx(dados_path: Path, saida: Path, tema: str | None = None) -> int:
     """Le slides.json + tokens.json e grava o .pptx. Devolve o numero de slides
-    escritos (a capa conta como 1)."""
+    escritos (a capa conta como 1). `tema` faz o restyle por cor: so a paleta da
+    Marca muda; as formas/posicoes/tipografia de estrutura ficam iguais."""
     from pptx import Presentation
     from pptx.util import Inches
 
@@ -612,7 +628,7 @@ def montar_pptx(dados_path: Path, saida: Path) -> int:
     deck = bruto.get("deck", {})
     slides = bruto.get("slides", [])
     tokens = json.loads(TOKENS_JSON.read_text(encoding="utf-8"))
-    m = Marca(tokens)
+    m = Marca(_tema.aplicar_tema(tokens, tema))  # so 'cor' muda com o tema
 
     pres = Presentation()
     pres.slide_width = Inches(LARGURA_SLIDE_IN)
@@ -674,7 +690,20 @@ def main(argv: list[str] | None = None) -> int:
                         help="JSON do deck (default: exemplos/deck.json)")
     parser.add_argument("--saida", type=Path,
                         help="caminho do .pptx (default: saida/deck.pptx)")
+    parser.add_argument(
+        "--tema", default=None,
+        help="tema de cor (restyle): ausente ou 'claro' = paleta atual; "
+             "'escuro' = fundo escuro acessivel. So muda cor, nao o layout.",
+    )
     args = parser.parse_args(argv)
+
+    # Valida o tema cedo (erro claro com a lista, nunca silencioso).
+    tokens_check = json.loads(TOKENS_JSON.read_text(encoding="utf-8"))
+    try:
+        _tema.resolver_cor(tokens_check, args.tema)
+    except _tema.TemaInexistente as e:
+        print(f"[gerar-pptx] ERRO: {e}", file=sys.stderr)
+        return 2
 
     try:
         import pptx  # noqa: F401
@@ -687,7 +716,7 @@ def main(argv: list[str] | None = None) -> int:
 
     dados = args.dados or RAIZ / "exemplos" / "deck.json"
     saida = _resolver_saida(args.saida or DIR_SAIDA / "deck.pptx")
-    montar_pptx(dados, saida)
+    montar_pptx(dados, saida, args.tema)
     return 0
 
 

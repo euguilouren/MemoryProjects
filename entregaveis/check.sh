@@ -18,7 +18,7 @@ if ! command -v python3 >/dev/null 2>&1; then
 fi
 
 # 1) Sintaxe do gerar.py (compila sem executar).
-log "1/7 Compilando gerar.py (py_compile)..."
+log "1/8 Compilando gerar.py (py_compile)..."
 if python3 -m py_compile "$DIR/gerar.py"; then
   log "  OK: gerar.py sem erro de sintaxe."
 else
@@ -27,7 +27,7 @@ else
 fi
 
 # 2) tokens.json valido (JSON bem-formado).
-log "2/7 Validando tokens.json..."
+log "2/8 Validando tokens.json..."
 if python3 -c "import json,sys; json.load(open(sys.argv[1], encoding='utf-8'))" "$DIR/marca/tokens.json"; then
   log "  OK: tokens.json valido."
 else
@@ -36,7 +36,7 @@ else
 fi
 
 # 3) Dados de exemplo validos (deck.json e front-matter do relatorio.md).
-log "3/7 Validando dados de exemplo..."
+log "3/8 Validando dados de exemplo..."
 if python3 -c "import json,sys; json.load(open(sys.argv[1], encoding='utf-8'))" "$DIR/exemplos/deck.json"; then
   log "  OK: exemplos/deck.json valido."
 else
@@ -51,7 +51,7 @@ else
 fi
 
 # 4) HTML/CSS bem-formados (parse XML tolerante via stdlib; nao exige libs externas).
-log "4/7 Checando templates e CSS..."
+log "4/8 Checando templates e CSS..."
 python3 - "$DIR" <<'PY'
 import sys, re
 from pathlib import Path
@@ -90,7 +90,7 @@ PY
 if [ $? -ne 0 ]; then falhou=1; fi
 
 # 1b) Sintaxe do gerar-pptx.py (caminho PPTX, aditivo ao PDF).
-log "1b/7 Compilando gerar-pptx.py (py_compile)..."
+log "1b/8 Compilando gerar-pptx.py (py_compile)..."
 if python3 -m py_compile "$DIR/gerar-pptx.py"; then
   log "  OK: gerar-pptx.py sem erro de sintaxe."
 else
@@ -99,7 +99,7 @@ else
 fi
 
 # 1c) Sintaxe do gerar-web.py (caminho WEB/reveal.js, aditivo ao PDF/PPTX).
-log "1c/7 Compilando gerar-web.py (py_compile)..."
+log "1c/8 Compilando gerar-web.py (py_compile)..."
 if python3 -m py_compile "$DIR/gerar-web.py"; then
   log "  OK: gerar-web.py sem erro de sintaxe."
 else
@@ -108,7 +108,7 @@ else
 fi
 
 # 5) Render de fumaca - SO se as libs existirem (degrada com aviso).
-log "5/7 Render de fumaca PDF (se as libs existirem)..."
+log "5/8 Render de fumaca PDF (se as libs existirem)..."
 if python3 -c "import jinja2, weasyprint" >/dev/null 2>&1; then
   if ( cd "$DIR" && python3 gerar.py demo ); then
     log "  OK: relatorio e deck renderizados em saida/."
@@ -131,7 +131,7 @@ fi
 # 6) Smoke do PPTX NATIVO - SO se python-pptx existir (degrada sem quebrar).
 #    Gera o .pptx do exemplo, REABRE com python-pptx e confere: N slides, e que
 #    o slide do grafico tem um CHART NATIVO (nao imagem) com eixo de valor min=0.
-log "6/7 Smoke do PPTX nativo (se python-pptx existir)..."
+log "6/8 Smoke do PPTX nativo (se python-pptx existir)..."
 if python3 -c "import pptx" >/dev/null 2>&1; then
   if ( cd "$DIR" && python3 gerar-pptx.py >/dev/null ) && python3 - "$DIR" <<'PY'
 import sys
@@ -180,7 +180,7 @@ fi
 #    <section> esperados (capa + slides), e a HONESTIDADE do grafico no DOM
 #    gerado: rotulo de valor em cada barra, a barra de maior valor NAO toca o topo
 #    quando `maximo` > maior valor, e a cor (destaque ambar) isolada a 1 barra.
-log "7/7 Smoke do deck WEB (reveal.js, sem libs externas)..."
+log "7/8 Smoke do deck WEB (reveal.js, sem libs externas)..."
 if ( cd "$DIR" && python3 gerar-web.py >/dev/null ) && python3 - "$DIR" <<'PY'
 import re, sys
 from pathlib import Path
@@ -252,6 +252,91 @@ then
   log "  OK: deck WEB gerado e reaberto - secoes + grafico honesto conferidos."
 else
   warn "  FALHA: smoke do deck WEB quebrou."
+  falhou=1
+fi
+
+# 8) TEMAS (restyle por cor) - SEM dependencia externa (so stdlib), roda SEMPRE.
+#    Prova a frente 4: (a) tema 'claro' BYTE-A-BYTE igual ao sem --tema (zero
+#    regressao); (b) tema 'escuro' gera sem erro, 0 byte NUL, fundo escuro no DOM;
+#    (c) tema inexistente falha com erro claro (exit !=0). Usa o gerar-web.py (sem
+#    libs) como prova das 3; o tokens.css 'claro' tambem e conferido byte-a-byte.
+log "8/8 Temas (restyle por cor: claro byte-identico, escuro acessivel, erro claro)..."
+if python3 - "$DIR" <<'PY'
+import subprocess, sys, json
+from pathlib import Path
+
+raiz = Path(sys.argv[1])
+web = raiz / "gerar-web.py"
+ger = raiz / "gerar.py"
+falhas = 0
+
+# As saidas ficam em saida/ (o --saida e CONFINADO a arvore do projeto por
+# _resolver_saida; um tempdir em /tmp seria rejeitado). Prefixo _check_tema_*
+# e limpo no fim. Escolho nomes proprios para nao colidir com os artefatos
+# que os passos 5-7 deixaram em saida/.
+sdir = raiz / "saida"
+sdir.mkdir(exist_ok=True)
+sem = sdir / "_check_tema_sem.html"
+claro = sdir / "_check_tema_claro.html"
+escuro = sdir / "_check_tema_escuro.html"
+criados = [sem, claro, escuro]
+
+def run(args, **kw):
+    return subprocess.run([sys.executable, *args], capture_output=True, text=True, **kw)
+
+try:
+    # (a) claro byte-a-byte == sem --tema (no deck WEB, saida deterministica).
+    run([str(web), "--saida", str(sem.relative_to(raiz))], cwd=raiz)
+    run([str(web), "--tema", "claro", "--saida", str(claro.relative_to(raiz))], cwd=raiz)
+    if not (sem.exists() and claro.exists()):
+        print("  FALHA: gerar-web nao produziu os HTML de comparacao."); falhas += 1
+    elif sem.read_bytes() != claro.read_bytes():
+        print("  FALHA: tema 'claro' difere do sem-tema (regressao no restyle)."); falhas += 1
+    else:
+        print("  OK: deck WEB 'claro' BYTE-A-BYTE identico ao sem --tema.")
+
+    # (a2) tokens.css 'claro' byte-a-byte == o versionado (PDF nao regride).
+    versionado = (raiz / "marca" / "tokens.css").read_bytes()
+    run([str(ger), "sincronizar-tokens"], cwd=raiz)  # regenera default
+    if (raiz / "marca" / "tokens.css").read_bytes() != versionado:
+        print("  FALHA: tokens.css 'claro' divergiu do versionado."); falhas += 1
+    else:
+        print("  OK: tokens.css 'claro' byte-a-byte igual ao versionado.")
+
+    # (b) escuro gera sem erro, 0 byte NUL, fundo escuro no DOM.
+    r = run([str(web), "--tema", "escuro", "--saida", str(escuro.relative_to(raiz))], cwd=raiz)
+    fundo = json.loads((raiz / "marca" / "tokens.json").read_text(encoding="utf-8"))
+    fundo_escuro = fundo["temas"]["escuro"]["cor"]["fundo"]
+    if r.returncode != 0 or not escuro.exists():
+        print(f"  FALHA: tema 'escuro' nao gerou (rc={r.returncode}): {r.stderr.strip()}"); falhas += 1
+    else:
+        h = escuro.read_text(encoding="utf-8")
+        if "\x00" in h:
+            print("  FALHA: HTML do tema 'escuro' contem byte NUL."); falhas += 1
+        elif fundo_escuro.upper() not in h.upper():
+            print(f"  FALHA: fundo escuro {fundo_escuro} ausente no DOM do tema 'escuro'."); falhas += 1
+        else:
+            print(f"  OK: tema 'escuro' gerou, 0 NUL, fundo {fundo_escuro} aplicado.")
+
+    # (c) tema inexistente -> erro claro com a lista, exit !=0 (nao silencioso).
+    r = run([str(web), "--tema", "naoexiste",
+             "--saida", str((sdir / "_check_tema_x.html").relative_to(raiz))], cwd=raiz)
+    if r.returncode == 0:
+        print("  FALHA: tema inexistente nao falhou (deveria exit !=0)."); falhas += 1
+    elif "inexistente" not in (r.stderr + r.stdout).lower():
+        print("  FALHA: erro de tema inexistente sem mensagem clara."); falhas += 1
+    else:
+        print("  OK: tema inexistente falha com erro claro (lista os disponiveis).")
+finally:
+    for p in criados + [sdir / "_check_tema_x.html"]:
+        p.unlink(missing_ok=True)
+
+sys.exit(1 if falhas else 0)
+PY
+then
+  log "  OK: temas conferidos - claro byte-identico, escuro acessivel, erro claro."
+else
+  warn "  FALHA: smoke de temas quebrou."
   falhou=1
 fi
 

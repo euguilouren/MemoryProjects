@@ -75,6 +75,28 @@ python3 entregaveis/gerar-web.py                       # saida/deck.html
 python3 entregaveis/gerar-web.py --dados meu-deck.json --saida saida/meu-deck.html
 ```
 
+### Temas (restyle por cor)
+
+Os 3 motores aceitam `--tema NOME` para trocar SO o **visual** (cores), sem tocar
+no conteudo nem no layout/contrato `slides.json` (paridade "restyle" do Gamma). A
+paleta vem de `marca/tokens.json` (bloco `temas`):
+
+- **`claro`** (default; tambem o comportamento sem `--tema`): navy `#1F3A5F` +
+  ambar `#E08A3C` sobre fundo claro - a marca de hoje, **byte-a-byte**.
+- **`escuro`**: fundo escuro acessivel (texto principal >= 4,5:1 WCAG AA), ambar
+  mantido como acento, navy "subido" para azul claro legivel sobre o escuro.
+
+```bash
+python3 entregaveis/gerar.py deck       --tema escuro --saida saida/deck-escuro.pdf
+python3 entregaveis/gerar-pptx.py       --tema escuro --saida saida/deck-escuro.pptx
+python3 entregaveis/gerar-web.py        --tema escuro --saida saida/deck-escuro.html
+python3 entregaveis/gerar.py relatorio  --tema escuro --saida saida/relatorio-escuro.pdf
+```
+
+Tema inexistente falha com erro claro listando os disponiveis (nunca silencioso).
+Para criar um tema novo, basta adicionar uma entrada em `temas` no `tokens.json`
+com as cores que diferem do default - nenhum codigo muda.
+
 O **deck web** (`gerar-web.py`) emite **um unico .html autocontido**: o reveal.js
 (`vendor/reveal.js/`, MIT) e o tema da marca ficam **embutidos inline** no arquivo.
 Por que vendorizado e inline, nao CDN: o deck abre **offline** (`file://`), nao

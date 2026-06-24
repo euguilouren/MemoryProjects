@@ -2,3 +2,7 @@
 saida/
 __pycache__/
 *.pyc
+# tokens.css de temas nao-default (marca/tokens-<tema>.css) sao derivados do
+# tokens.json sob demanda (gerar.py --tema X); reproduziveis, nao versionados.
+# O default marca/tokens.css CONTINUA versionado (fonte do PDF de hoje).
+marca/tokens-*.css

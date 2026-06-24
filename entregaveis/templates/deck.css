@@ -24,6 +24,7 @@
 html {
   font-family: var(--fonte-corpo);
   color: var(--cor-texto);
+  background: var(--cor-fundo);
 }
 body { margin: 0; }
 
@@ -39,6 +40,10 @@ body { margin: 0; }
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  /* Fundo do slide vem do token (restyle por tema). No tema 'claro' resolve para
+     #FFFFFF = o branco implicito de hoje (sem regressao); no 'escuro' pinta a
+     superficie escura para o texto (que sobe para quase-branco) ficar legivel. */
+  background: var(--cor-fundo);
 }
 .slide:last-child { break-after: auto; }
 
@@ -119,15 +124,19 @@ body { margin: 0; }
 .slide__corpo ul { margin: 0; padding-left: var(--esp-lg); }
 .slide__corpo li { margin-bottom: var(--esp-md); }
 
-/* --- Slide de capa (invertido: fundo de marca) --- */
+/* --- Slide de capa (invertido: fundo de marca) ---
+   Cores via fallback de var(): no tema 'claro' os tokens --cor-capa-* NAO sao
+   emitidos, entao a capa cai nos valores de hoje (primaria/neutro-000/neutro-100)
+   -> byte-identico. No 'escuro' os tokens existem e dao a capa escura legivel
+   (a primaria virou azul claro, nao serve de fundo). */
 .slide--capa {
-  background: var(--cor-primaria);
-  color: var(--cor-neutro-000);
+  background: var(--cor-capa-fundo, var(--cor-primaria));
+  color: var(--cor-capa-texto, var(--cor-neutro-000));
 }
-.slide--capa .slide__titulo { color: var(--cor-neutro-000); font-size: var(--fonte-3xl); }
+.slide--capa .slide__titulo { color: var(--cor-capa-texto, var(--cor-neutro-000)); font-size: var(--fonte-3xl); }
 .slide--capa .slide__subtitulo {
   font-size: var(--fonte-xl);
-  color: var(--cor-neutro-100);
+  color: var(--cor-capa-subtitulo, var(--cor-neutro-100));
 }
 .slide--capa .slide__marca {
   font-size: var(--fonte-sm);
