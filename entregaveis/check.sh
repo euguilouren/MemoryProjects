@@ -279,7 +279,15 @@ sdir.mkdir(exist_ok=True)
 sem = sdir / "_check_tema_sem.html"
 claro = sdir / "_check_tema_claro.html"
 escuro = sdir / "_check_tema_escuro.html"
-criados = [sem, claro, escuro]
+pptx_escuro = sdir / "_check_tema_escuro.pptx"
+pdf_escuro = sdir / "_check_tema_escuro.pdf"
+criados = [sem, claro, escuro, pptx_escuro, pdf_escuro]
+
+# O CSS derivado do tema escuro (marca/tokens-<tema>.css) e gitignorado e pode
+# pre-existir de uma execucao anterior. Lembramos se ja existia para restaurar o
+# estado no finally (nao sujar nem apagar artefato legitimo de fora do teste).
+derivado_escuro = raiz / "marca" / "tokens-escuro.css"
+derivado_pre_existia = derivado_escuro.exists()
 
 def run(args, **kw):
     return subprocess.run([sys.executable, *args], capture_output=True, text=True, **kw)
@@ -327,9 +335,98 @@ try:
         print("  FALHA: erro de tema inexistente sem mensagem clara."); falhas += 1
     else:
         print("  OK: tema inexistente falha com erro claro (lista os disponiveis).")
+
+    # (d) PPTX escuro - so com python-pptx (degrada com aviso, nao falha).
+    #     Gera com --tema escuro, REABRE e prova: (i) honestidade preservada no
+    #     escuro (chart com value_axis.minimum_scale == 0, base no zero independe
+    #     do tema); (ii) tema aplicado (alguma forma da capa tem fill solido com a
+    #     cor capa_fundo do tema escuro). Shapes sem fill solido sao ignorados.
+    try:
+        import pptx  # noqa: F401
+        tem_pptx = True
+    except ImportError:
+        tem_pptx = False
+    if not tem_pptx:
+        print("  PULADO: PPTX escuro (python-pptx ausente).")
+    else:
+        from pptx import Presentation
+        from pptx.enum.dml import MSO_FILL
+        rp = run([str(raiz / "gerar-pptx.py"), "--tema", "escuro",
+                  "--saida", str(pptx_escuro.relative_to(raiz))], cwd=raiz)
+        if rp.returncode != 0 or not pptx_escuro.exists():
+            print(f"  FALHA: PPTX 'escuro' nao gerou (rc={rp.returncode}): {rp.stderr.strip()}")
+            falhas += 1
+        else:
+            cor_escuro = fundo["temas"]["escuro"]["cor"]
+            capa_fundo = cor_escuro["capa_fundo"].lstrip("#").upper()
+            pres = Presentation(str(pptx_escuro))
+            slides = list(pres.slides)
+            charts = [sh for s in slides for sh in s.shapes if sh.has_chart]
+            if not charts:
+                print("  FALHA: PPTX 'escuro' sem chart nativo para conferir a honestidade.")
+                falhas += 1
+            elif charts[0].chart.value_axis.minimum_scale not in (0, 0.0):
+                ms = charts[0].chart.value_axis.minimum_scale
+                print(f"  FALHA: PPTX 'escuro' com eixo min={ms} (honestidade: deve ser 0).")
+                falhas += 1
+            else:
+                # Forma da CAPA (slide 0) com fill solido == capa_fundo do escuro.
+                capa = slides[0]
+                achou_fundo = False
+                for sh in capa.shapes:
+                    try:
+                        fill = sh.fill
+                        if fill.type == MSO_FILL.SOLID and \
+                           str(fill.fore_color.rgb).upper() == capa_fundo:
+                            achou_fundo = True
+                            break
+                    except Exception:  # noqa: BLE001 - shape sem fill solido: ignora
+                        continue
+                if not achou_fundo:
+                    print(f"  FALHA: capa do PPTX 'escuro' sem forma com fundo {cor_escuro['capa_fundo']}.")
+                    falhas += 1
+                else:
+                    print(f"  OK: PPTX 'escuro' - chart honesto (min=0) e capa com "
+                          f"fundo {cor_escuro['capa_fundo']} aplicado.")
+
+    # (e) PDF escuro - so com WeasyPrint (degrada com aviso, nao falha).
+    #     Gera o deck com --tema escuro e prova: (i) o PDF foi criado nao-vazio;
+    #     (ii) o CSS derivado que o PDF consome (marca/tokens-escuro.css) contem o
+    #     `fundo` escuro do tema - prova deterministica, lib-a-parte, de que o PDF
+    #     e escuro (o WeasyPrint le esse CSS via @import de tokens).
+    try:
+        import weasyprint  # noqa: F401
+        tem_weasy = True
+    except ImportError:
+        tem_weasy = False
+    if not tem_weasy:
+        print("  PULADO: PDF escuro (WeasyPrint ausente).")
+    else:
+        rpdf = run([str(ger), "deck", "--tema", "escuro",
+                    "--saida", str(pdf_escuro.relative_to(raiz))], cwd=raiz)
+        if rpdf.returncode != 0 or not pdf_escuro.exists():
+            print(f"  FALHA: PDF 'escuro' nao gerou (rc={rpdf.returncode}): {rpdf.stderr.strip()}")
+            falhas += 1
+        elif pdf_escuro.stat().st_size == 0:
+            print("  FALHA: PDF 'escuro' foi criado vazio.")
+            falhas += 1
+        elif not derivado_escuro.exists():
+            print(f"  FALHA: CSS derivado {derivado_escuro.name} ausente apos gerar o PDF escuro.")
+            falhas += 1
+        else:
+            css = derivado_escuro.read_text(encoding="utf-8")
+            if fundo_escuro.upper() not in css.upper():
+                print(f"  FALHA: CSS derivado {derivado_escuro.name} sem o fundo escuro {fundo_escuro}.")
+                falhas += 1
+            else:
+                print(f"  OK: PDF 'escuro' nao-vazio; CSS derivado {derivado_escuro.name} "
+                      f"com fundo {fundo_escuro}.")
 finally:
     for p in criados + [sdir / "_check_tema_x.html"]:
         p.unlink(missing_ok=True)
+    # Restaura o estado do CSS derivado: so removemos se NAO pre-existia ao teste.
+    if not derivado_pre_existia:
+        derivado_escuro.unlink(missing_ok=True)
 
 sys.exit(1 if falhas else 0)
 PY
