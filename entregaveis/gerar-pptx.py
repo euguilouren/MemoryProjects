@@ -443,6 +443,37 @@ def render_processo(slide, m: Marca, dados: dict) -> None:
             seta.shadow.inherit = False
 
 
+def _como_numero(valor):
+    """Converte para float quando der (aceita o "5"/"3.8" que o JSON pode trazer
+    e que o render ja coage com float()); devolve None quando nao e numero. Evita
+    o `valor > maximo` cru, que estoura (TypeError) ao misturar str e num e
+    compara string lexicograficamente ("10" > "5" e False) - falso negativo."""
+    try:
+        return float(valor)
+    except (TypeError, ValueError):
+        return None
+
+
+def _avisar_estouro_grafico(dados: dict) -> None:
+    """Quando o slide declara `maximo` (teto de dominio) e alguma barra o excede,
+    o eixo fixo em `maximo` faz a barra encostar/passar do topo: e honesto com a
+    ESCALA mas esconde que o dado estourou o teto. Avisa em stderr (nao quebra o
+    render) cada barra que estoura. Sem `maximo` o eixo e auto, sem estouro."""
+    maximo = _como_numero(dados.get("maximo"))
+    if maximo is None:
+        return
+    titulo = dados.get("titulo", "")
+    for barra in dados.get("barras", []):
+        valor = _como_numero(barra.get("valor"))
+        if valor is not None and valor > maximo:
+            print(
+                f"[aviso] grafico '{titulo}': valor {barra.get('valor')} de "
+                f"'{barra.get('rotulo', '')}' excede o maximo declarado ({maximo:g})"
+                " - barra limitada a 100%, escala pode enganar",
+                file=sys.stderr,
+            )
+
+
 def render_grafico(slide, m: Marca, dados: dict) -> None:
     """Grafico de barras NATIVO (editavel: dados em planilha embutida no .pptx).
 
@@ -456,6 +487,7 @@ def render_grafico(slide, m: Marca, dados: dict) -> None:
     from pptx.enum.chart import XL_CHART_TYPE, XL_LABEL_POSITION
     from pptx.util import Inches, Pt
 
+    _avisar_estouro_grafico(dados)
     _add_titulo(slide, m, dados.get("titulo", ""))
     topo = _add_intro(slide, m, dados.get("intro", ""))
     barras = dados.get("barras", [])

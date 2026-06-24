@@ -177,11 +177,47 @@ def montar_html_relatorio(dados: Path) -> str:
     return _ambiente_jinja().get_template("relatorio.html").render(**contexto)
 
 
+def _como_numero(valor):
+    """Converte para float quando der (aceita o "5"/"3.8" que o JSON pode trazer);
+    devolve None quando nao e numero. Evita o `valor > maximo` cru, que estoura
+    (TypeError) ao misturar str e num e compara string lexicograficamente
+    ("10" > "5" e False) - falso negativo silencioso."""
+    try:
+        return float(valor)
+    except (TypeError, ValueError):
+        return None
+
+
+def _avisar_estouro_grafico(slides: list) -> None:
+    """O template clampa a barra a 100% quando `valor > maximo`: honesto com a
+    ESCALA, mas esconde que o dado estourou o teto declarado. Jinja nao loga,
+    entao o aviso sai daqui (stderr, nao quebra o render) antes do render do PDF.
+    Sem `maximo` o teto e o maior do conjunto - nao ha estouro possivel."""
+    for slide in slides:
+        if slide.get("tipo") != "grafico":
+            continue
+        maximo = _como_numero(slide.get("maximo"))
+        if maximo is None:
+            continue
+        titulo = slide.get("titulo", "")
+        for barra in slide.get("barras", []):
+            valor = _como_numero(barra.get("valor"))
+            if valor is not None and valor > maximo:
+                print(
+                    f"[aviso] grafico '{titulo}': valor {barra.get('valor')} de "
+                    f"'{barra.get('rotulo', '')}' excede o maximo declarado "
+                    f"({maximo:g}) - barra limitada a 100%, escala pode enganar",
+                    file=sys.stderr,
+                )
+
+
 def montar_html_deck(dados: Path) -> str:
     bruto = json.loads(dados.read_text(encoding="utf-8"))
+    slides = bruto.get("slides", [])
+    _avisar_estouro_grafico(slides)
     contexto = {
         "deck": bruto.get("deck", {}),
-        "slides": bruto.get("slides", []),
+        "slides": slides,
         "marca": carregar_marca(),
         **_refs_css(),
     }

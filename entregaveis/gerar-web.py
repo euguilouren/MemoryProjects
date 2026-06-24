@@ -368,12 +368,44 @@ def _corpo_processo(slide: dict) -> str:
     return f'<div class="slide__corpo"><ol class="processo">{"".join(pecas)}</ol></div>'
 
 
+def _como_numero(valor):
+    """Converte para float quando der (aceita o "5"/"3.8" que o JSON pode trazer);
+    devolve None quando nao e numero. Evita o `valor > maximo` cru, que estoura
+    (TypeError) ao misturar str e num e compara string lexicograficamente
+    ("10" > "5" e False) - falso negativo silencioso."""
+    try:
+        return float(valor)
+    except (TypeError, ValueError):
+        return None
+
+
+def _avisar_estouro_grafico(slide: dict) -> None:
+    """Quando o slide declara `maximo` (teto de dominio) e alguma barra o excede,
+    o clamp a 100% e honesto com a ESCALA mas esconde que o dado estourou o teto.
+    Avisa em stderr (nao quebra o render) cada barra que estoura. Sem `maximo` nao
+    ha estouro possivel (o teto e o maior do conjunto), entao nao avisa."""
+    maximo = _como_numero(slide.get("maximo"))
+    if maximo is None:
+        return
+    titulo = slide.get("titulo", "")
+    for barra in slide.get("barras", []):
+        valor = _como_numero(barra.get("valor"))
+        if valor is not None and valor > maximo:
+            print(
+                f"[aviso] grafico '{titulo}': valor {barra.get('valor')} de "
+                f"'{barra.get('rotulo', '')}' excede o maximo declarado ({maximo:g})"
+                " - barra limitada a 100%, escala pode enganar",
+                file=sys.stderr,
+            )
+
+
 def _corpo_grafico(slide: dict) -> str:
     """Barras honestas. Teto da escala = slide.maximo quando presente (escala com
     maximo de dominio, ex.: 5 numa nota 0-5), senao o maior valor do conjunto.
     Altura de cada barra = valor/teto, limitada a 100% (um valor acima do teto nao
     estoura a area, o que distorceria a comparacao). Rotulo do valor SEMPRE no DOM.
     Ancora: o-grafico-convence-antes-do-numero.md (base no zero, cor como excecao)."""
+    _avisar_estouro_grafico(slide)
     barras = slide.get("barras", [])
     valores = [b.get("valor", 0) for b in barras]
     teto = slide.get("maximo") or (max(valores) if valores else 0)
