@@ -1,0 +1,61 @@
+name: Integridade (pipeline + portal)
+
+# Gate automático do repo PÚBLICO. Dois alvos:
+# 1) o pipeline de entregáveis (entregaveis/check.sh) — render PDF/PPTX/web e
+#    honestidade do gráfico (degrada se as libs de render faltarem).
+# 2) o portal público (docs/) — garante que NUNCA vaze conteúdo do cérebro:
+#    o index.html não referencia dados crus e a vitrine não tem corpo/resumo/url.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integridade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Dependências do pipeline (best-effort; check.sh degrada sem render)
+        run: pip install -r entregaveis/requirements.txt || true
+
+      - name: Rede de segurança do pipeline (entregaveis/check.sh)
+        run: bash entregaveis/check.sh
+
+      - name: Sanidade do portal público — nunca vazar conteúdo
+        if: ${{ hashFiles('docs/index.html') != '' }}
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          falhas = []
+
+          html = open('docs/index.html', encoding='utf-8').read()
+          raw = open('docs/index.html', 'rb').read()
+          # o portal público não pode referenciar dados crus do cérebro
+          for termo in ('notas.json', 'notas.html', 'grafo-dados.json', 'n.resumo', 'n.url'):
+              if termo in html:
+                  falhas.append(f"index.html referencia '{termo}' (vazaria conteudo/privado)")
+          if any(b < 9 or 13 < b < 32 for b in raw):
+              falhas.append("index.html contem byte de controle")
+
+          v = json.load(open('docs/grafo-vitrine.json'))
+          campos = set().union(*[set(n) for n in v['nodes']]) if v['nodes'] else set()
+          proib = campos & {'resumo', 'url', 'corpo', 'body', 'conteudo'}
+          if proib:
+              falhas.append(f"grafo-vitrine.json contem campo proibido {sorted(proib)}")
+
+          if falhas:
+              for f in falhas:
+                  print(f"::error::{f}")
+              sys.exit(1)
+          print(f"portal seguro: vitrine {v['stats']['notas']} notas; campos {sorted(campos)}")
+          PY
