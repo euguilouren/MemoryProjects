@@ -17,6 +17,21 @@ if ! command -v python3 >/dev/null 2>&1; then
   exit 0
 fi
 
+# 0) Lint (ruff): gate de estilo. Config versionada em pyproject.toml. No CI
+#    (requirements instala ruff) e' gate de verdade; local degrada se ausente.
+log "0/8 Lint (ruff)..."
+if command -v ruff >/dev/null 2>&1 || python3 -m ruff --version >/dev/null 2>&1; then
+  ruff_cmd() { if command -v ruff >/dev/null 2>&1; then ruff "$@"; else python3 -m ruff "$@"; fi; }
+  if ruff_cmd check "$DIR"; then
+    log "  OK: ruff sem violacoes."
+  else
+    warn "  FALHA: ruff encontrou violacoes de lint."
+    falhou=1
+  fi
+else
+  warn "  ruff ausente — lint pulado (instale: pip install -r requirements.txt)."
+fi
+
 # 1) Sintaxe do gerar.py (compila sem executar).
 log "1/8 Compilando gerar.py (py_compile)..."
 if python3 -m py_compile "$DIR/gerar.py"; then
