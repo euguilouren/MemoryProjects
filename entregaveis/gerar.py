@@ -64,7 +64,7 @@ def ler_front_matter_md(caminho: Path) -> tuple[dict, str]:
     linhas = texto.splitlines()
     # Tolera linhas em branco antes do front-matter; o '---' deve ser a primeira
     # linha nao vazia para o bloco ser reconhecido.
-    inicio = next((i for i, l in enumerate(linhas) if l.strip()), len(linhas))
+    inicio = next((i for i, linha in enumerate(linhas) if linha.strip()), len(linhas))
     if inicio < len(linhas) and linhas[inicio].strip() == "---":
         fim = next((i for i in range(inicio + 1, len(linhas)) if linhas[i].strip() == "---"), None)
         if fim is not None:
@@ -84,7 +84,9 @@ def markdown_para_secoes(corpo_md: str) -> list[dict]:
     """
     try:
         import markdown as _md
-        render = lambda txt: _md.markdown(txt, extensions=["tables"])
+
+        def render(txt: str) -> str:
+            return _md.markdown(txt, extensions=["tables"])
     except ImportError:
         render = _render_markdown_minimo
 
@@ -128,11 +130,11 @@ def _render_markdown_minimo(texto: str) -> str:
         bloco = _re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", bloco)  # negrito
 
         linhas = bloco.splitlines()
-        if all(l.lstrip().startswith(("- ", "* ")) for l in linhas):       # lista
-            itens = "".join(f"<li>{l.lstrip()[2:].strip()}</li>" for l in linhas)
+        if all(ln.lstrip().startswith(("- ", "* ")) for ln in linhas):     # lista
+            itens = "".join(f"<li>{ln.lstrip()[2:].strip()}</li>" for ln in linhas)
             blocos.append(f"<ul>{itens}</ul>")
-        elif all(l.lstrip().startswith("&gt;") for l in linhas):           # citacao
-            corpo = " ".join(l.lstrip()[4:].strip() for l in linhas)
+        elif all(ln.lstrip().startswith("&gt;") for ln in linhas):         # citacao
+            corpo = " ".join(ln.lstrip()[4:].strip() for ln in linhas)
             blocos.append(f"<blockquote><p>{corpo}</p></blockquote>")
         else:
             blocos.append(f"<p>{bloco}</p>")
@@ -246,7 +248,7 @@ def renderizar_pdf(html: str, saida: Path) -> bool:
     except ImportError:
         html_fallback = saida.with_suffix(".html")
         html_fallback.write_text(html, encoding="utf-8")
-        print(f"[gerar] AVISO: WeasyPrint ausente. PDF nao gerado.", file=sys.stderr)
+        print("[gerar] AVISO: WeasyPrint ausente. PDF nao gerado.", file=sys.stderr)
         print(f"[gerar] HTML intermediario salvo em: {html_fallback}", file=sys.stderr)
         print(f"[gerar] Instale as deps: pip install -r {RAIZ / 'requirements.txt'}", file=sys.stderr)
         return False

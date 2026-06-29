@@ -1,24 +1,18 @@
-# Android / Gradle — artefatos de build (nunca versionar)
-*.iml
-.gradle/
-build/
-**/build/
-captures/
-.cxx/
-
-# IDEs
-.idea/
-*.ipr
-*.iws
+# Python — caches e bytecode (nunca versionar)
+__pycache__/
+*.pyc
+*.pyo
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
 
 # Configuração local e SEGREDOS (jamais versionar)
-local.properties
-*.keystore
-*.jks
-*.apk
-*.aab
 .env
 .env.*
+*.keystore
+*.jks
 
 # Sistema
 .DS_Store
