@@ -9,3 +9,7 @@ python-pptx>=0.6      # deck .pptx NATIVO editavel (gerar-pptx.py) - formas/char
 
 # Para .docx NATIVO (editavel no Word), descomente quando o caminho existir:
 # python-docx>=1.1     # documento .docx via estilos/template
+
+# Lint: gate de estilo aplicado pelo check.sh (config em pyproject.toml). No CI
+# garante que o `ruff check` rode de verdade; local degrada se ausente.
+ruff>=0.5

@@ -1,15 +1,9 @@
 # Normaliza fim de linha (evita ruído entre Windows/Linux/macOS)
 * text=auto eol=lf
 
-# Scripts Windows mantêm CRLF
-*.bat text eol=crlf
-
-# Binários (nunca normalizar) — inclui o wrapper do Gradle quando existir
-*.jar binary
-*.apk binary
-*.aab binary
-*.keystore binary
-*.jks binary
+# Binários (nunca normalizar)
+*.pdf binary
+*.pptx binary
 *.png binary
 *.webp binary
-gradlew text eol=lf
+*.jpg binary
