@@ -433,19 +433,19 @@
     <span class="ponto"></span>
     <div><b>MemoryCode</b> <span>Portal Neural 3D</span></div>
   </div>
-  <input id="busca" type="search" placeholder="Buscar nota..." />
+  <input id="busca" type="search" placeholder="Buscar nota..." aria-label="Buscar nota pelo título ou tag" />
   <button id="btn-caminho" title="Traçar o menor caminho entre duas notas">Caminho</button>
   <button id="btn-stats" title="Estatísticas da rede">Stats</button>
-  <span id="contador"></span>
+  <span id="contador" aria-live="polite"></span>
 </div>
 
 <div id="modo-caminho">
   <span id="mc-fechar">×</span>
   <div class="mc-titulo">Traçar caminho</div>
   <div class="mc-sub">Busque pelo nome ou clique no nó (preenche o campo vazio)</div>
-  <input id="mc-a" type="search" placeholder="Nota de origem..." autocomplete="off" />
+  <input id="mc-a" type="search" placeholder="Nota de origem..." autocomplete="off" aria-label="Nota de origem do caminho" />
   <div class="mc-res" id="mcres-a"></div>
-  <input id="mc-b" type="search" placeholder="Nota de destino..." autocomplete="off" />
+  <input id="mc-b" type="search" placeholder="Nota de destino..." autocomplete="off" aria-label="Nota de destino do caminho" />
   <div class="mc-res" id="mcres-b"></div>
 </div>
 <div id="toast"></div>
@@ -505,13 +505,22 @@ const elPainel = document.getElementById('painel');
 const elErro = document.getElementById('erro');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
-fetch('grafo-vitrine.json').then(r => r.json()).then(data => {
+fetch('grafo-vitrine.json').then(r => {
+  if (!r.ok) throw new Error('HTTP ' + r.status);   // fetch não rejeita em 404: checar explicitamente
+  return r.json();
+}).then(data => {
+  // dataset vazio/malformado → mensagem amigável em vez de "nodes.map is not a function"
+  if (!data || !Array.isArray(data.nodes) || !Array.isArray(data.links) || data.nodes.length === 0) {
+    throw new Error('dataset vazio ou malformado');
+  }
   document.getElementById('carregando').remove();
   iniciar(data.nodes, data.links);
 }).catch(err => {
-  document.getElementById('carregando').style.display = 'none';
+  const c = document.getElementById('carregando');
+  if (c) c.style.display = 'none';
   elErro.style.display = 'flex';
-  elErro.textContent = 'Não foi possível carregar grafo-vitrine.json (o portal 3D precisa de internet para o Three.js). Erro: ' + err;
+  elErro.textContent = 'Não foi possível carregar o mapa da rede (grafo-vitrine.json). '
+    + 'Verifique a conexão e recarregue. Detalhe: ' + err.message;
 });
 
 function iniciar(nodes, links) {
@@ -1208,6 +1217,9 @@ function iniciar(nodes, links) {
   let cenaRevelada = false;
   function animar() {
     requestAnimationFrame(animar);
+    // aba oculta: não gasta GPU/CPU com bloom/render (o rAF já é limitado pelo navegador,
+    // mas ainda dispararia composer.render() a cada tick). Retoma exatamente onde parou ao voltar.
+    if (document.hidden) return;
     const t = relogio.getElapsedTime();
     // fade-in elegante da cena ao carregar (1 vez, apos o 1o frame valido)
     if (!cenaRevelada) { cenaRevelada = true; requestAnimationFrame(() => cv.classList.add('dentro')); }
@@ -1312,11 +1324,19 @@ function iniciar(nodes, links) {
   }
   animar();
 
+  // resize coalescido por frame: um arraste dispara dezenas de eventos, e cada setSize
+  // realoca os render targets do bloom (caro). Aplica uma vez por frame, resultado final idêntico.
+  let resizeAgendado = false;
   addEventListener('resize', () => {
-    camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
-    renderer.setSize(innerWidth, innerHeight);
-    composer.setSize(innerWidth, innerHeight);
-    labelRenderer.setSize(innerWidth, innerHeight);
+    if (resizeAgendado) return;
+    resizeAgendado = true;
+    requestAnimationFrame(() => {
+      resizeAgendado = false;
+      camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight);
+      composer.setSize(innerWidth, innerHeight);
+      labelRenderer.setSize(innerWidth, innerHeight);
+    });
   });
 }
 </script>
