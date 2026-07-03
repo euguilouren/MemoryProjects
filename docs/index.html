@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; font-src https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; connect-src 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; font-src https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'sha256-SIJ+tRsYCzLD9afY1x8CjBi1lnYGImlU/Ddlv8VUvtA=' 'sha256-1yvnH29VT6SvG/tGoNfuKL3PfgQC2PuybzkQ2c6rgyA=' 'sha256-oVfVCJAeP/bAjF/tw7wteJGiJVkj77dU86pWark7beI='; connect-src 'self'" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <title>MemoryCode • Portal Neural 3D</title>
 <meta name="author" content="Luan Guilherme Lourenço (euguilouren)" />
@@ -457,10 +457,11 @@
 <div id="erro"></div>
 
 <script>
-  // Fallback de resiliência: se a biblioteca 3D (Three.js, via CDN) não carregar
-  // — CDN fora do ar, sem internet, rede bloqueada — o módulo abaixo nem executa e
-  // a tela ficaria travada em "Carregando". Este timer mostra um erro claro nesse caso.
-  // No caminho de sucesso o #carregando some em ~1s, então este check vira no-op.
+  // Fallback de resiliência: se a biblioteca 3D (Three.js, servida pelo próprio
+  // site em docs/vendor/) não carregar — arquivo ausente, navegador sem WebGL,
+  // erro no módulo — o módulo abaixo nem executa e a tela ficaria travada em
+  // "Carregando". Este timer mostra um erro claro nesse caso. No caminho de
+  // sucesso o #carregando some em ~1s, então este check vira no-op.
   window.addEventListener('load', function () {
     setTimeout(function () {
       var c = document.getElementById('carregando');
@@ -469,8 +470,8 @@
         var e = document.getElementById('erro');
         if (e) {
           e.style.display = 'flex';
-          e.textContent = 'Não foi possível carregar a biblioteca 3D (Three.js) do CDN — '
-            + 'o Portal Neural precisa de internet para essa biblioteca. Verifique a conexão e recarregue.';
+          e.textContent = 'Não foi possível carregar a biblioteca 3D (Three.js). '
+            + 'Recarregue a página; se persistir, seu navegador pode não suportar WebGL.';
         }
       }
     }, 12000);
@@ -503,7 +504,7 @@ const LABELS = {
 const elTip = document.getElementById('tip');
 const elPainel = document.getElementById('painel');
 const elErro = document.getElementById('erro');
-const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 fetch('grafo-vitrine.json').then(r => {
   if (!r.ok) throw new Error('HTTP ' + r.status);   // fetch não rejeita em 404: checar explicitamente

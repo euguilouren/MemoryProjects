@@ -59,3 +59,7 @@ jobs:
               sys.exit(1)
           print(f"portal seguro: vitrine {v['stats']['notas']} notas; campos {sorted(campos)}")
           PY
+
+      - name: Portal — CSP por hash (script-src sem 'unsafe-inline')
+        if: ${{ hashFiles('docs/index.html') != '' }}
+        run: python3 docs/check-csp-hashes.py
