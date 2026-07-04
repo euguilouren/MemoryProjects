@@ -1,0 +1,7 @@
+# Fila de tarefas do MemoryProjects. Issues em branco ficam desativadas para
+# manter a fila estruturada — todo pedido entra pelo formulario "Pedido de tarefa".
+blank_issues_enabled: false
+contact_links:
+  - name: Evoluir o cerebro (MemoryCode)
+    url: https://github.com/euguilouren/MemoryCode/issues
+    about: Isto aqui e para PRODUZIR projetos. Para refinar conhecimento, decisoes ou os agentes, abra no repo do cerebro (MemoryCode).
