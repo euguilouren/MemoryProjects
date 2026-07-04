@@ -1,0 +1,74 @@
+name: Pedido de tarefa
+description: Abra um pedido para a sessao construtora produzir algo (software, site, app, planilha, documento...). A fila vive aqui, nas Issues — nao na memoria efemera de um chat.
+title: "[tarefa] "
+labels: ["pedido-de-tarefa"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Este pedido e a **fila duravel** de tarefas do MemoryProjects. Uma sessao construtora do Claude Code o pega, **consulta o cerebro (MemoryCode) como ancora antes de produzir**, entrega no repo de projetos e **registra as licoes de volta no MemoryCode** (`registros/projetos/`). Preencha o suficiente para a sessao comecar sem adivinhar.
+  - type: input
+    id: objetivo
+    attributes:
+      label: Objetivo (em uma frase)
+      description: O que precisa ser construido/entregue.
+      placeholder: "Ex.: uma landing page para o gerador de POP; um app de controle de gastos em Flutter; um dashboard de DRE."
+    validations:
+      required: true
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto e detalhes
+      description: Por que, para quem, exemplos, referencias, o que ja existe. Quanto mais concreto, menos adivinhacao.
+      placeholder: "Publico, problema que resolve, inspiracoes, restricoes de marca, dados de entrada..."
+    validations:
+      required: true
+  - type: dropdown
+    id: especialista
+    attributes:
+      label: Tipo de entregavel / especialista
+      description: Ajuda a rotear para o agente dono. Na duvida, escolha "Nao sei / a sessao decide".
+      options:
+        - Software (API, backend, sistema)
+        - Site / landing / interface
+        - Aplicativo mobile (iOS/Android/Flutter/PWA)
+        - Planilha / dashboard / BI
+        - Documento / apresentacao (PDF/PPTX/DOCX)
+        - Prompt / skill / agente
+        - Analise de dados / ML
+        - Nao sei / a sessao decide
+    validations:
+      required: true
+  - type: textarea
+    id: ancora-cerebro
+    attributes:
+      label: Ancora no cerebro (opcional)
+      description: Dominios/temas do MemoryCode que a sessao deve consultar antes de produzir. Se nao souber, deixe em branco — a sessao busca pelo `consultar-cerebro`.
+      placeholder: "Ex.: conhecimento/engenharia-de-software/web/*, finanças/precificacao, marketing-digital/copywriting..."
+    validations:
+      required: false
+  - type: textarea
+    id: criterio-pronto
+    attributes:
+      label: Criterio de pronto (Definition of Done)
+      description: Como saber que a tarefa esta concluida. Seja concreto e verificavel.
+      placeholder: "Ex.: pagina responsiva no ar servindo o arquivo; testes verdes; PDF gerado na marca; dashboard abrindo com os dados X."
+    validations:
+      required: true
+  - type: textarea
+    id: restricoes
+    attributes:
+      label: Restricoes (opcional)
+      description: Prazo, stack obrigatoria, orcamento, limites, o que NAO fazer.
+      placeholder: "Ex.: usar Next.js; sem dependencia paga; entregar ate sexta; nada de dados pessoais reais."
+    validations:
+      required: false
+  - type: checkboxes
+    id: regua
+    attributes:
+      label: Regua do ecossistema (confirme que entende)
+      options:
+        - label: "Codigo gerado passa pelo `revisor-de-codigo` (portao de clean code, testes verdes antes/depois) antes de ser entregue."
+          required: true
+        - label: "Mudanca que afeta producao (deploy, site publicado, artefato em runtime) so e 'pronta' apos smoke test / confirmacao no ar — nunca so com CI verde."
+          required: true
