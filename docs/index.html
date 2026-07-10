@@ -9,14 +9,12 @@
 <meta name="description" content="MemoryCode — um segundo cérebro que pensa em rede. Projeto pessoal de Luan Guilherme Lourenço. Powered by euguilouren." />
 <!-- Fontes self-hosted (ver @font-face no <style>): sem Google Fonts, zero-CDN. -->
 <style>
-  /* Fontes self-hosted (zero-CDN, blindagem): Manrope + Inter (variaveis) e Pinyon Script.
+  /* Fontes self-hosted (zero-CDN, blindagem): Manrope + Inter (variaveis).
      Subsets latin/latin-ext cobrem o pt-BR. Servidas de ./vendor/fonts, sem Google Fonts. */
   @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(./vendor/fonts/manrope-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
   @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(./vendor/fonts/manrope-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
   @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(./vendor/fonts/inter-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
   @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(./vendor/fonts/inter-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-  @font-face { font-family: 'Pinyon Script'; font-style: normal; font-weight: 400; font-display: swap; src: url(./vendor/fonts/pinyon-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-  @font-face { font-family: 'Pinyon Script'; font-style: normal; font-weight: 400; font-display: swap; src: url(./vendor/fonts/pinyon-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
   :root {
     /* Marca elevada: navy profundo + ambar/ouro como unico metal precioso.
        Coerente com tokens.json (navy #1F3A5F, acento ambar #E08A3C). */
@@ -58,28 +56,6 @@
   .cena .lead { font-family:var(--display); font-weight:500; font-size:clamp(16px,2.3vw,30px);
     line-height:1.4; color:#C8D4E4; margin:26px 0 0; max-width:30ch;
     text-shadow:0 1px 3px rgba(5,11,20,.95), 0 1px 16px rgba(5,11,20,.85); }
-  /* Assinatura do autor (hero) e dedicatoria de fechamento (ultima cena) */
-  .cena .assinatura { font-family:var(--display); font-weight:600; font-size:clamp(13px,1.5vw,17px);
-    color:var(--gold-soft); margin:22px 0 0; letter-spacing:.015em; text-shadow:0 1px 10px rgba(5,11,20,.92); }
-  .cena .assinatura strong { color:var(--gold-bright); font-weight:700; }
-  /* Rubrica: nome em cursiva LEGÍVEL revelado da esquerda p/ direita, com a caneta escrevendo por cima (anda + balança) */
-  .cena .rubrica { position:relative; display:inline-block; margin:6px 0 0; }
-  .cena .rubrica-nome { display:inline-block; font-family:'Pinyon Script', cursive; font-weight:400;
-    font-size:clamp(46px,8vw,86px); line-height:1.1; color:var(--gold-bright); white-space:nowrap;
-    text-shadow:0 1px 12px rgba(5,11,20,.92), 0 0 20px rgba(240,188,126,.22);
-    clip-path:inset(-.2em 100% -.34em 0); animation:rub-escreve 4.8s ease-in-out 1.2s both; }
-  .cena .rubrica-caneta { position:absolute; bottom:.16em; left:0; width:0; height:0;
-    animation:rub-anda 4.8s ease-in-out 1.2s both, rub-trace 4.8s ease-in-out 1.2s both, rub-pena 4.8s linear 1.2s both; }
-  .cena .rubrica-caneta svg { position:absolute; left:0; bottom:0; width:clamp(133px,18.5vw,208px); height:auto;
-    transform:translate(-9%, -30%); filter:drop-shadow(0 2px 5px rgba(0,0,0,.5)); }
-  @keyframes rub-escreve { from { clip-path:inset(-.2em 100% -.34em 0); } to { clip-path:inset(-.2em 0 -.34em 0); } }
-  @keyframes rub-anda { from { left:0; } to { left:100%; } }
-  @keyframes rub-trace { 0%{transform:translateY(-13px)} 8%{transform:translateY(1px)} 14%{transform:translateY(-1px)} 20%{transform:translateY(-11px)} 26%{transform:translateY(-9px)} 32%{transform:translateY(1px)} 38%{transform:translateY(-1px)} 44%{transform:translateY(1px)} 50%{transform:translateY(-13px)} 58%{transform:translateY(1px)} 64%{transform:translateY(0)} 70%{transform:translateY(-1px)} 78%{transform:translateY(1px)} 86%{transform:translateY(7px)} 94%{transform:translateY(1px)} 100%{transform:translateY(0)} }
-  @keyframes rub-pena { 0%{opacity:0} 5%{opacity:1} 92%{opacity:1} 100%{opacity:0} }
-  @media (prefers-reduced-motion:reduce) {
-    .cena .rubrica-nome { clip-path:none; animation:none; }
-    .cena .rubrica-caneta { display:none; }
-  }
   .cena .creditos { font-family:var(--sans); font-size:clamp(12px,1.3vw,14.5px); color:var(--muted);
     margin:30px 0 0; letter-spacing:.02em; text-shadow:0 1px 8px rgba(5,11,20,.92); }
   .cena .creditos strong { color:var(--ink); font-weight:600; }
@@ -229,9 +205,6 @@
     #painel { top:auto; bottom:10px; left:10px; right:10px; width:auto; max-width:none; max-height:60vh; overflow:auto; }
     #stats { top:auto; bottom:10px; left:10px; right:10px; width:auto; max-width:none; max-height:60vh; }
     #filtro-tag { top:auto; bottom:25vh; }
-    /* Assinatura: no mobile a Pinyon Script (nowrap) estourava a largura e cortava o nome.
-       Escala para caber no viewport estreito sem alterar o desktop. */
-    .cena .rubrica-nome { font-size:clamp(27px,8.6vw,52px); }
   }
 
   /* ===== Cena "mostre, nao conte": copy + mockup de telefone com screencast em CSS/JS puro =====
@@ -376,11 +349,6 @@
     <p class="kicker">MemoryCode</p>
     <h1>Um <span class="ouro">segundo cérebro</span> que pensa em rede.</h1>
     <p class="lead">Cada ideia vira um nó. Cada conexão, uma sinapse. Role para sobrevoar a memória viva.</p>
-    <p class="assinatura">Um projeto de</p>
-    <div class="rubrica" role="img" aria-label="Assinatura de Guilherme Lourenço">
-      <span class="rubrica-nome">Guilherme Lourenço</span>
-      <span class="rubrica-caneta" aria-hidden="true"><svg viewBox="0 0 50 56" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="canetaG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6DCAE"/><stop offset=".45" stop-color="#E3A65C"/><stop offset="1" stop-color="#8A5A24"/></linearGradient></defs><g transform="rotate(-40 4 52)"><rect x="0" y="8" width="8" height="28" rx="4" fill="url(#canetaG)"/><rect x="0.6" y="9" width="2.4" height="25" rx="1.2" fill="#FBEAC9" opacity=".5"/><rect x="0" y="22" width="8" height="2.4" fill="#5a3c18" opacity=".55"/><rect x="8" y="11" width="2.4" height="9" rx="1.2" fill="#F2CF95"/><path d="M0.6 36 H7.4 L6.4 43 H1.6 Z" fill="url(#canetaG)"/><path d="M1.4 43 H6.6 L4 52 Z" fill="#F0BC7E"/><line x1="4" y1="45" x2="4" y2="51" stroke="#6e4a1c" stroke-width="1"/><circle cx="4" cy="44.6" r="1.15" fill="#6e4a1c"/><circle cx="4" cy="52" r="1.7" fill="#FFF6E2"/></g></svg></span>
-    </div>
   </section>
   <section class="cena" data-cena="1">
     <p class="kicker">A rede em números</p>
