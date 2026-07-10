@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-SIJ+tRsYCzLD9afY1x8CjBi1lnYGImlU/Ddlv8VUvtA=' 'sha256-1yvnH29VT6SvG/tGoNfuKL3PfgQC2PuybzkQ2c6rgyA=' 'sha256-oVfVCJAeP/bAjF/tw7wteJGiJVkj77dU86pWark7beI='; connect-src 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-SIJ+tRsYCzLD9afY1x8CjBi1lnYGImlU/Ddlv8VUvtA=' 'sha256-1yvnH29VT6SvG/tGoNfuKL3PfgQC2PuybzkQ2c6rgyA=' 'sha256-+4qwjEMSI9ycckQV5eMFRDBsLIpNrakhW/OxPvDy1Ck='; connect-src 'self'" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <title>MemoryCode • Portal Neural 3D</title>
 <meta name="author" content="Luan Guilherme Lourenço (euguilouren)" />
@@ -1327,6 +1327,28 @@ function iniciar(nodes, links) {
       const vis = !filtroDom || lab.userData.dom === filtroDom;
       lab.visible = vis;
       lab.element.style.opacity = vis ? '1' : '0';
+    }
+    // declutter espacial: no centro denso vários rótulos se sobrepunham (sopa de letras).
+    // Esconde os que colidem na tela com um de maior prioridade (domínio > nó mais conectado),
+    // preservando o estilo — só reduz a poluição. Recalculado a cada frame, sem estado.
+    {
+      const proj = new THREE.Vector3();
+      const ocup = [];
+      const cand = [];
+      for (const lab of rotulosDom) if (lab.visible)
+        cand.push({ lab, prio: 1e7, hw: (lab.element.textContent.length * 7 + 16) / 2, hh: 10 });
+      for (const lab of rotulos) if (lab.visible && parseFloat(lab.element.style.opacity) >= 0.35)
+        cand.push({ lab, prio: (nodes[lab.userData.i].grau || 0), hw: (lab.element.textContent.length * 6.2 + 14) / 2, hh: 9 });
+      cand.sort((a, b) => b.prio - a.prio);
+      for (const c of cand) {
+        proj.copy(c.lab.position).project(camera);
+        if (proj.z > 1) { c.lab.visible = false; continue; }
+        const sx = (proj.x * 0.5 + 0.5) * innerWidth, sy = (-proj.y * 0.5 + 0.5) * innerHeight;
+        let bate = false;
+        for (const o of ocup) { if (Math.abs(sx - o.x) < c.hw + o.hw && Math.abs(sy - o.y) < c.hh + o.hh) { bate = true; break; } }
+        if (bate) { c.lab.visible = false; c.lab.element.style.opacity = '0'; }
+        else ocup.push({ x: sx, y: sy, hw: c.hw, hh: c.hh });
+      }
     }
     controls.update();
     composer.render();
