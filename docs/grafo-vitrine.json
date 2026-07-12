@@ -1,26 +1,27 @@
 {
   "_meta": "VITRINE PUBLICA (forma + titulos + tags, SEM corpo/resumo). Gerado por scripts/gerar-vitrine-publica.py. NAO editar a mao.",
   "stats": {
-    "notas": 413,
-    "conexoes": 2906,
-    "dominios": 20,
-    "conexoes_entre_dominios": 1453,
+    "notas": 426,
+    "conexoes": 3000,
+    "dominios": 21,
+    "conexoes_entre_dominios": 1516,
     "por_dominio": {
       "engenharia-de-software": 93,
       "sinteses": 59,
       "marketing-digital": 38,
       "contabilidade": 35,
-      "administracao": 23,
+      "administracao": 28,
       "mocs": 21,
       "planilhas-e-dashboards": 21,
-      "financas": 17,
+      "financas": 18,
+      "inteligencia-artificial": 18,
       "idiomas": 17,
-      "inteligencia-artificial": 17,
       "auditoria": 13,
       "psicologia-e-psicanalise": 13,
       "direito": 10,
       "compliance": 8,
       "filosofia": 7,
+      "comunicacao": 6,
       "produtividade": 6,
       "estatistica": 5,
       "games": 4,
@@ -69,6 +70,25 @@
         "#mudanca-cultural",
         "#psicologia-organizacional",
         "#clima"
+      ]
+    },
+    {
+      "id": "conhecimento/administracao/customer-success-e-relacionamento.md",
+      "titulo": "Customer Success e Relacionamento com o Cliente — Entregar Valor e Reter",
+      "dominio": "administracao",
+      "ilha": "administracao",
+      "ehMoc": false,
+      "cor": "#FF9800",
+      "grau": 8,
+      "tipo": "conceito",
+      "nivel": "intermediário",
+      "data": "2026-07-10",
+      "tags": [
+        "#administracao",
+        "#customer-success",
+        "#retencao",
+        "#relacionamento",
+        "#pos-venda"
       ]
     },
     {
@@ -184,7 +204,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 20,
+      "grau": 23,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -205,7 +225,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 12,
+      "grau": 13,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -226,7 +246,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 15,
+      "grau": 17,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -293,7 +313,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 39,
+      "grau": 40,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -316,7 +336,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 10,
+      "grau": 11,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -337,7 +357,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 25,
+      "grau": 26,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -396,13 +416,32 @@
       ]
     },
     {
+      "id": "conhecimento/administracao/modelos-mentais-para-decisao.md",
+      "titulo": "Modelos Mentais para Decisão — o Latticework de Frames Transferíveis",
+      "dominio": "administracao",
+      "ilha": "administracao",
+      "ehMoc": false,
+      "cor": "#FF9800",
+      "grau": 9,
+      "tipo": "guia",
+      "nivel": "intermediário",
+      "data": "2026-07-11",
+      "tags": [
+        "#administracao",
+        "#decisao",
+        "#modelos-mentais",
+        "#raciocinio",
+        "#pensamento"
+      ]
+    },
+    {
       "id": "conhecimento/administracao/negociacao.md",
       "titulo": "Negociação",
       "dominio": "administracao",
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 17,
+      "grau": 20,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -422,7 +461,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 21,
+      "grau": 22,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-09",
@@ -433,6 +472,25 @@
         "#previsao",
         "#risco",
         "#estatistica"
+      ]
+    },
+    {
+      "id": "conhecimento/administracao/pensamento-sistemico.md",
+      "titulo": "Pensamento Sistêmico — Ver o Todo, os Laços e a Dinâmica",
+      "dominio": "administracao",
+      "ilha": "administracao",
+      "ehMoc": false,
+      "cor": "#FF9800",
+      "grau": 6,
+      "tipo": "conceito",
+      "nivel": "avançado",
+      "data": "2026-07-11",
+      "tags": [
+        "#administracao",
+        "#pensamento-sistemico",
+        "#sistemas",
+        "#feedback",
+        "#complexidade"
       ]
     },
     {
@@ -500,13 +558,51 @@
       ]
     },
     {
+      "id": "conhecimento/administracao/proposta-e-gestao-de-escopo.md",
+      "titulo": "Proposta Comercial e Gestão de Escopo — Definir, Propor e Proteger o Trabalho",
+      "dominio": "administracao",
+      "ilha": "administracao",
+      "ehMoc": false,
+      "cor": "#FF9800",
+      "grau": 7,
+      "tipo": "guia",
+      "nivel": "intermediário",
+      "data": "2026-07-10",
+      "tags": [
+        "#administracao",
+        "#escopo",
+        "#proposta",
+        "#projetos",
+        "#scope-creep"
+      ]
+    },
+    {
+      "id": "conhecimento/administracao/resolucao-de-problemas-e-criatividade.md",
+      "titulo": "Resolução de Problemas e Criatividade — Definir Certo, Achar a Causa, Gerar Ideias",
+      "dominio": "administracao",
+      "ilha": "administracao",
+      "ehMoc": false,
+      "cor": "#FF9800",
+      "grau": 6,
+      "tipo": "guia",
+      "nivel": "intermediário",
+      "data": "2026-07-11",
+      "tags": [
+        "#administracao",
+        "#resolucao-de-problemas",
+        "#criatividade",
+        "#inovacao",
+        "#design-thinking"
+      ]
+    },
+    {
       "id": "conhecimento/administracao/tomada-de-decisao-gerencial.md",
       "titulo": "Tomada de Decisão Gerencial",
       "dominio": "administracao",
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 18,
+      "grau": 19,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -938,6 +1034,117 @@
         "#compliance",
         "#programa",
         "#integridade"
+      ]
+    },
+    {
+      "id": "conhecimento/comunicacao/README.md",
+      "titulo": "Comunicação",
+      "dominio": "comunicacao",
+      "ilha": "comunicacao",
+      "ehMoc": false,
+      "cor": "#9E9E9E",
+      "grau": 9,
+      "tipo": "índice",
+      "nivel": "",
+      "data": "",
+      "tags": [
+        "#comunicacao",
+        "#indice"
+      ]
+    },
+    {
+      "id": "conhecimento/comunicacao/avaliar-informacao-e-fontes.md",
+      "titulo": "Avaliar Informação e Fontes",
+      "dominio": "comunicacao",
+      "ilha": "comunicacao",
+      "ehMoc": false,
+      "cor": "#9E9E9E",
+      "grau": 7,
+      "tipo": "guia",
+      "nivel": "intermediário",
+      "data": "2026-07-11",
+      "tags": [
+        "#comunicacao",
+        "#informacao",
+        "#desinformacao",
+        "#fontes",
+        "#pensamento-critico",
+        "#ia"
+      ]
+    },
+    {
+      "id": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md",
+      "titulo": "Comunicar com Dados (Data Storytelling)",
+      "dominio": "comunicacao",
+      "ilha": "comunicacao",
+      "ehMoc": false,
+      "cor": "#9E9E9E",
+      "grau": 10,
+      "tipo": "guia",
+      "nivel": "intermediário",
+      "data": "2026-07-11",
+      "tags": [
+        "#comunicacao",
+        "#dados",
+        "#data-storytelling",
+        "#visualizacao",
+        "#graficos"
+      ]
+    },
+    {
+      "id": "conhecimento/comunicacao/escrita-profissional-e-clareza.md",
+      "titulo": "Escrita Profissional e Clareza",
+      "dominio": "comunicacao",
+      "ilha": "comunicacao",
+      "ehMoc": false,
+      "cor": "#9E9E9E",
+      "grau": 12,
+      "tipo": "guia",
+      "nivel": "intermediário",
+      "data": "2026-07-11",
+      "tags": [
+        "#comunicacao",
+        "#escrita",
+        "#clareza",
+        "#trabalho"
+      ]
+    },
+    {
+      "id": "conhecimento/comunicacao/falar-em-publico-e-apresentar.md",
+      "titulo": "Falar em Público e Apresentar Bem",
+      "dominio": "comunicacao",
+      "ilha": "comunicacao",
+      "ehMoc": false,
+      "cor": "#9E9E9E",
+      "grau": 9,
+      "tipo": "guia",
+      "nivel": "intermediário",
+      "data": "2026-07-11",
+      "tags": [
+        "#comunicacao",
+        "#oratoria",
+        "#apresentacao",
+        "#storytelling",
+        "#trabalho"
+      ]
+    },
+    {
+      "id": "conhecimento/comunicacao/reunioes-eficazes-e-assincrono.md",
+      "titulo": "Reuniões Eficazes e Comunicação Assíncrona",
+      "dominio": "comunicacao",
+      "ilha": "comunicacao",
+      "ehMoc": false,
+      "cor": "#9E9E9E",
+      "grau": 9,
+      "tipo": "guia",
+      "nivel": "intermediário",
+      "data": "2026-07-11",
+      "tags": [
+        "#comunicacao",
+        "#reunioes",
+        "#assincrono",
+        "#facilitacao",
+        "#trabalho"
       ]
     },
     {
@@ -1834,7 +2041,7 @@
       "ilha": "economia",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 23,
+      "grau": 24,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -2142,7 +2349,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 11,
+      "grau": 12,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-06-20",
@@ -2353,7 +2560,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 6,
+      "grau": 7,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-23",
@@ -3009,7 +3216,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 10,
+      "grau": 11,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-30",
@@ -3098,7 +3305,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 10,
+      "grau": 11,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-10",
@@ -3285,7 +3492,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 18,
+      "grau": 19,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -3417,7 +3624,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 12,
+      "grau": 13,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-06-01",
@@ -3706,7 +3913,7 @@
       "ilha": "estatistica",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 17,
+      "grau": 18,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -3840,7 +4047,7 @@
       "ilha": "filosofia",
       "ehMoc": false,
       "cor": "#455A64",
-      "grau": 16,
+      "grau": 19,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-06-02",
@@ -3972,7 +4179,7 @@
       "ilha": "financas",
       "ehMoc": false,
       "cor": "#4CAF50",
-      "grau": 16,
+      "grau": 17,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -4180,6 +4387,25 @@
       ]
     },
     {
+      "id": "conhecimento/financas/precificacao-de-servicos-e-projetos.md",
+      "titulo": "Precificação de Serviços e Projetos — Como Cobrar pelo Próprio Trabalho",
+      "dominio": "financas",
+      "ilha": "financas",
+      "ehMoc": false,
+      "cor": "#4CAF50",
+      "grau": 7,
+      "tipo": "guia",
+      "nivel": "intermediário",
+      "data": "2026-07-10",
+      "tags": [
+        "#financas",
+        "#precificacao",
+        "#servicos",
+        "#freelance",
+        "#consultoria"
+      ]
+    },
+    {
       "id": "conhecimento/financas/valuation.md",
       "titulo": "Valuation",
       "dominio": "financas",
@@ -4277,7 +4503,7 @@
       "ilha": "idiomas",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 1,
+      "grau": 3,
       "tipo": "",
       "nivel": "",
       "data": "",
@@ -4486,7 +4712,7 @@
       "ilha": "idiomas",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 7,
+      "grau": 8,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-30",
@@ -4594,7 +4820,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": false,
       "cor": "#FF5722",
-      "grau": 19,
+      "grau": 20,
       "tipo": "índice",
       "nivel": "",
       "data": "",
@@ -4627,7 +4853,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": false,
       "cor": "#FF5722",
-      "grau": 9,
+      "grau": 10,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -4669,7 +4895,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": false,
       "cor": "#FF5722",
-      "grau": 19,
+      "grau": 20,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-05-30",
@@ -4751,7 +4977,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": false,
       "cor": "#FF5722",
-      "grau": 11,
+      "grau": 12,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-30",
@@ -4788,7 +5014,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": false,
       "cor": "#FF5722",
-      "grau": 14,
+      "grau": 15,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-30",
@@ -4875,7 +5101,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": false,
       "cor": "#FF5722",
-      "grau": 20,
+      "grau": 21,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-30",
@@ -4910,6 +5136,25 @@
         "#observabilidade",
         "#rag",
         "#ferramentas"
+      ]
+    },
+    {
+      "id": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md",
+      "titulo": "Trabalhar com IA como Copiloto",
+      "dominio": "inteligencia-artificial",
+      "ilha": "inteligencia-artificial",
+      "ehMoc": false,
+      "cor": "#FF5722",
+      "grau": 13,
+      "tipo": "guia",
+      "nivel": "intermediário",
+      "data": "2026-07-11",
+      "tags": [
+        "#ia",
+        "#produtividade",
+        "#copiloto",
+        "#llm",
+        "#trabalho"
       ]
     },
     {
@@ -4975,7 +5220,7 @@
       "ilha": "marketing-digital",
       "ehMoc": false,
       "cor": "#E91E63",
-      "grau": 17,
+      "grau": 19,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-29",
@@ -4999,7 +5244,7 @@
       "ilha": "marketing-digital",
       "ehMoc": false,
       "cor": "#E91E63",
-      "grau": 12,
+      "grau": 13,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-29",
@@ -5507,7 +5752,7 @@
       "ilha": "marketing-digital",
       "ehMoc": false,
       "cor": "#E91E63",
-      "grau": 15,
+      "grau": 16,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -5527,7 +5772,7 @@
       "ilha": "marketing-digital",
       "ehMoc": false,
       "cor": "#E91E63",
-      "grau": 13,
+      "grau": 14,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -5813,7 +6058,7 @@
       "ilha": "contabilidade",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 24,
+      "grau": 26,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-05-28",
@@ -5890,7 +6135,7 @@
       "ilha": "planilhas-e-dashboards",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 39,
+      "grau": 40,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-05-28",
@@ -6000,7 +6245,7 @@
       "ilha": "administracao",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 52,
+      "grau": 53,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-05-28",
@@ -6054,7 +6299,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 34,
+      "grau": 35,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-05-30",
@@ -6071,7 +6316,7 @@
       "ilha": "marketing-digital",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 53,
+      "grau": 54,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-05-29",
@@ -6087,7 +6332,7 @@
       "ilha": "administracao",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 41,
+      "grau": 45,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-06-09",
@@ -6139,10 +6384,10 @@
       "id": "conhecimento/mocs/psicologia-e-comunicacao.md",
       "titulo": "MOC — Psicologia e Comunicação",
       "dominio": "mocs",
-      "ilha": "psicologia-e-psicanalise",
+      "ilha": "comunicacao",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 44,
+      "grau": 50,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-05-30",
@@ -6316,7 +6561,7 @@
       "ilha": "planilhas-e-dashboards",
       "ehMoc": false,
       "cor": "#009688",
-      "grau": 39,
+      "grau": 40,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-05-28",
@@ -6472,7 +6717,7 @@
       "ilha": "planilhas-e-dashboards",
       "ehMoc": false,
       "cor": "#009688",
-      "grau": 12,
+      "grau": 13,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -6625,7 +6870,7 @@
       "ilha": "produtividade",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 8,
+      "grau": 10,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-09",
@@ -6662,7 +6907,7 @@
       "ilha": "produtividade",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 7,
+      "grau": 8,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-09",
@@ -6681,7 +6926,7 @@
       "ilha": "produtividade",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 13,
+      "grau": 15,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-09",
@@ -6734,7 +6979,7 @@
       "ilha": "psicologia-e-psicanalise",
       "ehMoc": false,
       "cor": "#7E57C2",
-      "grau": 10,
+      "grau": 14,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-30",
@@ -6840,7 +7085,7 @@
       "ilha": "psicologia-e-psicanalise",
       "ehMoc": false,
       "cor": "#7E57C2",
-      "grau": 17,
+      "grau": 18,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-30",
@@ -6912,7 +7157,7 @@
       "ilha": "psicologia-e-psicanalise",
       "ehMoc": false,
       "cor": "#7E57C2",
-      "grau": 39,
+      "grau": 41,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-30",
@@ -6970,7 +7215,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 8,
+      "grau": 9,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-07-01",
@@ -7118,7 +7363,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 15,
+      "grau": 17,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-22",
@@ -7344,7 +7589,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 11,
+      "grau": 12,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-02",
@@ -7781,7 +8026,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 11,
+      "grau": 12,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-16",
@@ -8100,7 +8345,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 7,
+      "grau": 8,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-07-01",
@@ -8330,6 +8575,38 @@
       "target": "conhecimento/sinteses/tone-at-the-top-governanca-previne-fraude.md"
     },
     {
+      "source": "conhecimento/administracao/customer-success-e-relacionamento.md",
+      "target": "conhecimento/administracao/indicadores-e-kpis-de-gestao.md"
+    },
+    {
+      "source": "conhecimento/administracao/customer-success-e-relacionamento.md",
+      "target": "conhecimento/administracao/proposta-e-gestao-de-escopo.md"
+    },
+    {
+      "source": "conhecimento/administracao/customer-success-e-relacionamento.md",
+      "target": "conhecimento/financas/precificacao-de-servicos-e-projetos.md"
+    },
+    {
+      "source": "conhecimento/administracao/customer-success-e-relacionamento.md",
+      "target": "conhecimento/marketing-digital/crm-e-gestao-de-leads.md"
+    },
+    {
+      "source": "conhecimento/administracao/customer-success-e-relacionamento.md",
+      "target": "conhecimento/marketing-digital/retencao-churn-e-lifecycle.md"
+    },
+    {
+      "source": "conhecimento/administracao/customer-success-e-relacionamento.md",
+      "target": "conhecimento/mocs/gestao-empresarial.md"
+    },
+    {
+      "source": "conhecimento/administracao/customer-success-e-relacionamento.md",
+      "target": "conhecimento/mocs/marketing-digital.md"
+    },
+    {
+      "source": "conhecimento/administracao/customer-success-e-relacionamento.md",
+      "target": "conhecimento/psicologia-e-psicanalise/comunicacao-e-escuta-ativa.md"
+    },
+    {
       "source": "conhecimento/administracao/funcoes-da-administracao.md",
       "target": "conhecimento/administracao/gestao-de-pessoas-rh.md"
     },
@@ -8547,6 +8824,10 @@
     },
     {
       "source": "conhecimento/administracao/gestao-de-processos-bpm.md",
+      "target": "conhecimento/administracao/pensamento-sistemico.md"
+    },
+    {
+      "source": "conhecimento/administracao/gestao-de-processos-bpm.md",
       "target": "conhecimento/administracao/planejamento-estrategico.md"
     },
     {
@@ -8555,7 +8836,15 @@
     },
     {
       "source": "conhecimento/administracao/gestao-de-processos-bpm.md",
+      "target": "conhecimento/administracao/proposta-e-gestao-de-escopo.md"
+    },
+    {
+      "source": "conhecimento/administracao/gestao-de-processos-bpm.md",
       "target": "conhecimento/compliance/gestao-de-riscos.md"
+    },
+    {
+      "source": "conhecimento/administracao/gestao-de-processos-bpm.md",
+      "target": "conhecimento/comunicacao/reunioes-eficazes-e-assincrono.md"
     },
     {
       "source": "conhecimento/administracao/gestao-de-processos-bpm.md",
@@ -8615,6 +8904,10 @@
     },
     {
       "source": "conhecimento/administracao/gestao-de-produto.md",
+      "target": "conhecimento/administracao/resolucao-de-problemas-e-criatividade.md"
+    },
+    {
+      "source": "conhecimento/administracao/gestao-de-produto.md",
       "target": "conhecimento/administracao/tomada-de-decisao-gerencial.md"
     },
     {
@@ -8660,6 +8953,14 @@
     {
       "source": "conhecimento/administracao/gestao-de-projetos.md",
       "target": "conhecimento/administracao/planejamento-estrategico.md"
+    },
+    {
+      "source": "conhecimento/administracao/gestao-de-projetos.md",
+      "target": "conhecimento/administracao/proposta-e-gestao-de-escopo.md"
+    },
+    {
+      "source": "conhecimento/administracao/gestao-de-projetos.md",
+      "target": "conhecimento/comunicacao/reunioes-eficazes-e-assincrono.md"
     },
     {
       "source": "conhecimento/administracao/gestao-de-projetos.md",
@@ -8891,6 +9192,10 @@
     },
     {
       "source": "conhecimento/administracao/lean-e-melhoria-continua.md",
+      "target": "conhecimento/administracao/resolucao-de-problemas-e-criatividade.md"
+    },
+    {
+      "source": "conhecimento/administracao/lean-e-melhoria-continua.md",
       "target": "conhecimento/engenharia-de-software/metodologias-ageis.md"
     },
     {
@@ -8924,6 +9229,10 @@
     {
       "source": "conhecimento/administracao/lideranca-e-tomada-de-decisao.md",
       "target": "conhecimento/compliance/gestao-de-riscos.md"
+    },
+    {
+      "source": "conhecimento/administracao/lideranca-e-tomada-de-decisao.md",
+      "target": "conhecimento/comunicacao/reunioes-eficazes-e-assincrono.md"
     },
     {
       "source": "conhecimento/administracao/lideranca-e-tomada-de-decisao.md",
@@ -9142,8 +9451,52 @@
       "target": "conhecimento/sinteses/a-triade-do-preco.md"
     },
     {
+      "source": "conhecimento/administracao/modelos-mentais-para-decisao.md",
+      "target": "conhecimento/administracao/pensamento-probabilistico-e-previsao.md"
+    },
+    {
+      "source": "conhecimento/administracao/modelos-mentais-para-decisao.md",
+      "target": "conhecimento/administracao/pensamento-sistemico.md"
+    },
+    {
+      "source": "conhecimento/administracao/modelos-mentais-para-decisao.md",
+      "target": "conhecimento/administracao/resolucao-de-problemas-e-criatividade.md"
+    },
+    {
+      "source": "conhecimento/administracao/modelos-mentais-para-decisao.md",
+      "target": "conhecimento/administracao/tomada-de-decisao-gerencial.md"
+    },
+    {
+      "source": "conhecimento/administracao/modelos-mentais-para-decisao.md",
+      "target": "conhecimento/economia/fundamentos-de-economia.md"
+    },
+    {
+      "source": "conhecimento/administracao/modelos-mentais-para-decisao.md",
+      "target": "conhecimento/filosofia/logica-e-pensamento-critico.md"
+    },
+    {
+      "source": "conhecimento/administracao/modelos-mentais-para-decisao.md",
+      "target": "conhecimento/mocs/planejamento-e-decisao.md"
+    },
+    {
+      "source": "conhecimento/administracao/modelos-mentais-para-decisao.md",
+      "target": "conhecimento/psicologia-e-psicanalise/vieses-cognitivos-e-tomada-de-decisao.md"
+    },
+    {
+      "source": "conhecimento/administracao/modelos-mentais-para-decisao.md",
+      "target": "conhecimento/sinteses/a-premissa-invisivel.md"
+    },
+    {
+      "source": "conhecimento/administracao/negociacao.md",
+      "target": "conhecimento/administracao/proposta-e-gestao-de-escopo.md"
+    },
+    {
       "source": "conhecimento/administracao/negociacao.md",
       "target": "conhecimento/administracao/tomada-de-decisao-gerencial.md"
+    },
+    {
+      "source": "conhecimento/administracao/negociacao.md",
+      "target": "conhecimento/comunicacao/reunioes-eficazes-e-assincrono.md"
     },
     {
       "source": "conhecimento/administracao/negociacao.md",
@@ -9152,6 +9505,10 @@
     {
       "source": "conhecimento/administracao/negociacao.md",
       "target": "conhecimento/direito/revisao-de-contratos.md"
+    },
+    {
+      "source": "conhecimento/administracao/negociacao.md",
+      "target": "conhecimento/financas/precificacao-de-servicos-e-projetos.md"
     },
     {
       "source": "conhecimento/administracao/negociacao.md",
@@ -9286,6 +9643,22 @@
       "target": "conhecimento/sinteses/auditoria-e-inferencia-estatistica.md"
     },
     {
+      "source": "conhecimento/administracao/pensamento-sistemico.md",
+      "target": "conhecimento/administracao/resolucao-de-problemas-e-criatividade.md"
+    },
+    {
+      "source": "conhecimento/administracao/pensamento-sistemico.md",
+      "target": "conhecimento/engenharia-de-software/system-design-e-escalabilidade.md"
+    },
+    {
+      "source": "conhecimento/administracao/pensamento-sistemico.md",
+      "target": "conhecimento/mocs/planejamento-e-decisao.md"
+    },
+    {
+      "source": "conhecimento/administracao/pensamento-sistemico.md",
+      "target": "conhecimento/sinteses/a-dose-faz-o-veneno.md"
+    },
+    {
       "source": "conhecimento/administracao/planejamento-de-metas-e-sonhos.md",
       "target": "conhecimento/administracao/planejamento-estrategico.md"
     },
@@ -9380,6 +9753,26 @@
     {
       "source": "conhecimento/administracao/procedimento-operacional-padrao-pop.md",
       "target": "conhecimento/sinteses/padronizar-para-mudar.md"
+    },
+    {
+      "source": "conhecimento/administracao/proposta-e-gestao-de-escopo.md",
+      "target": "conhecimento/financas/precificacao-de-servicos-e-projetos.md"
+    },
+    {
+      "source": "conhecimento/administracao/proposta-e-gestao-de-escopo.md",
+      "target": "conhecimento/mocs/abrir-e-estruturar-empresa.md"
+    },
+    {
+      "source": "conhecimento/administracao/proposta-e-gestao-de-escopo.md",
+      "target": "conhecimento/mocs/planejamento-e-decisao.md"
+    },
+    {
+      "source": "conhecimento/administracao/resolucao-de-problemas-e-criatividade.md",
+      "target": "conhecimento/mocs/planejamento-e-decisao.md"
+    },
+    {
+      "source": "conhecimento/administracao/resolucao-de-problemas-e-criatividade.md",
+      "target": "conhecimento/produtividade/como-aprender.md"
     },
     {
       "source": "conhecimento/administracao/tomada-de-decisao-gerencial.md",
@@ -10352,6 +10745,170 @@
     {
       "source": "conhecimento/compliance/programa-de-compliance.md",
       "target": "conhecimento/sinteses/tone-at-the-top-governanca-previne-fraude.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/README.md",
+      "target": "conhecimento/comunicacao/avaliar-informacao-e-fontes.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/README.md",
+      "target": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/README.md",
+      "target": "conhecimento/comunicacao/escrita-profissional-e-clareza.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/README.md",
+      "target": "conhecimento/comunicacao/falar-em-publico-e-apresentar.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/README.md",
+      "target": "conhecimento/comunicacao/reunioes-eficazes-e-assincrono.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/README.md",
+      "target": "conhecimento/idiomas/README.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/README.md",
+      "target": "conhecimento/marketing-digital/copywriting.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/README.md",
+      "target": "conhecimento/mocs/psicologia-e-comunicacao.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/README.md",
+      "target": "conhecimento/psicologia-e-psicanalise/comunicacao-e-escuta-ativa.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/avaliar-informacao-e-fontes.md",
+      "target": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/avaliar-informacao-e-fontes.md",
+      "target": "conhecimento/engenharia-de-software/seguranca/conscientizacao-anti-phishing.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/avaliar-informacao-e-fontes.md",
+      "target": "conhecimento/filosofia/logica-e-pensamento-critico.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/avaliar-informacao-e-fontes.md",
+      "target": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/avaliar-informacao-e-fontes.md",
+      "target": "conhecimento/mocs/psicologia-e-comunicacao.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/avaliar-informacao-e-fontes.md",
+      "target": "conhecimento/psicologia-e-psicanalise/vieses-cognitivos-e-tomada-de-decisao.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md",
+      "target": "conhecimento/comunicacao/escrita-profissional-e-clareza.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md",
+      "target": "conhecimento/comunicacao/falar-em-publico-e-apresentar.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md",
+      "target": "conhecimento/estatistica/estatistica-e-analise-de-dados.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md",
+      "target": "conhecimento/mocs/psicologia-e-comunicacao.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md",
+      "target": "conhecimento/planilhas-e-dashboards/dashboards-modernos.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md",
+      "target": "conhecimento/planilhas-e-dashboards/graficos-no-excel.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md",
+      "target": "conhecimento/sinteses/a-premissa-invisivel.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md",
+      "target": "conhecimento/sinteses/o-grafico-convence-antes-do-numero.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/escrita-profissional-e-clareza.md",
+      "target": "conhecimento/comunicacao/falar-em-publico-e-apresentar.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/escrita-profissional-e-clareza.md",
+      "target": "conhecimento/comunicacao/reunioes-eficazes-e-assincrono.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/escrita-profissional-e-clareza.md",
+      "target": "conhecimento/filosofia/logica-e-pensamento-critico.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/escrita-profissional-e-clareza.md",
+      "target": "conhecimento/idiomas/README.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/escrita-profissional-e-clareza.md",
+      "target": "conhecimento/idiomas/ingles-escrita-e-register.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/escrita-profissional-e-clareza.md",
+      "target": "conhecimento/marketing-digital/copywriting.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/escrita-profissional-e-clareza.md",
+      "target": "conhecimento/mocs/psicologia-e-comunicacao.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/escrita-profissional-e-clareza.md",
+      "target": "conhecimento/produtividade/gestao-do-conhecimento-pessoal.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/escrita-profissional-e-clareza.md",
+      "target": "conhecimento/psicologia-e-psicanalise/comunicacao-e-escuta-ativa.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/escrita-profissional-e-clareza.md",
+      "target": "conhecimento/sinteses/quem-escreveu-nao-enxerga.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/falar-em-publico-e-apresentar.md",
+      "target": "conhecimento/comunicacao/reunioes-eficazes-e-assincrono.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/falar-em-publico-e-apresentar.md",
+      "target": "conhecimento/engenharia-de-software/design-de-apresentacoes-e-marca.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/falar-em-publico-e-apresentar.md",
+      "target": "conhecimento/engenharia-de-software/geracao-de-apresentacoes-com-ia.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/falar-em-publico-e-apresentar.md",
+      "target": "conhecimento/mocs/psicologia-e-comunicacao.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/falar-em-publico-e-apresentar.md",
+      "target": "conhecimento/psicologia-e-psicanalise/comunicacao-e-escuta-ativa.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/falar-em-publico-e-apresentar.md",
+      "target": "conhecimento/psicologia-e-psicanalise/persuasao-e-influencia.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/reunioes-eficazes-e-assincrono.md",
+      "target": "conhecimento/mocs/psicologia-e-comunicacao.md"
+    },
+    {
+      "source": "conhecimento/comunicacao/reunioes-eficazes-e-assincrono.md",
+      "target": "conhecimento/produtividade/produtividade-e-foco.md"
     },
     {
       "source": "conhecimento/contabilidade/README.md",
@@ -14415,6 +14972,10 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/seguranca/higiene-digital-e-seguranca-pessoal.md",
+      "target": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/seguranca/higiene-digital-e-seguranca-pessoal.md",
       "target": "conhecimento/mocs/proteger-software.md"
     },
     {
@@ -14708,6 +15269,10 @@
     {
       "source": "conhecimento/engenharia-de-software/vibe-coding.md",
       "target": "conhecimento/inteligencia-artificial/engenharia-de-prompt.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/vibe-coding.md",
+      "target": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/vibe-coding.md",
@@ -15499,6 +16064,10 @@
     },
     {
       "source": "conhecimento/financas/custos-e-precificacao.md",
+      "target": "conhecimento/financas/precificacao-de-servicos-e-projetos.md"
+    },
+    {
+      "source": "conhecimento/financas/custos-e-precificacao.md",
       "target": "conhecimento/matematica/fisica-essencial.md"
     },
     {
@@ -15848,6 +16417,18 @@
     {
       "source": "conhecimento/financas/planejamento-financeiro-e-orcamento.md",
       "target": "conhecimento/sinteses/estrategia-e-uma-so-disciplina.md"
+    },
+    {
+      "source": "conhecimento/financas/precificacao-de-servicos-e-projetos.md",
+      "target": "conhecimento/marketing-digital/pricing-e-estrategia-de-preco.md"
+    },
+    {
+      "source": "conhecimento/financas/precificacao-de-servicos-e-projetos.md",
+      "target": "conhecimento/mocs/abrir-e-estruturar-empresa.md"
+    },
+    {
+      "source": "conhecimento/financas/precificacao-de-servicos-e-projetos.md",
+      "target": "conhecimento/mocs/controle-financeiro-e-valores.md"
     },
     {
       "source": "conhecimento/financas/valuation.md",
@@ -16235,6 +16816,10 @@
     },
     {
       "source": "conhecimento/inteligencia-artificial/README.md",
+      "target": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/README.md",
       "target": "conhecimento/mocs/governanca-risco-compliance.md"
     },
     {
@@ -16319,6 +16904,10 @@
     },
     {
       "source": "conhecimento/inteligencia-artificial/avaliacao-de-modelos-de-ia.md",
+      "target": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/avaliacao-de-modelos-de-ia.md",
       "target": "conhecimento/mocs/inteligencia-artificial.md"
     },
     {
@@ -16368,6 +16957,10 @@
     {
       "source": "conhecimento/inteligencia-artificial/engenharia-de-prompt.md",
       "target": "conhecimento/inteligencia-artificial/rag-e-bases-vetoriais.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/engenharia-de-prompt.md",
+      "target": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md"
     },
     {
       "source": "conhecimento/inteligencia-artificial/engenharia-de-prompt.md",
@@ -16467,6 +17060,10 @@
     },
     {
       "source": "conhecimento/inteligencia-artificial/ia-aplicada-aos-negocios.md",
+      "target": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/ia-aplicada-aos-negocios.md",
       "target": "conhecimento/marketing-digital/growth-marketing.md"
     },
     {
@@ -16500,6 +17097,10 @@
     {
       "source": "conhecimento/inteligencia-artificial/llms-e-ia-generativa.md",
       "target": "conhecimento/inteligencia-artificial/rag-e-bases-vetoriais.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/llms-e-ia-generativa.md",
+      "target": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md"
     },
     {
       "source": "conhecimento/inteligencia-artificial/llms-e-ia-generativa.md",
@@ -16595,6 +17196,10 @@
     },
     {
       "source": "conhecimento/inteligencia-artificial/riscos-etica-e-governanca-de-ia.md",
+      "target": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/riscos-etica-e-governanca-de-ia.md",
       "target": "conhecimento/mocs/filosofia-e-vida-examinada.md"
     },
     {
@@ -16640,6 +17245,22 @@
     {
       "source": "conhecimento/inteligencia-artificial/stack-de-engenharia-de-agentes.md",
       "target": "conhecimento/sinteses/guardrails-de-agente-sao-controle-interno.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md",
+      "target": "conhecimento/mocs/inteligencia-artificial.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md",
+      "target": "conhecimento/produtividade/como-aprender.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md",
+      "target": "conhecimento/produtividade/produtividade-e-foco.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md",
+      "target": "conhecimento/sinteses/discernimento-na-era-da-ia.md"
     },
     {
       "source": "conhecimento/marketing-digital/README.md",
