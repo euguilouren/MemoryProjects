@@ -1,16 +1,16 @@
 {
   "_meta": "VITRINE PUBLICA (forma + titulos + tags, SEM corpo/resumo). Gerado por scripts/gerar-vitrine-publica.py. NAO editar a mao.",
   "stats": {
-    "notas": 426,
-    "conexoes": 3000,
+    "notas": 427,
+    "conexoes": 3006,
     "dominios": 21,
-    "conexoes_entre_dominios": 1516,
+    "conexoes_entre_dominios": 1521,
     "por_dominio": {
       "engenharia-de-software": 93,
       "sinteses": 59,
       "marketing-digital": 38,
       "contabilidade": 35,
-      "administracao": 28,
+      "administracao": 29,
       "mocs": 21,
       "planilhas-e-dashboards": 21,
       "financas": 18,
@@ -181,7 +181,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 21,
+      "grau": 22,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -452,6 +452,26 @@
         "#decisao",
         "#comunicacao",
         "#contratos"
+      ]
+    },
+    {
+      "id": "conhecimento/administracao/otimizacao-de-curriculo-ats.md",
+      "titulo": "Otimização de Currículo para ATS e Recrutador",
+      "dominio": "administracao",
+      "ilha": "administracao",
+      "ehMoc": false,
+      "cor": "#FF9800",
+      "grau": 6,
+      "tipo": "guia",
+      "nivel": "intermediário",
+      "data": "2026-07-12",
+      "tags": [
+        "#administracao",
+        "#curriculo",
+        "#ats",
+        "#carreira",
+        "#recrutamento",
+        "#candidatura"
       ]
     },
     {
@@ -1079,7 +1099,7 @@
       "ilha": "comunicacao",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 10,
+      "grau": 11,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-11",
@@ -1098,7 +1118,7 @@
       "ilha": "comunicacao",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 12,
+      "grau": 13,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-11",
@@ -5200,7 +5220,7 @@
       "ilha": "marketing-digital",
       "ehMoc": false,
       "cor": "#E91E63",
-      "grau": 11,
+      "grau": 12,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -5620,7 +5640,7 @@
       "ilha": "marketing-digital",
       "ehMoc": false,
       "cor": "#E91E63",
-      "grau": 9,
+      "grau": 10,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-29",
@@ -6245,7 +6265,7 @@
       "ilha": "administracao",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 53,
+      "grau": 54,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-05-28",
@@ -8768,6 +8788,10 @@
     },
     {
       "source": "conhecimento/administracao/gestao-de-pessoas-rh.md",
+      "target": "conhecimento/administracao/otimizacao-de-curriculo-ats.md"
+    },
+    {
+      "source": "conhecimento/administracao/gestao-de-pessoas-rh.md",
       "target": "conhecimento/direito/direito-do-trabalho.md"
     },
     {
@@ -9557,6 +9581,26 @@
     {
       "source": "conhecimento/administracao/negociacao.md",
       "target": "conhecimento/sinteses/persuasao-dentro-da-lei.md"
+    },
+    {
+      "source": "conhecimento/administracao/otimizacao-de-curriculo-ats.md",
+      "target": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md"
+    },
+    {
+      "source": "conhecimento/administracao/otimizacao-de-curriculo-ats.md",
+      "target": "conhecimento/comunicacao/escrita-profissional-e-clareza.md"
+    },
+    {
+      "source": "conhecimento/administracao/otimizacao-de-curriculo-ats.md",
+      "target": "conhecimento/marketing-digital/branding-e-posicionamento.md"
+    },
+    {
+      "source": "conhecimento/administracao/otimizacao-de-curriculo-ats.md",
+      "target": "conhecimento/marketing-digital/midias-sociais.md"
+    },
+    {
+      "source": "conhecimento/administracao/otimizacao-de-curriculo-ats.md",
+      "target": "conhecimento/mocs/gestao-empresarial.md"
     },
     {
       "source": "conhecimento/administracao/pensamento-probabilistico-e-previsao.md",
