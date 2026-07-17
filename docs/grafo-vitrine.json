@@ -2,9 +2,9 @@
   "_meta": "VITRINE PUBLICA (forma + titulos + tags, SEM corpo/resumo). Gerado por scripts/gerar-vitrine-publica.py. NAO editar a mao.",
   "stats": {
     "notas": 427,
-    "conexoes": 3006,
+    "conexoes": 3058,
     "dominios": 21,
-    "conexoes_entre_dominios": 1521,
+    "conexoes_entre_dominios": 1529,
     "por_dominio": {
       "engenharia-de-software": 93,
       "sinteses": 59,
@@ -291,7 +291,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 15,
+      "grau": 17,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -303,7 +303,8 @@
         "#agencia",
         "#stakeholders",
         "#esg",
-        "#ibgc"
+        "#ibgc",
+        "#governanca"
       ]
     },
     {
@@ -365,6 +366,7 @@
         "#administracao",
         "#lideranca",
         "#decisao",
+        "#vieses",
         "#motivacao",
         "#mudanca",
         "#gestao-de-conflitos",
@@ -491,7 +493,8 @@
         "#probabilidade",
         "#previsao",
         "#risco",
-        "#estatistica"
+        "#estatistica",
+        "#vieses"
       ]
     },
     {
@@ -530,7 +533,8 @@
         "#metas",
         "#okr",
         "#habitos",
-        "#produtividade"
+        "#produtividade",
+        "#decisao"
       ]
     },
     {
@@ -705,7 +709,7 @@
       "ilha": "auditoria",
       "ehMoc": false,
       "cor": "#9C27B0",
-      "grau": 33,
+      "grau": 35,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -809,7 +813,7 @@
       "ilha": "auditoria",
       "ehMoc": false,
       "cor": "#9C27B0",
-      "grau": 17,
+      "grau": 18,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -820,7 +824,8 @@
         "#materialidade",
         "#risco",
         "#execucao",
-        "#relatorio"
+        "#relatorio",
+        "#controle"
       ]
     },
     {
@@ -969,14 +974,16 @@
       "ilha": "compliance",
       "ehMoc": false,
       "cor": "#F44336",
-      "grau": 11,
+      "grau": 14,
       "tipo": "conceito",
       "nivel": "introdutório",
       "data": "2026-05-28",
       "tags": [
         "#compliance",
         "#fundamentos",
-        "#etica"
+        "#etica",
+        "#integridade",
+        "#governanca"
       ]
     },
     {
@@ -986,7 +993,7 @@
       "ilha": "compliance",
       "ehMoc": false,
       "cor": "#F44336",
-      "grau": 28,
+      "grau": 29,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-16",
@@ -1007,14 +1014,16 @@
       "ilha": "compliance",
       "ehMoc": false,
       "cor": "#F44336",
-      "grau": 35,
+      "grau": 37,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-28",
       "tags": [
         "#compliance",
         "#legislacao",
-        "#regulatorio"
+        "#regulatorio",
+        "#anticorrupcao",
+        "#lgpd"
       ]
     },
     {
@@ -1053,7 +1062,9 @@
       "tags": [
         "#compliance",
         "#programa",
-        "#integridade"
+        "#integridade",
+        "#governanca",
+        "#risco"
       ]
     },
     {
@@ -1190,7 +1201,7 @@
       "ilha": "contabilidade",
       "ehMoc": false,
       "cor": "#2196F3",
-      "grau": 10,
+      "grau": 11,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -1350,15 +1361,16 @@
       "ilha": "contabilidade",
       "ehMoc": false,
       "cor": "#2196F3",
-      "grau": 35,
+      "grau": 36,
       "tipo": "guia",
       "nivel": "intermediário",
-      "data": "2026-05-28",
+      "data": "2026-05-28 (aprofundada em 2026-07-13)",
       "tags": [
         "#contabilidade",
         "#dre",
         "#balanco",
-        "#demonstracoes"
+        "#demonstracoes",
+        "#dfc"
       ]
     },
     {
@@ -1389,7 +1401,7 @@
       "ilha": "contabilidade",
       "ehMoc": false,
       "cor": "#2196F3",
-      "grau": 21,
+      "grau": 22,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-05-28 (atualizada em 2026-06-09)",
@@ -1409,14 +1421,16 @@
       "ilha": "contabilidade",
       "ehMoc": false,
       "cor": "#2196F3",
-      "grau": 19,
+      "grau": 21,
       "tipo": "guia",
       "nivel": "intermediário",
-      "data": "2026-05-28",
+      "data": "2026-05-28 (aprofundada em 2026-07-13)",
       "tags": [
         "#contabilidade",
         "#lancamentos",
-        "#debito-credito"
+        "#debito-credito",
+        "#partidas-dobradas",
+        "#escrituracao"
       ]
     },
     {
@@ -1426,7 +1440,7 @@
       "ilha": "contabilidade",
       "ehMoc": false,
       "cor": "#2196F3",
-      "grau": 19,
+      "grau": 20,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-05-28",
@@ -1550,7 +1564,7 @@
       "ilha": "contabilidade",
       "ehMoc": false,
       "cor": "#2196F3",
-      "grau": 24,
+      "grau": 25,
       "tipo": "conceito",
       "nivel": "introdutório",
       "data": "2026-05-28",
@@ -1849,7 +1863,8 @@
       "tags": [
         "#contabilidade",
         "#impostos",
-        "#tributos"
+        "#tributos",
+        "#fiscal"
       ]
     },
     {
@@ -1896,7 +1911,7 @@
       "ilha": "direito",
       "ehMoc": false,
       "cor": "#795548",
-      "grau": 7,
+      "grau": 8,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-06-01",
@@ -1970,7 +1985,7 @@
       "ilha": "direito",
       "ehMoc": false,
       "cor": "#795548",
-      "grau": 8,
+      "grau": 9,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-06-01",
@@ -2137,7 +2152,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 36,
+      "grau": 37,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -2166,7 +2181,8 @@
       "data": "2026-05-28",
       "tags": [
         "#engenharia-de-software",
-        "#arquitetura"
+        "#arquitetura",
+        "#trade-off"
       ]
     },
     {
@@ -2176,14 +2192,15 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 29,
+      "grau": 30,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
       "tags": [
         "#engenharia-de-software",
         "#banco-de-dados",
-        "#sql"
+        "#sql",
+        "#nosql"
       ]
     },
     {
@@ -2200,7 +2217,8 @@
       "tags": [
         "#engenharia-de-software",
         "#clean-code",
-        "#solid"
+        "#solid",
+        "#revisao-de-codigo"
       ]
     },
     {
@@ -2210,7 +2228,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 13,
+      "grau": 14,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -2278,7 +2296,8 @@
         "#azure",
         "#gcp",
         "#serverless",
-        "#escalabilidade"
+        "#escalabilidade",
+        "#custo"
       ]
     },
     {
@@ -2329,7 +2348,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 7,
+      "grau": 8,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -2348,7 +2367,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 14,
+      "grau": 16,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-02",
@@ -2359,7 +2378,9 @@
         "#android",
         "#flutter",
         "#react-native",
-        "#app"
+        "#app",
+        "#offline",
+        "#performance"
       ]
     },
     {
@@ -2419,7 +2440,8 @@
         "#devops",
         "#ci-cd",
         "#iac",
-        "#gitops"
+        "#gitops",
+        "#automacao"
       ]
     },
     {
@@ -2469,7 +2491,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 5,
+      "grau": 6,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -2496,7 +2518,8 @@
         "#dados",
         "#bi",
         "#etl",
-        "#dashboards"
+        "#dashboards",
+        "#modelagem"
       ]
     },
     {
@@ -2506,7 +2529,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 5,
+      "grau": 7,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-06-08",
@@ -2525,7 +2548,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 11,
+      "grau": 26,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-05-30",
@@ -2643,13 +2666,14 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 10,
+      "grau": 11,
       "tipo": "checklist",
       "nivel": "intermediário",
       "data": "2026-06-15",
       "tags": [
         "#engenharia-de-software",
         "#git",
+        "#github",
         "#gitignore",
         "#ci",
         "#seguranca",
@@ -2673,7 +2697,9 @@
         "#integracao",
         "#contabilidade",
         "#fiscal",
-        "#erp"
+        "#erp",
+        "#dados",
+        "#arquitetura"
       ]
     },
     {
@@ -2693,7 +2719,8 @@
         "#ocr",
         "#extracao",
         "#automacao",
-        "#documentos"
+        "#documentos",
+        "#seguranca"
       ]
     },
     {
@@ -2703,7 +2730,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 9,
+      "grau": 10,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-06-08",
@@ -2738,14 +2765,16 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 7,
+      "grau": 8,
       "tipo": "referência",
       "nivel": "intermediário",
       "data": "2026-05-28",
       "tags": [
         "#engenharia-de-software",
         "#linguagem",
-        "#c"
+        "#c",
+        "#sistemas",
+        "#embarcados"
       ]
     },
     {
@@ -2755,14 +2784,16 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 7,
+      "grau": 9,
       "tipo": "referência",
       "nivel": "avançado",
       "data": "2026-05-28",
       "tags": [
         "#engenharia-de-software",
         "#linguagem",
-        "#cpp"
+        "#cpp",
+        "#sistemas",
+        "#games"
       ]
     },
     {
@@ -2772,7 +2803,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 6,
+      "grau": 8,
       "tipo": "referência",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -2790,14 +2821,16 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 8,
+      "grau": 12,
       "tipo": "referência",
       "nivel": "intermediário",
       "data": "2026-05-28",
       "tags": [
         "#engenharia-de-software",
         "#linguagem",
-        "#go"
+        "#go",
+        "#cloud",
+        "#concorrencia"
       ]
     },
     {
@@ -2807,40 +2840,6 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 7,
-      "tipo": "referência",
-      "nivel": "intermediário",
-      "data": "2026-05-28",
-      "tags": [
-        "#engenharia-de-software",
-        "#linguagem",
-        "#java"
-      ]
-    },
-    {
-      "id": "conhecimento/engenharia-de-software/linguagens/javascript.md",
-      "titulo": "JavaScript",
-      "dominio": "engenharia-de-software",
-      "ilha": "engenharia-de-software",
-      "ehMoc": false,
-      "cor": "#3F51B5",
-      "grau": 10,
-      "tipo": "referência",
-      "nivel": "intermediário",
-      "data": "2026-05-28",
-      "tags": [
-        "#engenharia-de-software",
-        "#linguagem",
-        "#javascript"
-      ]
-    },
-    {
-      "id": "conhecimento/engenharia-de-software/linguagens/kotlin.md",
-      "titulo": "Kotlin",
-      "dominio": "engenharia-de-software",
-      "ilha": "engenharia-de-software",
-      "ehMoc": false,
-      "cor": "#3F51B5",
       "grau": 8,
       "tipo": "referência",
       "nivel": "intermediário",
@@ -2848,12 +2847,13 @@
       "tags": [
         "#engenharia-de-software",
         "#linguagem",
-        "#kotlin"
+        "#java",
+        "#jvm"
       ]
     },
     {
-      "id": "conhecimento/engenharia-de-software/linguagens/nodejs.md",
-      "titulo": "Node.js",
+      "id": "conhecimento/engenharia-de-software/linguagens/javascript.md",
+      "titulo": "JavaScript",
       "dominio": "engenharia-de-software",
       "ilha": "engenharia-de-software",
       "ehMoc": false,
@@ -2865,8 +2865,46 @@
       "tags": [
         "#engenharia-de-software",
         "#linguagem",
+        "#javascript",
+        "#web"
+      ]
+    },
+    {
+      "id": "conhecimento/engenharia-de-software/linguagens/kotlin.md",
+      "titulo": "Kotlin",
+      "dominio": "engenharia-de-software",
+      "ilha": "engenharia-de-software",
+      "ehMoc": false,
+      "cor": "#3F51B5",
+      "grau": 10,
+      "tipo": "referência",
+      "nivel": "intermediário",
+      "data": "2026-05-28",
+      "tags": [
+        "#engenharia-de-software",
+        "#linguagem",
+        "#kotlin",
+        "#jvm",
+        "#android"
+      ]
+    },
+    {
+      "id": "conhecimento/engenharia-de-software/linguagens/nodejs.md",
+      "titulo": "Node.js",
+      "dominio": "engenharia-de-software",
+      "ilha": "engenharia-de-software",
+      "ehMoc": false,
+      "cor": "#3F51B5",
+      "grau": 12,
+      "tipo": "referência",
+      "nivel": "intermediário",
+      "data": "2026-05-28",
+      "tags": [
+        "#engenharia-de-software",
+        "#linguagem",
         "#nodejs",
-        "#javascript"
+        "#javascript",
+        "#web"
       ]
     },
     {
@@ -2876,14 +2914,15 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 8,
+      "grau": 13,
       "tipo": "referência",
       "nivel": "intermediário",
       "data": "2026-05-28",
       "tags": [
         "#engenharia-de-software",
         "#linguagem",
-        "#php"
+        "#php",
+        "#web"
       ]
     },
     {
@@ -2893,7 +2932,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 13,
+      "grau": 15,
       "tipo": "referência",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -2910,14 +2949,15 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 7,
+      "grau": 11,
       "tipo": "referência",
       "nivel": "intermediário",
       "data": "2026-05-28",
       "tags": [
         "#engenharia-de-software",
         "#linguagem",
-        "#ruby"
+        "#ruby",
+        "#web"
       ]
     },
     {
@@ -2927,14 +2967,16 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 8,
+      "grau": 11,
       "tipo": "referência",
       "nivel": "avançado",
       "data": "2026-05-28",
       "tags": [
         "#engenharia-de-software",
         "#linguagem",
-        "#rust"
+        "#rust",
+        "#sistemas",
+        "#seguranca"
       ]
     },
     {
@@ -2944,7 +2986,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 6,
+      "grau": 7,
       "tipo": "referência",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -2962,7 +3004,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 7,
+      "grau": 8,
       "tipo": "referência",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -2970,7 +3012,8 @@
         "#engenharia-de-software",
         "#linguagem",
         "#swift",
-        "#apple"
+        "#apple",
+        "#mobile"
       ]
     },
     {
@@ -2980,14 +3023,15 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 10,
+      "grau": 12,
       "tipo": "referência",
       "nivel": "intermediário",
       "data": "2026-05-28",
       "tags": [
         "#engenharia-de-software",
         "#linguagem",
-        "#typescript"
+        "#typescript",
+        "#web"
       ]
     },
     {
@@ -3006,7 +3050,8 @@
         "#martech",
         "#marketing-digital",
         "#tracking",
-        "#dados"
+        "#dados",
+        "#lgpd"
       ]
     },
     {
@@ -3160,7 +3205,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 28,
+      "grau": 29,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -3244,7 +3289,8 @@
         "#engenharia-de-software",
         "#seguranca",
         "#phishing",
-        "#pessoas"
+        "#pessoas",
+        "#engenharia-social"
       ]
     },
     {
@@ -3254,7 +3300,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 18,
+      "grau": 20,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-05-30",
@@ -3271,7 +3317,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 26,
+      "grau": 27,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-05-30",
@@ -3279,7 +3325,8 @@
         "#engenharia-de-software",
         "#seguranca",
         "#zero-trust",
-        "#hardening"
+        "#hardening",
+        "#arquitetura"
       ]
     },
     {
@@ -3297,7 +3344,8 @@
         "#engenharia-de-software",
         "#seguranca",
         "#devsecops",
-        "#sdlc"
+        "#sdlc",
+        "#supply-chain"
       ]
     },
     {
@@ -3307,7 +3355,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 8,
+      "grau": 11,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-05-30",
@@ -3385,7 +3433,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 8,
+      "grau": 10,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-05-30",
@@ -3421,7 +3469,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 8,
+      "grau": 9,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-05-30",
@@ -3439,14 +3487,18 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 10,
+      "grau": 11,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-30",
       "tags": [
         "#engenharia-de-software",
         "#seguranca",
-        "#cloud"
+        "#cloud",
+        "#nuvem",
+        "#aws",
+        "#azure",
+        "#gcp"
       ]
     },
     {
@@ -3456,7 +3508,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 12,
+      "grau": 14,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-30",
@@ -3502,7 +3554,8 @@
         "#fintech",
         "#financas",
         "#pagamentos",
-        "#open-finance"
+        "#open-finance",
+        "#seguranca"
       ]
     },
     {
@@ -3553,14 +3606,15 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 14,
+      "grau": 15,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
       "tags": [
         "#engenharia-de-software",
         "#testes",
-        "#qa"
+        "#qa",
+        "#tdd"
       ]
     },
     {
@@ -3634,7 +3688,8 @@
       "tags": [
         "#engenharia-de-software",
         "#git",
-        "#versionamento"
+        "#versionamento",
+        "#fluxo-de-trabalho"
       ]
     },
     {
@@ -3703,7 +3758,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 18,
+      "grau": 19,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-06-02",
@@ -3789,7 +3844,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 11,
+      "grau": 12,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-06-02",
@@ -4019,7 +4074,8 @@
         "#moral",
         "#virtude",
         "#deontologia",
-        "#consequencialismo"
+        "#consequencialismo",
+        "#decisao"
       ]
     },
     {
@@ -4057,7 +4113,8 @@
         "#fundamentos",
         "#etica",
         "#logica",
-        "#epistemologia"
+        "#epistemologia",
+        "#metafisica"
       ]
     },
     {
@@ -4076,7 +4133,8 @@
         "#logica",
         "#pensamento-critico",
         "#argumentacao",
-        "#falacias"
+        "#falacias",
+        "#vieses"
       ]
     },
     {
@@ -4163,7 +4221,7 @@
       "ilha": "financas",
       "ehMoc": false,
       "cor": "#4CAF50",
-      "grau": 19,
+      "grau": 20,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-05-28",
@@ -4183,7 +4241,7 @@
       "ilha": "financas",
       "ehMoc": false,
       "cor": "#4CAF50",
-      "grau": 9,
+      "grau": 10,
       "tipo": "conceito",
       "nivel": "introdutório",
       "data": "2026-05-28",
@@ -4222,11 +4280,13 @@
       "grau": 22,
       "tipo": "conceito",
       "nivel": "intermediário",
-      "data": "2026-05-28",
+      "data": "2026-05-28 (aprofundada em 2026-07-13)",
       "tags": [
         "#financas",
         "#corporativo",
-        "#valuation"
+        "#valuation",
+        "#estrutura-de-capital",
+        "#dividendos"
       ]
     },
     {
@@ -4324,11 +4384,14 @@
       "grau": 38,
       "tipo": "conceito",
       "nivel": "intermediário",
-      "data": "2026-05-28",
+      "data": "2026-05-28 (aprofundada em 2026-07-13)",
       "tags": [
         "#financas",
         "#indicadores",
-        "#analise"
+        "#analise",
+        "#liquidez",
+        "#rentabilidade",
+        "#endividamento"
       ]
     },
     {
@@ -4338,13 +4401,15 @@
       "ilha": "financas",
       "ehMoc": false,
       "cor": "#4CAF50",
-      "grau": 13,
+      "grau": 14,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
       "tags": [
         "#financas",
-        "#matematica-financeira"
+        "#matematica-financeira",
+        "#juros",
+        "#vpl"
       ]
     },
     {
@@ -4361,7 +4426,8 @@
       "tags": [
         "#financas",
         "#mercado",
-        "#investimentos"
+        "#investimentos",
+        "#risco"
       ]
     },
     {
@@ -4382,7 +4448,7 @@
         "#dre",
         "#balanco",
         "#fluxo-de-caixa",
-        "#FPA",
+        "#fpa",
         "#premissas"
       ]
     },
@@ -4403,7 +4469,9 @@
         "#planejamento",
         "#forecast",
         "#orcamento-base-zero",
-        "#controle-orcamentario"
+        "#controle-orcamentario",
+        "#kpi",
+        "#controle"
       ]
     },
     {
@@ -4987,7 +5055,8 @@
       "tags": [
         "#ia",
         "#fundamentos",
-        "#machine-learning"
+        "#machine-learning",
+        "#deep-learning"
       ]
     },
     {
@@ -5058,7 +5127,8 @@
       "tags": [
         "#ia",
         "#machine-learning",
-        "#dados"
+        "#dados",
+        "#estatistica"
       ]
     },
     {
@@ -5075,7 +5145,8 @@
       "tags": [
         "#ia",
         "#mlops",
-        "#devops"
+        "#devops",
+        "#dados"
       ]
     },
     {
@@ -5094,7 +5165,8 @@
         "#agentes",
         "#orquestracao",
         "#pkm",
-        "#automacao"
+        "#automacao",
+        "#governanca"
       ]
     },
     {
@@ -5129,7 +5201,10 @@
         "#ia",
         "#etica",
         "#governanca",
-        "#lgpd"
+        "#lgpd",
+        "#compliance",
+        "#regulacao",
+        "#risco"
       ]
     },
     {
@@ -6097,7 +6172,7 @@
       "ilha": "contabilidade",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 40,
+      "grau": 41,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-05-28",
@@ -6472,7 +6547,9 @@
         "#planilhas",
         "#excel",
         "#cenarios",
-        "#analise"
+        "#analise",
+        "#sensibilidade",
+        "#decisao"
       ]
     },
     {
@@ -6490,7 +6567,8 @@
         "#planilhas",
         "#financas",
         "#controle",
-        "#templates"
+        "#templates",
+        "#kpi"
       ]
     },
     {
@@ -6500,7 +6578,7 @@
       "ilha": "planilhas-e-dashboards",
       "ehMoc": false,
       "cor": "#009688",
-      "grau": 8,
+      "grau": 9,
       "tipo": "referência",
       "nivel": "avançado",
       "data": "2026-06-22",
@@ -6630,7 +6708,8 @@
         "#excel",
         "#avancado",
         "#power-query",
-        "#tabela-dinamica"
+        "#tabela-dinamica",
+        "#bi"
       ]
     },
     {
@@ -6640,7 +6719,7 @@
       "ilha": "planilhas-e-dashboards",
       "ehMoc": false,
       "cor": "#009688",
-      "grau": 8,
+      "grau": 9,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -6785,7 +6864,8 @@
         "#planilhas",
         "#excel",
         "#modelagem",
-        "#financas"
+        "#financas",
+        "#auditoria"
       ]
     },
     {
@@ -6802,7 +6882,8 @@
       "tags": [
         "#planilhas",
         "#boas-praticas",
-        "#modelagem"
+        "#modelagem",
+        "#excel"
       ]
     },
     {
@@ -6981,7 +7062,7 @@
       "ilha": "psicologia-e-psicanalise",
       "ehMoc": false,
       "cor": "#7E57C2",
-      "grau": 6,
+      "grau": 7,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-30",
@@ -7007,7 +7088,8 @@
         "#psicologia",
         "#comunicacao",
         "#escuta",
-        "#cnv"
+        "#cnv",
+        "#lideranca"
       ]
     },
     {
@@ -7025,7 +7107,8 @@
         "#psicologia",
         "#emocoes",
         "#motivacao",
-        "#maslow"
+        "#maslow",
+        "#decisao"
       ]
     },
     {
@@ -7059,7 +7142,8 @@
       "tags": [
         "#psicologia",
         "#fundamentos",
-        "#ciencia"
+        "#ciencia",
+        "#metodo-cientifico"
       ]
     },
     {
@@ -7087,7 +7171,7 @@
       "ilha": "psicologia-e-psicanalise",
       "ehMoc": false,
       "cor": "#7E57C2",
-      "grau": 6,
+      "grau": 7,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-30",
@@ -7113,7 +7197,8 @@
         "#psicologia",
         "#persuasao",
         "#cialdini",
-        "#comunicacao"
+        "#comunicacao",
+        "#etica"
       ]
     },
     {
@@ -7167,7 +7252,8 @@
         "#psicologia",
         "#narrativa",
         "#escrita",
-        "#arquetipos"
+        "#arquetipos",
+        "#storytelling"
       ]
     },
     {
@@ -7320,7 +7406,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 9,
+      "grau": 10,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-07-01",
@@ -8134,7 +8220,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 13,
+      "grau": 14,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -9056,7 +9142,15 @@
     },
     {
       "source": "conhecimento/administracao/governanca-corporativa.md",
+      "target": "conhecimento/compliance/fundamentos-compliance.md"
+    },
+    {
+      "source": "conhecimento/administracao/governanca-corporativa.md",
       "target": "conhecimento/compliance/gestao-de-riscos.md"
+    },
+    {
+      "source": "conhecimento/administracao/governanca-corporativa.md",
+      "target": "conhecimento/compliance/legislacao-chave.md"
     },
     {
       "source": "conhecimento/administracao/governanca-corporativa.md",
@@ -10076,7 +10170,15 @@
     },
     {
       "source": "conhecimento/auditoria/controles-internos-coso.md",
+      "target": "conhecimento/compliance/fundamentos-compliance.md"
+    },
+    {
+      "source": "conhecimento/auditoria/controles-internos-coso.md",
       "target": "conhecimento/compliance/gestao-de-riscos.md"
+    },
+    {
+      "source": "conhecimento/auditoria/controles-internos-coso.md",
+      "target": "conhecimento/compliance/legislacao-chave.md"
     },
     {
       "source": "conhecimento/auditoria/controles-internos-coso.md",
@@ -10308,6 +10410,10 @@
     },
     {
       "source": "conhecimento/auditoria/processo-de-auditoria.md",
+      "target": "conhecimento/contabilidade/auditoria.md"
+    },
+    {
+      "source": "conhecimento/auditoria/processo-de-auditoria.md",
       "target": "conhecimento/contabilidade/contabil/fechamento-contabil.md"
     },
     {
@@ -10505,6 +10611,10 @@
     {
       "source": "conhecimento/compliance/esg-e-relato-de-sustentabilidade.md",
       "target": "conhecimento/sinteses/tone-at-the-top-governanca-previne-fraude.md"
+    },
+    {
+      "source": "conhecimento/compliance/fundamentos-compliance.md",
+      "target": "conhecimento/compliance/gestao-de-riscos.md"
     },
     {
       "source": "conhecimento/compliance/fundamentos-compliance.md",
@@ -11340,6 +11450,10 @@
     },
     {
       "source": "conhecimento/contabilidade/contabil/demonstracoes-financeiras.md",
+      "target": "conhecimento/contabilidade/contabil/lancamentos-contabeis.md"
+    },
+    {
+      "source": "conhecimento/contabilidade/contabil/demonstracoes-financeiras.md",
       "target": "conhecimento/contabilidade/contabil/normas-cpc-ifrs.md"
     },
     {
@@ -11480,6 +11594,10 @@
     },
     {
       "source": "conhecimento/contabilidade/contabil/fechamento-contabil.md",
+      "target": "conhecimento/contabilidade/contabilidade-geral.md"
+    },
+    {
+      "source": "conhecimento/contabilidade/contabil/fechamento-contabil.md",
       "target": "conhecimento/contabilidade/departamento-pessoal.md"
     },
     {
@@ -11505,6 +11623,10 @@
     {
       "source": "conhecimento/contabilidade/contabil/fechamento-contabil.md",
       "target": "conhecimento/sinteses/numero-esg-e-da-controladoria.md"
+    },
+    {
+      "source": "conhecimento/contabilidade/contabil/lancamentos-contabeis.md",
+      "target": "conhecimento/contabilidade/contabil/normas-cpc-ifrs.md"
     },
     {
       "source": "conhecimento/contabilidade/contabil/lancamentos-contabeis.md",
@@ -12200,6 +12322,10 @@
     },
     {
       "source": "conhecimento/direito/direito-civil.md",
+      "target": "conhecimento/direito/direito-penal.md"
+    },
+    {
+      "source": "conhecimento/direito/direito-civil.md",
       "target": "conhecimento/direito/fundamentos-do-direito.md"
     },
     {
@@ -12724,6 +12850,10 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/apis-e-integracao.md",
+      "target": "conhecimento/engenharia-de-software/desenvolvimento-mobile.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/apis-e-integracao.md",
       "target": "conhecimento/engenharia-de-software/domain-driven-design.md"
     },
     {
@@ -12896,10 +13026,6 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/arquitetura.md",
-      "target": "conhecimento/engenharia-de-software/linguagens/nodejs.md"
-    },
-    {
-      "source": "conhecimento/engenharia-de-software/arquitetura.md",
       "target": "conhecimento/engenharia-de-software/linguagens/swift.md"
     },
     {
@@ -12952,11 +13078,19 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/arquitetura.md",
+      "target": "conhecimento/sinteses/o-organograma-vira-codigo.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/arquitetura.md",
       "target": "conhecimento/sinteses/pensar-bem-codar-bem.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/bancos-de-dados.md",
       "target": "conhecimento/engenharia-de-software/cache-e-performance.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/bancos-de-dados.md",
+      "target": "conhecimento/engenharia-de-software/desenvolvimento-mobile.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/bancos-de-dados.md",
@@ -13145,6 +13279,10 @@
     {
       "source": "conhecimento/engenharia-de-software/bounded-context.md",
       "target": "conhecimento/engenharia-de-software/domain-driven-design.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/bounded-context.md",
+      "target": "conhecimento/engenharia-de-software/entity-vs-value-object.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/bounded-context.md",
@@ -13464,6 +13602,10 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/context-mapping.md",
+      "target": "conhecimento/engenharia-de-software/linguagem-ubiqua.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/context-mapping.md",
       "target": "conhecimento/mocs/domain-driven-design.md"
     },
     {
@@ -13752,6 +13894,10 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/domain-service.md",
+      "target": "conhecimento/engenharia-de-software/entity-vs-value-object.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/domain-service.md",
       "target": "conhecimento/mocs/domain-driven-design.md"
     },
     {
@@ -13841,6 +13987,66 @@
     {
       "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
       "target": "conhecimento/engenharia-de-software/linguagens.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/c.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/cpp.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/csharp.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/go.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/java.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/javascript.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/kotlin.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/nodejs.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/php.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/python.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/ruby.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/rust.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/sql.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/swift.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/typescript.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
@@ -14032,6 +14238,10 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/higiene-de-repositorio.md",
+      "target": "conhecimento/engenharia-de-software/seguranca/seguranca-em-nuvem.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/higiene-de-repositorio.md",
       "target": "conhecimento/engenharia-de-software/versionamento-git.md"
     },
     {
@@ -14212,6 +14422,10 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/linguagens/cpp.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/go.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/linguagens/cpp.md",
       "target": "conhecimento/engenharia-de-software/linguagens/rust.md"
     },
     {
@@ -14236,6 +14450,10 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/linguagens/csharp.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/kotlin.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/linguagens/csharp.md",
       "target": "conhecimento/engenharia-de-software/sistemas-operacionais.md"
     },
     {
@@ -14245,6 +14463,14 @@
     {
       "source": "conhecimento/engenharia-de-software/linguagens/csharp.md",
       "target": "conhecimento/mocs/projeto-de-software.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/linguagens/go.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/php.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/linguagens/go.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/ruby.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/linguagens/go.md",
@@ -14308,6 +14534,10 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/linguagens/nodejs.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/php.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/linguagens/nodejs.md",
       "target": "conhecimento/engenharia-de-software/linguagens/typescript.md"
     },
     {
@@ -14329,6 +14559,14 @@
     {
       "source": "conhecimento/engenharia-de-software/linguagens/nodejs.md",
       "target": "conhecimento/mocs/projeto-de-software.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/linguagens/php.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/python.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/linguagens/php.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/rust.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/linguagens/php.md",
@@ -14381,6 +14619,14 @@
     {
       "source": "conhecimento/engenharia-de-software/linguagens/python.md",
       "target": "conhecimento/sinteses/dados-como-ativo.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/linguagens/ruby.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/rust.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/linguagens/ruby.md",
+      "target": "conhecimento/engenharia-de-software/linguagens/typescript.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/linguagens/ruby.md",
@@ -14676,6 +14922,10 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/seguranca-de-software.md",
+      "target": "conhecimento/engenharia-de-software/web/fullstack.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/seguranca-de-software.md",
       "target": "conhecimento/engenharia-de-software/web/hospedagem-e-deploy-front-end.md"
     },
     {
@@ -14864,6 +15114,10 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/seguranca/criptografia-aplicada.md",
+      "target": "conhecimento/engenharia-de-software/seguranca/defesa-em-profundidade-e-zero-trust.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/seguranca/criptografia-aplicada.md",
       "target": "conhecimento/engenharia-de-software/seguranca/devsecops-e-sdlc-seguro.md"
     },
     {
@@ -14881,6 +15135,10 @@
     {
       "source": "conhecimento/engenharia-de-software/seguranca/criptografia-aplicada.md",
       "target": "conhecimento/engenharia-de-software/seguranca/seguranca-em-nuvem.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/seguranca/criptografia-aplicada.md",
+      "target": "conhecimento/engenharia-de-software/web/desenvolvimento-web.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/seguranca/criptografia-aplicada.md",
@@ -15000,7 +15258,19 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/seguranca/gestao-de-vulnerabilidades-e-pentest.md",
+      "target": "conhecimento/engenharia-de-software/seguranca/runbook-resposta-ransomware.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/seguranca/gestao-de-vulnerabilidades-e-pentest.md",
+      "target": "conhecimento/engenharia-de-software/seguranca/seguranca-de-conteineres-e-kubernetes.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/seguranca/gestao-de-vulnerabilidades-e-pentest.md",
       "target": "conhecimento/engenharia-de-software/seguranca/seguranca-em-nuvem.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/seguranca/gestao-de-vulnerabilidades-e-pentest.md",
+      "target": "conhecimento/engenharia-de-software/seguranca/soc-e-blue-team.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/seguranca/gestao-de-vulnerabilidades-e-pentest.md",
@@ -15049,6 +15319,10 @@
     {
       "source": "conhecimento/engenharia-de-software/seguranca/runbook-resposta-ransomware.md",
       "target": "conhecimento/engenharia-de-software/seguranca/seguranca-em-nuvem.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/seguranca/runbook-resposta-ransomware.md",
+      "target": "conhecimento/engenharia-de-software/seguranca/soc-e-blue-team.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/seguranca/runbook-resposta-ransomware.md",
@@ -15189,6 +15463,10 @@
     {
       "source": "conhecimento/engenharia-de-software/testes.md",
       "target": "conhecimento/mocs/projeto-de-software.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/testes.md",
+      "target": "conhecimento/sinteses/a-metrica-que-vira-alvo.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/tipos-de-linguagens.md",
@@ -16004,6 +16282,10 @@
     },
     {
       "source": "conhecimento/financas/analise-de-investimentos.md",
+      "target": "conhecimento/financas/conceitos-fundamentais.md"
+    },
+    {
+      "source": "conhecimento/financas/analise-de-investimentos.md",
       "target": "conhecimento/financas/custos-e-precificacao.md"
     },
     {
@@ -16409,6 +16691,10 @@
     {
       "source": "conhecimento/financas/matematica-financeira.md",
       "target": "conhecimento/matematica/matematica-essencial.md"
+    },
+    {
+      "source": "conhecimento/financas/matematica-financeira.md",
+      "target": "conhecimento/mocs/analise-de-empresa.md"
     },
     {
       "source": "conhecimento/financas/matematica-financeira.md",
@@ -19332,6 +19618,10 @@
     },
     {
       "source": "conhecimento/planilhas-e-dashboards/analise-estatistica-no-excel.md",
+      "target": "conhecimento/planilhas-e-dashboards/excel-funcoes-essenciais.md"
+    },
+    {
+      "source": "conhecimento/planilhas-e-dashboards/analise-estatistica-no-excel.md",
       "target": "conhecimento/planilhas-e-dashboards/power-query-e-linguagem-m.md"
     },
     {
@@ -19741,6 +20031,10 @@
     {
       "source": "conhecimento/psicologia-e-psicanalise/README.md",
       "target": "conhecimento/sinteses/a-mente-por-tras-da-mensagem.md"
+    },
+    {
+      "source": "conhecimento/psicologia-e-psicanalise/arquetipos-jung.md",
+      "target": "conhecimento/psicologia-e-psicanalise/personalidade-e-mecanismos-de-defesa.md"
     },
     {
       "source": "conhecimento/psicologia-e-psicanalise/arquetipos-jung.md",
