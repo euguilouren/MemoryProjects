@@ -1,13 +1,13 @@
 {
   "_meta": "VITRINE PUBLICA (forma + titulos + tags, SEM corpo/resumo). Gerado por scripts/gerar-vitrine-publica.py. NAO editar a mao.",
   "stats": {
-    "notas": 427,
-    "conexoes": 3058,
+    "notas": 430,
+    "conexoes": 3142,
     "dominios": 21,
-    "conexoes_entre_dominios": 1529,
+    "conexoes_entre_dominios": 1548,
     "por_dominio": {
       "engenharia-de-software": 93,
-      "sinteses": 59,
+      "sinteses": 62,
       "marketing-digital": 38,
       "contabilidade": 35,
       "administracao": 29,
@@ -38,7 +38,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 28,
+      "grau": 37,
       "tipo": "índice",
       "nivel": "",
       "data": "2026-05-28",
@@ -79,7 +79,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 8,
+      "grau": 9,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-07-10",
@@ -404,7 +404,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 12,
+      "grau": 13,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-08",
@@ -424,7 +424,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 9,
+      "grau": 10,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-11",
@@ -463,7 +463,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 6,
+      "grau": 7,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-12",
@@ -483,7 +483,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 22,
+      "grau": 23,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-09",
@@ -504,7 +504,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 6,
+      "grau": 7,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-07-11",
@@ -523,7 +523,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 15,
+      "grau": 16,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-06-09",
@@ -588,7 +588,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 7,
+      "grau": 8,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-10",
@@ -607,7 +607,7 @@
       "ilha": "administracao",
       "ehMoc": false,
       "cor": "#FF9800",
-      "grau": 6,
+      "grau": 7,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-11",
@@ -709,7 +709,7 @@
       "ilha": "auditoria",
       "ehMoc": false,
       "cor": "#9C27B0",
-      "grau": 35,
+      "grau": 36,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -854,7 +854,7 @@
       "ilha": "auditoria",
       "ehMoc": false,
       "cor": "#9C27B0",
-      "grau": 14,
+      "grau": 15,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -916,7 +916,7 @@
       "ilha": "compliance",
       "ehMoc": false,
       "cor": "#F44336",
-      "grau": 10,
+      "grau": 11,
       "tipo": "índice",
       "nivel": "",
       "data": "",
@@ -932,7 +932,7 @@
       "ilha": "compliance",
       "ehMoc": false,
       "cor": "#F44336",
-      "grau": 9,
+      "grau": 10,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -1055,7 +1055,7 @@
       "ilha": "compliance",
       "ehMoc": false,
       "cor": "#F44336",
-      "grau": 14,
+      "grau": 15,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -1361,7 +1361,7 @@
       "ilha": "contabilidade",
       "ehMoc": false,
       "cor": "#2196F3",
-      "grau": 36,
+      "grau": 37,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-28 (aprofundada em 2026-07-13)",
@@ -1863,7 +1863,6 @@
       "tags": [
         "#contabilidade",
         "#impostos",
-        "#tributos",
         "#fiscal"
       ]
     },
@@ -1874,7 +1873,7 @@
       "ilha": "direito",
       "ehMoc": false,
       "cor": "#795548",
-      "grau": 10,
+      "grau": 13,
       "tipo": "índice",
       "nivel": "",
       "data": "",
@@ -1890,7 +1889,7 @@
       "ilha": "direito",
       "ehMoc": false,
       "cor": "#795548",
-      "grau": 12,
+      "grau": 13,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -2003,7 +2002,7 @@
       "ilha": "direito",
       "ehMoc": false,
       "cor": "#795548",
-      "grau": 10,
+      "grau": 11,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -2040,7 +2039,7 @@
       "ilha": "direito",
       "ehMoc": false,
       "cor": "#795548",
-      "grau": 9,
+      "grau": 10,
       "tipo": "checklist",
       "nivel": "avançado",
       "data": "2026-06-09",
@@ -2060,7 +2059,7 @@
       "ilha": "economia",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 4,
+      "grau": 5,
       "tipo": "índice",
       "nivel": "",
       "data": "",
@@ -2097,7 +2096,7 @@
       "ilha": "economia",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 6,
+      "grau": 7,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-07-01",
@@ -2117,7 +2116,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 55,
+      "grau": 71,
       "tipo": "índice",
       "nivel": "",
       "data": "",
@@ -2133,7 +2132,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 6,
+      "grau": 7,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -2228,7 +2227,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 14,
+      "grau": 15,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -2348,7 +2347,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 8,
+      "grau": 9,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -2378,7 +2377,7 @@
         "#android",
         "#flutter",
         "#react-native",
-        "#app",
+        "#aplicacao",
         "#offline",
         "#performance"
       ]
@@ -2390,7 +2389,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 12,
+      "grau": 13,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-06-20",
@@ -2451,7 +2450,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 16,
+      "grau": 17,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-02",
@@ -2471,7 +2470,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 20,
+      "grau": 21,
       "tipo": "referência",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -2491,7 +2490,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 6,
+      "grau": 7,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -2529,7 +2528,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 7,
+      "grau": 8,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-06-08",
@@ -2603,7 +2602,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 7,
+      "grau": 8,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-23",
@@ -2624,7 +2623,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 13,
+      "grau": 14,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-06-20",
@@ -2666,7 +2665,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 11,
+      "grau": 12,
       "tipo": "checklist",
       "nivel": "intermediário",
       "data": "2026-06-15",
@@ -2709,7 +2708,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 9,
+      "grau": 10,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-06-09",
@@ -2730,7 +2729,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 10,
+      "grau": 11,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-06-08",
@@ -3124,7 +3123,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 6,
+      "grau": 7,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-06-20",
@@ -3146,7 +3145,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 21,
+      "grau": 22,
       "tipo": "referência",
       "nivel": "introdutório",
       "data": "2026-06-15",
@@ -3166,7 +3165,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 7,
+      "grau": 8,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -3226,7 +3225,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 21,
+      "grau": 24,
       "tipo": "índice",
       "nivel": "",
       "data": "2026-05-30",
@@ -3261,7 +3260,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 8,
+      "grau": 9,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-24",
@@ -3317,7 +3316,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 27,
+      "grau": 28,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-05-30",
@@ -3394,7 +3393,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 9,
+      "grau": 10,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-24",
@@ -3585,7 +3584,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 8,
+      "grau": 9,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-15",
@@ -3717,7 +3716,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 12,
+      "grau": 15,
       "tipo": "índice",
       "nivel": "",
       "data": "",
@@ -3779,7 +3778,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 7,
+      "grau": 8,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-06-20",
@@ -3801,7 +3800,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 9,
+      "grau": 10,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-15",
@@ -3888,7 +3887,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": false,
       "cor": "#3F51B5",
-      "grau": 8,
+      "grau": 9,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-06-22",
@@ -3930,7 +3929,7 @@
       "ilha": "estatistica",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 6,
+      "grau": 7,
       "tipo": "índice",
       "nivel": "",
       "data": "",
@@ -3967,7 +3966,7 @@
       "ilha": "estatistica",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 6,
+      "grau": 7,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-15",
@@ -4162,7 +4161,7 @@
       "ilha": "financas",
       "ehMoc": false,
       "cor": "#4CAF50",
-      "grau": 17,
+      "grau": 19,
       "tipo": "índice",
       "nivel": "",
       "data": "",
@@ -4306,7 +4305,7 @@
         "#financas-pessoais",
         "#renda-fixa",
         "#renda-variavel",
-        "#tributacao"
+        "#tributario"
       ]
     },
     {
@@ -4316,7 +4315,7 @@
       "ilha": "financas",
       "ehMoc": false,
       "cor": "#4CAF50",
-      "grau": 14,
+      "grau": 15,
       "tipo": "referência",
       "nivel": "intermediário",
       "data": "2026-07-09",
@@ -4401,7 +4400,7 @@
       "ilha": "financas",
       "ehMoc": false,
       "cor": "#4CAF50",
-      "grau": 14,
+      "grau": 15,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-05-28",
@@ -4481,7 +4480,7 @@
       "ilha": "financas",
       "ehMoc": false,
       "cor": "#4CAF50",
-      "grau": 7,
+      "grau": 8,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-10",
@@ -4595,7 +4594,10 @@
       "tipo": "",
       "nivel": "",
       "data": "",
-      "tags": []
+      "tags": [
+        "#idiomas",
+        "#indice"
+      ]
     },
     {
       "id": "conhecimento/idiomas/gramatica-acentuacao-grafica.md",
@@ -4908,7 +4910,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": false,
       "cor": "#FF5722",
-      "grau": 20,
+      "grau": 22,
       "tipo": "índice",
       "nivel": "",
       "data": "",
@@ -4941,13 +4943,12 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": false,
       "cor": "#FF5722",
-      "grau": 10,
+      "grau": 11,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-10",
       "tags": [
         "#ia",
-        "#avaliacao",
         "#llm-evals",
         "#benchmark",
         "#alucinacao",
@@ -5005,7 +5006,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": false,
       "cor": "#FF5722",
-      "grau": 8,
+      "grau": 9,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-14",
@@ -5156,7 +5157,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": false,
       "cor": "#FF5722",
-      "grau": 11,
+      "grau": 12,
       "tipo": "conceito",
       "nivel": "intermediário",
       "data": "2026-06-01",
@@ -5176,7 +5177,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": false,
       "cor": "#FF5722",
-      "grau": 14,
+      "grau": 15,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-05-30",
@@ -5214,7 +5215,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": false,
       "cor": "#FF5722",
-      "grau": 11,
+      "grau": 12,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-14",
@@ -5259,7 +5260,7 @@
       "ilha": "marketing-digital",
       "ehMoc": false,
       "cor": "#E91E63",
-      "grau": 43,
+      "grau": 44,
       "tipo": "índice",
       "nivel": "",
       "data": "",
@@ -5403,7 +5404,7 @@
       "ilha": "marketing-digital",
       "ehMoc": false,
       "cor": "#E91E63",
-      "grau": 7,
+      "grau": 8,
       "tipo": "guia",
       "nivel": "avançado",
       "data": "2026-06-24",
@@ -5675,7 +5676,7 @@
         "#analytics",
         "#ga4",
         "#metricas",
-        "#kpis-digitais",
+        "#kpi",
         "#utm",
         "#eventos",
         "#server-side",
@@ -6097,7 +6098,7 @@
       "ilha": "matematica",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 6,
+      "grau": 7,
       "tipo": "referência",
       "nivel": "intermediário",
       "data": "2026-07-09",
@@ -6172,7 +6173,7 @@
       "ilha": "contabilidade",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 41,
+      "grau": 42,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-05-28",
@@ -6358,7 +6359,7 @@
       "ilha": "compliance",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 40,
+      "grau": 41,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-05-28",
@@ -6394,7 +6395,7 @@
       "ilha": "inteligencia-artificial",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 35,
+      "grau": 36,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-05-30",
@@ -6465,7 +6466,7 @@
       "ilha": "engenharia-de-software",
       "ehMoc": true,
       "cor": "#FFEB3B",
-      "grau": 31,
+      "grau": 32,
       "tipo": "moc",
       "nivel": "",
       "data": "2026-05-30",
@@ -6521,7 +6522,7 @@
       "ilha": "planilhas-e-dashboards",
       "ehMoc": false,
       "cor": "#009688",
-      "grau": 21,
+      "grau": 23,
       "tipo": "índice",
       "nivel": "",
       "data": "",
@@ -6578,7 +6579,7 @@
       "ilha": "planilhas-e-dashboards",
       "ehMoc": false,
       "cor": "#009688",
-      "grau": 9,
+      "grau": 10,
       "tipo": "referência",
       "nivel": "avançado",
       "data": "2026-06-22",
@@ -6588,7 +6589,8 @@
         "#excel",
         "#regressao",
         "#dados",
-        "#analise-de-dados"
+        "#analise-de-dados",
+        "#desvio-padrao"
       ]
     },
     {
@@ -6856,7 +6858,7 @@
       "ilha": "planilhas-e-dashboards",
       "ehMoc": false,
       "cor": "#009688",
-      "grau": 9,
+      "grau": 10,
       "tipo": "conceito",
       "nivel": "avançado",
       "data": "2026-05-30",
@@ -6914,7 +6916,7 @@
       "ilha": "planilhas-e-dashboards",
       "ehMoc": false,
       "cor": "#009688",
-      "grau": 8,
+      "grau": 9,
       "tipo": "referência",
       "nivel": "avançado",
       "data": "2026-06-22",
@@ -6971,7 +6973,7 @@
       "ilha": "produtividade",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 10,
+      "grau": 11,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-09",
@@ -7008,7 +7010,7 @@
       "ilha": "produtividade",
       "ehMoc": false,
       "cor": "#9E9E9E",
-      "grau": 8,
+      "grau": 9,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-07-09",
@@ -7263,7 +7265,7 @@
       "ilha": "psicologia-e-psicanalise",
       "ehMoc": false,
       "cor": "#7E57C2",
-      "grau": 41,
+      "grau": 42,
       "tipo": "guia",
       "nivel": "intermediário",
       "data": "2026-05-30",
@@ -7284,7 +7286,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 48,
+      "grau": 62,
       "tipo": "índice",
       "nivel": "",
       "data": "",
@@ -7321,7 +7323,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 9,
+      "grau": 10,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-07-01",
@@ -7354,7 +7356,7 @@
         "#pld-ft",
         "#economia-virtual",
         "#lavagem",
-        "#partida-dobrada",
+        "#partidas-dobradas",
         "#fraude"
       ]
     },
@@ -7406,7 +7408,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 10,
+      "grau": 12,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-07-01",
@@ -7428,7 +7430,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 9,
+      "grau": 10,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-30",
@@ -7437,7 +7439,7 @@
         "#idiomas",
         "#engenharia-de-software",
         "#comunicacao",
-        "#norma",
+        "#normas",
         "#ambiguidade",
         "#protocolo"
       ]
@@ -7469,7 +7471,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 17,
+      "grau": 18,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-22",
@@ -7530,7 +7532,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 7,
+      "grau": 8,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-14",
@@ -7551,7 +7553,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 10,
+      "grau": 11,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-14",
@@ -7734,7 +7736,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 8,
+      "grau": 9,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -7833,7 +7835,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 14,
+      "grau": 15,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-24",
@@ -7919,7 +7921,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 9,
+      "grau": 10,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-14",
@@ -7971,7 +7973,7 @@
         "#fiscal",
         "#devops",
         "#gestao-da-mudanca",
-        "#gestao-de-riscos",
+        "#risco",
         "#rollout"
       ]
     },
@@ -8018,13 +8020,37 @@
       ]
     },
     {
+      "id": "conhecimento/sinteses/normalizacao-do-desvio.md",
+      "titulo": "Síntese — A Normalização do Desvio: a regra afrouxa aos poucos, sem ninguém decidir afrouxar",
+      "dominio": "sinteses",
+      "ilha": "sinteses",
+      "ehMoc": false,
+      "cor": "#00E5FF",
+      "grau": 13,
+      "tipo": "síntese",
+      "nivel": "avançado",
+      "data": "2026-07-18",
+      "tags": [
+        "#sintese",
+        "#auditoria",
+        "#compliance",
+        "#psicologia",
+        "#engenharia-de-software",
+        "#seguranca",
+        "#risco",
+        "#controles-internos",
+        "#cultura",
+        "#normalizacao-do-desvio"
+      ]
+    },
+    {
       "id": "conhecimento/sinteses/numero-esg-e-da-controladoria.md",
       "titulo": "Síntese — O Número ESG é da Controladoria",
       "dominio": "sinteses",
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 10,
+      "grau": 11,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -8070,7 +8096,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 6,
+      "grau": 7,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-07-01",
@@ -8123,6 +8149,28 @@
         "#economia-comportamental",
         "#consumidor",
         "#nudge"
+      ]
+    },
+    {
+      "id": "conhecimento/sinteses/o-erro-mora-na-unidade.md",
+      "titulo": "Síntese — O Erro Mora na Unidade: análise dimensional é o teste de sanidade que a modelagem financeira esqueceu",
+      "dominio": "sinteses",
+      "ilha": "sinteses",
+      "ehMoc": false,
+      "cor": "#00E5FF",
+      "grau": 8,
+      "tipo": "síntese",
+      "nivel": "avançado",
+      "data": "2026-07-20",
+      "tags": [
+        "#sintese",
+        "#matematica",
+        "#financas",
+        "#contabilidade",
+        "#fisica",
+        "#analise-dimensional",
+        "#unidades",
+        "#modelagem"
       ]
     },
     {
@@ -8261,7 +8309,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 6,
+      "grau": 8,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-07-01",
@@ -8302,7 +8350,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 8,
+      "grau": 9,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-22",
@@ -8322,7 +8370,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 13,
+      "grau": 14,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-10",
@@ -8407,7 +8455,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 14,
+      "grau": 15,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-02",
@@ -8451,7 +8499,7 @@
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 8,
+      "grau": 9,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-07-01",
@@ -8488,13 +8536,33 @@
       ]
     },
     {
+      "id": "conhecimento/sinteses/so-existe-o-que-se-recupera.md",
+      "titulo": "Síntese — Só Existe o que se Recupera: a memória humana e o RAG falham no mesmo lugar (e se treinam com o mesmo teste)",
+      "dominio": "sinteses",
+      "ilha": "sinteses",
+      "ehMoc": false,
+      "cor": "#00E5FF",
+      "grau": 9,
+      "tipo": "síntese",
+      "nivel": "avançado",
+      "data": "2026-07-20",
+      "tags": [
+        "#sintese",
+        "#produtividade",
+        "#ia",
+        "#pkm",
+        "#rag",
+        "#aprendizagem"
+      ]
+    },
+    {
       "id": "conhecimento/sinteses/tone-at-the-top-governanca-previne-fraude.md",
       "titulo": "Síntese — Tone at the Top: a Governança que Previne Fraude",
       "dominio": "sinteses",
       "ilha": "sinteses",
       "ehMoc": false,
       "cor": "#00E5FF",
-      "grau": 14,
+      "grau": 15,
       "tipo": "síntese",
       "nivel": "avançado",
       "data": "2026-06-08",
@@ -8515,6 +8583,10 @@
     {
       "source": "conhecimento/administracao/README.md",
       "target": "conhecimento/administracao/cultura-organizacional.md"
+    },
+    {
+      "source": "conhecimento/administracao/README.md",
+      "target": "conhecimento/administracao/customer-success-e-relacionamento.md"
     },
     {
       "source": "conhecimento/administracao/README.md",
@@ -8574,7 +8646,31 @@
     },
     {
       "source": "conhecimento/administracao/README.md",
+      "target": "conhecimento/administracao/mentoria.md"
+    },
+    {
+      "source": "conhecimento/administracao/README.md",
+      "target": "conhecimento/administracao/modelos-mentais-para-decisao.md"
+    },
+    {
+      "source": "conhecimento/administracao/README.md",
       "target": "conhecimento/administracao/negociacao.md"
+    },
+    {
+      "source": "conhecimento/administracao/README.md",
+      "target": "conhecimento/administracao/otimizacao-de-curriculo-ats.md"
+    },
+    {
+      "source": "conhecimento/administracao/README.md",
+      "target": "conhecimento/administracao/pensamento-probabilistico-e-previsao.md"
+    },
+    {
+      "source": "conhecimento/administracao/README.md",
+      "target": "conhecimento/administracao/pensamento-sistemico.md"
+    },
+    {
+      "source": "conhecimento/administracao/README.md",
+      "target": "conhecimento/administracao/planejamento-de-metas-e-sonhos.md"
     },
     {
       "source": "conhecimento/administracao/README.md",
@@ -8583,6 +8679,14 @@
     {
       "source": "conhecimento/administracao/README.md",
       "target": "conhecimento/administracao/procedimento-operacional-padrao-pop.md"
+    },
+    {
+      "source": "conhecimento/administracao/README.md",
+      "target": "conhecimento/administracao/proposta-e-gestao-de-escopo.md"
+    },
+    {
+      "source": "conhecimento/administracao/README.md",
+      "target": "conhecimento/administracao/resolucao-de-problemas-e-criatividade.md"
     },
     {
       "source": "conhecimento/administracao/README.md",
@@ -10242,6 +10346,10 @@
     },
     {
       "source": "conhecimento/auditoria/controles-internos-coso.md",
+      "target": "conhecimento/sinteses/normalizacao-do-desvio.md"
+    },
+    {
+      "source": "conhecimento/auditoria/controles-internos-coso.md",
       "target": "conhecimento/sinteses/numero-esg-e-da-controladoria.md"
     },
     {
@@ -10469,6 +10577,10 @@
       "target": "conhecimento/sinteses/auditoria-e-inferencia-estatistica.md"
     },
     {
+      "source": "conhecimento/auditoria/risco-de-auditoria.md",
+      "target": "conhecimento/sinteses/normalizacao-do-desvio.md"
+    },
+    {
       "source": "conhecimento/auditoria/testes-e-amostragem.md",
       "target": "conhecimento/mocs/governanca-risco-compliance.md"
     },
@@ -10503,6 +10615,10 @@
     {
       "source": "conhecimento/auditoria/tipos-e-objetivos.md",
       "target": "conhecimento/sinteses/numero-esg-e-da-controladoria.md"
+    },
+    {
+      "source": "conhecimento/compliance/README.md",
+      "target": "conhecimento/compliance/anticorrupcao-due-diligence.md"
     },
     {
       "source": "conhecimento/compliance/README.md",
@@ -10891,6 +11007,10 @@
     {
       "source": "conhecimento/compliance/programa-de-compliance.md",
       "target": "conhecimento/sinteses/etica-da-virtude-ao-framework.md"
+    },
+    {
+      "source": "conhecimento/compliance/programa-de-compliance.md",
+      "target": "conhecimento/sinteses/normalizacao-do-desvio.md"
     },
     {
       "source": "conhecimento/compliance/programa-de-compliance.md",
@@ -11543,6 +11663,10 @@
     {
       "source": "conhecimento/contabilidade/contabil/demonstracoes-financeiras.md",
       "target": "conhecimento/sinteses/do-lancamento-ao-parecer.md"
+    },
+    {
+      "source": "conhecimento/contabilidade/contabil/demonstracoes-financeiras.md",
+      "target": "conhecimento/sinteses/o-erro-mora-na-unidade.md"
     },
     {
       "source": "conhecimento/contabilidade/contabil/estoques-e-cmv.md",
@@ -12250,6 +12374,10 @@
     },
     {
       "source": "conhecimento/direito/README.md",
+      "target": "conhecimento/direito/contratos.md"
+    },
+    {
+      "source": "conhecimento/direito/README.md",
       "target": "conhecimento/direito/direito-civil.md"
     },
     {
@@ -12270,7 +12398,15 @@
     },
     {
       "source": "conhecimento/direito/README.md",
+      "target": "conhecimento/direito/direito-tributario.md"
+    },
+    {
+      "source": "conhecimento/direito/README.md",
       "target": "conhecimento/direito/fundamentos-do-direito.md"
+    },
+    {
+      "source": "conhecimento/direito/README.md",
+      "target": "conhecimento/direito/revisao-de-contratos.md"
     },
     {
       "source": "conhecimento/direito/README.md",
@@ -12494,6 +12630,10 @@
     },
     {
       "source": "conhecimento/economia/README.md",
+      "target": "conhecimento/economia/politica-monetaria-e-inflacao.md"
+    },
+    {
+      "source": "conhecimento/economia/README.md",
       "target": "conhecimento/financas/gestao-de-caixa-e-tesouraria.md"
     },
     {
@@ -12598,6 +12738,10 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/aggregate-e-aggregate-root.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
       "target": "conhecimento/engenharia-de-software/apis-e-integracao.md"
     },
     {
@@ -12611,6 +12755,10 @@
     {
       "source": "conhecimento/engenharia-de-software/README.md",
       "target": "conhecimento/engenharia-de-software/boas-praticas.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/bounded-context.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/README.md",
@@ -12634,7 +12782,15 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/context-mapping.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
       "target": "conhecimento/engenharia-de-software/desenvolvimento-mobile.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/design-de-apresentacoes-e-marca.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/README.md",
@@ -12650,7 +12806,19 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/domain-driven-design.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/domain-service.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
       "target": "conhecimento/engenharia-de-software/engenharia-de-dados-e-bi.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/entity-vs-value-object.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/README.md",
@@ -12666,11 +12834,31 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/geracao-de-apresentacoes-com-ia.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/geracao-de-documentos-e-apresentacoes.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
       "target": "conhecimento/engenharia-de-software/github-fluxo-e-segundo-cerebro.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/higiene-de-repositorio.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
       "target": "conhecimento/engenharia-de-software/integracao-erp-e-sistemas-contabeis.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/leitura-e-extracao-de-pdf.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/linguagem-ubiqua.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/README.md",
@@ -12691,6 +12879,18 @@
     {
       "source": "conhecimento/engenharia-de-software/README.md",
       "target": "conhecimento/engenharia-de-software/observabilidade-e-monitoramento.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/publicacao-sharepoint-microsoft-graph.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/recursos-de-aprendizado.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/repository-no-ddd.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/README.md",
@@ -12739,6 +12939,10 @@
     {
       "source": "conhecimento/engenharia-de-software/README.md",
       "target": "conhecimento/engenharia-de-software/system-design-e-escalabilidade.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/README.md",
+      "target": "conhecimento/engenharia-de-software/testes-avancados.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/README.md",
@@ -13849,6 +14053,10 @@
       "target": "conhecimento/sinteses/escalar-e-decisao-economica.md"
     },
     {
+      "source": "conhecimento/engenharia-de-software/devops-cultura-e-sre.md",
+      "target": "conhecimento/sinteses/normalizacao-do-desvio.md"
+    },
+    {
       "source": "conhecimento/engenharia-de-software/domain-driven-design.md",
       "target": "conhecimento/engenharia-de-software/domain-service.md"
     },
@@ -14954,6 +15162,10 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/seguranca/README.md",
+      "target": "conhecimento/engenharia-de-software/seguranca/arquitetura-de-defesa-em-camadas.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/seguranca/README.md",
       "target": "conhecimento/engenharia-de-software/seguranca/conscientizacao-anti-phishing.md"
     },
     {
@@ -14975,6 +15187,10 @@
     {
       "source": "conhecimento/engenharia-de-software/seguranca/README.md",
       "target": "conhecimento/engenharia-de-software/seguranca/higiene-digital-e-seguranca-pessoal.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/seguranca/README.md",
+      "target": "conhecimento/engenharia-de-software/seguranca/protecao-de-codigo-e-anti-engenharia-reversa.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/seguranca/README.md",
@@ -15215,6 +15431,10 @@
     {
       "source": "conhecimento/engenharia-de-software/seguranca/defesa-em-profundidade-e-zero-trust.md",
       "target": "conhecimento/sinteses/nao-ha-solucao-so-trade-offs.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/seguranca/defesa-em-profundidade-e-zero-trust.md",
+      "target": "conhecimento/sinteses/normalizacao-do-desvio.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/seguranca/defesa-em-profundidade-e-zero-trust.md",
@@ -15614,6 +15834,14 @@
     },
     {
       "source": "conhecimento/engenharia-de-software/web/README.md",
+      "target": "conhecimento/engenharia-de-software/web/design-md-para-agentes.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/web/README.md",
+      "target": "conhecimento/engenharia-de-software/web/design-system.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/web/README.md",
       "target": "conhecimento/engenharia-de-software/web/front-end.md"
     },
     {
@@ -15623,6 +15851,10 @@
     {
       "source": "conhecimento/engenharia-de-software/web/README.md",
       "target": "conhecimento/engenharia-de-software/web/hospedagem-e-deploy-front-end.md"
+    },
+    {
+      "source": "conhecimento/engenharia-de-software/web/README.md",
+      "target": "conhecimento/engenharia-de-software/web/scrollytelling-narrativa-dirigida-por-scroll.md"
     },
     {
       "source": "conhecimento/engenharia-de-software/web/README.md",
@@ -15775,6 +16007,10 @@
     {
       "source": "conhecimento/estatistica/README.md",
       "target": "conhecimento/estatistica/analise-exploratoria-e-limpeza-de-dados.md"
+    },
+    {
+      "source": "conhecimento/estatistica/README.md",
+      "target": "conhecimento/estatistica/churn-e-analise-de-sobrevivencia.md"
     },
     {
       "source": "conhecimento/estatistica/README.md",
@@ -16178,6 +16414,10 @@
     },
     {
       "source": "conhecimento/financas/README.md",
+      "target": "conhecimento/financas/formulario-financeiro-e-administrativo.md"
+    },
+    {
+      "source": "conhecimento/financas/README.md",
       "target": "conhecimento/financas/gestao-de-caixa-e-tesouraria.md"
     },
     {
@@ -16203,6 +16443,10 @@
     {
       "source": "conhecimento/financas/README.md",
       "target": "conhecimento/financas/planejamento-financeiro-e-orcamento.md"
+    },
+    {
+      "source": "conhecimento/financas/README.md",
+      "target": "conhecimento/financas/precificacao-de-servicos-e-projetos.md"
     },
     {
       "source": "conhecimento/financas/README.md",
@@ -16702,6 +16946,10 @@
     },
     {
       "source": "conhecimento/financas/matematica-financeira.md",
+      "target": "conhecimento/sinteses/o-erro-mora-na-unidade.md"
+    },
+    {
+      "source": "conhecimento/financas/matematica-financeira.md",
       "target": "conhecimento/sinteses/o-imposto-invisivel-da-inflacao.md"
     },
     {
@@ -17106,6 +17354,10 @@
     },
     {
       "source": "conhecimento/inteligencia-artificial/README.md",
+      "target": "conhecimento/inteligencia-artificial/extracao-estruturada-de-documentos.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/README.md",
       "target": "conhecimento/inteligencia-artificial/fine-tuning-e-adaptacao-de-modelos.md"
     },
     {
@@ -17143,6 +17395,10 @@
     {
       "source": "conhecimento/inteligencia-artificial/README.md",
       "target": "conhecimento/inteligencia-artificial/riscos-etica-e-governanca-de-ia.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/README.md",
+      "target": "conhecimento/inteligencia-artificial/stack-de-engenharia-de-agentes.md"
     },
     {
       "source": "conhecimento/inteligencia-artificial/README.md",
@@ -17243,6 +17499,10 @@
     {
       "source": "conhecimento/inteligencia-artificial/avaliacao-de-modelos-de-ia.md",
       "target": "conhecimento/sinteses/a-metrica-que-vira-alvo.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/avaliacao-de-modelos-de-ia.md",
+      "target": "conhecimento/sinteses/so-existe-o-que-se-recupera.md"
     },
     {
       "source": "conhecimento/inteligencia-artificial/custo-e-infraestrutura-de-inferencia.md",
@@ -17517,12 +17777,20 @@
       "target": "conhecimento/produtividade/gestao-do-conhecimento-pessoal.md"
     },
     {
+      "source": "conhecimento/inteligencia-artificial/orquestracao-de-agentes-no-memorycode.md",
+      "target": "conhecimento/sinteses/so-existe-o-que-se-recupera.md"
+    },
+    {
       "source": "conhecimento/inteligencia-artificial/rag-e-bases-vetoriais.md",
       "target": "conhecimento/inteligencia-artificial/stack-de-engenharia-de-agentes.md"
     },
     {
       "source": "conhecimento/inteligencia-artificial/rag-e-bases-vetoriais.md",
       "target": "conhecimento/mocs/inteligencia-artificial.md"
+    },
+    {
+      "source": "conhecimento/inteligencia-artificial/rag-e-bases-vetoriais.md",
+      "target": "conhecimento/sinteses/so-existe-o-que-se-recupera.md"
     },
     {
       "source": "conhecimento/inteligencia-artificial/riscos-etica-e-governanca-de-ia.md",
@@ -17615,6 +17883,10 @@
     {
       "source": "conhecimento/marketing-digital/README.md",
       "target": "conhecimento/marketing-digital/estrategia-e-planejamento.md"
+    },
+    {
+      "source": "conhecimento/marketing-digital/README.md",
+      "target": "conhecimento/marketing-digital/estrategia-visual.md"
     },
     {
       "source": "conhecimento/marketing-digital/README.md",
@@ -18597,6 +18869,10 @@
       "target": "conhecimento/mocs/controle-financeiro-e-valores.md"
     },
     {
+      "source": "conhecimento/matematica/fisica-essencial.md",
+      "target": "conhecimento/sinteses/o-erro-mora-na-unidade.md"
+    },
+    {
       "source": "conhecimento/matematica/matematica-essencial.md",
       "target": "conhecimento/mocs/controle-financeiro-e-valores.md"
     },
@@ -18751,6 +19027,10 @@
     {
       "source": "conhecimento/mocs/analise-de-empresa.md",
       "target": "conhecimento/sinteses/financas-comportamentais.md"
+    },
+    {
+      "source": "conhecimento/mocs/analise-de-empresa.md",
+      "target": "conhecimento/sinteses/o-erro-mora-na-unidade.md"
     },
     {
       "source": "conhecimento/mocs/analise-de-empresa.md",
@@ -19162,6 +19442,10 @@
     },
     {
       "source": "conhecimento/mocs/governanca-risco-compliance.md",
+      "target": "conhecimento/sinteses/normalizacao-do-desvio.md"
+    },
+    {
+      "source": "conhecimento/mocs/governanca-risco-compliance.md",
       "target": "conhecimento/sinteses/numero-esg-e-da-controladoria.md"
     },
     {
@@ -19231,6 +19515,10 @@
     {
       "source": "conhecimento/mocs/inteligencia-artificial.md",
       "target": "conhecimento/sinteses/o-sotaque-e-interferencia-do-prior.md"
+    },
+    {
+      "source": "conhecimento/mocs/inteligencia-artificial.md",
+      "target": "conhecimento/sinteses/so-existe-o-que-se-recupera.md"
     },
     {
       "source": "conhecimento/mocs/marketing-digital.md",
@@ -19366,6 +19654,10 @@
     },
     {
       "source": "conhecimento/mocs/proteger-software.md",
+      "target": "conhecimento/sinteses/normalizacao-do-desvio.md"
+    },
+    {
+      "source": "conhecimento/mocs/proteger-software.md",
       "target": "conhecimento/sinteses/nunca-confie-no-cliente.md"
     },
     {
@@ -19498,6 +19790,10 @@
     },
     {
       "source": "conhecimento/planilhas-e-dashboards/README.md",
+      "target": "conhecimento/planilhas-e-dashboards/analise-estatistica-no-excel.md"
+    },
+    {
+      "source": "conhecimento/planilhas-e-dashboards/README.md",
       "target": "conhecimento/planilhas-e-dashboards/auditar-planilha-recebida.md"
     },
     {
@@ -19559,6 +19855,10 @@
     {
       "source": "conhecimento/planilhas-e-dashboards/README.md",
       "target": "conhecimento/planilhas-e-dashboards/power-bi-ponta-a-ponta.md"
+    },
+    {
+      "source": "conhecimento/planilhas-e-dashboards/README.md",
+      "target": "conhecimento/planilhas-e-dashboards/power-query-e-linguagem-m.md"
     },
     {
       "source": "conhecimento/planilhas-e-dashboards/analise-de-cenarios-excel.md",
@@ -19885,6 +20185,10 @@
       "target": "conhecimento/sinteses/do-lancamento-ao-parecer.md"
     },
     {
+      "source": "conhecimento/planilhas-e-dashboards/modelagem-financeira-no-excel.md",
+      "target": "conhecimento/sinteses/o-erro-mora-na-unidade.md"
+    },
+    {
       "source": "conhecimento/planilhas-e-dashboards/power-bi-ponta-a-ponta.md",
       "target": "conhecimento/planilhas-e-dashboards/power-query-e-linguagem-m.md"
     },
@@ -19949,6 +20253,10 @@
       "target": "conhecimento/psicologia-e-psicanalise/vieses-cognitivos-e-tomada-de-decisao.md"
     },
     {
+      "source": "conhecimento/produtividade/como-aprender.md",
+      "target": "conhecimento/sinteses/so-existe-o-que-se-recupera.md"
+    },
+    {
       "source": "conhecimento/produtividade/formacao-de-habitos.md",
       "target": "conhecimento/produtividade/produtividade-e-foco.md"
     },
@@ -19959,6 +20267,10 @@
     {
       "source": "conhecimento/produtividade/gestao-do-conhecimento-pessoal.md",
       "target": "conhecimento/produtividade/produtividade-e-foco.md"
+    },
+    {
+      "source": "conhecimento/produtividade/gestao-do-conhecimento-pessoal.md",
+      "target": "conhecimento/sinteses/so-existe-o-que-se-recupera.md"
     },
     {
       "source": "conhecimento/produtividade/produtividade-e-foco.md",
@@ -20226,6 +20538,10 @@
     },
     {
       "source": "conhecimento/psicologia-e-psicanalise/vieses-cognitivos-e-tomada-de-decisao.md",
+      "target": "conhecimento/sinteses/normalizacao-do-desvio.md"
+    },
+    {
+      "source": "conhecimento/psicologia-e-psicanalise/vieses-cognitivos-e-tomada-de-decisao.md",
       "target": "conhecimento/sinteses/o-batna-financeiro.md"
     },
     {
@@ -20266,6 +20582,10 @@
     },
     {
       "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/a-dose-faz-o-veneno.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
       "target": "conhecimento/sinteses/a-economia-do-jogo-e-real.md"
     },
     {
@@ -20275,6 +20595,14 @@
     {
       "source": "conhecimento/sinteses/README.md",
       "target": "conhecimento/sinteses/a-mente-por-tras-da-mensagem.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/a-metrica-que-vira-alvo.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/a-norma-e-um-protocolo.md"
     },
     {
       "source": "conhecimento/sinteses/README.md",
@@ -20291,6 +20619,14 @@
     {
       "source": "conhecimento/sinteses/README.md",
       "target": "conhecimento/sinteses/a-triade-do-preco.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/analise-economica-do-direito.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/auditoria-e-inferencia-estatistica.md"
     },
     {
       "source": "conhecimento/sinteses/README.md",
@@ -20346,6 +20682,10 @@
     },
     {
       "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/estrategia-e-uma-so-disciplina.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
       "target": "conhecimento/sinteses/etica-da-virtude-ao-framework.md"
     },
     {
@@ -20355,6 +20695,10 @@
     {
       "source": "conhecimento/sinteses/README.md",
       "target": "conhecimento/sinteses/gamificacao-e-motivacao.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/guardrails-de-agente-sao-controle-interno.md"
     },
     {
       "source": "conhecimento/sinteses/README.md",
@@ -20374,7 +20718,19 @@
     },
     {
       "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/normalizacao-do-desvio.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/numero-esg-e-da-controladoria.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
       "target": "conhecimento/sinteses/nunca-confie-no-cliente.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/o-banco-central-do-jogo.md"
     },
     {
       "source": "conhecimento/sinteses/README.md",
@@ -20383,6 +20739,10 @@
     {
       "source": "conhecimento/sinteses/README.md",
       "target": "conhecimento/sinteses/o-direito-e-o-humano-irracional.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/o-erro-mora-na-unidade.md"
     },
     {
       "source": "conhecimento/sinteses/README.md",
@@ -20407,6 +20767,10 @@
     {
       "source": "conhecimento/sinteses/README.md",
       "target": "conhecimento/sinteses/o-sinal-e-o-preco-da-desconfianca.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/o-sotaque-e-interferencia-do-prior.md"
     },
     {
       "source": "conhecimento/sinteses/README.md",
@@ -20442,7 +20806,15 @@
     },
     {
       "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/quem-escreveu-nao-enxerga.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
       "target": "conhecimento/sinteses/retencao-e-valuation.md"
+    },
+    {
+      "source": "conhecimento/sinteses/README.md",
+      "target": "conhecimento/sinteses/so-existe-o-que-se-recupera.md"
     },
     {
       "source": "conhecimento/sinteses/README.md",
@@ -20510,6 +20882,10 @@
     },
     {
       "source": "conhecimento/sinteses/a-metrica-que-vira-alvo.md",
+      "target": "conhecimento/sinteses/normalizacao-do-desvio.md"
+    },
+    {
+      "source": "conhecimento/sinteses/a-metrica-que-vira-alvo.md",
       "target": "conhecimento/sinteses/o-banco-central-do-jogo.md"
     },
     {
@@ -20555,6 +20931,10 @@
     {
       "source": "conhecimento/sinteses/a-premissa-invisivel.md",
       "target": "conhecimento/sinteses/nunca-confie-no-cliente.md"
+    },
+    {
+      "source": "conhecimento/sinteses/a-premissa-invisivel.md",
+      "target": "conhecimento/sinteses/o-erro-mora-na-unidade.md"
     },
     {
       "source": "conhecimento/sinteses/a-premissa-invisivel.md",
@@ -20637,6 +21017,10 @@
       "target": "conhecimento/sinteses/o-organograma-vira-codigo.md"
     },
     {
+      "source": "conhecimento/sinteses/do-grao-ao-kpi.md",
+      "target": "conhecimento/sinteses/o-erro-mora-na-unidade.md"
+    },
+    {
       "source": "conhecimento/sinteses/eficiencia-mata-na-cauda.md",
       "target": "conhecimento/sinteses/nao-ha-solucao-so-trade-offs.md"
     },
@@ -20689,6 +21073,18 @@
       "target": "conhecimento/sinteses/padronizar-para-mudar.md"
     },
     {
+      "source": "conhecimento/sinteses/normalizacao-do-desvio.md",
+      "target": "conhecimento/sinteses/padronizar-para-mudar.md"
+    },
+    {
+      "source": "conhecimento/sinteses/normalizacao-do-desvio.md",
+      "target": "conhecimento/sinteses/psicologia-da-fraude.md"
+    },
+    {
+      "source": "conhecimento/sinteses/normalizacao-do-desvio.md",
+      "target": "conhecimento/sinteses/tone-at-the-top-governanca-previne-fraude.md"
+    },
+    {
       "source": "conhecimento/sinteses/numero-esg-e-da-controladoria.md",
       "target": "conhecimento/sinteses/tone-at-the-top-governanca-previne-fraude.md"
     },
@@ -20735,6 +21131,14 @@
     {
       "source": "conhecimento/sinteses/o-sotaque-e-interferencia-do-prior.md",
       "target": "conhecimento/sinteses/o-vies-e-um-cache-velho.md"
+    },
+    {
+      "source": "conhecimento/sinteses/o-sotaque-e-interferencia-do-prior.md",
+      "target": "conhecimento/sinteses/so-existe-o-que-se-recupera.md"
+    },
+    {
+      "source": "conhecimento/sinteses/o-vies-e-um-cache-velho.md",
+      "target": "conhecimento/sinteses/so-existe-o-que-se-recupera.md"
     },
     {
       "source": "conhecimento/sinteses/padronizar-para-mudar.md",
