@@ -2,11 +2,24 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-SIJ+tRsYCzLD9afY1x8CjBi1lnYGImlU/Ddlv8VUvtA=' 'sha256-1yvnH29VT6SvG/tGoNfuKL3PfgQC2PuybzkQ2c6rgyA=' 'sha256-+4qwjEMSI9ycckQV5eMFRDBsLIpNrakhW/OxPvDy1Ck='; connect-src 'self'" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-SIJ+tRsYCzLD9afY1x8CjBi1lnYGImlU/Ddlv8VUvtA=' 'sha256-1yvnH29VT6SvG/tGoNfuKL3PfgQC2PuybzkQ2c6rgyA=' 'sha256-3prNTwydHWlhXLDcJqu2eWHx6nqs2ttQbK8YB0VW9vU='; connect-src 'self'" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MemoryCode • Portal Neural 3D</title>
 <meta name="author" content="Luan Guilherme Lourenço (euguilouren)" />
 <meta name="description" content="MemoryCode — um segundo cérebro que pensa em rede. Projeto pessoal de Luan Guilherme Lourenço. Powered by euguilouren." />
+<link rel="canonical" href="https://euguilouren.github.io/MemoryProjects/" />
+<meta name="theme-color" content="#0C1A2B" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%230C1A2B'/%3E%3Cg%20stroke='%23E8A85E'%20stroke-width='1.5'%3E%3Cline%20x1='16'%20y1='16'%20x2='8'%20y2='9'/%3E%3Cline%20x1='16'%20y1='16'%20x2='24'%20y2='10'/%3E%3Cline%20x1='16'%20y1='16'%20x2='10'%20y2='24'/%3E%3Cline%20x1='16'%20y1='16'%20x2='23'%20y2='23'/%3E%3C/g%3E%3Cg%20fill='%23E8A85E'%3E%3Ccircle%20cx='16'%20cy='16'%20r='3.4'/%3E%3Ccircle%20cx='8'%20cy='9'%20r='2'/%3E%3Ccircle%20cx='24'%20cy='10'%20r='2'/%3E%3Ccircle%20cx='10'%20cy='24'%20r='2'/%3E%3Ccircle%20cx='23'%20cy='23'%20r='2'/%3E%3C/g%3E%3C/svg%3E" />
+<!-- Open Graph / cartão de compartilhamento (rico mesmo sem imagem própria) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="MemoryCode" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:title" content="MemoryCode — Portal Neural 3D" />
+<meta property="og:description" content="A rede de conhecimento como um grafo vivo: navegue o segundo cérebro em 3D, nó a nó." />
+<meta property="og:url" content="https://euguilouren.github.io/MemoryProjects/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="MemoryCode — Portal Neural 3D" />
+<meta name="twitter:description" content="A rede de conhecimento como um grafo vivo: navegue o segundo cérebro em 3D, nó a nó." />
 <!-- Fontes self-hosted (ver @font-face no <style>): sem Google Fonts, zero-CDN. -->
 <style>
   /* Fontes self-hosted (zero-CDN, blindagem): Manrope + Inter (variaveis).
@@ -109,9 +122,17 @@
   .marca b { font-family:var(--display); font-weight:800; font-size:25px; letter-spacing:-.02em; line-height:1; }
   .marca span { font-size:9.5px; color:var(--gold-soft); letter-spacing:.26em; text-transform:uppercase; font-weight:500; }
   .ponto { width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 10px var(--gold); }
-  #busca { flex:1 1 220px; min-width:150px; max-width:420px; padding:9px 12px; border-radius:10px; border:1px solid var(--linha);
+  .busca-wrap { position:relative; flex:1 1 220px; min-width:150px; max-width:420px; }
+  #busca { width:100%; padding:9px 12px; border-radius:10px; border:1px solid var(--linha);
     background:rgba(14,27,46,.85); color:var(--ink); font-size:14px; outline:none; }
   #busca:focus { border-color:rgba(224,160,90,.55); box-shadow:0 0 0 3px rgba(224,160,90,.12); }
+  /* Dropdown vivo da busca principal (mesmo padrão do modo Caminho, agora flutuante) */
+  #busca-res { position:absolute; top:calc(100% + 6px); left:0; right:0; z-index:12; display:none;
+    background:var(--panel); border:1px solid var(--linha); border-radius:10px; padding:5px;
+    max-height:340px; overflow:auto; box-shadow:0 14px 50px rgba(0,0,0,.6); }
+  #busca-res .mc-item { padding:7px 8px; border-radius:7px; }
+  #busca-res .mc-item:hover { background:rgba(224,160,90,.12); }
+  #busca-res .mc-vazio { font-size:12.5px; color:var(--muted); padding:7px 8px; }
   #contador { font-size:12px; color:var(--muted); background:rgba(14,27,46,.85); padding:7px 10px; border-radius:10px; }
   #painel { position:fixed; top:64px; right:14px; width:340px; max-width:88vw; z-index:11; display:none;
     background:var(--panel); border:1px solid var(--linha); border-radius:14px; padding:16px; box-shadow:0 14px 50px rgba(0,0,0,.6); }
@@ -147,6 +168,10 @@
   /* breadcrumb "voltar" nos painéis (Stats / nota / caminho) */
   .btn-voltar { cursor:pointer; color:var(--gold-soft); font-size:12.5px; display:inline-block; margin:0 0 9px; }
   .btn-voltar:hover { text-decoration:underline; color:var(--gold); }
+  /* Foco visível de teclado nos controles do painel (div/span operáveis via role=button) */
+  #fechar:focus-visible, #st-fechar:focus-visible, #mc-fechar:focus-visible, .btn-voltar:focus-visible,
+  #painel .lk:focus-visible, #painel .tag-lk:focus-visible, #stats .st-row:focus-visible,
+  .mc-item:focus-visible { outline:2px solid var(--gold-bright); outline-offset:2px; border-radius:4px; }
   #modo-caminho { position:fixed; top:62px; left:50%; transform:translateX(-50%); z-index:13; display:none;
     width:330px; max-width:92vw; background:rgba(11,22,34,.97); border:1px solid rgba(224,160,90,.4); border-radius:14px;
     padding:12px 14px; box-shadow:0 14px 50px rgba(0,0,0,.6); }
@@ -199,7 +224,7 @@
     #topo { flex-direction:row; flex-wrap:wrap; align-items:center; gap:7px; top:10px; left:10px; right:10px; }
     .marca { flex:0 0 auto; }
     .marca b { font-size:16px; }
-    #busca { flex:1 1 100%; width:100%; max-width:none; order:3; }
+    .busca-wrap { flex:1 1 100%; max-width:none; order:3; }
     #btn-notas, #btn-caminho, #btn-stats { flex:1 1 0; min-width:0; text-align:center; font-size:12px; padding:8px 6px; order:4; }
     #contador { flex:1 1 100%; order:5; align-self:flex-start; background:none; padding:2px; }
     #painel { top:auto; bottom:10px; left:10px; right:10px; width:auto; max-width:none; max-height:60vh; overflow:auto; }
@@ -410,14 +435,18 @@
     <span class="ponto"></span>
     <div><b>MemoryCode</b> <span>Portal Neural 3D</span></div>
   </div>
-  <input id="busca" type="search" placeholder="Buscar nota..." aria-label="Buscar nota pelo título ou tag" />
+  <div class="busca-wrap">
+    <input id="busca" type="search" placeholder="Buscar nota..." aria-label="Buscar nota pelo título ou tag"
+      role="combobox" aria-expanded="false" aria-controls="busca-res" aria-autocomplete="list" autocomplete="off" />
+    <div class="mc-res" id="busca-res" role="listbox" aria-label="Resultados da busca"></div>
+  </div>
   <button id="btn-caminho" title="Traçar o menor caminho entre duas notas">Caminho</button>
   <button id="btn-stats" title="Estatísticas da rede">Stats</button>
   <span id="contador" aria-live="polite"></span>
 </div>
 
 <div id="modo-caminho">
-  <span id="mc-fechar">×</span>
+  <span id="mc-fechar" role="button" tabindex="0" aria-label="Fechar modo caminho">×</span>
   <div class="mc-titulo">Traçar caminho</div>
   <div class="mc-sub">Busque pelo nome ou clique no nó (preenche o campo vazio)</div>
   <input id="mc-a" type="search" placeholder="Nota de origem..." autocomplete="off" aria-label="Nota de origem do caminho" />
@@ -885,7 +914,15 @@ function iniciar(nodes, links) {
     else if (desc.t === 'caminho') mostrarCaminho(desc.caminho);
   }
   function voltar() { const d = navHist.pop(); if (d) aplicarVista(d); else fecharPainel(); }
-  const htmlVoltar = () => navHist.length ? `<span class="btn-voltar">‹ Voltar</span>` : '';
+  const htmlVoltar = () => navHist.length ? `<span class="btn-voltar" role="button" tabindex="0">‹ Voltar</span>` : '';
+  // a11y: controles do painel são div/span (role=button) — click + Enter/Espaço + foco por teclado.
+  function aoAtivar(el, fn) {
+    if (!el) return;
+    el.onclick = fn;
+    el.onkeydown = e => {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); fn(e); }
+    };
+  }
   const btnCaminho = document.getElementById('btn-caminho');
   const elModoCaminho = document.getElementById('modo-caminho');
   const elToast = document.getElementById('toast');
@@ -975,7 +1012,7 @@ function iniciar(nodes, links) {
     if (selCam[0] == null) definirPonta(0, i);
     else definirPonta(1, i);
   }
-  document.getElementById('mc-fechar').onclick = sairCaminho;
+  aoAtivar(document.getElementById('mc-fechar'), sairCaminho);
 
   function ndc(e) {
     const t = (e.touches && e.touches[0]) || e;
@@ -1051,18 +1088,18 @@ function iniciar(nodes, links) {
     focarSuave(pos[caminho[Math.floor(caminho.length / 2)]]);
     const doms = new Set(caminho.map(j => nodes[j].dominio));
     const passos = caminho.map(j =>
-      `<div class="lk" data-i="${j}"><i style="background:${nodes[j].cor}"></i>${esc(nodes[j].titulo)}</div>`)
+      `<div class="lk" role="button" tabindex="0" data-i="${j}"><i style="background:${nodes[j].cor}"></i>${esc(nodes[j].titulo)}</div>`)
       .join('<span class="seta">·</span>');
     elStats.style.display = 'none';
     elPainel.style.display = 'block';
     elPainel.innerHTML =
-      `<span id="fechar">×</span>${htmlVoltar()}<h2>Caminho entre notas</h2>` +
+      `<span id="fechar" role="button" tabindex="0" aria-label="Fechar painel">×</span>${htmlVoltar()}<h2>Caminho entre notas</h2>` +
       `<div class="rota-resumo">${caminho.length - 1} saltos · cruza ${doms.size} domínio${doms.size > 1 ? 's' : ''}</div>` +
       `<div class="rota-passos">${passos}</div>`;
-    document.getElementById('fechar').onclick = fecharPainel;
-    const vb = elPainel.querySelector('.btn-voltar'); if (vb) vb.onclick = voltar;
+    aoAtivar(document.getElementById('fechar'), fecharPainel);
+    aoAtivar(elPainel.querySelector('.btn-voltar'), voltar);
     elPainel.querySelectorAll('.lk').forEach(el =>
-      el.onclick = () => navTo({ t: 'nota', i: +el.dataset.i }));
+      aoAtivar(el, () => navTo({ t: 'nota', i: +el.dataset.i })));
     vistaAtual = { t: 'caminho', caminho };
   }
 
@@ -1077,19 +1114,19 @@ function iniciar(nodes, links) {
     const vizinhos = [...viz[i]].map(j => meshes[j])
       .sort((x, y) => (y.userData.n.grau || 0) - (x.userData.n.grau || 0));
     const lista = vizinhos.map(v =>
-      `<div class="lk" data-i="${v.userData.i}"><i style="background:${v.userData.n.cor}"></i>${esc(v.userData.n.titulo)}</div>`).join('');
+      `<div class="lk" role="button" tabindex="0" data-i="${v.userData.i}"><i style="background:${v.userData.n.cor}"></i>${esc(v.userData.n.titulo)}</div>`).join('');
     elPainel.style.display = 'block';
     elPainel.innerHTML =
-      `<span id="fechar">×</span>${htmlVoltar()}<h2>${esc(n.titulo)}</h2>` +
+      `<span id="fechar" role="button" tabindex="0" aria-label="Fechar painel">×</span>${htmlVoltar()}<h2>${esc(n.titulo)}</h2>` +
       `<span class="chip" style="background:${n.cor}">${esc(LABELS[n.dominio] || n.dominio)}</span>` +
       (meta ? ` <span style="font-size:11px;color:#9aa0b4">${esc(meta)}</span>` : '') +
       `<button class="btn-copiar" title="Copiar link direto para esta nota">copiar link</button>` +
       (n.tags && n.tags.length ? `<div class="tags">${n.tags.map(t =>
-        `<span class="tag-lk" data-tag="${esc(t)}" title="Filtrar a rede por ${esc(t)}">${esc(t)}</span>`).join(' ')}</div>` : '') +
+        `<span class="tag-lk" role="button" tabindex="0" data-tag="${esc(t)}" title="Filtrar a rede por ${esc(t)}">${esc(t)}</span>`).join(' ')}</div>` : '') +
       `<button class="btn-rota" data-i="${i}">Traçar caminho a partir daqui</button>` +
       `<div class="conx">${n.grau || 0} conexões</div><div class="conx-lista">${lista}</div>`;
-    document.getElementById('fechar').onclick = fecharPainel;
-    const vb = elPainel.querySelector('.btn-voltar'); if (vb) vb.onclick = voltar;
+    aoAtivar(document.getElementById('fechar'), fecharPainel);
+    aoAtivar(elPainel.querySelector('.btn-voltar'), voltar);
     elPainel.querySelector('.btn-rota').onclick = () => entrarCaminho(i);
     elPainel.querySelector('.btn-copiar').onclick = () => {
       const url = location.origin + location.pathname + '#nota=' + encodeURIComponent(n.id);
@@ -1097,9 +1134,9 @@ function iniciar(nodes, links) {
         .then(() => toast('Link copiado'), () => toast('Copie da barra: ' + url));
     };
     elPainel.querySelectorAll('.tag-lk').forEach(el =>
-      el.onclick = () => aplicarFiltroTag(el.dataset.tag));
+      aoAtivar(el, () => aplicarFiltroTag(el.dataset.tag)));
     elPainel.querySelectorAll('.lk').forEach(el =>
-      el.onclick = () => navTo({ t: 'nota', i: +el.dataset.i }));
+      aoAtivar(el, () => navTo({ t: 'nota', i: +el.dataset.i })));
     vistaAtual = { t: 'nota', i };
     setHash(n.id);                            // deep-link: reflete a nota aberta na URL
   }
@@ -1132,27 +1169,27 @@ function iniciar(nodes, links) {
     const topo = meshes.map(m => m.userData)
       .sort((a, b) => (b.n.grau || 0) - (a.n.grau || 0)).slice(0, 10);
     const linhasDom = domsOrd.map(d =>
-      `<div class="st-row" data-dom="${d}" title="Filtrar por domínio"><i style="background:${dominios[d]}"></i>` +
+      `<div class="st-row" role="button" tabindex="0" data-dom="${d}" title="Filtrar por domínio"><i style="background:${dominios[d]}"></i>` +
       `${esc(LABELS[d] || d)}` +
       `<span class="st-bar" style="width:${Math.round(54 * cont[d] / maxC) + 6}px;background:${dominios[d]}"></span>` +
       `<span class="st-num">${cont[d]}</span></div>`).join('');
     const linhasHub = topo.map(u =>
-      `<div class="st-row" data-i="${u.i}" title="Abrir nota"><i style="background:${u.n.cor}"></i>` +
+      `<div class="st-row" role="button" tabindex="0" data-i="${u.i}" title="Abrir nota"><i style="background:${u.n.cor}"></i>` +
       `${esc(u.n.titulo)}<span class="st-num">${u.n.grau || 0}</span></div>`).join('');
     elStats.innerHTML =
-      `<span id="st-fechar">×</span>${htmlVoltar()}<h2>Estatísticas da rede</h2>` +
+      `<span id="st-fechar" role="button" tabindex="0" aria-label="Fechar estatísticas">×</span>${htmlVoltar()}<h2>Estatísticas da rede</h2>` +
       `<div style="font-size:12.5px;color:#D7E1EF">${nodes.length} notas · ${E.length} conexões · ${domsOrd.length} domínios</div>` +
       `<div class="st-sec">Notas por domínio (clique p/ filtrar)</div>${linhasDom}` +
       `<div class="st-sec">Núcleos mais conectados (clique p/ abrir)</div>${linhasHub}`;
-    document.getElementById('st-fechar').onclick = fecharPainel;
-    const vb = elStats.querySelector('.btn-voltar'); if (vb) vb.onclick = voltar;
-    elStats.querySelectorAll('.st-row[data-dom]').forEach(el => el.onclick = () => {
+    aoAtivar(document.getElementById('st-fechar'), fecharPainel);
+    aoAtivar(elStats.querySelector('.btn-voltar'), voltar);
+    elStats.querySelectorAll('.st-row[data-dom]').forEach(el => aoAtivar(el, () => {
       const d = el.dataset.dom;
       filtroDom = (filtroDom === d) ? null : d;
       fecharPainel();                         // aplica o filtro e fecha os painéis
-    });
-    elStats.querySelectorAll('.st-row[data-i]').forEach(el => el.onclick = () =>
-      navTo({ t: 'nota', i: +el.dataset.i }));   // abre a nota mantendo "Voltar" p/ o Stats
+    }));
+    elStats.querySelectorAll('.st-row[data-i]').forEach(el => aoAtivar(el, () =>
+      navTo({ t: 'nota', i: +el.dataset.i })));   // abre a nota mantendo "Voltar" p/ o Stats
     vistaAtual = { t: 'stats' };
   }
   btnStats.onclick = () => {
@@ -1177,17 +1214,46 @@ function iniciar(nodes, links) {
   addEventListener('hashchange', () => { if (!ignoraHash) lerHash(); });
   lerHash();                                  // abre direto se a URL já vier com #nota=
 
-  // busca: só ao apertar Enter; casa título e tags; vazio reseta
+  // busca: dropdown vivo ao digitar (mesmo padrão do modo Caminho) + Enter abre o 1º.
   const elBusca = document.getElementById('busca');
+  const elBuscaRes = document.getElementById('busca-res');
+  function fecharBuscaRes() {
+    elBuscaRes.style.display = 'none';
+    elBuscaRes.innerHTML = '';
+    elBusca.setAttribute('aria-expanded', 'false');
+  }
+  function abrirNotaBusca(i) {                 // abre a nota e recolhe o dropdown
+    liberarRede(); navHist.length = 0; vistaAtual = null;
+    abrirPainel(meshes[i]);
+    fecharBuscaRes();
+  }
+  elBusca.addEventListener('input', () => {
+    const termo = elBusca.value.trim();
+    if (!termo) { fecharBuscaRes(); return; }   // vazio: só recolhe (Enter é que reseta a vista)
+    const ids = buscarNotas(termo);
+    if (ids.length) {
+      elBuscaRes.innerHTML = ids.map(i =>
+        `<div class="mc-item" role="option" tabindex="-1" data-i="${i}"><i style="background:${nodes[i].cor}"></i>${esc(nodes[i].titulo)}</div>`).join('');
+      elBuscaRes.querySelectorAll('.mc-item').forEach(el =>
+        el.onclick = () => abrirNotaBusca(+el.dataset.i));
+    } else {
+      elBuscaRes.innerHTML = '<div class="mc-vazio">Nenhuma nota encontrada.</div>';
+    }
+    elBuscaRes.style.display = 'block';
+    elBusca.setAttribute('aria-expanded', 'true');
+  });
   elBusca.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { fecharBuscaRes(); return; }
     if (e.key !== 'Enter') return;
-    const termo = elBusca.value.trim().toLowerCase();
-    if (!termo) { fecharPainel(); return; }   // fecharPainel já restaura o estado de rotação escolhido
-    const achou = meshes.find(m => {
-      const n = m.userData.n;
-      return n.titulo.toLowerCase().includes(termo) || (n.tags || []).join(' ').toLowerCase().includes(termo);
-    });
-    if (achou) { liberarRede(); navHist.length = 0; vistaAtual = null; abrirPainel(achou); }
+    const termo = elBusca.value.trim();
+    if (!termo) { fecharBuscaRes(); fecharPainel(); return; }   // fecharPainel restaura o estado de rotação
+    const ids = buscarNotas(termo);
+    if (ids.length) abrirNotaBusca(ids[0]);
+    else toast('Nenhuma nota encontrada.');
+  });
+  // clique/toque fora recolhe o dropdown (não interfere no clique nos itens)
+  document.addEventListener('pointerdown', e => {
+    if (e.target !== elBusca && !elBuscaRes.contains(e.target)) fecharBuscaRes();
   });
 
   // ----- loop -----
