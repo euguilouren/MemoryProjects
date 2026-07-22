@@ -1,0 +1,21 @@
+# CODEOWNERS — Governança do MemoryProjects (camada pública)
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Espelha o CODEOWNERS do cérebro (MemoryCode). O portal em docs/ é PRODUÇÃO
+# publicada (GitHub Pages, com CSP por hash) e recebe auto-commits do robô da
+# vitrine — qualquer alteração ali ou na CI exige revisão do dono.
+# Enforcement real depende de branch protection (Settings -> Branches) exigindo
+# revisão de code owner; este arquivo declara os donos.
+
+# Raiz e configuração
+/ @euguilouren
+.github/ @euguilouren
+
+# Portal público de produção (docs/index.html + CSP + dataset curado servido)
+docs/ @euguilouren
+
+# Entregáveis e pipeline
+entregaveis/ @euguilouren
+
+# Documentação
+README.md @euguilouren

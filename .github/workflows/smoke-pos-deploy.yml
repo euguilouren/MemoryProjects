@@ -1,0 +1,66 @@
+# Smoke test pos-deploy do portal publico (o juiz de producao).
+#
+# Regua do dono (CLAUDE.md do MemoryCode): "CI verde NAO prova que o site serve
+# o arquivo". O integridade.yml roda guards estaticos sobre o docs/ no repo; ESTE
+# workflow confirma o site AO VIVO depois que o GitHub Pages publica.
+#
+# Robusto a timing: o Pages publica de forma assincrona apos o push, entao
+# fazemos POLL com retries e so falhamos se, apos a janela, o site nao servir um
+# portal valido. Assertamos INVARIANTES (validas de qualquer versao boa) para nao
+# criar alarme falso quando o cache do Pages ainda serve a versao anterior: HTTP
+# 200, <title> presente, importmap do three, e a vitrine carrega com nos > 0 e SEM
+# campo proibido. A confirmacao do conteudo especifico de um PR e o smoke manual
+# do autor; este garante que o site nunca fica quebrado/vazando no ar sem alarme.
+
+name: Smoke pos-deploy (portal ao vivo)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Poll do portal ao vivo e assercao de invariantes
+        env:
+          BASE: https://euguilouren.github.io/MemoryProjects
+        run: |
+          set -euo pipefail
+          html=""
+          ok=0
+          for i in $(seq 1 12); do   # ate ~4 min (12 x 20s)
+            code="$(curl -s -o /tmp/portal.html -w '%{http_code}' "$BASE/?cb=$GITHUB_SHA-$i" || echo 000)"
+            if [ "$code" = "200" ] && grep -q '<title>' /tmp/portal.html && grep -q 'three' /tmp/portal.html; then
+              ok=1; break
+            fi
+            echo "tentativa $i: http=$code (aguardando o Pages publicar)"; sleep 20
+          done
+          if [ "$ok" != "1" ]; then
+            echo "::error::Portal ao vivo nao respondeu 200 com portal valido apos a janela de deploy."
+            exit 1
+          fi
+          echo "index.html ao vivo: 200 + <title> + importmap three OK"
+
+          # Vitrine servida: carrega, tem nos, e NAO vaza campo proibido
+          curl -fsS "$BASE/grafo-vitrine.json?cb=$GITHUB_SHA" -o /tmp/vitrine.json
+          python3 - <<'PY'
+          import json, sys
+          d = json.load(open('/tmp/vitrine.json'))
+          nodes = d.get('nodes', [])
+          if not nodes:
+              print("::error::Vitrine ao vivo sem nos."); sys.exit(1)
+          proib = set()
+          for n in nodes:
+              proib |= (set(n.keys()) & {'resumo', 'url', 'corpo', 'conteudo', 'summary', 'body', 'path', 'caminho'})
+          if proib:
+              print(f"::error::Vitrine ao vivo com campo PROIBIDO {sorted(proib)} — vazamento no ar!"); sys.exit(1)
+          print(f"vitrine ao vivo: {len(nodes)} nos, sem campo proibido OK")
+          PY
+          echo "SMOKE POS-DEPLOY VERDE: o portal esta no ar e integro."

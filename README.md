@@ -6,6 +6,7 @@ A separação segue a virada de 2026-06-13: **código de projeto sai do cérebro
 
 ## Projetos
 
+- **Portal Neural 3D** (`docs/`) — a **vitrine pública** do segundo cérebro: um grafo interativo (Three.js, CSP por hash) que mostra a rede de conhecimento como um mapa vivo de nós e conexões, servindo só um **dataset curado** (forma + títulos + tags, sem corpo/resumo/url). No ar: **[euguilouren.github.io/MemoryProjects](https://euguilouren.github.io/MemoryProjects/)**.
 - **`entregaveis/`** — pipeline reproduzível de **geração de entregáveis na marca** (PDF, deck, documento), separando conteúdo (do cérebro) de forma (template/tokens). É a **camada de renderização** dos entregáveis do ecossistema e a fundação do estúdio de apresentações em construção.
 
 ## Desenvolvimento (Claude Code na web)
