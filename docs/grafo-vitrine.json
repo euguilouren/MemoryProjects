@@ -48,7 +48,10 @@
         "#negocios",
         "#estrategia",
         "#dominio"
-      ]
+      ],
+      "x": 33.044,
+      "y": 63.955,
+      "z": 6.739
     },
     {
       "id": "conhecimento/administracao/cultura-organizacional.md",
@@ -70,7 +73,10 @@
         "#mudanca-cultural",
         "#psicologia-organizacional",
         "#clima"
-      ]
+      ],
+      "x": 41.331,
+      "y": 55.96,
+      "z": 0.331
     },
     {
       "id": "conhecimento/administracao/customer-success-e-relacionamento.md",
@@ -89,7 +95,10 @@
         "#retencao",
         "#relacionamento",
         "#pos-venda"
-      ]
+      ],
+      "x": 38.758,
+      "y": 68.925,
+      "z": 25.931
     },
     {
       "id": "conhecimento/administracao/funcoes-da-administracao.md",
@@ -108,7 +117,10 @@
         "#teoria",
         "#historico",
         "#gestao"
-      ]
+      ],
+      "x": 17.562,
+      "y": 84.662,
+      "z": 14.614
     },
     {
       "id": "conhecimento/administracao/gestao-da-mudanca.md",
@@ -128,7 +140,10 @@
         "#kotter",
         "#cultura",
         "#adocao"
-      ]
+      ],
+      "x": 38.112,
+      "y": 74.822,
+      "z": 13.911
     },
     {
       "id": "conhecimento/administracao/gestao-da-qualidade.md",
@@ -151,7 +166,10 @@
         "#tqm",
         "#ferramentas-qualidade",
         "#melhoria-continua"
-      ]
+      ],
+      "x": 20.312,
+      "y": 87.008,
+      "z": -3.35
     },
     {
       "id": "conhecimento/administracao/gestao-de-operacoes-e-supply-chain.md",
@@ -172,7 +190,10 @@
         "#logistica",
         "#producao",
         "#scm"
-      ]
+      ],
+      "x": 11.457,
+      "y": 74.057,
+      "z": -6.712
     },
     {
       "id": "conhecimento/administracao/gestao-de-pessoas-rh.md",
@@ -195,7 +216,10 @@
         "#cultura",
         "#clima",
         "#lideranca"
-      ]
+      ],
+      "x": 25.299,
+      "y": 60.119,
+      "z": 18.637
     },
     {
       "id": "conhecimento/administracao/gestao-de-processos-bpm.md",
@@ -216,7 +240,10 @@
         "#melhoria-continua",
         "#automacao",
         "#workflow"
-      ]
+      ],
+      "x": 24.637,
+      "y": 67.416,
+      "z": -11.029
     },
     {
       "id": "conhecimento/administracao/gestao-de-produto.md",
@@ -237,7 +264,10 @@
         "#roadmap",
         "#priorizacao",
         "#plg"
-      ]
+      ],
+      "x": 14.153,
+      "y": 71.505,
+      "z": 15.319
     },
     {
       "id": "conhecimento/administracao/gestao-de-projetos.md",
@@ -261,7 +291,10 @@
         "#prazo",
         "#custo",
         "#risco"
-      ]
+      ],
+      "x": 27.089,
+      "y": 73.757,
+      "z": 2.042
     },
     {
       "id": "conhecimento/administracao/gestao-orcamentaria.md",
@@ -282,7 +315,10 @@
         "#planejamento",
         "#variance",
         "#beyond-budgeting"
-      ]
+      ],
+      "x": 44.231,
+      "y": 67.209,
+      "z": -9.127
     },
     {
       "id": "conhecimento/administracao/governanca-corporativa.md",
@@ -305,7 +341,10 @@
         "#esg",
         "#ibgc",
         "#governanca"
-      ]
+      ],
+      "x": 34.496,
+      "y": 59.732,
+      "z": -16.588
     },
     {
       "id": "conhecimento/administracao/indicadores-e-kpis-de-gestao.md",
@@ -328,7 +367,10 @@
         "#gestao",
         "#desempenho",
         "#ods"
-      ]
+      ],
+      "x": 9.125,
+      "y": 54.5,
+      "z": 13.523
     },
     {
       "id": "conhecimento/administracao/lean-e-melhoria-continua.md",
@@ -349,7 +391,10 @@
         "#six-sigma",
         "#toyota",
         "#desperdicio"
-      ]
+      ],
+      "x": 32.543,
+      "y": 79.378,
+      "z": -13.654
     },
     {
       "id": "conhecimento/administracao/lideranca-e-tomada-de-decisao.md",
@@ -372,7 +417,10 @@
         "#gestao-de-conflitos",
         "#inteligencia-emocional",
         "#coaching"
-      ]
+      ],
+      "x": 20.27,
+      "y": 44.836,
+      "z": 15.244
     },
     {
       "id": "conhecimento/administracao/marketing-e-vendas.md",
@@ -395,7 +443,10 @@
         "#crm",
         "#metricas",
         "#posicionamento"
-      ]
+      ],
+      "x": 8.861,
+      "y": 37.622,
+      "z": 30.61
     },
     {
       "id": "conhecimento/administracao/mentoria.md",
@@ -415,7 +466,10 @@
         "#desenvolvimento",
         "#rh",
         "#lideranca"
-      ]
+      ],
+      "x": 29.785,
+      "y": 51.685,
+      "z": 27.703
     },
     {
       "id": "conhecimento/administracao/modelos-mentais-para-decisao.md",
@@ -434,7 +488,10 @@
         "#modelos-mentais",
         "#raciocinio",
         "#pensamento"
-      ]
+      ],
+      "x": 49.835,
+      "y": 59.255,
+      "z": 14.691
     },
     {
       "id": "conhecimento/administracao/negociacao.md",
@@ -454,7 +511,10 @@
         "#decisao",
         "#comunicacao",
         "#contratos"
-      ]
+      ],
+      "x": 37.794,
+      "y": 42.091,
+      "z": 18.517
     },
     {
       "id": "conhecimento/administracao/otimizacao-de-curriculo-ats.md",
@@ -474,7 +534,10 @@
         "#carreira",
         "#recrutamento",
         "#candidatura"
-      ]
+      ],
+      "x": 28.684,
+      "y": 80.752,
+      "z": 27.874
     },
     {
       "id": "conhecimento/administracao/pensamento-probabilistico-e-previsao.md",
@@ -495,7 +558,10 @@
         "#risco",
         "#estatistica",
         "#vieses"
-      ]
+      ],
+      "x": 43.882,
+      "y": 39.568,
+      "z": 2.785
     },
     {
       "id": "conhecimento/administracao/pensamento-sistemico.md",
@@ -514,7 +580,10 @@
         "#sistemas",
         "#feedback",
         "#complexidade"
-      ]
+      ],
+      "x": 50.225,
+      "y": 81.469,
+      "z": 1.353
     },
     {
       "id": "conhecimento/administracao/planejamento-de-metas-e-sonhos.md",
@@ -535,7 +604,10 @@
         "#habitos",
         "#produtividade",
         "#decisao"
-      ]
+      ],
+      "x": 32.105,
+      "y": 46.078,
+      "z": -7.569
     },
     {
       "id": "conhecimento/administracao/planejamento-estrategico.md",
@@ -558,7 +630,10 @@
         "#okr",
         "#missao",
         "#visao"
-      ]
+      ],
+      "x": 19.041,
+      "y": 62.379,
+      "z": 3.184
     },
     {
       "id": "conhecimento/administracao/procedimento-operacional-padrao-pop.md",
@@ -579,7 +654,10 @@
         "#qualidade",
         "#padronizacao",
         "#sop"
-      ]
+      ],
+      "x": 29.528,
+      "y": 90.031,
+      "z": 7.3
     },
     {
       "id": "conhecimento/administracao/proposta-e-gestao-de-escopo.md",
@@ -598,7 +676,10 @@
         "#proposta",
         "#projetos",
         "#scope-creep"
-      ]
+      ],
+      "x": 39.588,
+      "y": 86.022,
+      "z": -2.328
     },
     {
       "id": "conhecimento/administracao/resolucao-de-problemas-e-criatividade.md",
@@ -617,7 +698,10 @@
         "#criatividade",
         "#inovacao",
         "#design-thinking"
-      ]
+      ],
+      "x": 54.682,
+      "y": 71.837,
+      "z": 6.773
     },
     {
       "id": "conhecimento/administracao/tomada-de-decisao-gerencial.md",
@@ -639,7 +723,10 @@
         "#racionalidade-limitada",
         "#financas",
         "#filosofia"
-      ]
+      ],
+      "x": 29.274,
+      "y": 41.117,
+      "z": 5.878
     },
     {
       "id": "conhecimento/auditoria/README.md",
@@ -656,7 +743,10 @@
         "#auditoria",
         "#dominio",
         "#mapa"
-      ]
+      ],
+      "x": -36.963,
+      "y": 75.898,
+      "z": 36.079
     },
     {
       "id": "conhecimento/auditoria/auditoria-continua-e-analytics.md",
@@ -678,7 +768,10 @@
         "#idea",
         "#ia",
         "#tecnologia"
-      ]
+      ],
+      "x": -25.191,
+      "y": 45.256,
+      "z": 36.192
     },
     {
       "id": "conhecimento/auditoria/auditoria-de-ti-e-itgc.md",
@@ -700,7 +793,10 @@
         "#icfr",
         "#acesso-logico",
         "#gestao-da-mudanca"
-      ]
+      ],
+      "x": -36.573,
+      "y": 71.185,
+      "z": 23.699
     },
     {
       "id": "conhecimento/auditoria/controles-internos-coso.md",
@@ -720,7 +816,10 @@
         "#segregacao-de-funcoes",
         "#tres-linhas-de-defesa",
         "#governanca"
-      ]
+      ],
+      "x": -25.743,
+      "y": 47.907,
+      "z": 21.189
     },
     {
       "id": "conhecimento/auditoria/deteccao-de-fraude.md",
@@ -741,7 +840,10 @@
         "#triangulo-da-fraude",
         "#ceticismo-profissional",
         "#red-flags"
-      ]
+      ],
+      "x": -16.895,
+      "y": 58.549,
+      "z": 32.276
     },
     {
       "id": "conhecimento/auditoria/evidencias-e-papeis-de-trabalho.md",
@@ -760,7 +862,10 @@
         "#papeis-de-trabalho",
         "#documentacao",
         "#procedimentos"
-      ]
+      ],
+      "x": -33.145,
+      "y": 81.243,
+      "z": 47.23
     },
     {
       "id": "conhecimento/auditoria/normas-nbc-ta-isa.md",
@@ -782,7 +887,10 @@
         "#iaasb",
         "#ifac",
         "#regulacao"
-      ]
+      ],
+      "x": -33.993,
+      "y": 69.242,
+      "z": 55.819
     },
     {
       "id": "conhecimento/auditoria/parecer-e-relatorio.md",
@@ -804,7 +912,10 @@
         "#com-ressalva",
         "#adverso",
         "#abstencao"
-      ]
+      ],
+      "x": -47.625,
+      "y": 68.599,
+      "z": 43.821
     },
     {
       "id": "conhecimento/auditoria/processo-de-auditoria.md",
@@ -826,7 +937,10 @@
         "#execucao",
         "#relatorio",
         "#controle"
-      ]
+      ],
+      "x": -35.379,
+      "y": 60.649,
+      "z": 35.499
     },
     {
       "id": "conhecimento/auditoria/programa-de-auditoria-por-area.md",
@@ -845,7 +959,10 @@
         "#assercoes",
         "#procedimentos",
         "#ciclos"
-      ]
+      ],
+      "x": -21.083,
+      "y": 79.59,
+      "z": 39.703
     },
     {
       "id": "conhecimento/auditoria/risco-de-auditoria.md",
@@ -865,7 +982,10 @@
         "#risco-de-controle",
         "#risco-de-deteccao",
         "#modelo-ra"
-      ]
+      ],
+      "x": -23.187,
+      "y": 64.251,
+      "z": 44.243
     },
     {
       "id": "conhecimento/auditoria/testes-e-amostragem.md",
@@ -885,7 +1005,10 @@
         "#controle",
         "#substantivos",
         "#estatistica"
-      ]
+      ],
+      "x": -22.321,
+      "y": 69.631,
+      "z": 28.454
     },
     {
       "id": "conhecimento/auditoria/tipos-e-objetivos.md",
@@ -907,7 +1030,10 @@
         "#forense",
         "#fiscal",
         "#operacional"
-      ]
+      ],
+      "x": -37.166,
+      "y": 56.714,
+      "z": 49.547
     },
     {
       "id": "conhecimento/compliance/README.md",
@@ -923,7 +1049,10 @@
       "tags": [
         "#compliance",
         "#indice"
-      ]
+      ],
+      "x": 12.46,
+      "y": 74.348,
+      "z": -60.076
     },
     {
       "id": "conhecimento/compliance/anticorrupcao-due-diligence.md",
@@ -944,7 +1073,10 @@
         "#due-diligence",
         "#integridade",
         "#terceiros"
-      ]
+      ],
+      "x": 25.6,
+      "y": 68.609,
+      "z": -58.031
     },
     {
       "id": "conhecimento/compliance/esg-e-relato-de-sustentabilidade.md",
@@ -965,7 +1097,10 @@
         "#cvm",
         "#governanca",
         "#relato"
-      ]
+      ],
+      "x": 8.23,
+      "y": 72.783,
+      "z": -43.786
     },
     {
       "id": "conhecimento/compliance/fundamentos-compliance.md",
@@ -984,7 +1119,10 @@
         "#etica",
         "#integridade",
         "#governanca"
-      ]
+      ],
+      "x": 3.434,
+      "y": 61.86,
+      "z": -51.38
     },
     {
       "id": "conhecimento/compliance/gestao-de-riscos.md",
@@ -1005,7 +1143,10 @@
         "#iso-31000",
         "#kri",
         "#tres-linhas-de-defesa"
-      ]
+      ],
+      "x": 5.252,
+      "y": 57.048,
+      "z": -38.314
     },
     {
       "id": "conhecimento/compliance/legislacao-chave.md",
@@ -1024,7 +1165,10 @@
         "#regulatorio",
         "#anticorrupcao",
         "#lgpd"
-      ]
+      ],
+      "x": 12.653,
+      "y": 43.194,
+      "z": -46.286
     },
     {
       "id": "conhecimento/compliance/pld-ft.md",
@@ -1046,7 +1190,10 @@
         "#pep",
         "#sancoes",
         "#criptoativos"
-      ]
+      ],
+      "x": 21.114,
+      "y": 55.283,
+      "z": -61.999
     },
     {
       "id": "conhecimento/compliance/programa-de-compliance.md",
@@ -1065,7 +1212,10 @@
         "#integridade",
         "#governanca",
         "#risco"
-      ]
+      ],
+      "x": 20.44,
+      "y": 56.618,
+      "z": -48.041
     },
     {
       "id": "conhecimento/comunicacao/README.md",
@@ -1081,7 +1231,10 @@
       "tags": [
         "#comunicacao",
         "#indice"
-      ]
+      ],
+      "x": 48.063,
+      "y": 40.376,
+      "z": 68.699
     },
     {
       "id": "conhecimento/comunicacao/avaliar-informacao-e-fontes.md",
@@ -1101,7 +1254,10 @@
         "#fontes",
         "#pensamento-critico",
         "#ia"
-      ]
+      ],
+      "x": 42.006,
+      "y": 46.664,
+      "z": 53.565
     },
     {
       "id": "conhecimento/comunicacao/comunicar-com-dados-data-storytelling.md",
@@ -1120,7 +1276,10 @@
         "#data-storytelling",
         "#visualizacao",
         "#graficos"
-      ]
+      ],
+      "x": 32.411,
+      "y": 37.811,
+      "z": 64.436
     },
     {
       "id": "conhecimento/comunicacao/escrita-profissional-e-clareza.md",
@@ -1138,7 +1297,10 @@
         "#escrita",
         "#clareza",
         "#trabalho"
-      ]
+      ],
+      "x": 40.507,
+      "y": 31.822,
+      "z": 54.481
     },
     {
       "id": "conhecimento/comunicacao/falar-em-publico-e-apresentar.md",
@@ -1157,7 +1319,10 @@
         "#apresentacao",
         "#storytelling",
         "#trabalho"
-      ]
+      ],
+      "x": 38.73,
+      "y": 53.374,
+      "z": 65.422
     },
     {
       "id": "conhecimento/comunicacao/reunioes-eficazes-e-assincrono.md",
@@ -1176,7 +1341,10 @@
         "#assincrono",
         "#facilitacao",
         "#trabalho"
-      ]
+      ],
+      "x": 55.315,
+      "y": 49.951,
+      "z": 56.859
     },
     {
       "id": "conhecimento/contabilidade/README.md",
@@ -1192,7 +1360,10 @@
       "tags": [
         "#contabilidade",
         "#indice"
-      ]
+      ],
+      "x": -55.825,
+      "y": 45.932,
+      "z": -7.545
     },
     {
       "id": "conhecimento/contabilidade/auditoria.md",
@@ -1209,7 +1380,10 @@
         "#contabilidade",
         "#auditoria",
         "#controle"
-      ]
+      ],
+      "x": -67.998,
+      "y": 31.497,
+      "z": 10.928
     },
     {
       "id": "conhecimento/contabilidade/conciliacoes.md",
@@ -1228,7 +1402,10 @@
         "#fechamento",
         "#controles-internos",
         "#aging"
-      ]
+      ],
+      "x": -57.449,
+      "y": 22.673,
+      "z": 1.567
     },
     {
       "id": "conhecimento/contabilidade/contabil/README.md",
@@ -1244,7 +1421,10 @@
       "tags": [
         "#contabilidade",
         "#indice"
-      ]
+      ],
+      "x": -87.41,
+      "y": 52.364,
+      "z": -17.556
     },
     {
       "id": "conhecimento/contabilidade/contabil/arrendamentos-leasing.md",
@@ -1265,7 +1445,10 @@
         "#ifrs16",
         "#direito-de-uso",
         "#passivo-arrendamento"
-      ]
+      ],
+      "x": -74.462,
+      "y": 54.388,
+      "z": -15.692
     },
     {
       "id": "conhecimento/contabilidade/contabil/ativo-imobilizado-e-depreciacao.md",
@@ -1284,7 +1467,10 @@
         "#depreciacao",
         "#cpc27",
         "#ias16"
-      ]
+      ],
+      "x": -101.618,
+      "y": 42.845,
+      "z": -11.03
     },
     {
       "id": "conhecimento/contabilidade/contabil/ativo-intangivel.md",
@@ -1306,7 +1492,10 @@
         "#goodwill",
         "#impairment",
         "#vida-util"
-      ]
+      ],
+      "x": -99.58,
+      "y": 53.152,
+      "z": -24.193
     },
     {
       "id": "conhecimento/contabilidade/contabil/consolidacao-e-equivalencia-patrimonial.md",
@@ -1330,7 +1519,10 @@
         "#controlada",
         "#coligada",
         "#nao-controladores"
-      ]
+      ],
+      "x": -78.08,
+      "y": 52.005,
+      "z": -31.002
     },
     {
       "id": "conhecimento/contabilidade/contabil/contabilidade-de-custos.md",
@@ -1352,7 +1544,10 @@
         "#departamentalizacao",
         "#cpv",
         "#margem-contribuicao"
-      ]
+      ],
+      "x": -79.191,
+      "y": 24.341,
+      "z": -4.017
     },
     {
       "id": "conhecimento/contabilidade/contabil/demonstracoes-financeiras.md",
@@ -1371,7 +1566,10 @@
         "#balanco",
         "#demonstracoes",
         "#dfc"
-      ]
+      ],
+      "x": -64.501,
+      "y": 33.488,
+      "z": -19.376
     },
     {
       "id": "conhecimento/contabilidade/contabil/estoques-e-cmv.md",
@@ -1392,7 +1590,10 @@
         "#custeio",
         "#pep",
         "#media-ponderada"
-      ]
+      ],
+      "x": -94.863,
+      "y": 32.059,
+      "z": -1.271
     },
     {
       "id": "conhecimento/contabilidade/contabil/fechamento-contabil.md",
@@ -1412,7 +1613,10 @@
         "#conciliacao",
         "#competencia",
         "#fast-close"
-      ]
+      ],
+      "x": -79.913,
+      "y": 40.03,
+      "z": -0.911
     },
     {
       "id": "conhecimento/contabilidade/contabil/lancamentos-contabeis.md",
@@ -1431,7 +1635,10 @@
         "#debito-credito",
         "#partidas-dobradas",
         "#escrituracao"
-      ]
+      ],
+      "x": -86.285,
+      "y": 27.893,
+      "z": -16.182
     },
     {
       "id": "conhecimento/contabilidade/contabil/normas-cpc-ifrs.md",
@@ -1452,7 +1659,10 @@
         "#iasb",
         "#estrutura-conceitual",
         "#convergencia"
-      ]
+      ],
+      "x": -87.642,
+      "y": 42.775,
+      "z": -11.191
     },
     {
       "id": "conhecimento/contabilidade/contabil/patrimonio-liquido.md",
@@ -1473,7 +1683,10 @@
         "#dividendos",
         "#jcp",
         "#lei6404"
-      ]
+      ],
+      "x": -74.765,
+      "y": 66.409,
+      "z": -21.907
     },
     {
       "id": "conhecimento/contabilidade/contabil/plano-de-contas.md",
@@ -1493,7 +1706,10 @@
         "#sped",
         "#escrituracao",
         "#parametrizacao"
-      ]
+      ],
+      "x": -78.415,
+      "y": 37.171,
+      "z": -22.199
     },
     {
       "id": "conhecimento/contabilidade/contabil/provisoes-e-contingencias.md",
@@ -1513,7 +1729,10 @@
         "#cpc25",
         "#ias37",
         "#passivo"
-      ]
+      ],
+      "x": -90.267,
+      "y": 65.281,
+      "z": -19.314
     },
     {
       "id": "conhecimento/contabilidade/contabil/reconhecimento-de-receita.md",
@@ -1534,7 +1753,10 @@
         "#cinco-etapas",
         "#obrigacao-de-desempenho",
         "#preco-transacao"
-      ]
+      ],
+      "x": -64.043,
+      "y": 52.496,
+      "z": -21.87
     },
     {
       "id": "conhecimento/contabilidade/contabil/tributos-diferidos.md",
@@ -1555,7 +1777,10 @@
         "#cpc32",
         "#ias12",
         "#diferenca-temporaria"
-      ]
+      ],
+      "x": -92.431,
+      "y": 41.841,
+      "z": -24.822
     },
     {
       "id": "conhecimento/contabilidade/contabilidade-geral.md",
@@ -1571,7 +1796,10 @@
       "tags": [
         "#contabilidade",
         "#fundamentos"
-      ]
+      ],
+      "x": -71.894,
+      "y": 38.099,
+      "z": -10.252
     },
     {
       "id": "conhecimento/contabilidade/controladoria-gerencial.md",
@@ -1592,7 +1820,10 @@
         "#orcamento",
         "#kpi",
         "#decisao"
-      ]
+      ],
+      "x": -44.491,
+      "y": 32.223,
+      "z": -1.747
     },
     {
       "id": "conhecimento/contabilidade/departamento-pessoal.md",
@@ -1610,7 +1841,10 @@
         "#departamento-pessoal",
         "#folha",
         "#trabalhista"
-      ]
+      ],
+      "x": -59.183,
+      "y": 42.461,
+      "z": 7.535
     },
     {
       "id": "conhecimento/contabilidade/fiscal-tributario.md",
@@ -1630,7 +1864,10 @@
         "#sped",
         "#reforma-tributaria",
         "#planejamento"
-      ]
+      ],
+      "x": -79.139,
+      "y": 56.021,
+      "z": 1.107
     },
     {
       "id": "conhecimento/contabilidade/fiscal/README.md",
@@ -1646,7 +1883,10 @@
       "tags": [
         "#fiscal",
         "#indice"
-      ]
+      ],
+      "x": -90.13,
+      "y": 61.597,
+      "z": -4.098
     },
     {
       "id": "conhecimento/contabilidade/fiscal/icms.md",
@@ -1667,7 +1907,10 @@
         "#cfop",
         "#cst",
         "#estadual"
-      ]
+      ],
+      "x": -79.814,
+      "y": 76.073,
+      "z": -6.17
     },
     {
       "id": "conhecimento/contabilidade/fiscal/irpj-csll.md",
@@ -1688,7 +1931,10 @@
         "#lucro-presumido",
         "#lalur",
         "#adicional"
-      ]
+      ],
+      "x": -78.689,
+      "y": 57.151,
+      "z": 15.454
     },
     {
       "id": "conhecimento/contabilidade/fiscal/iss.md",
@@ -1708,7 +1954,10 @@
         "#municipal",
         "#retencao",
         "#lc116"
-      ]
+      ],
+      "x": -93.561,
+      "y": 62.67,
+      "z": 9.59
     },
     {
       "id": "conhecimento/contabilidade/fiscal/obrigacoes-acessorias.md",
@@ -1725,7 +1974,10 @@
         "#fiscal",
         "#sped",
         "#obrigacoes-acessorias"
-      ]
+      ],
+      "x": -67.594,
+      "y": 50.985,
+      "z": -1.239
     },
     {
       "id": "conhecimento/contabilidade/fiscal/pis-cofins.md",
@@ -1746,7 +1998,10 @@
         "#cumulativo",
         "#monofasico",
         "#credito-fiscal"
-      ]
+      ],
+      "x": -80.581,
+      "y": 71.341,
+      "z": 7.987
     },
     {
       "id": "conhecimento/contabilidade/fiscal/planejamento-tributario.md",
@@ -1767,7 +2022,10 @@
         "#elusao",
         "#holding",
         "#regime-tributario"
-      ]
+      ],
+      "x": -64.519,
+      "y": 65.759,
+      "z": 9.974
     },
     {
       "id": "conhecimento/contabilidade/fiscal/reforma-tributaria.md",
@@ -1788,7 +2046,10 @@
         "#imposto-seletivo",
         "#lc214",
         "#lc227"
-      ]
+      ],
+      "x": -59.671,
+      "y": 62.539,
+      "z": -2.495
     },
     {
       "id": "conhecimento/contabilidade/fiscal/regimes-tributarios.md",
@@ -1806,7 +2067,10 @@
         "#tributario",
         "#regime-tributario",
         "#planejamento"
-      ]
+      ],
+      "x": -65.109,
+      "y": 73.15,
+      "z": -5.563
     },
     {
       "id": "conhecimento/contabilidade/fiscal/retencoes-na-fonte.md",
@@ -1829,7 +2093,10 @@
         "#cofins",
         "#csll",
         "#iss"
-      ]
+      ],
+      "x": -99.144,
+      "y": 48.855,
+      "z": 7.676
     },
     {
       "id": "conhecimento/contabilidade/fiscal/simples-nacional.md",
@@ -1847,7 +2114,10 @@
         "#simples-nacional",
         "#das",
         "#mei"
-      ]
+      ],
+      "x": -85.257,
+      "y": 46.906,
+      "z": 13.271
     },
     {
       "id": "conhecimento/contabilidade/impostos.md",
@@ -1864,7 +2134,10 @@
         "#contabilidade",
         "#impostos",
         "#fiscal"
-      ]
+      ],
+      "x": -66.018,
+      "y": 51.591,
+      "z": 14.832
     },
     {
       "id": "conhecimento/direito/README.md",
@@ -1880,7 +2153,10 @@
       "tags": [
         "#direito",
         "#indice"
-      ]
+      ],
+      "x": 80.258,
+      "y": 47.105,
+      "z": -38.525
     },
     {
       "id": "conhecimento/direito/contratos.md",
@@ -1901,7 +2177,10 @@
         "#clausulas",
         "#civil",
         "#empresarial"
-      ]
+      ],
+      "x": 67.252,
+      "y": 49.021,
+      "z": -34.204
     },
     {
       "id": "conhecimento/direito/direito-civil.md",
@@ -1919,7 +2198,10 @@
         "#civil",
         "#contratos",
         "#responsabilidade-civil"
-      ]
+      ],
+      "x": 81.194,
+      "y": 48.984,
+      "z": -51.806
     },
     {
       "id": "conhecimento/direito/direito-do-consumidor-e-digital.md",
@@ -1937,7 +2219,10 @@
         "#consumidor",
         "#digital",
         "#lgpd"
-      ]
+      ],
+      "x": 64.362,
+      "y": 27.356,
+      "z": -44.129
     },
     {
       "id": "conhecimento/direito/direito-do-trabalho.md",
@@ -1957,7 +2242,10 @@
         "#rh",
         "#rescisao",
         "#verbas-rescisorias"
-      ]
+      ],
+      "x": 89.448,
+      "y": 35.989,
+      "z": -39.769
     },
     {
       "id": "conhecimento/direito/direito-empresarial.md",
@@ -1975,7 +2263,10 @@
         "#empresarial",
         "#societario",
         "#contratos"
-      ]
+      ],
+      "x": 66.494,
+      "y": 46.686,
+      "z": -48.091
     },
     {
       "id": "conhecimento/direito/direito-penal.md",
@@ -1993,7 +2284,10 @@
         "#penal",
         "#crime",
         "#processo-penal"
-      ]
+      ],
+      "x": 76.663,
+      "y": 35.836,
+      "z": -55.359
     },
     {
       "id": "conhecimento/direito/direito-tributario.md",
@@ -2013,7 +2307,10 @@
         "#reforma-tributaria",
         "#obrigacao-tributaria",
         "#fiscal"
-      ]
+      ],
+      "x": 62.859,
+      "y": 38.776,
+      "z": -25.41
     },
     {
       "id": "conhecimento/direito/fundamentos-do-direito.md",
@@ -2030,7 +2327,10 @@
         "#direito",
         "#fundamentos",
         "#ordenamento-juridico"
-      ]
+      ],
+      "x": 76.492,
+      "y": 25.091,
+      "z": -40.491
     },
     {
       "id": "conhecimento/direito/revisao-de-contratos.md",
@@ -2050,7 +2350,10 @@
         "#compliance",
         "#checklist",
         "#due-diligence"
-      ]
+      ],
+      "x": 79.148,
+      "y": 36.366,
+      "z": -27.598
     },
     {
       "id": "conhecimento/economia/README.md",
@@ -2066,7 +2369,10 @@
       "tags": [
         "#economia",
         "#indice"
-      ]
+      ],
+      "x": -7.876,
+      "y": 35.676,
+      "z": 84.416
     },
     {
       "id": "conhecimento/economia/fundamentos-de-economia.md",
@@ -2087,7 +2393,10 @@
         "#juros",
         "#cambio",
         "#pib"
-      ]
+      ],
+      "x": -5.08,
+      "y": 22.265,
+      "z": 59.705
     },
     {
       "id": "conhecimento/economia/politica-monetaria-e-inflacao.md",
@@ -2107,7 +2416,10 @@
         "#selic",
         "#juros",
         "#banco-central"
-      ]
+      ],
+      "x": -18.958,
+      "y": 28.669,
+      "z": 82.338
     },
     {
       "id": "conhecimento/engenharia-de-software/README.md",
@@ -2123,7 +2435,10 @@
       "tags": [
         "#engenharia-de-software",
         "#indice"
-      ]
+      ],
+      "x": -31.136,
+      "y": 20.954,
+      "z": -76.289
     },
     {
       "id": "conhecimento/engenharia-de-software/aggregate-e-aggregate-root.md",
@@ -2142,7 +2457,10 @@
         "#modelagem",
         "#aggregate",
         "#consistencia"
-      ]
+      ],
+      "x": -16.318,
+      "y": 58.733,
+      "z": -84.378
     },
     {
       "id": "conhecimento/engenharia-de-software/apis-e-integracao.md",
@@ -2165,7 +2483,10 @@
         "#oauth",
         "#jwt",
         "#integracao"
-      ]
+      ],
+      "x": -32.989,
+      "y": 15.525,
+      "z": -69.456
     },
     {
       "id": "conhecimento/engenharia-de-software/arquitetura.md",
@@ -2182,7 +2503,10 @@
         "#engenharia-de-software",
         "#arquitetura",
         "#trade-off"
-      ]
+      ],
+      "x": -24.459,
+      "y": 32.834,
+      "z": -89.368
     },
     {
       "id": "conhecimento/engenharia-de-software/bancos-de-dados.md",
@@ -2200,7 +2524,10 @@
         "#banco-de-dados",
         "#sql",
         "#nosql"
-      ]
+      ],
+      "x": -32.133,
+      "y": 39.309,
+      "z": -76.54
     },
     {
       "id": "conhecimento/engenharia-de-software/boas-praticas.md",
@@ -2218,7 +2545,10 @@
         "#clean-code",
         "#solid",
         "#revisao-de-codigo"
-      ]
+      ],
+      "x": -20.755,
+      "y": 17.555,
+      "z": -99.814
     },
     {
       "id": "conhecimento/engenharia-de-software/bounded-context.md",
@@ -2237,7 +2567,10 @@
         "#arquitetura",
         "#bounded-context",
         "#modelagem"
-      ]
+      ],
+      "x": -13.171,
+      "y": 39.084,
+      "z": -61.719
     },
     {
       "id": "conhecimento/engenharia-de-software/cache-e-performance.md",
@@ -2257,7 +2590,10 @@
         "#redis",
         "#cdn",
         "#escalabilidade"
-      ]
+      ],
+      "x": -31.818,
+      "y": 33.164,
+      "z": -62.277
     },
     {
       "id": "conhecimento/engenharia-de-software/clean-code.md",
@@ -2275,7 +2611,10 @@
         "#clean-code",
         "#qualidade",
         "#refatoracao"
-      ]
+      ],
+      "x": -14.939,
+      "y": 22.438,
+      "z": -71.115
     },
     {
       "id": "conhecimento/engenharia-de-software/cloud-computing.md",
@@ -2297,7 +2636,10 @@
         "#serverless",
         "#escalabilidade",
         "#custo"
-      ]
+      ],
+      "x": -38.075,
+      "y": 3.289,
+      "z": -76.438
     },
     {
       "id": "conhecimento/engenharia-de-software/concorrencia-e-paralelismo.md",
@@ -2319,7 +2661,10 @@
         "#deadlock",
         "#impasse",
         "#race-condition"
-      ]
+      ],
+      "x": -18.573,
+      "y": 30.269,
+      "z": -106.67
     },
     {
       "id": "conhecimento/engenharia-de-software/containers-e-orquestracao.md",
@@ -2338,7 +2683,10 @@
         "#kubernetes",
         "#containers",
         "#orquestracao"
-      ]
+      ],
+      "x": -50.377,
+      "y": 13.574,
+      "z": -92.538
     },
     {
       "id": "conhecimento/engenharia-de-software/context-mapping.md",
@@ -2357,7 +2705,10 @@
         "#arquitetura",
         "#context-mapping",
         "#integracao"
-      ]
+      ],
+      "x": -18.935,
+      "y": 34.783,
+      "z": -50.202
     },
     {
       "id": "conhecimento/engenharia-de-software/desenvolvimento-mobile.md",
@@ -2380,7 +2731,10 @@
         "#aplicacao",
         "#offline",
         "#performance"
-      ]
+      ],
+      "x": -37.348,
+      "y": 15.689,
+      "z": -93.149
     },
     {
       "id": "conhecimento/engenharia-de-software/design-de-apresentacoes-e-marca.md",
@@ -2402,7 +2756,10 @@
         "#comunicacao",
         "#deck",
         "#pdf"
-      ]
+      ],
+      "x": -41.234,
+      "y": 41.961,
+      "z": -48.579
     },
     {
       "id": "conhecimento/engenharia-de-software/design-patterns.md",
@@ -2421,7 +2778,10 @@
         "#gof",
         "#padroes",
         "#oo"
-      ]
+      ],
+      "x": -2.636,
+      "y": 33.163,
+      "z": -94.829
     },
     {
       "id": "conhecimento/engenharia-de-software/devops-ci-cd.md",
@@ -2441,7 +2801,10 @@
         "#iac",
         "#gitops",
         "#automacao"
-      ]
+      ],
+      "x": -36.072,
+      "y": 0.568,
+      "z": -90.488
     },
     {
       "id": "conhecimento/engenharia-de-software/devops-cultura-e-sre.md",
@@ -2461,7 +2824,10 @@
         "#plataforma",
         "#dora",
         "#cultura"
-      ]
+      ],
+      "x": -29.579,
+      "y": -4.623,
+      "z": -82.0
     },
     {
       "id": "conhecimento/engenharia-de-software/domain-driven-design.md",
@@ -2481,7 +2847,10 @@
         "#modelagem",
         "#design",
         "#negocios"
-      ]
+      ],
+      "x": -13.773,
+      "y": 43.129,
+      "z": -74.191
     },
     {
       "id": "conhecimento/engenharia-de-software/domain-service.md",
@@ -2499,7 +2868,10 @@
         "#ddd",
         "#modelagem",
         "#domain-service"
-      ]
+      ],
+      "x": -1.637,
+      "y": 38.87,
+      "z": -71.168
     },
     {
       "id": "conhecimento/engenharia-de-software/engenharia-de-dados-e-bi.md",
@@ -2519,7 +2891,10 @@
         "#etl",
         "#dashboards",
         "#modelagem"
-      ]
+      ],
+      "x": -34.787,
+      "y": -1.8,
+      "z": -49.778
     },
     {
       "id": "conhecimento/engenharia-de-software/entity-vs-value-object.md",
@@ -2538,7 +2913,10 @@
         "#modelagem",
         "#entity",
         "#value-object"
-      ]
+      ],
+      "x": -21.988,
+      "y": 56.661,
+      "z": -70.937
     },
     {
       "id": "conhecimento/engenharia-de-software/escolha-de-linguagem-por-projeto.md",
@@ -2556,7 +2934,10 @@
         "#linguagem",
         "#arquitetura",
         "#decisao"
-      ]
+      ],
+      "x": -46.968,
+      "y": 33.68,
+      "z": -99.916
     },
     {
       "id": "conhecimento/engenharia-de-software/estruturas-de-dados-e-algoritmos.md",
@@ -2576,7 +2957,10 @@
         "#complexidade",
         "#big-o",
         "#fundamentos"
-      ]
+      ],
+      "x": -25.061,
+      "y": 48.149,
+      "z": -91.783
     },
     {
       "id": "conhecimento/engenharia-de-software/fundamentos.md",
@@ -2593,7 +2977,10 @@
         "#engenharia-de-software",
         "#fundamentos",
         "#algoritmos"
-      ]
+      ],
+      "x": -7.717,
+      "y": 24.988,
+      "z": -105.185
     },
     {
       "id": "conhecimento/engenharia-de-software/geracao-de-apresentacoes-com-ia.md",
@@ -2614,7 +3001,10 @@
         "#deck",
         "#storytelling",
         "#automacao"
-      ]
+      ],
+      "x": -26.713,
+      "y": 45.489,
+      "z": -49.811
     },
     {
       "id": "conhecimento/engenharia-de-software/geracao-de-documentos-e-apresentacoes.md",
@@ -2637,7 +3027,10 @@
         "#ia",
         "#templates",
         "#python"
-      ]
+      ],
+      "x": -29.256,
+      "y": 25.386,
+      "z": -51.504
     },
     {
       "id": "conhecimento/engenharia-de-software/github-fluxo-e-segundo-cerebro.md",
@@ -2656,7 +3049,10 @@
         "#git",
         "#pkm",
         "#automacao"
-      ]
+      ],
+      "x": -26.433,
+      "y": -16.158,
+      "z": -92.676
     },
     {
       "id": "conhecimento/engenharia-de-software/higiene-de-repositorio.md",
@@ -2678,7 +3074,10 @@
         "#seguranca",
         "#higiene",
         "#repositorio"
-      ]
+      ],
+      "x": -43.206,
+      "y": -11.908,
+      "z": -97.975
     },
     {
       "id": "conhecimento/engenharia-de-software/integracao-erp-e-sistemas-contabeis.md",
@@ -2699,7 +3098,10 @@
         "#erp",
         "#dados",
         "#arquitetura"
-      ]
+      ],
+      "x": -54.826,
+      "y": 34.756,
+      "z": -58.423
     },
     {
       "id": "conhecimento/engenharia-de-software/leitura-e-extracao-de-pdf.md",
@@ -2720,7 +3122,10 @@
         "#automacao",
         "#documentos",
         "#seguranca"
-      ]
+      ],
+      "x": -3.929,
+      "y": 0.5,
+      "z": -69.621
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagem-ubiqua.md",
@@ -2739,7 +3144,10 @@
         "#modelagem",
         "#comunicacao",
         "#linguagem-ubiqua"
-      ]
+      ],
+      "x": -13.663,
+      "y": 20.988,
+      "z": -50.94
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens.md",
@@ -2755,7 +3163,10 @@
       "tags": [
         "#engenharia-de-software",
         "#linguagem"
-      ]
+      ],
+      "x": -34.503,
+      "y": 38.368,
+      "z": -102.439
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/c.md",
@@ -2774,7 +3185,10 @@
         "#c",
         "#sistemas",
         "#embarcados"
-      ]
+      ],
+      "x": -51.67,
+      "y": 10.247,
+      "z": -116.1
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/cpp.md",
@@ -2793,7 +3207,10 @@
         "#cpp",
         "#sistemas",
         "#games"
-      ]
+      ],
+      "x": -64.383,
+      "y": 28.757,
+      "z": -107.773
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/csharp.md",
@@ -2811,7 +3228,10 @@
         "#linguagem",
         "#csharp",
         "#dotnet"
-      ]
+      ],
+      "x": -28.357,
+      "y": 51.636,
+      "z": -106.073
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/go.md",
@@ -2830,7 +3250,10 @@
         "#go",
         "#cloud",
         "#concorrencia"
-      ]
+      ],
+      "x": -46.321,
+      "y": 38.78,
+      "z": -111.865
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/java.md",
@@ -2848,7 +3271,10 @@
         "#linguagem",
         "#java",
         "#jvm"
-      ]
+      ],
+      "x": -42.01,
+      "y": 57.783,
+      "z": -96.678
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/javascript.md",
@@ -2866,7 +3292,10 @@
         "#linguagem",
         "#javascript",
         "#web"
-      ]
+      ],
+      "x": -58.051,
+      "y": 44.991,
+      "z": -99.337
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/kotlin.md",
@@ -2885,7 +3314,10 @@
         "#kotlin",
         "#jvm",
         "#android"
-      ]
+      ],
+      "x": -28.19,
+      "y": 37.317,
+      "z": -115.88
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/nodejs.md",
@@ -2904,7 +3336,10 @@
         "#nodejs",
         "#javascript",
         "#web"
-      ]
+      ],
+      "x": -37.366,
+      "y": 25.831,
+      "z": -100.968
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/php.md",
@@ -2922,7 +3357,10 @@
         "#linguagem",
         "#php",
         "#web"
-      ]
+      ],
+      "x": -44.727,
+      "y": 44.375,
+      "z": -91.537
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/python.md",
@@ -2939,7 +3377,10 @@
         "#engenharia-de-software",
         "#linguagem",
         "#python"
-      ]
+      ],
+      "x": -9.292,
+      "y": 12.809,
+      "z": -91.639
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/ruby.md",
@@ -2957,7 +3398,10 @@
         "#linguagem",
         "#ruby",
         "#web"
-      ]
+      ],
+      "x": -37.111,
+      "y": 23.911,
+      "z": -116.707
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/rust.md",
@@ -2976,7 +3420,10 @@
         "#rust",
         "#sistemas",
         "#seguranca"
-      ]
+      ],
+      "x": -52.278,
+      "y": 25.592,
+      "z": -115.56
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/sql.md",
@@ -2994,7 +3441,10 @@
         "#linguagem",
         "#sql",
         "#banco-de-dados"
-      ]
+      ],
+      "x": -66.95,
+      "y": 33.202,
+      "z": -91.221
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/swift.md",
@@ -3013,7 +3463,10 @@
         "#swift",
         "#apple",
         "#mobile"
-      ]
+      ],
+      "x": -23.437,
+      "y": 18.395,
+      "z": -117.799
     },
     {
       "id": "conhecimento/engenharia-de-software/linguagens/typescript.md",
@@ -3031,7 +3484,10 @@
         "#linguagem",
         "#typescript",
         "#web"
-      ]
+      ],
+      "x": -55.248,
+      "y": 22.329,
+      "z": -100.828
     },
     {
       "id": "conhecimento/engenharia-de-software/martech-e-rastreamento.md",
@@ -3051,7 +3507,10 @@
         "#tracking",
         "#dados",
         "#lgpd"
-      ]
+      ],
+      "x": -41.158,
+      "y": 11.018,
+      "z": -48.374
     },
     {
       "id": "conhecimento/engenharia-de-software/metodologias-ageis.md",
@@ -3070,7 +3529,10 @@
         "#scrum",
         "#kanban",
         "#xp"
-      ]
+      ],
+      "x": -16.826,
+      "y": 3.375,
+      "z": -107.487
     },
     {
       "id": "conhecimento/engenharia-de-software/microsservicos-e-arquitetura-orientada-a-eventos.md",
@@ -3091,7 +3553,10 @@
         "#saga",
         "#cqrs",
         "#arquitetura"
-      ]
+      ],
+      "x": -13.744,
+      "y": 36.902,
+      "z": -87.568
     },
     {
       "id": "conhecimento/engenharia-de-software/observabilidade-e-monitoramento.md",
@@ -3114,7 +3579,10 @@
         "#slo",
         "#sli",
         "#alertas"
-      ]
+      ],
+      "x": -24.639,
+      "y": 7.007,
+      "z": -75.238
     },
     {
       "id": "conhecimento/engenharia-de-software/publicacao-sharepoint-microsoft-graph.md",
@@ -3136,7 +3604,10 @@
         "#m365",
         "#oauth",
         "#automacao"
-      ]
+      ],
+      "x": -48.33,
+      "y": 55.039,
+      "z": -72.374
     },
     {
       "id": "conhecimento/engenharia-de-software/recursos-de-aprendizado.md",
@@ -3156,7 +3627,10 @@
         "#roadmap",
         "#carreira",
         "#open-source"
-      ]
+      ],
+      "x": -16.986,
+      "y": 21.247,
+      "z": -84.628
     },
     {
       "id": "conhecimento/engenharia-de-software/repository-no-ddd.md",
@@ -3175,7 +3649,10 @@
         "#modelagem",
         "#repository",
         "#persistencia"
-      ]
+      ],
+      "x": -9.912,
+      "y": 47.902,
+      "z": -97.21
     },
     {
       "id": "conhecimento/engenharia-de-software/revisao-e-refatoracao-de-codigo.md",
@@ -3195,7 +3672,10 @@
         "#revisao-de-codigo",
         "#qualidade",
         "#ia"
-      ]
+      ],
+      "x": -19.617,
+      "y": -7.887,
+      "z": -73.552
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca-de-software.md",
@@ -3216,7 +3696,10 @@
         "#autenticacao",
         "#autorizacao",
         "#secrets"
-      ]
+      ],
+      "x": -47.461,
+      "y": 9.327,
+      "z": -77.985
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/README.md",
@@ -3233,7 +3716,10 @@
         "#engenharia-de-software",
         "#seguranca",
         "#indice"
-      ]
+      ],
+      "x": -63.116,
+      "y": 12.466,
+      "z": -79.701
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/ameacas-malware-e-ataques.md",
@@ -3251,7 +3737,10 @@
         "#seguranca",
         "#malware",
         "#ameacas"
-      ]
+      ],
+      "x": -62.204,
+      "y": 8.135,
+      "z": -57.884
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/arquitetura-de-defesa-em-camadas.md",
@@ -3271,7 +3760,10 @@
         "#defesa-em-profundidade",
         "#criptografia",
         "#zero-trust"
-      ]
+      ],
+      "x": -73.944,
+      "y": -1.097,
+      "z": -84.856
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/conscientizacao-anti-phishing.md",
@@ -3290,7 +3782,10 @@
         "#phishing",
         "#pessoas",
         "#engenharia-social"
-      ]
+      ],
+      "x": -44.525,
+      "y": -4.958,
+      "z": -58.498
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/criptografia-aplicada.md",
@@ -3307,7 +3802,10 @@
         "#engenharia-de-software",
         "#seguranca",
         "#criptografia"
-      ]
+      ],
+      "x": -55.504,
+      "y": 1.634,
+      "z": -91.378
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/defesa-em-profundidade-e-zero-trust.md",
@@ -3326,7 +3824,10 @@
         "#zero-trust",
         "#hardening",
         "#arquitetura"
-      ]
+      ],
+      "x": -53.801,
+      "y": -4.337,
+      "z": -68.561
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/devsecops-e-sdlc-seguro.md",
@@ -3345,7 +3846,10 @@
         "#devsecops",
         "#sdlc",
         "#supply-chain"
-      ]
+      ],
+      "x": -57.002,
+      "y": -5.141,
+      "z": -81.571
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/gestao-de-vulnerabilidades-e-pentest.md",
@@ -3363,7 +3867,10 @@
         "#seguranca",
         "#vulnerabilidades",
         "#pentest"
-      ]
+      ],
+      "x": -72.117,
+      "y": 6.907,
+      "z": -73.02
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/higiene-digital-e-seguranca-pessoal.md",
@@ -3384,7 +3891,10 @@
         "#2fa",
         "#backup",
         "#privacidade"
-      ]
+      ],
+      "x": -45.132,
+      "y": -16.648,
+      "z": -78.869
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/protecao-de-codigo-e-anti-engenharia-reversa.md",
@@ -3405,7 +3915,10 @@
         "#engenharia-reversa",
         "#secrets",
         "#licenciamento"
-      ]
+      ],
+      "x": -61.503,
+      "y": -12.827,
+      "z": -91.004
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/resposta-a-incidentes-e-forense.md",
@@ -3423,7 +3936,10 @@
         "#seguranca",
         "#incidentes",
         "#forense"
-      ]
+      ],
+      "x": -73.988,
+      "y": 32.48,
+      "z": -78.113
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/runbook-resposta-ransomware.md",
@@ -3441,7 +3957,10 @@
         "#seguranca",
         "#ransomware",
         "#incidentes"
-      ]
+      ],
+      "x": -78.653,
+      "y": 20.056,
+      "z": -73.927
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/seguranca-de-apis-e-oauth.md",
@@ -3459,7 +3978,10 @@
         "#seguranca",
         "#api",
         "#oauth"
-      ]
+      ],
+      "x": -61.23,
+      "y": 29.027,
+      "z": -73.782
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/seguranca-de-conteineres-e-kubernetes.md",
@@ -3477,7 +3999,10 @@
         "#seguranca",
         "#containers",
         "#kubernetes"
-      ]
+      ],
+      "x": -77.296,
+      "y": 15.252,
+      "z": -88.406
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/seguranca-em-nuvem.md",
@@ -3498,7 +4023,10 @@
         "#aws",
         "#azure",
         "#gcp"
-      ]
+      ],
+      "x": -68.854,
+      "y": 5.365,
+      "z": -97.729
     },
     {
       "id": "conhecimento/engenharia-de-software/seguranca/soc-e-blue-team.md",
@@ -3516,7 +4044,10 @@
         "#seguranca",
         "#soc",
         "#blue-team"
-      ]
+      ],
+      "x": -67.887,
+      "y": 21.523,
+      "z": -64.326
     },
     {
       "id": "conhecimento/engenharia-de-software/sistemas-operacionais.md",
@@ -3535,7 +4066,10 @@
         "#linux",
         "#windows",
         "#macos"
-      ]
+      ],
+      "x": -35.39,
+      "y": 12.228,
+      "z": -109.6
     },
     {
       "id": "conhecimento/engenharia-de-software/software-financeiro-e-fintech.md",
@@ -3555,7 +4089,10 @@
         "#pagamentos",
         "#open-finance",
         "#seguranca"
-      ]
+      ],
+      "x": -25.624,
+      "y": 10.596,
+      "z": -56.003
     },
     {
       "id": "conhecimento/engenharia-de-software/system-design-e-escalabilidade.md",
@@ -3575,7 +4112,10 @@
         "#arquitetura",
         "#distribuido",
         "#performance"
-      ]
+      ],
+      "x": -11.379,
+      "y": 9.328,
+      "z": -77.17
     },
     {
       "id": "conhecimento/engenharia-de-software/testes-avancados.md",
@@ -3596,7 +4136,10 @@
         "#caos",
         "#property-based",
         "#mutation"
-      ]
+      ],
+      "x": -11.349,
+      "y": -2.349,
+      "z": -90.071
     },
     {
       "id": "conhecimento/engenharia-de-software/testes.md",
@@ -3614,7 +4157,10 @@
         "#testes",
         "#qa",
         "#tdd"
-      ]
+      ],
+      "x": -23.557,
+      "y": 2.405,
+      "z": -95.412
     },
     {
       "id": "conhecimento/engenharia-de-software/tipos-de-linguagens.md",
@@ -3631,7 +4177,10 @@
         "#engenharia-de-software",
         "#linguagem",
         "#fundamentos"
-      ]
+      ],
+      "x": -36.813,
+      "y": 53.634,
+      "z": -82.042
     },
     {
       "id": "conhecimento/engenharia-de-software/utilidades-e-automacoes.md",
@@ -3650,7 +4199,10 @@
         "#produtividade",
         "#extensoes",
         "#agentes"
-      ]
+      ],
+      "x": -18.488,
+      "y": -1.912,
+      "z": -56.604
     },
     {
       "id": "conhecimento/engenharia-de-software/ux-ui-design.md",
@@ -3671,7 +4223,10 @@
         "#usabilidade",
         "#acessibilidade",
         "#psicologia"
-      ]
+      ],
+      "x": -39.902,
+      "y": 26.917,
+      "z": -46.875
     },
     {
       "id": "conhecimento/engenharia-de-software/versionamento-git.md",
@@ -3689,7 +4244,10 @@
         "#git",
         "#versionamento",
         "#fluxo-de-trabalho"
-      ]
+      ],
+      "x": -32.818,
+      "y": -5.359,
+      "z": -109.459
     },
     {
       "id": "conhecimento/engenharia-de-software/vibe-coding.md",
@@ -3707,7 +4265,10 @@
         "#vibe-coding",
         "#ia",
         "#produtividade"
-      ]
+      ],
+      "x": -6.789,
+      "y": 12.885,
+      "z": -59.783
     },
     {
       "id": "conhecimento/engenharia-de-software/web/README.md",
@@ -3726,7 +4287,10 @@
         "#back-end",
         "#fullstack",
         "#indice"
-      ]
+      ],
+      "x": -54.214,
+      "y": 40.359,
+      "z": -80.267
     },
     {
       "id": "conhecimento/engenharia-de-software/web/back-end.md",
@@ -3748,7 +4312,10 @@
         "#cache",
         "#escalabilidade",
         "#seguranca"
-      ]
+      ],
+      "x": -40.563,
+      "y": 28.221,
+      "z": -86.112
     },
     {
       "id": "conhecimento/engenharia-de-software/web/desenvolvimento-web.md",
@@ -3769,7 +4336,10 @@
         "#front-end",
         "#back-end",
         "#fullstack"
-      ]
+      ],
+      "x": -52.954,
+      "y": 24.355,
+      "z": -84.107
     },
     {
       "id": "conhecimento/engenharia-de-software/web/design-md-para-agentes.md",
@@ -3791,7 +4361,10 @@
         "#ia",
         "#markdown",
         "#contexto-de-agente"
-      ]
+      ],
+      "x": -37.595,
+      "y": 55.988,
+      "z": -61.694
     },
     {
       "id": "conhecimento/engenharia-de-software/web/design-system.md",
@@ -3812,7 +4385,10 @@
         "#tokens",
         "#componentes",
         "#storybook"
-      ]
+      ],
+      "x": -48.971,
+      "y": 48.669,
+      "z": -59.702
     },
     {
       "id": "conhecimento/engenharia-de-software/web/front-end.md",
@@ -3834,7 +4410,10 @@
         "#css",
         "#performance",
         "#acessibilidade"
-      ]
+      ],
+      "x": -46.623,
+      "y": 35.93,
+      "z": -71.152
     },
     {
       "id": "conhecimento/engenharia-de-software/web/fullstack.md",
@@ -3855,7 +4434,10 @@
         "#back-end",
         "#bff",
         "#monorepo"
-      ]
+      ],
+      "x": -48.112,
+      "y": 5.931,
+      "z": -101.874
     },
     {
       "id": "conhecimento/engenharia-de-software/web/hospedagem-e-deploy-front-end.md",
@@ -3878,7 +4460,10 @@
         "#github-pages",
         "#controle-de-acesso",
         "#front-end"
-      ]
+      ],
+      "x": -51.126,
+      "y": 19.228,
+      "z": -57.825
     },
     {
       "id": "conhecimento/engenharia-de-software/web/scrollytelling-narrativa-dirigida-por-scroll.md",
@@ -3899,7 +4484,10 @@
         "#animacao",
         "#scrollytelling",
         "#three-js"
-      ]
+      ],
+      "x": -63.261,
+      "y": 48.617,
+      "z": -65.779
     },
     {
       "id": "conhecimento/engenharia-de-software/web/visualizacao-3d-de-grafos.md",
@@ -3920,7 +4508,10 @@
         "#dataviz",
         "#ui",
         "#grafo"
-      ]
+      ],
+      "x": -61.262,
+      "y": 53.895,
+      "z": -82.805
     },
     {
       "id": "conhecimento/estatistica/README.md",
@@ -3937,7 +4528,10 @@
         "#estatistica",
         "#dados",
         "#indice"
-      ]
+      ],
+      "x": 89.992,
+      "y": 20.632,
+      "z": 39.925
     },
     {
       "id": "conhecimento/estatistica/analise-exploratoria-e-limpeza-de-dados.md",
@@ -3957,7 +4551,10 @@
         "#faltantes",
         "#outliers",
         "#feature-engineering"
-      ]
+      ],
+      "x": 85.215,
+      "y": 12.838,
+      "z": 27.626
     },
     {
       "id": "conhecimento/estatistica/churn-e-analise-de-sobrevivencia.md",
@@ -3978,7 +4575,10 @@
         "#cox",
         "#retencao",
         "#censura"
-      ]
+      ],
+      "x": 92.007,
+      "y": 5.782,
+      "z": 40.418
     },
     {
       "id": "conhecimento/estatistica/estatistica-e-analise-de-dados.md",
@@ -3998,7 +4598,10 @@
         "#regressao",
         "#correlacao",
         "#hipotese"
-      ]
+      ],
+      "x": 69.755,
+      "y": 2.119,
+      "z": 26.974
     },
     {
       "id": "conhecimento/estatistica/inferencia-causal-e-experimentos.md",
@@ -4018,7 +4621,10 @@
         "#rct",
         "#confundimento",
         "#inferencia-causal"
-      ]
+      ],
+      "x": 74.315,
+      "y": 9.196,
+      "z": 41.958
     },
     {
       "id": "conhecimento/filosofia/README.md",
@@ -4034,7 +4640,10 @@
       "tags": [
         "#filosofia",
         "#indice"
-      ]
+      ],
+      "x": -87.989,
+      "y": 14.062,
+      "z": 38.984
     },
     {
       "id": "conhecimento/filosofia/estoicismo.md",
@@ -4054,7 +4663,10 @@
         "#virtude",
         "#autoconhecimento",
         "#resiliencia"
-      ]
+      ],
+      "x": -79.407,
+      "y": 0.006,
+      "z": 46.365
     },
     {
       "id": "conhecimento/filosofia/etica-e-filosofia-moral.md",
@@ -4075,7 +4687,10 @@
         "#deontologia",
         "#consequencialismo",
         "#decisao"
-      ]
+      ],
+      "x": -76.638,
+      "y": 4.814,
+      "z": 31.806
     },
     {
       "id": "conhecimento/filosofia/filosofia-aplicada.md",
@@ -4094,7 +4709,10 @@
         "#decisao",
         "#etica",
         "#vida"
-      ]
+      ],
+      "x": -78.087,
+      "y": 16.97,
+      "z": 48.152
     },
     {
       "id": "conhecimento/filosofia/fundamentos-da-filosofia.md",
@@ -4114,7 +4732,10 @@
         "#logica",
         "#epistemologia",
         "#metafisica"
-      ]
+      ],
+      "x": -90.711,
+      "y": -2.375,
+      "z": 36.695
     },
     {
       "id": "conhecimento/filosofia/logica-e-pensamento-critico.md",
@@ -4134,7 +4755,10 @@
         "#argumentacao",
         "#falacias",
         "#vieses"
-      ]
+      ],
+      "x": -59.999,
+      "y": 13.794,
+      "z": 38.788
     },
     {
       "id": "conhecimento/filosofia/principais-correntes-e-pensadores.md",
@@ -4152,7 +4776,10 @@
         "#historia",
         "#correntes",
         "#pensadores"
-      ]
+      ],
+      "x": -97.783,
+      "y": 7.414,
+      "z": 48.59
     },
     {
       "id": "conhecimento/financas/README.md",
@@ -4168,7 +4795,10 @@
       "tags": [
         "#financas",
         "#indice"
-      ]
+      ],
+      "x": 52.349,
+      "y": 0.345,
+      "z": -88.153
     },
     {
       "id": "conhecimento/financas/analise-das-demonstracoes-financeiras.md",
@@ -4189,7 +4819,10 @@
         "#indice",
         "#vertical",
         "#horizontal"
-      ]
+      ],
+      "x": 42.847,
+      "y": 8.776,
+      "z": -91.937
     },
     {
       "id": "conhecimento/financas/analise-de-credito-e-cobranca.md",
@@ -4211,7 +4844,10 @@
         "#credit-scoring",
         "#5Cs",
         "#politica-de-credito"
-      ]
+      ],
+      "x": 54.422,
+      "y": -8.468,
+      "z": -75.162
     },
     {
       "id": "conhecimento/financas/analise-de-investimentos.md",
@@ -4231,7 +4867,10 @@
         "#tir",
         "#payback",
         "#decisao-de-capital"
-      ]
+      ],
+      "x": 40.836,
+      "y": -16.696,
+      "z": -67.052
     },
     {
       "id": "conhecimento/financas/conceitos-fundamentais.md",
@@ -4247,7 +4886,10 @@
       "tags": [
         "#financas",
         "#fundamentos"
-      ]
+      ],
+      "x": 57.592,
+      "y": -15.925,
+      "z": -85.639
     },
     {
       "id": "conhecimento/financas/custos-e-precificacao.md",
@@ -4267,7 +4909,10 @@
         "#margem-contribuicao",
         "#ponto-equilibrio",
         "#markup"
-      ]
+      ],
+      "x": 30.056,
+      "y": 7.659,
+      "z": -79.632
     },
     {
       "id": "conhecimento/financas/financas-corporativas.md",
@@ -4286,7 +4931,10 @@
         "#valuation",
         "#estrutura-de-capital",
         "#dividendos"
-      ]
+      ],
+      "x": 45.613,
+      "y": 12.167,
+      "z": -70.736
     },
     {
       "id": "conhecimento/financas/financas-pessoais-e-investimentos.md",
@@ -4306,7 +4954,10 @@
         "#renda-fixa",
         "#renda-variavel",
         "#tributario"
-      ]
+      ],
+      "x": 42.577,
+      "y": -23.823,
+      "z": -77.542
     },
     {
       "id": "conhecimento/financas/formulario-financeiro-e-administrativo.md",
@@ -4329,7 +4980,10 @@
         "#markup",
         "#ponto-equilibrio",
         "#liquidez"
-      ]
+      ],
+      "x": 41.252,
+      "y": -3.06,
+      "z": -79.017
     },
     {
       "id": "conhecimento/financas/gestao-de-caixa-e-tesouraria.md",
@@ -4349,7 +5003,10 @@
         "#capital-de-giro",
         "#ciclo-financeiro",
         "#renda-fixa"
-      ]
+      ],
+      "x": 38.631,
+      "y": -5.695,
+      "z": -61.146
     },
     {
       "id": "conhecimento/financas/gestao-de-riscos-financeiros.md",
@@ -4371,7 +5028,10 @@
         "#risco-mercado",
         "#risco-credito",
         "#risco-liquidez"
-      ]
+      ],
+      "x": 59.688,
+      "y": 3.653,
+      "z": -74.736
     },
     {
       "id": "conhecimento/financas/indicadores-financeiros.md",
@@ -4391,7 +5051,10 @@
         "#liquidez",
         "#rentabilidade",
         "#endividamento"
-      ]
+      ],
+      "x": 22.753,
+      "y": -3.648,
+      "z": -52.659
     },
     {
       "id": "conhecimento/financas/matematica-financeira.md",
@@ -4409,7 +5072,10 @@
         "#matematica-financeira",
         "#juros",
         "#vpl"
-      ]
+      ],
+      "x": 42.221,
+      "y": -16.96,
+      "z": -89.866
     },
     {
       "id": "conhecimento/financas/mercado-financeiro.md",
@@ -4427,7 +5093,10 @@
         "#mercado",
         "#investimentos",
         "#risco"
-      ]
+      ],
+      "x": 54.758,
+      "y": -4.312,
+      "z": -61.498
     },
     {
       "id": "conhecimento/financas/modelagem-financeira.md",
@@ -4449,7 +5118,10 @@
         "#fluxo-de-caixa",
         "#fpa",
         "#premissas"
-      ]
+      ],
+      "x": 36.644,
+      "y": -4.754,
+      "z": -94.759
     },
     {
       "id": "conhecimento/financas/planejamento-financeiro-e-orcamento.md",
@@ -4471,7 +5143,10 @@
         "#controle-orcamentario",
         "#kpi",
         "#controle"
-      ]
+      ],
+      "x": 29.523,
+      "y": -7.735,
+      "z": -75.961
     },
     {
       "id": "conhecimento/financas/precificacao-de-servicos-e-projetos.md",
@@ -4490,7 +5165,10 @@
         "#servicos",
         "#freelance",
         "#consultoria"
-      ]
+      ],
+      "x": 51.221,
+      "y": 20.427,
+      "z": -82.723
     },
     {
       "id": "conhecimento/financas/valuation.md",
@@ -4511,7 +5189,10 @@
         "#multiplos",
         "#fluxo-de-caixa-livre",
         "#perpetuidade"
-      ]
+      ],
+      "x": 35.481,
+      "y": 5.535,
+      "z": -66.888
     },
     {
       "id": "conhecimento/games/README.md",
@@ -4527,7 +5208,10 @@
       "tags": [
         "#games",
         "#indice"
-      ]
+      ],
+      "x": 42.008,
+      "y": -9.643,
+      "z": 87.818
     },
     {
       "id": "conhecimento/games/desenvolvimento-de-jogos.md",
@@ -4545,7 +5229,10 @@
         "#game-dev",
         "#engines",
         "#design"
-      ]
+      ],
+      "x": 28.581,
+      "y": 0.122,
+      "z": 70.157
     },
     {
       "id": "conhecimento/games/ferramentas-e-automacao-para-jogos.md",
@@ -4563,7 +5250,10 @@
         "#automacao",
         "#mods",
         "#ferramentas"
-      ]
+      ],
+      "x": 32.449,
+      "y": 0.757,
+      "z": 91.786
     },
     {
       "id": "conhecimento/games/seguranca-e-anti-cheat.md",
@@ -4581,7 +5271,10 @@
         "#seguranca",
         "#anti-cheat",
         "#defensivo"
-      ]
+      ],
+      "x": 26.141,
+      "y": -12.026,
+      "z": 86.314
     },
     {
       "id": "conhecimento/idiomas/README.md",
@@ -4597,7 +5290,10 @@
       "tags": [
         "#idiomas",
         "#indice"
-      ]
+      ],
+      "x": -68.687,
+      "y": -14.319,
+      "z": -32.611
     },
     {
       "id": "conhecimento/idiomas/gramatica-acentuacao-grafica.md",
@@ -4617,7 +5313,10 @@
         "#acentuacao",
         "#novo-acordo-ortografico",
         "#revisao"
-      ]
+      ],
+      "x": -96.884,
+      "y": -39.142,
+      "z": -51.608
     },
     {
       "id": "conhecimento/idiomas/gramatica-colocacao-pronominal.md",
@@ -4637,7 +5336,10 @@
         "#colocacao-pronominal",
         "#revisao",
         "#concursos"
-      ]
+      ],
+      "x": -103.337,
+      "y": -6.608,
+      "z": -55.578
     },
     {
       "id": "conhecimento/idiomas/gramatica-concordancia.md",
@@ -4656,7 +5358,10 @@
         "#norma-culta",
         "#concordancia",
         "#revisao"
-      ]
+      ],
+      "x": -92.834,
+      "y": -7.331,
+      "z": -45.966
     },
     {
       "id": "conhecimento/idiomas/gramatica-crase.md",
@@ -4676,7 +5381,10 @@
         "#crase",
         "#regencia",
         "#revisao"
-      ]
+      ],
+      "x": -79.483,
+      "y": -28.309,
+      "z": -56.949
     },
     {
       "id": "conhecimento/idiomas/gramatica-duvidas-frequentes-e-vicios.md",
@@ -4696,7 +5404,10 @@
         "#revisao",
         "#duvidas-frequentes",
         "#vicios-de-linguagem"
-      ]
+      ],
+      "x": -98.287,
+      "y": -22.466,
+      "z": -59.938
     },
     {
       "id": "conhecimento/idiomas/gramatica-ortografia-e-novo-acordo.md",
@@ -4717,7 +5428,10 @@
         "#novo-acordo-ortografico",
         "#hifen",
         "#revisao"
-      ]
+      ],
+      "x": -90.206,
+      "y": -35.737,
+      "z": -64.981
     },
     {
       "id": "conhecimento/idiomas/gramatica-pontuacao.md",
@@ -4737,7 +5451,10 @@
         "#pontuacao",
         "#virgula",
         "#revisao"
-      ]
+      ],
+      "x": -81.547,
+      "y": -41.443,
+      "z": -50.682
     },
     {
       "id": "conhecimento/idiomas/gramatica-regencia.md",
@@ -4757,7 +5474,10 @@
         "#regencia",
         "#crase",
         "#revisao"
-      ]
+      ],
+      "x": -84.937,
+      "y": -15.647,
+      "z": -53.403
     },
     {
       "id": "conhecimento/idiomas/ingles-artigos-e-determinantes.md",
@@ -4775,7 +5495,10 @@
         "#ingles",
         "#gramatica",
         "#escrita"
-      ]
+      ],
+      "x": -110.208,
+      "y": -17.34,
+      "z": -47.744
     },
     {
       "id": "conhecimento/idiomas/ingles-condicionais-e-subjuntivo.md",
@@ -4793,7 +5516,10 @@
         "#ingles",
         "#gramatica",
         "#verbos"
-      ]
+      ],
+      "x": -95.644,
+      "y": -17.633,
+      "z": -36.642
     },
     {
       "id": "conhecimento/idiomas/ingles-escrita-e-register.md",
@@ -4811,7 +5537,10 @@
         "#ingles",
         "#escrita",
         "#comunicacao"
-      ]
+      ],
+      "x": -90.084,
+      "y": -16.846,
+      "z": -22.019
     },
     {
       "id": "conhecimento/idiomas/ingles-estruturas-avancadas.md",
@@ -4829,7 +5558,10 @@
         "#ingles",
         "#gramatica",
         "#escrita"
-      ]
+      ],
+      "x": -106.454,
+      "y": -11.988,
+      "z": -31.73
     },
     {
       "id": "conhecimento/idiomas/ingles-modais-e-semimodais.md",
@@ -4847,7 +5579,10 @@
         "#ingles",
         "#gramatica",
         "#verbos"
-      ]
+      ],
+      "x": -93.739,
+      "y": -30.977,
+      "z": -31.867
     },
     {
       "id": "conhecimento/idiomas/ingles-pronuncia-e-fala-conectada.md",
@@ -4865,7 +5600,10 @@
         "#ingles",
         "#pronuncia",
         "#fluencia"
-      ]
+      ],
+      "x": -76.852,
+      "y": -26.803,
+      "z": -30.265
     },
     {
       "id": "conhecimento/idiomas/ingles-tempos-verbais-e-aspecto.md",
@@ -4883,7 +5621,10 @@
         "#ingles",
         "#gramatica",
         "#verbos"
-      ]
+      ],
+      "x": -85.736,
+      "y": -7.026,
+      "z": -31.433
     },
     {
       "id": "conhecimento/idiomas/ingles-vocabulario-collocations-e-phrasal-verbs.md",
@@ -4901,7 +5642,10 @@
         "#ingles",
         "#vocabulario",
         "#escrita"
-      ]
+      ],
+      "x": -106.539,
+      "y": -29.858,
+      "z": -39.856
     },
     {
       "id": "conhecimento/inteligencia-artificial/README.md",
@@ -4917,7 +5661,10 @@
       "tags": [
         "#ia",
         "#indice"
-      ]
+      ],
+      "x": 89.553,
+      "y": -19.008,
+      "z": -10.546
     },
     {
       "id": "conhecimento/inteligencia-artificial/agentes-de-ia.md",
@@ -4934,7 +5681,10 @@
         "#ia",
         "#agentes",
         "#automacao"
-      ]
+      ],
+      "x": 86.593,
+      "y": -26.53,
+      "z": -19.756
     },
     {
       "id": "conhecimento/inteligencia-artificial/avaliacao-de-modelos-de-ia.md",
@@ -4953,7 +5703,10 @@
         "#benchmark",
         "#alucinacao",
         "#llm-as-judge"
-      ]
+      ],
+      "x": 94.606,
+      "y": -23.077,
+      "z": 1.73
     },
     {
       "id": "conhecimento/inteligencia-artificial/custo-e-infraestrutura-de-inferencia.md",
@@ -4975,7 +5728,10 @@
         "#serving",
         "#tokens",
         "#finops"
-      ]
+      ],
+      "x": 96.054,
+      "y": -31.011,
+      "z": -33.455
     },
     {
       "id": "conhecimento/inteligencia-artificial/engenharia-de-prompt.md",
@@ -4997,7 +5753,10 @@
         "#rag",
         "#agentes",
         "#dspy"
-      ]
+      ],
+      "x": 70.63,
+      "y": -32.133,
+      "z": -9.378
     },
     {
       "id": "conhecimento/inteligencia-artificial/extracao-estruturada-de-documentos.md",
@@ -5019,7 +5778,10 @@
         "#instructor",
         "#hitl",
         "#pipeline"
-      ]
+      ],
+      "x": 101.342,
+      "y": -32.04,
+      "z": -7.35
     },
     {
       "id": "conhecimento/inteligencia-artificial/fine-tuning-e-adaptacao-de-modelos.md",
@@ -5040,7 +5802,10 @@
         "#rlhf",
         "#llm",
         "#treinamento"
-      ]
+      ],
+      "x": 94.194,
+      "y": -42.217,
+      "z": -16.186
     },
     {
       "id": "conhecimento/inteligencia-artificial/fundamentos-de-ia.md",
@@ -5058,7 +5823,10 @@
         "#fundamentos",
         "#machine-learning",
         "#deep-learning"
-      ]
+      ],
+      "x": 103.59,
+      "y": -12.329,
+      "z": -6.74
     },
     {
       "id": "conhecimento/inteligencia-artificial/ia-aplicada-aos-negocios.md",
@@ -5075,7 +5843,10 @@
         "#ia",
         "#aplicacao",
         "#negocios"
-      ]
+      ],
+      "x": 69.869,
+      "y": -17.151,
+      "z": -26.5
     },
     {
       "id": "conhecimento/inteligencia-artificial/ia-multimodal.md",
@@ -5095,7 +5866,10 @@
         "#audio",
         "#geracao-de-imagem",
         "#vlm"
-      ]
+      ],
+      "x": 100.539,
+      "y": -13.397,
+      "z": -24.364
     },
     {
       "id": "conhecimento/inteligencia-artificial/llms-e-ia-generativa.md",
@@ -5112,7 +5886,10 @@
         "#ia",
         "#llm",
         "#generativa"
-      ]
+      ],
+      "x": 86.934,
+      "y": -35.93,
+      "z": -1.641
     },
     {
       "id": "conhecimento/inteligencia-artificial/machine-learning.md",
@@ -5130,7 +5907,10 @@
         "#machine-learning",
         "#dados",
         "#estatistica"
-      ]
+      ],
+      "x": 76.787,
+      "y": -23.615,
+      "z": 3.191
     },
     {
       "id": "conhecimento/inteligencia-artificial/mlops-e-ciclo-de-vida.md",
@@ -5148,7 +5928,10 @@
         "#mlops",
         "#devops",
         "#dados"
-      ]
+      ],
+      "x": 83.829,
+      "y": -24.292,
+      "z": -31.533
     },
     {
       "id": "conhecimento/inteligencia-artificial/orquestracao-de-agentes-no-memorycode.md",
@@ -5168,7 +5951,10 @@
         "#pkm",
         "#automacao",
         "#governanca"
-      ]
+      ],
+      "x": 85.883,
+      "y": -10.989,
+      "z": -27.946
     },
     {
       "id": "conhecimento/inteligencia-artificial/rag-e-bases-vetoriais.md",
@@ -5185,7 +5971,10 @@
         "#ia",
         "#rag",
         "#embeddings"
-      ]
+      ],
+      "x": 101.813,
+      "y": -26.903,
+      "z": -19.612
     },
     {
       "id": "conhecimento/inteligencia-artificial/riscos-etica-e-governanca-de-ia.md",
@@ -5206,7 +5995,10 @@
         "#compliance",
         "#regulacao",
         "#risco"
-      ]
+      ],
+      "x": 73.436,
+      "y": -10.933,
+      "z": -2.695
     },
     {
       "id": "conhecimento/inteligencia-artificial/stack-de-engenharia-de-agentes.md",
@@ -5232,7 +6024,10 @@
         "#observabilidade",
         "#rag",
         "#ferramentas"
-      ]
+      ],
+      "x": 91.061,
+      "y": -5.408,
+      "z": -14.581
     },
     {
       "id": "conhecimento/inteligencia-artificial/trabalhar-com-ia-copiloto.md",
@@ -5251,7 +6046,10 @@
         "#copiloto",
         "#llm",
         "#trabalho"
-      ]
+      ],
+      "x": 78.168,
+      "y": -36.465,
+      "z": -21.084
     },
     {
       "id": "conhecimento/marketing-digital/README.md",
@@ -5267,7 +6065,10 @@
       "tags": [
         "#marketing-digital",
         "#indice"
-      ]
+      ],
+      "x": -43.997,
+      "y": -24.596,
+      "z": 76.35
     },
     {
       "id": "conhecimento/marketing-digital/automacao-de-marketing.md",
@@ -5287,7 +6088,10 @@
         "#lead-scoring",
         "#workflow",
         "#crm"
-      ]
+      ],
+      "x": -36.978,
+      "y": -38.142,
+      "z": 58.172
     },
     {
       "id": "conhecimento/marketing-digital/branding-e-posicionamento.md",
@@ -5307,7 +6111,10 @@
         "#marca",
         "#brand-equity",
         "#estrategia"
-      ]
+      ],
+      "x": -50.673,
+      "y": -29.5,
+      "z": 65.877
     },
     {
       "id": "conhecimento/marketing-digital/copywriting.md",
@@ -5331,7 +6138,10 @@
         "#gatilhos-mentais",
         "#copy-web",
         "#anuncios"
-      ]
+      ],
+      "x": -19.039,
+      "y": -28.0,
+      "z": 82.846
     },
     {
       "id": "conhecimento/marketing-digital/crm-e-gestao-de-leads.md",
@@ -5353,7 +6163,10 @@
         "#pipeline",
         "#vendas",
         "#integracao"
-      ]
+      ],
+      "x": -20.1,
+      "y": -29.058,
+      "z": 67.206
     },
     {
       "id": "conhecimento/marketing-digital/email-marketing.md",
@@ -5373,7 +6186,10 @@
         "#automacao",
         "#captacao",
         "#segmentacao"
-      ]
+      ],
+      "x": -29.644,
+      "y": -17.947,
+      "z": 78.746
     },
     {
       "id": "conhecimento/marketing-digital/estrategia-e-planejamento.md",
@@ -5395,7 +6211,10 @@
         "#7ps",
         "#posicionamento",
         "#campanha"
-      ]
+      ],
+      "x": -55.221,
+      "y": -7.651,
+      "z": 82.678
     },
     {
       "id": "conhecimento/marketing-digital/estrategia-visual.md",
@@ -5416,7 +6235,10 @@
         "#dataviz",
         "#atencao",
         "#branding"
-      ]
+      ],
+      "x": -49.365,
+      "y": -51.892,
+      "z": 63.541
     },
     {
       "id": "conhecimento/marketing-digital/fundamentos-marketing-digital.md",
@@ -5435,7 +6257,10 @@
         "#canais-digitais",
         "#ecossistema",
         "#estrategia"
-      ]
+      ],
+      "x": -44.196,
+      "y": -23.178,
+      "z": 88.612
     },
     {
       "id": "conhecimento/marketing-digital/funil-e-jornada.md",
@@ -5457,7 +6282,10 @@
         "#meio-funil",
         "#fundo-funil",
         "#growth"
-      ]
+      ],
+      "x": -31.08,
+      "y": -34.429,
+      "z": 72.321
     },
     {
       "id": "conhecimento/marketing-digital/geracao-de-leads.md",
@@ -5478,7 +6306,10 @@
         "#captacao",
         "#inbound",
         "#conversao"
-      ]
+      ],
+      "x": -36.363,
+      "y": -47.157,
+      "z": 71.921
     },
     {
       "id": "conhecimento/marketing-digital/google-ads.md",
@@ -5501,7 +6332,10 @@
         "#youtube",
         "#display",
         "#shopping"
-      ]
+      ],
+      "x": -71.568,
+      "y": -34.321,
+      "z": 82.648
     },
     {
       "id": "conhecimento/marketing-digital/growth-marketing.md",
@@ -5523,7 +6357,10 @@
         "#experimentacao",
         "#marketing-digital",
         "#produto"
-      ]
+      ],
+      "x": -32.659,
+      "y": -14.477,
+      "z": 52.879
     },
     {
       "id": "conhecimento/marketing-digital/inbound-x-outbound.md",
@@ -5546,7 +6383,10 @@
         "#cold-outreach",
         "#content-marketing",
         "#comparativo"
-      ]
+      ],
+      "x": -50.577,
+      "y": -38.752,
+      "z": 78.179
     },
     {
       "id": "conhecimento/marketing-digital/influencers-e-criadores.md",
@@ -5569,7 +6409,10 @@
         "#metricas",
         "#ugc",
         "#marca"
-      ]
+      ],
+      "x": -41.364,
+      "y": -21.355,
+      "z": 103.073
     },
     {
       "id": "conhecimento/marketing-digital/kpis-e-roi-digital.md",
@@ -5592,7 +6435,10 @@
         "#performance",
         "#marketing-digital",
         "#growth"
-      ]
+      ],
+      "x": -44.573,
+      "y": -21.095,
+      "z": 48.738
     },
     {
       "id": "conhecimento/marketing-digital/lgpd-no-marketing.md",
@@ -5614,7 +6460,10 @@
         "#opt-in",
         "#dados-pessoais",
         "#anpd"
-      ]
+      ],
+      "x": -25.523,
+      "y": -27.768,
+      "z": 52.916
     },
     {
       "id": "conhecimento/marketing-digital/marketing-de-conteudo.md",
@@ -5636,7 +6485,10 @@
         "#distribuicao",
         "#repurposing",
         "#content-marketing"
-      ]
+      ],
+      "x": -30.549,
+      "y": -34.229,
+      "z": 90.355
     },
     {
       "id": "conhecimento/marketing-digital/meta-ads.md",
@@ -5659,7 +6511,10 @@
         "#pixel",
         "#capi",
         "#criativo"
-      ]
+      ],
+      "x": -71.218,
+      "y": -18.321,
+      "z": 80.051
     },
     {
       "id": "conhecimento/marketing-digital/metricas-analytics.md",
@@ -5681,7 +6536,10 @@
         "#eventos",
         "#server-side",
         "#marketing-digital"
-      ]
+      ],
+      "x": -57.266,
+      "y": -14.789,
+      "z": 59.856
     },
     {
       "id": "conhecimento/marketing-digital/metricas-de-midia-paga.md",
@@ -5707,7 +6565,10 @@
         "#cac",
         "#frequencia",
         "#analytics"
-      ]
+      ],
+      "x": -65.682,
+      "y": -42.39,
+      "z": 66.156
     },
     {
       "id": "conhecimento/marketing-digital/midias-sociais.md",
@@ -5731,7 +6592,10 @@
         "#social-commerce",
         "#organico",
         "#estrategia"
-      ]
+      ],
+      "x": -38.052,
+      "y": -8.834,
+      "z": 93.82
     },
     {
       "id": "conhecimento/marketing-digital/modelos-de-atribuicao.md",
@@ -5753,7 +6617,10 @@
         "#server-side",
         "#marketing-digital",
         "#ga4"
-      ]
+      ],
+      "x": -58.082,
+      "y": -29.532,
+      "z": 54.444
     },
     {
       "id": "conhecimento/marketing-digital/otimizacao-e-testes.md",
@@ -5777,7 +6644,10 @@
         "#criativo",
         "#google-ads",
         "#meta-ads"
-      ]
+      ],
+      "x": -64.016,
+      "y": -47.343,
+      "z": 78.944
     },
     {
       "id": "conhecimento/marketing-digital/personas-e-segmentacao.md",
@@ -5799,7 +6669,10 @@
         "#pesquisa-de-mercado",
         "#b2b",
         "#b2c"
-      ]
+      ],
+      "x": -48.077,
+      "y": -9.207,
+      "z": 71.952
     },
     {
       "id": "conhecimento/marketing-digital/pesquisa-de-mercado-e-voz-do-cliente.md",
@@ -5819,7 +6692,10 @@
         "#voz-do-cliente",
         "#jtbd",
         "#insights"
-      ]
+      ],
+      "x": -38.538,
+      "y": 1.363,
+      "z": 80.526
     },
     {
       "id": "conhecimento/marketing-digital/pesquisa-de-palavras-chave.md",
@@ -5839,7 +6715,10 @@
         "#marketing-digital",
         "#cauda-longa",
         "#intencao-de-busca"
-      ]
+      ],
+      "x": -57.175,
+      "y": -18.838,
+      "z": 95.574
     },
     {
       "id": "conhecimento/marketing-digital/pricing-e-estrategia-de-preco.md",
@@ -5859,7 +6738,10 @@
         "#valor",
         "#monetizacao",
         "#estrategia"
-      ]
+      ],
+      "x": -31.499,
+      "y": -5.116,
+      "z": 69.048
     },
     {
       "id": "conhecimento/marketing-digital/retencao-churn-e-lifecycle.md",
@@ -5880,7 +6762,10 @@
         "#lifecycle",
         "#cohort",
         "#customer-success"
-      ]
+      ],
+      "x": -20.732,
+      "y": -13.863,
+      "z": 62.488
     },
     {
       "id": "conhecimento/marketing-digital/seo-e-busca-com-ia-2026.md",
@@ -5901,7 +6786,10 @@
         "#geo",
         "#marketing-digital",
         "#busca-generativa"
-      ]
+      ],
+      "x": -36.905,
+      "y": -45.94,
+      "z": 85.758
     },
     {
       "id": "conhecimento/marketing-digital/seo-fundamentos.md",
@@ -5921,7 +6809,10 @@
         "#ranking",
         "#serp",
         "#fundamentos"
-      ]
+      ],
+      "x": -42.167,
+      "y": -35.819,
+      "z": 97.687
     },
     {
       "id": "conhecimento/marketing-digital/seo-off-page-link-building.md",
@@ -5942,7 +6833,10 @@
         "#eeat",
         "#autoridade",
         "#marketing-digital"
-      ]
+      ],
+      "x": -56.988,
+      "y": -32.127,
+      "z": 96.765
     },
     {
       "id": "conhecimento/marketing-digital/seo-on-page.md",
@@ -5963,7 +6857,10 @@
         "#palavras-chave",
         "#intencao-de-busca",
         "#dados-estruturados"
-      ]
+      ],
+      "x": -53.194,
+      "y": -44.17,
+      "z": 91.573
     },
     {
       "id": "conhecimento/marketing-digital/seo-tecnico.md",
@@ -5985,7 +6882,10 @@
         "#canonical",
         "#mobile",
         "#marketing-digital"
-      ]
+      ],
+      "x": -58.528,
+      "y": -24.525,
+      "z": 78.657
     },
     {
       "id": "conhecimento/marketing-digital/testes-ab-e-cro.md",
@@ -6006,7 +6906,10 @@
         "#experimentos",
         "#bayesiano",
         "#marketing-digital"
-      ]
+      ],
+      "x": -41.612,
+      "y": -4.406,
+      "z": 59.817
     },
     {
       "id": "conhecimento/marketing-digital/trafego-pago-fundamentos.md",
@@ -6027,7 +6930,10 @@
         "#cpc",
         "#cpm",
         "#cpa"
-      ]
+      ],
+      "x": -71.106,
+      "y": -27.791,
+      "z": 67.998
     },
     {
       "id": "conhecimento/marketing-digital/vendas-b2b.md",
@@ -6048,7 +6954,10 @@
         "#forecast",
         "#sdr",
         "#marketing-digital"
-      ]
+      ],
+      "x": -16.054,
+      "y": -14.603,
+      "z": 76.643
     },
     {
       "id": "conhecimento/marketing-digital/video-marketing.md",
@@ -6072,7 +6981,10 @@
         "#roteiro",
         "#video-curto",
         "#video-longo"
-      ]
+      ],
+      "x": -27.155,
+      "y": -19.533,
+      "z": 96.693
     },
     {
       "id": "conhecimento/matematica/README.md",
@@ -6089,7 +7001,10 @@
         "#matematica",
         "#calculo",
         "#indice"
-      ]
+      ],
+      "x": 0.804,
+      "y": -45.415,
+      "z": -95.588
     },
     {
       "id": "conhecimento/matematica/fisica-essencial.md",
@@ -6111,7 +7026,10 @@
         "#energia",
         "#kwh",
         "#conversao"
-      ]
+      ],
+      "x": 5.872,
+      "y": -44.649,
+      "z": -81.331
     },
     {
       "id": "conhecimento/matematica/matematica-essencial.md",
@@ -6128,7 +7046,10 @@
         "#matematica",
         "#calculo",
         "#arredondamento"
-      ]
+      ],
+      "x": -7.37,
+      "y": -50.181,
+      "z": -85.845
     },
     {
       "id": "conhecimento/mocs/README.md",
@@ -6145,7 +7066,10 @@
         "#moc",
         "#indice",
         "#rede-neural"
-      ]
+      ],
+      "x": 45.301,
+      "y": -26.992,
+      "z": 33.369
     },
     {
       "id": "conhecimento/mocs/abrir-e-estruturar-empresa.md",
@@ -6164,7 +7088,10 @@
         "#fiscal",
         "#contabilidade",
         "#administracao"
-      ]
+      ],
+      "x": -46.054,
+      "y": 54.791,
+      "z": -6.98
     },
     {
       "id": "conhecimento/mocs/analise-de-empresa.md",
@@ -6183,7 +7110,10 @@
         "#financas",
         "#contabilidade",
         "#auditoria"
-      ]
+      ],
+      "x": -54.166,
+      "y": 24.84,
+      "z": -10.35
     },
     {
       "id": "conhecimento/mocs/arquitetura-de-agentes.md",
@@ -6202,7 +7132,10 @@
         "#governanca",
         "#arquitetura",
         "#rede-neural"
-      ]
+      ],
+      "x": 70.933,
+      "y": -6.867,
+      "z": -16.049
     },
     {
       "id": "conhecimento/mocs/construir-sistema-em-escala.md",
@@ -6222,7 +7155,10 @@
         "#sistemas-distribuidos",
         "#performance",
         "#arquitetura"
-      ]
+      ],
+      "x": -24.848,
+      "y": 28.622,
+      "z": -72.464
     },
     {
       "id": "conhecimento/mocs/controle-financeiro-e-valores.md",
@@ -6241,7 +7177,10 @@
         "#planilhas",
         "#financas",
         "#contabilidade"
-      ]
+      ],
+      "x": -58.582,
+      "y": -45.02,
+      "z": -3.959
     },
     {
       "id": "conhecimento/mocs/desenvolvimento-web-e-stack.md",
@@ -6262,7 +7201,10 @@
         "#fullstack",
         "#devops",
         "#rede-neural"
-      ]
+      ],
+      "x": -43.492,
+      "y": 24.706,
+      "z": -75.047
     },
     {
       "id": "conhecimento/mocs/direito-aplicado.md",
@@ -6279,7 +7221,10 @@
         "#moc",
         "#direito",
         "#rede-neural"
-      ]
+      ],
+      "x": 55.969,
+      "y": 35.849,
+      "z": -36.694
     },
     {
       "id": "conhecimento/mocs/domain-driven-design.md",
@@ -6298,7 +7243,10 @@
         "#arquitetura",
         "#modelagem",
         "#engenharia-de-software"
-      ]
+      ],
+      "x": -3.738,
+      "y": 29.594,
+      "z": -76.823
     },
     {
       "id": "conhecimento/mocs/filosofia-e-vida-examinada.md",
@@ -6315,7 +7263,10 @@
         "#moc",
         "#filosofia",
         "#rede-neural"
-      ]
+      ],
+      "x": -61.904,
+      "y": -0.108,
+      "z": 32.319
     },
     {
       "id": "conhecimento/mocs/games-e-jogabilidade.md",
@@ -6332,7 +7283,10 @@
         "#moc",
         "#games",
         "#rede-neural"
-      ]
+      ],
+      "x": 29.407,
+      "y": -12.256,
+      "z": 64.743
     },
     {
       "id": "conhecimento/mocs/gestao-empresarial.md",
@@ -6350,7 +7304,10 @@
         "#administracao",
         "#gestao",
         "#financas"
-      ]
+      ],
+      "x": 17.437,
+      "y": 47.181,
+      "z": 0.297
     },
     {
       "id": "conhecimento/mocs/governanca-risco-compliance.md",
@@ -6369,7 +7326,10 @@
         "#compliance",
         "#auditoria",
         "#risco"
-      ]
+      ],
+      "x": 9.618,
+      "y": 34.937,
+      "z": -36.125
     },
     {
       "id": "conhecimento/mocs/idiomas-e-redacao.md",
@@ -6386,7 +7346,10 @@
         "#moc",
         "#idiomas",
         "#rede-neural"
-      ]
+      ],
+      "x": -82.371,
+      "y": -25.632,
+      "z": -42.189
     },
     {
       "id": "conhecimento/mocs/inteligencia-artificial.md",
@@ -6403,7 +7366,10 @@
         "#moc",
         "#ia",
         "#rede-neural"
-      ]
+      ],
+      "x": 73.368,
+      "y": -21.672,
+      "z": -12.93
     },
     {
       "id": "conhecimento/mocs/marketing-digital.md",
@@ -6419,7 +7385,10 @@
       "tags": [
         "#moc",
         "#marketing-digital"
-      ]
+      ],
+      "x": -39.343,
+      "y": -23.883,
+      "z": 67.482
     },
     {
       "id": "conhecimento/mocs/planejamento-e-decisao.md",
@@ -6440,7 +7409,10 @@
         "#probabilidade",
         "#decisao",
         "#risco"
-      ]
+      ],
+      "x": 30.476,
+      "y": 29.71,
+      "z": -1.323
     },
     {
       "id": "conhecimento/mocs/projeto-de-software.md",
@@ -6457,7 +7429,10 @@
         "#moc",
         "#engenharia-de-software",
         "#projetos"
-      ]
+      ],
+      "x": -29.274,
+      "y": 21.056,
+      "z": -85.441
     },
     {
       "id": "conhecimento/mocs/proteger-software.md",
@@ -6474,7 +7449,10 @@
         "#moc",
         "#seguranca",
         "#engenharia-de-software"
-      ]
+      ],
+      "x": -54.589,
+      "y": 8.016,
+      "z": -68.151
     },
     {
       "id": "conhecimento/mocs/psicologia-e-comunicacao.md",
@@ -6492,7 +7470,10 @@
         "#psicologia",
         "#comunicacao",
         "#rede-neural"
-      ]
+      ],
+      "x": 21.713,
+      "y": 13.168,
+      "z": 43.516
     },
     {
       "id": "conhecimento/mocs/revisao-de-documentos.md",
@@ -6513,7 +7494,10 @@
         "#pdf",
         "#auditoria",
         "#documentos"
-      ]
+      ],
+      "x": 53.215,
+      "y": 22.459,
+      "z": -31.243
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/README.md",
@@ -6531,7 +7515,10 @@
         "#dashboards",
         "#excel",
         "#indice"
-      ]
+      ],
+      "x": -73.665,
+      "y": -49.01,
+      "z": 12.23
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/analise-de-cenarios-excel.md",
@@ -6551,7 +7538,10 @@
         "#analise",
         "#sensibilidade",
         "#decisao"
-      ]
+      ],
+      "x": -55.496,
+      "y": -52.459,
+      "z": 12.592
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/analise-e-controle-de-valores.md",
@@ -6570,7 +7560,10 @@
         "#controle",
         "#templates",
         "#kpi"
-      ]
+      ],
+      "x": -64.833,
+      "y": -36.911,
+      "z": 4.049
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/analise-estatistica-no-excel.md",
@@ -6591,7 +7584,10 @@
         "#dados",
         "#analise-de-dados",
         "#desvio-padrao"
-      ]
+      ],
+      "x": -56.675,
+      "y": -65.034,
+      "z": 19.309
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/auditar-planilha-recebida.md",
@@ -6611,7 +7607,10 @@
         "#revisao",
         "#checklist",
         "#controle"
-      ]
+      ],
+      "x": -83.901,
+      "y": -40.058,
+      "z": 10.932
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/automacao-vba-e-office-scripts.md",
@@ -6631,7 +7630,10 @@
         "#office-scripts",
         "#automacao",
         "#planilhas"
-      ]
+      ],
+      "x": -79.445,
+      "y": -59.109,
+      "z": -13.558
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/dashboard-controle-de-despesas.md",
@@ -6652,7 +7654,10 @@
         "#controle",
         "#somases",
         "#comparativo"
-      ]
+      ],
+      "x": -75.223,
+      "y": -64.657,
+      "z": 25.196
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/dashboards-modernos.md",
@@ -6672,7 +7677,10 @@
         "#bi",
         "#kpi",
         "#information-design"
-      ]
+      ],
+      "x": -55.447,
+      "y": -36.42,
+      "z": 17.33
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/dax-avancado.md",
@@ -6692,7 +7700,10 @@
         "#power-pivot",
         "#bi",
         "#modelagem"
-      ]
+      ],
+      "x": -89.502,
+      "y": -54.085,
+      "z": -0.182
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/excel-avancado.md",
@@ -6712,7 +7723,10 @@
         "#power-query",
         "#tabela-dinamica",
         "#bi"
-      ]
+      ],
+      "x": -76.109,
+      "y": -59.898,
+      "z": 12.452
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/excel-funcoes-essenciais.md",
@@ -6729,7 +7743,10 @@
         "#excel",
         "#funcoes",
         "#planilhas"
-      ]
+      ],
+      "x": -73.614,
+      "y": -74.66,
+      "z": 12.5
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/formatacao-condicional-e-validacao.md",
@@ -6749,7 +7766,10 @@
         "#validacao",
         "#dashboards",
         "#controle"
-      ]
+      ],
+      "x": -73.403,
+      "y": -32.134,
+      "z": 16.023
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/formulas-avancadas-e-matrizes-dinamicas.md",
@@ -6768,7 +7788,10 @@
         "#matrizes-dinamicas",
         "#lambda",
         "#funcoes"
-      ]
+      ],
+      "x": -90.997,
+      "y": -60.783,
+      "z": 11.233
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/funcoes-financeiras-excel.md",
@@ -6789,7 +7812,10 @@
         "#tir",
         "#pgto",
         "#modelagem"
-      ]
+      ],
+      "x": -61.211,
+      "y": -63.692,
+      "z": -4.14
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/google-sheets-especifico.md",
@@ -6809,7 +7835,10 @@
         "#arrayformula",
         "#apps-script",
         "#nuvem"
-      ]
+      ],
+      "x": -72.45,
+      "y": -65.146,
+      "z": 1.445
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/graficos-no-excel.md",
@@ -6828,7 +7857,10 @@
         "#dashboards",
         "#planilhas",
         "#dataviz"
-      ]
+      ],
+      "x": -69.719,
+      "y": -48.077,
+      "z": 24.571
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/modelagem-dimensional-e-data-warehouse.md",
@@ -6849,7 +7881,10 @@
         "#kimball",
         "#star-schema",
         "#dados"
-      ]
+      ],
+      "x": -89.082,
+      "y": -41.514,
+      "z": -0.347
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/modelagem-financeira-no-excel.md",
@@ -6868,7 +7903,10 @@
         "#modelagem",
         "#financas",
         "#auditoria"
-      ]
+      ],
+      "x": -75.652,
+      "y": -46.694,
+      "z": -9.842
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/planilhas-refinadas.md",
@@ -6886,7 +7924,10 @@
         "#boas-praticas",
         "#modelagem",
         "#excel"
-      ]
+      ],
+      "x": -71.254,
+      "y": -51.238,
+      "z": 1.452
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/power-bi-ponta-a-ponta.md",
@@ -6907,7 +7948,10 @@
         "#dax",
         "#dashboards",
         "#fabric"
-      ]
+      ],
+      "x": -88.019,
+      "y": -50.237,
+      "z": 21.623
     },
     {
       "id": "conhecimento/planilhas-e-dashboards/power-query-e-linguagem-m.md",
@@ -6928,7 +7972,10 @@
         "#bi",
         "#dados",
         "#excel"
-      ]
+      ],
+      "x": -85.558,
+      "y": -70.438,
+      "z": 0.31
     },
     {
       "id": "conhecimento/produtividade/README.md",
@@ -6945,7 +7992,10 @@
         "#produtividade",
         "#pkm",
         "#indice"
-      ]
+      ],
+      "x": 59.307,
+      "y": -62.133,
+      "z": -48.831
     },
     {
       "id": "conhecimento/produtividade/bem-estar-e-desempenho-sustentavel.md",
@@ -6964,7 +8014,10 @@
         "#sono",
         "#burnout",
         "#saude-ocupacional"
-      ]
+      ],
+      "x": 54.984,
+      "y": -73.508,
+      "z": -38.198
     },
     {
       "id": "conhecimento/produtividade/como-aprender.md",
@@ -6983,7 +8036,10 @@
         "#repeticao-espacada",
         "#pratica-deliberada",
         "#metacognicao"
-      ]
+      ],
+      "x": 60.497,
+      "y": -57.115,
+      "z": -31.988
     },
     {
       "id": "conhecimento/produtividade/formacao-de-habitos.md",
@@ -7001,7 +8057,10 @@
         "#habitos",
         "#comportamento",
         "#psicologia"
-      ]
+      ],
+      "x": 45.598,
+      "y": -62.98,
+      "z": -49.806
     },
     {
       "id": "conhecimento/produtividade/gestao-do-conhecimento-pessoal.md",
@@ -7020,7 +8079,10 @@
         "#zettelkasten",
         "#segundo-cerebro",
         "#conhecimento"
-      ]
+      ],
+      "x": 52.701,
+      "y": -48.601,
+      "z": -44.804
     },
     {
       "id": "conhecimento/produtividade/produtividade-e-foco.md",
@@ -7039,7 +8101,10 @@
         "#deep-work",
         "#gtd",
         "#gestao-de-tempo"
-      ]
+      ],
+      "x": 48.336,
+      "y": -56.159,
+      "z": -29.425
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/README.md",
@@ -7055,7 +8120,10 @@
       "tags": [
         "#psicologia",
         "#indice"
-      ]
+      ],
+      "x": 6.535,
+      "y": -59.634,
+      "z": 60.274
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/arquetipos-jung.md",
@@ -7073,7 +8141,10 @@
         "#jung",
         "#arquetipos",
         "#narrativa"
-      ]
+      ],
+      "x": 4.06,
+      "y": -82.487,
+      "z": 56.605
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/comunicacao-e-escuta-ativa.md",
@@ -7092,7 +8163,10 @@
         "#escuta",
         "#cnv",
         "#lideranca"
-      ]
+      ],
+      "x": 20.579,
+      "y": -42.586,
+      "z": 56.648
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/emocoes-e-motivacao.md",
@@ -7111,7 +8185,10 @@
         "#motivacao",
         "#maslow",
         "#decisao"
-      ]
+      ],
+      "x": 18.509,
+      "y": -56.77,
+      "z": 44.791
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/escolas-e-abordagens.md",
@@ -7128,7 +8205,10 @@
         "#psicologia",
         "#abordagens",
         "#teoria"
-      ]
+      ],
+      "x": -6.124,
+      "y": -73.052,
+      "z": 63.802
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/fundamentos-da-psicologia.md",
@@ -7146,7 +8226,10 @@
         "#fundamentos",
         "#ciencia",
         "#metodo-cientifico"
-      ]
+      ],
+      "x": -6.713,
+      "y": -65.79,
+      "z": 49.81
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/inteligencia-emocional.md",
@@ -7164,7 +8247,10 @@
         "#inteligencia-emocional",
         "#autoconhecimento",
         "#lideranca"
-      ]
+      ],
+      "x": 2.467,
+      "y": -53.955,
+      "z": 47.841
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/personalidade-e-mecanismos-de-defesa.md",
@@ -7182,7 +8268,10 @@
         "#personalidade",
         "#bigfive",
         "#defesas"
-      ]
+      ],
+      "x": 19.8,
+      "y": -64.743,
+      "z": 64.774
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/persuasao-e-influencia.md",
@@ -7201,7 +8290,10 @@
         "#cialdini",
         "#comunicacao",
         "#etica"
-      ]
+      ],
+      "x": 6.883,
+      "y": -40.732,
+      "z": 51.89
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/psicanalise-e-inconsciente.md",
@@ -7219,7 +8311,10 @@
         "#freud",
         "#inconsciente",
         "#lacan"
-      ]
+      ],
+      "x": 8.734,
+      "y": -74.689,
+      "z": 70.141
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/psicologia-cognitiva-e-comportamental.md",
@@ -7237,7 +8332,10 @@
         "#cognitiva",
         "#comportamental",
         "#tcc"
-      ]
+      ],
+      "x": 11.029,
+      "y": -68.392,
+      "z": 39.784
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/psicologia-de-personagens-e-narrativa.md",
@@ -7256,7 +8354,10 @@
         "#escrita",
         "#arquetipos",
         "#storytelling"
-      ]
+      ],
+      "x": 17.445,
+      "y": -75.947,
+      "z": 55.215
     },
     {
       "id": "conhecimento/psicologia-e-psicanalise/vieses-cognitivos-e-tomada-de-decisao.md",
@@ -7277,7 +8378,10 @@
         "#ancoragem",
         "#heuristicas",
         "#economia-comportamental"
-      ]
+      ],
+      "x": 6.006,
+      "y": -43.629,
+      "z": 31.657
     },
     {
       "id": "conhecimento/sinteses/README.md",
@@ -7294,7 +8398,10 @@
         "#sintese",
         "#indice",
         "#rede-neural"
-      ]
+      ],
+      "x": -10.51,
+      "y": -68.838,
+      "z": -18.587
     },
     {
       "id": "conhecimento/sinteses/a-coragem-de-rejeitar-carga.md",
@@ -7314,7 +8421,10 @@
         "#operacoes",
         "#psicologia",
         "#performance"
-      ]
+      ],
+      "x": 5.546,
+      "y": -77.922,
+      "z": -31.889
     },
     {
       "id": "conhecimento/sinteses/a-dose-faz-o-veneno.md",
@@ -7335,7 +8445,10 @@
         "#estatistica",
         "#risco",
         "#trade-off"
-      ]
+      ],
+      "x": 16.819,
+      "y": -81.207,
+      "z": -18.752
     },
     {
       "id": "conhecimento/sinteses/a-economia-do-jogo-e-real.md",
@@ -7358,7 +8471,10 @@
         "#lavagem",
         "#partidas-dobradas",
         "#fraude"
-      ]
+      ],
+      "x": -29.783,
+      "y": -60.769,
+      "z": -6.439
     },
     {
       "id": "conhecimento/sinteses/a-forma-conduz-a-atencao.md",
@@ -7380,7 +8496,10 @@
         "#front-end",
         "#comunicacao",
         "#cognitiva"
-      ]
+      ],
+      "x": -13.013,
+      "y": -89.157,
+      "z": -4.93
     },
     {
       "id": "conhecimento/sinteses/a-mente-por-tras-da-mensagem.md",
@@ -7399,7 +8518,10 @@
         "#marketing-digital",
         "#administracao",
         "#escrita"
-      ]
+      ],
+      "x": -6.47,
+      "y": -66.656,
+      "z": 17.476
     },
     {
       "id": "conhecimento/sinteses/a-metrica-que-vira-alvo.md",
@@ -7421,7 +8543,10 @@
         "#incentivos",
         "#metricas",
         "#goodhart"
-      ]
+      ],
+      "x": 18.624,
+      "y": -69.818,
+      "z": -5.316
     },
     {
       "id": "conhecimento/sinteses/a-norma-e-um-protocolo.md",
@@ -7442,7 +8567,10 @@
         "#normas",
         "#ambiguidade",
         "#protocolo"
-      ]
+      ],
+      "x": -41.689,
+      "y": -78.892,
+      "z": -32.157
     },
     {
       "id": "conhecimento/sinteses/a-ordem-custa-energia.md",
@@ -7462,7 +8590,10 @@
         "#financas",
         "#operacoes",
         "#manutencao"
-      ]
+      ],
+      "x": -14.768,
+      "y": -62.573,
+      "z": -39.009
     },
     {
       "id": "conhecimento/sinteses/a-premissa-invisivel.md",
@@ -7483,7 +8614,10 @@
         "#decisao",
         "#dados",
         "#risco"
-      ]
+      ],
+      "x": -10.749,
+      "y": -81.914,
+      "z": -22.567
     },
     {
       "id": "conhecimento/sinteses/a-reversibilidade-governa-a-velocidade.md",
@@ -7503,7 +8637,10 @@
         "#financas",
         "#administracao",
         "#risco"
-      ]
+      ],
+      "x": 5.792,
+      "y": -82.745,
+      "z": -45.029
     },
     {
       "id": "conhecimento/sinteses/a-triade-do-preco.md",
@@ -7523,7 +8660,10 @@
         "#controladoria",
         "#margem",
         "#valor"
-      ]
+      ],
+      "x": -13.253,
+      "y": -55.092,
+      "z": -5.478
     },
     {
       "id": "conhecimento/sinteses/analise-economica-do-direito.md",
@@ -7544,7 +8684,10 @@
         "#eficiencia",
         "#coase",
         "#contratos"
-      ]
+      ],
+      "x": 16.177,
+      "y": -71.054,
+      "z": -38.223
     },
     {
       "id": "conhecimento/sinteses/auditoria-e-inferencia-estatistica.md",
@@ -7565,7 +8708,10 @@
         "#amostragem",
         "#probabilidade",
         "#inferencia"
-      ]
+      ],
+      "x": 13.074,
+      "y": -57.176,
+      "z": 4.714
     },
     {
       "id": "conhecimento/sinteses/compliance-vive-no-painel.md",
@@ -7586,7 +8732,10 @@
         "#monitoramento",
         "#risco",
         "#pld-ft"
-      ]
+      ],
+      "x": -20.562,
+      "y": -85.884,
+      "z": -41.602
     },
     {
       "id": "conhecimento/sinteses/confianca-por-incapacidade.md",
@@ -7607,7 +8756,10 @@
         "#compliance",
         "#privacidade",
         "#lgpd"
-      ]
+      ],
+      "x": -27.188,
+      "y": -54.18,
+      "z": -43.173
     },
     {
       "id": "conhecimento/sinteses/contabilidade-mental.md",
@@ -7628,7 +8780,10 @@
         "#vieses",
         "#decisao",
         "#dinheiro"
-      ]
+      ],
+      "x": -22.623,
+      "y": -98.704,
+      "z": -22.055
     },
     {
       "id": "conhecimento/sinteses/da-campanha-ao-caixa.md",
@@ -7646,7 +8801,10 @@
         "#marketing-digital",
         "#financas",
         "#contabilidade"
-      ]
+      ],
+      "x": -29.252,
+      "y": -66.189,
+      "z": -19.12
     },
     {
       "id": "conhecimento/sinteses/da-norma-a-apuracao.md",
@@ -7667,7 +8825,10 @@
         "#contabilidade",
         "#planejamento-tributario",
         "#reforma-tributaria"
-      ]
+      ],
+      "x": -29.455,
+      "y": -43.271,
+      "z": -6.944
     },
     {
       "id": "conhecimento/sinteses/dados-como-ativo.md",
@@ -7688,7 +8849,10 @@
         "#auditoria",
         "#dados",
         "#machine-learning"
-      ]
+      ],
+      "x": -17.965,
+      "y": -53.163,
+      "z": -24.502
     },
     {
       "id": "conhecimento/sinteses/discernimento-na-era-da-ia.md",
@@ -7707,7 +8871,10 @@
         "#ia",
         "#psicologia",
         "#pensamento-critico"
-      ]
+      ],
+      "x": 7.94,
+      "y": -66.929,
+      "z": -14.026
     },
     {
       "id": "conhecimento/sinteses/do-codigo-ao-negocio.md",
@@ -7727,7 +8894,10 @@
         "#contabilidade",
         "#planilhas",
         "#marketing-digital"
-      ]
+      ],
+      "x": -21.028,
+      "y": -38.309,
+      "z": -34.357
     },
     {
       "id": "conhecimento/sinteses/do-grao-ao-kpi.md",
@@ -7747,7 +8917,10 @@
         "#controladoria",
         "#dashboards",
         "#kpi"
-      ]
+      ],
+      "x": -39.494,
+      "y": -91.707,
+      "z": -17.204
     },
     {
       "id": "conhecimento/sinteses/do-lancamento-ao-parecer.md",
@@ -7766,7 +8939,10 @@
         "#auditoria",
         "#financas",
         "#planilhas"
-      ]
+      ],
+      "x": -25.997,
+      "y": -30.545,
+      "z": -16.191
     },
     {
       "id": "conhecimento/sinteses/eficiencia-mata-na-cauda.md",
@@ -7786,7 +8962,10 @@
         "#administracao",
         "#operacoes",
         "#risco"
-      ]
+      ],
+      "x": -6.537,
+      "y": -86.56,
+      "z": -44.078
     },
     {
       "id": "conhecimento/sinteses/escalar-e-decisao-economica.md",
@@ -7807,7 +8986,10 @@
         "#custo",
         "#sre",
         "#decisao"
-      ]
+      ],
+      "x": -9.861,
+      "y": -68.09,
+      "z": -53.864
     },
     {
       "id": "conhecimento/sinteses/estoicismo-e-a-mente.md",
@@ -7826,7 +9008,10 @@
         "#estoicismo",
         "#psicologia",
         "#emocoes"
-      ]
+      ],
+      "x": -29.147,
+      "y": -73.33,
+      "z": 11.88
     },
     {
       "id": "conhecimento/sinteses/estrategia-e-uma-so-disciplina.md",
@@ -7848,7 +9033,10 @@
         "#planejamento",
         "#lideranca",
         "#marketing-digital"
-      ]
+      ],
+      "x": 1.25,
+      "y": -53.831,
+      "z": -7.52
     },
     {
       "id": "conhecimento/sinteses/etica-da-virtude-ao-framework.md",
@@ -7869,7 +9057,10 @@
         "#governanca",
         "#compliance",
         "#direito"
-      ]
+      ],
+      "x": 0.004,
+      "y": -39.46,
+      "z": -1.203
     },
     {
       "id": "conhecimento/sinteses/financas-comportamentais.md",
@@ -7890,7 +9081,10 @@
         "#risco",
         "#decisao",
         "#administracao"
-      ]
+      ],
+      "x": 0.677,
+      "y": -79.434,
+      "z": -14.772
     },
     {
       "id": "conhecimento/sinteses/gamificacao-e-motivacao.md",
@@ -7912,7 +9106,10 @@
         "#marketing-digital",
         "#administracao",
         "#etica"
-      ]
+      ],
+      "x": 6.297,
+      "y": -77.982,
+      "z": 11.203
     },
     {
       "id": "conhecimento/sinteses/guardrails-de-agente-sao-controle-interno.md",
@@ -7934,7 +9131,10 @@
         "#governanca",
         "#seguranca",
         "#controles-internos"
-      ]
+      ],
+      "x": 20.399,
+      "y": -63.991,
+      "z": -26.744
     },
     {
       "id": "conhecimento/sinteses/ia-como-camada-transversal.md",
@@ -7954,7 +9154,10 @@
         "#auditoria",
         "#marketing-digital",
         "#administracao"
-      ]
+      ],
+      "x": 9.179,
+      "y": -36.235,
+      "z": -11.965
     },
     {
       "id": "conhecimento/sinteses/lancar-uma-lei-como-um-deploy.md",
@@ -7975,7 +9178,10 @@
         "#gestao-da-mudanca",
         "#risco",
         "#rollout"
-      ]
+      ],
+      "x": 0.714,
+      "y": -56.667,
+      "z": -45.145
     },
     {
       "id": "conhecimento/sinteses/liderar-a-si-mesmo.md",
@@ -7996,7 +9202,10 @@
         "#administracao",
         "#psicologia",
         "#inteligencia-emocional"
-      ]
+      ],
+      "x": -21.923,
+      "y": -58.053,
+      "z": 11.099
     },
     {
       "id": "conhecimento/sinteses/nao-ha-solucao-so-trade-offs.md",
@@ -8017,7 +9226,10 @@
         "#arquitetura",
         "#engenharia-de-software",
         "#gestao"
-      ]
+      ],
+      "x": -4.818,
+      "y": -69.951,
+      "z": -35.982
     },
     {
       "id": "conhecimento/sinteses/normalizacao-do-desvio.md",
@@ -8041,7 +9253,10 @@
         "#controles-internos",
         "#cultura",
         "#normalizacao-do-desvio"
-      ]
+      ],
+      "x": -5.163,
+      "y": -49.834,
+      "z": -25.689
     },
     {
       "id": "conhecimento/sinteses/numero-esg-e-da-controladoria.md",
@@ -8064,7 +9279,10 @@
         "#asseguracao",
         "#fechamento",
         "#custo-de-capital"
-      ]
+      ],
+      "x": -15.549,
+      "y": -34.648,
+      "z": -0.707
     },
     {
       "id": "conhecimento/sinteses/nunca-confie-no-cliente.md",
@@ -8087,7 +9305,10 @@
         "#zero-trust",
         "#segregacao-de-funcoes",
         "#integridade"
-      ]
+      ],
+      "x": -33.063,
+      "y": -52.833,
+      "z": -21.414
     },
     {
       "id": "conhecimento/sinteses/o-banco-central-do-jogo.md",
@@ -8107,7 +9328,10 @@
         "#inflacao",
         "#politica-monetaria",
         "#game-design"
-      ]
+      ],
+      "x": -4.776,
+      "y": -90.354,
+      "z": 7.154
     },
     {
       "id": "conhecimento/sinteses/o-batna-financeiro.md",
@@ -8128,7 +9352,10 @@
         "#negociacao",
         "#psicologia",
         "#decisao"
-      ]
+      ],
+      "x": 3.347,
+      "y": -73.245,
+      "z": -2.471
     },
     {
       "id": "conhecimento/sinteses/o-direito-e-o-humano-irracional.md",
@@ -8149,7 +9376,10 @@
         "#economia-comportamental",
         "#consumidor",
         "#nudge"
-      ]
+      ],
+      "x": -1.485,
+      "y": -95.019,
+      "z": -30.038
     },
     {
       "id": "conhecimento/sinteses/o-erro-mora-na-unidade.md",
@@ -8171,7 +9401,10 @@
         "#analise-dimensional",
         "#unidades",
         "#modelagem"
-      ]
+      ],
+      "x": -31.21,
+      "y": -92.983,
+      "z": -35.713
     },
     {
       "id": "conhecimento/sinteses/o-grafico-convence-antes-do-numero.md",
@@ -8192,7 +9425,10 @@
         "#percepcao",
         "#vieses",
         "#comunicacao"
-      ]
+      ],
+      "x": -26.911,
+      "y": -89.969,
+      "z": 0.46
     },
     {
       "id": "conhecimento/sinteses/o-humano-e-o-vetor.md",
@@ -8214,7 +9450,10 @@
         "#phishing",
         "#compliance",
         "#engenharia-de-software"
-      ]
+      ],
+      "x": -40.411,
+      "y": -61.055,
+      "z": -33.109
     },
     {
       "id": "conhecimento/sinteses/o-imposto-invisivel-da-inflacao.md",
@@ -8236,7 +9475,10 @@
         "#renda-fixa",
         "#inflacao",
         "#decisao"
-      ]
+      ],
+      "x": -22.889,
+      "y": -77.677,
+      "z": -27.781
     },
     {
       "id": "conhecimento/sinteses/o-orcamento-e-uma-negociacao.md",
@@ -8259,7 +9501,10 @@
         "#agencia",
         "#governanca",
         "#incentivos"
-      ]
+      ],
+      "x": 16.28,
+      "y": -53.592,
+      "z": -9.99
     },
     {
       "id": "conhecimento/sinteses/o-organograma-vira-codigo.md",
@@ -8280,7 +9525,10 @@
         "#conway",
         "#bounded-context",
         "#governanca"
-      ]
+      ],
+      "x": -0.25,
+      "y": -42.653,
+      "z": -39.682
     },
     {
       "id": "conhecimento/sinteses/o-sinal-e-o-preco-da-desconfianca.md",
@@ -8300,7 +9548,10 @@
         "#administracao",
         "#auditoria",
         "#estrategia"
-      ]
+      ],
+      "x": -20.083,
+      "y": -66.641,
+      "z": -0.76
     },
     {
       "id": "conhecimento/sinteses/o-sotaque-e-interferencia-do-prior.md",
@@ -8321,7 +9572,10 @@
         "#aprendizado",
         "#pronuncia",
         "#transfer-learning"
-      ]
+      ],
+      "x": 3.623,
+      "y": -98.103,
+      "z": -13.041
     },
     {
       "id": "conhecimento/sinteses/o-suficiente-filosofia-do-dinheiro.md",
@@ -8341,7 +9595,10 @@
         "#estoicismo",
         "#etica",
         "#comportamento"
-      ]
+      ],
+      "x": -23.058,
+      "y": -79.915,
+      "z": -10.567
     },
     {
       "id": "conhecimento/sinteses/o-vies-e-um-cache-velho.md",
@@ -8361,7 +9618,10 @@
         "#cognitiva",
         "#decisao",
         "#performance"
-      ]
+      ],
+      "x": -10.581,
+      "y": -101.457,
+      "z": -13.849
     },
     {
       "id": "conhecimento/sinteses/padronizar-para-mudar.md",
@@ -8382,7 +9642,10 @@
         "#gestao-da-mudanca",
         "#melhoria-continua",
         "#padronizacao"
-      ]
+      ],
+      "x": 0.995,
+      "y": -35.411,
+      "z": -25.385
     },
     {
       "id": "conhecimento/sinteses/pensar-bem-codar-bem.md",
@@ -8403,7 +9666,10 @@
         "#clean-code",
         "#pensamento-critico",
         "#logica"
-      ]
+      ],
+      "x": -31.314,
+      "y": -68.523,
+      "z": -40.024
     },
     {
       "id": "conhecimento/sinteses/persuasao-dentro-da-lei.md",
@@ -8425,7 +9691,10 @@
         "#lgpd",
         "#etica",
         "#copywriting"
-      ]
+      ],
+      "x": -11.098,
+      "y": -75.772,
+      "z": 4.452
     },
     {
       "id": "conhecimento/sinteses/privacidade-por-design.md",
@@ -8446,7 +9715,10 @@
         "#seguranca",
         "#privacidade",
         "#devsecops"
-      ]
+      ],
+      "x": -25.612,
+      "y": -68.142,
+      "z": -52.5
     },
     {
       "id": "conhecimento/sinteses/psicologia-da-fraude.md",
@@ -8467,7 +9739,10 @@
         "#direito",
         "#fraude",
         "#pld-ft"
-      ]
+      ],
+      "x": -12.832,
+      "y": -40.035,
+      "z": -14.216
     },
     {
       "id": "conhecimento/sinteses/quando-parar-de-medir.md",
@@ -8490,7 +9765,10 @@
         "#amostragem",
         "#p-hacking",
         "#decisao"
-      ]
+      ],
+      "x": -3.386,
+      "y": -53.806,
+      "z": 7.259
     },
     {
       "id": "conhecimento/sinteses/quem-escreveu-nao-enxerga.md",
@@ -8511,7 +9789,10 @@
         "#psicologia",
         "#revisao",
         "#controles-internos"
-      ]
+      ],
+      "x": -39.354,
+      "y": -76.738,
+      "z": -14.7
     },
     {
       "id": "conhecimento/sinteses/retencao-e-valuation.md",
@@ -8533,7 +9814,10 @@
         "#marketing-digital",
         "#receita-recorrente",
         "#nrr"
-      ]
+      ],
+      "x": 3.826,
+      "y": -60.629,
+      "z": -25.818
     },
     {
       "id": "conhecimento/sinteses/so-existe-o-que-se-recupera.md",
@@ -8553,7 +9837,10 @@
         "#pkm",
         "#rag",
         "#aprendizagem"
-      ]
+      ],
+      "x": 15.462,
+      "y": -94.406,
+      "z": -23.662
     },
     {
       "id": "conhecimento/sinteses/tone-at-the-top-governanca-previne-fraude.md",
@@ -8576,7 +9863,10 @@
         "#fraude",
         "#cultura",
         "#tone-at-the-top"
-      ]
+      ],
+      "x": 12.089,
+      "y": -43.61,
+      "z": -23.765
     }
   ],
   "links": [

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-SIJ+tRsYCzLD9afY1x8CjBi1lnYGImlU/Ddlv8VUvtA=' 'sha256-1yvnH29VT6SvG/tGoNfuKL3PfgQC2PuybzkQ2c6rgyA=' 'sha256-3prNTwydHWlhXLDcJqu2eWHx6nqs2ttQbK8YB0VW9vU='; connect-src 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-SIJ+tRsYCzLD9afY1x8CjBi1lnYGImlU/Ddlv8VUvtA=' 'sha256-1yvnH29VT6SvG/tGoNfuKL3PfgQC2PuybzkQ2c6rgyA=' 'sha256-lrdsloGpaKMOWSYjdU3OHOgWd8wtJBWhO/8Bf5H4bts='; connect-src 'self'" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MemoryCode • Portal Neural 3D</title>
 <meta name="author" content="Luan Guilherme Lourenço (euguilouren)" />
@@ -534,15 +534,16 @@ function iniciar(nodes, links) {
   const idx = new Map(nodes.map((n, i) => [n.id, i]));
   document.getElementById('contador').textContent = nodes.length + ' notas · ' + links.length + ' conexões';
 
-  // ----- layout force-directed 3D (pré-calculado) -----
+  // ----- layout force-directed 3D -----
+  // As posições x/y/z são PRÉ-CALCULADAS no build por
+  // scripts/gerar-vitrine-publica.py (mesmo algoritmo/semente): o portal só LÊ.
+  // Antes, esta simulação O(N²) rodava no navegador a cada load — centenas de
+  // milhões de operações antes do 1º paint, que travavam o mobile e pioravam a
+  // cada nota. Agora, se o dataset já traz x/y/z por nó, posicionamos direto e
+  // PULAMOS a simulação. Retrocompatível: sem posições embutidas (vitrine
+  // antiga), cai de volta para o cálculo no navegador — nada quebra.
   const N = nodes.length;
   const pos = new Array(N);
-  let seed = 7;
-  const rnd = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
-  for (let i = 0; i < N; i++) {
-    const u = rnd() * 2 - 1, th = rnd() * 6.2832, r = 40 * Math.cbrt(rnd()), s = Math.sqrt(1 - u * u);
-    pos[i] = new THREE.Vector3(r * s * Math.cos(th), r * s * Math.sin(th), r * u);
-  }
   const E = [];
   for (const l of links) {
     const a = idx.get(typeof l.source === 'object' ? l.source.id : l.source);
@@ -552,53 +553,67 @@ function iniciar(nodes, links) {
   // adjacência (vizinhos) — base do "modo foco"
   const viz = Array.from({ length: N }, () => new Set());
   for (const [a, b] of E) { viz[a].add(b); viz[b].add(a); }
-  // iterações — força-dirigida com AGRUPAMENTO POR DOMÍNIO: cada domínio é atraído
-  // para uma âncora própria (distribuída numa esfera de Fibonacci), formando ilhas
-  // separadas em vez de uma bola única. Repulsão espaça os nós, as molas mantêm as
-  // notas ligadas juntas, e as pontes entre domínios aparecem como linhas entre ilhas.
   // ilha de cada nó: notas comuns = seu domínio; MOC = a ilha que ele consolida
   // (campo vindo do gerar-grafo.py). Cada ilha vira um ecossistema completo.
   const ilhaDe = n => n.ilha || n.dominio;
   const domsLista = [...new Set(nodes.map(ilhaDe))];
-  const R_DOM = 80;
-  const ancoraDom = {};
-  domsLista.forEach((d, k) => {
-    const y = 1 - (k + 0.5) / domsLista.length * 2;          // -1..1
-    const rad = Math.sqrt(Math.max(0, 1 - y * y));
-    const th = k * 2.399963229;                              // ângulo áureo
-    ancoraDom[d] = new THREE.Vector3(R_DOM * rad * Math.cos(th), R_DOM * y * 0.8, R_DOM * rad * Math.sin(th));
-  });
-  const nodeAnc = nodes.map(n => ancoraDom[ilhaDe(n)]);
-  const K_REP = 200, K_SPR = 0.02, L0 = 9, K_CT = 0.002, K_DOM = 0.18;
-  const force = Array.from({ length: N }, () => new THREE.Vector3());
-  for (let it = 0; it < 280; it++) {
-    for (let i = 0; i < N; i++) force[i].set(0, 0, 0);
+
+  const temPosicoes = nodes.every(n => Number.isFinite(n.x) && Number.isFinite(n.y) && Number.isFinite(n.z));
+  if (temPosicoes) {
+    // caminho rápido: lê as posições pré-calculadas no build (sem O(N²))
+    for (let i = 0; i < N; i++) pos[i] = new THREE.Vector3(nodes[i].x, nodes[i].y, nodes[i].z);
+  } else {
+    // fallback: simula o layout no navegador (comportamento anterior). Força-dirigida
+    // com AGRUPAMENTO POR DOMÍNIO: cada domínio é atraído para uma âncora própria
+    // (distribuída numa esfera de Fibonacci), formando ilhas separadas em vez de uma
+    // bola única. Repulsão espaça os nós, as molas mantêm as notas ligadas juntas, e
+    // as pontes entre domínios aparecem como linhas entre ilhas.
+    let seed = 7;
+    const rnd = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
     for (let i = 0; i < N; i++) {
-      for (let j = i + 1; j < N; j++) {
-        const dx = pos[i].x - pos[j].x, dy = pos[i].y - pos[j].y, dz = pos[i].z - pos[j].z;
-        let d2 = dx * dx + dy * dy + dz * dz; if (d2 < 0.1) d2 = 0.1;
-        const f = K_REP / d2, d = Math.sqrt(d2);
-        const ux = dx / d, uy = dy / d, uz = dz / d;
-        force[i].x += ux * f; force[i].y += uy * f; force[i].z += uz * f;
-        force[j].x -= ux * f; force[j].y -= uy * f; force[j].z -= uz * f;
+      const u = rnd() * 2 - 1, th = rnd() * 6.2832, r = 40 * Math.cbrt(rnd()), s = Math.sqrt(1 - u * u);
+      pos[i] = new THREE.Vector3(r * s * Math.cos(th), r * s * Math.sin(th), r * u);
+    }
+    const R_DOM = 80;
+    const ancoraDom = {};
+    domsLista.forEach((d, k) => {
+      const y = 1 - (k + 0.5) / domsLista.length * 2;          // -1..1
+      const rad = Math.sqrt(Math.max(0, 1 - y * y));
+      const th = k * 2.399963229;                              // ângulo áureo
+      ancoraDom[d] = new THREE.Vector3(R_DOM * rad * Math.cos(th), R_DOM * y * 0.8, R_DOM * rad * Math.sin(th));
+    });
+    const nodeAnc = nodes.map(n => ancoraDom[ilhaDe(n)]);
+    const K_REP = 200, K_SPR = 0.02, L0 = 9, K_CT = 0.002, K_DOM = 0.18;
+    const force = Array.from({ length: N }, () => new THREE.Vector3());
+    for (let it = 0; it < 280; it++) {
+      for (let i = 0; i < N; i++) force[i].set(0, 0, 0);
+      for (let i = 0; i < N; i++) {
+        for (let j = i + 1; j < N; j++) {
+          const dx = pos[i].x - pos[j].x, dy = pos[i].y - pos[j].y, dz = pos[i].z - pos[j].z;
+          let d2 = dx * dx + dy * dy + dz * dz; if (d2 < 0.1) d2 = 0.1;
+          const f = K_REP / d2, d = Math.sqrt(d2);
+          const ux = dx / d, uy = dy / d, uz = dz / d;
+          force[i].x += ux * f; force[i].y += uy * f; force[i].z += uz * f;
+          force[j].x -= ux * f; force[j].y -= uy * f; force[j].z -= uz * f;
+        }
       }
-    }
-    for (const [a, b] of E) {
-      const dx = pos[b].x - pos[a].x, dy = pos[b].y - pos[a].y, dz = pos[b].z - pos[a].z;
-      // molas entre ilhas são fracas: deixam as pontes esticarem em vez de fundir as ilhas
-      const ks = ilhaDe(nodes[a]) === ilhaDe(nodes[b]) ? K_SPR : K_SPR * 0.2;
-      const d = Math.hypot(dx, dy, dz) || 1, f = (d - L0) * ks;
-      const ux = dx / d, uy = dy / d, uz = dz / d;
-      force[a].x += ux * f; force[a].y += uy * f; force[a].z += uz * f;
-      force[b].x -= ux * f; force[b].y -= uy * f; force[b].z -= uz * f;
-    }
-    const cool = 0.85 * (1 - it / 320);
-    for (let i = 0; i < N; i++) {
-      const an = nodeAnc[i];
-      force[i].x += (an.x - pos[i].x) * K_DOM - pos[i].x * K_CT;
-      force[i].y += (an.y - pos[i].y) * K_DOM - pos[i].y * K_CT;
-      force[i].z += (an.z - pos[i].z) * K_DOM - pos[i].z * K_CT;
-      pos[i].x += force[i].x * cool; pos[i].y += force[i].y * cool; pos[i].z += force[i].z * cool;
+      for (const [a, b] of E) {
+        const dx = pos[b].x - pos[a].x, dy = pos[b].y - pos[a].y, dz = pos[b].z - pos[a].z;
+        // molas entre ilhas são fracas: deixam as pontes esticarem em vez de fundir as ilhas
+        const ks = ilhaDe(nodes[a]) === ilhaDe(nodes[b]) ? K_SPR : K_SPR * 0.2;
+        const d = Math.hypot(dx, dy, dz) || 1, f = (d - L0) * ks;
+        const ux = dx / d, uy = dy / d, uz = dz / d;
+        force[a].x += ux * f; force[a].y += uy * f; force[a].z += uz * f;
+        force[b].x -= ux * f; force[b].y -= uy * f; force[b].z -= uz * f;
+      }
+      const cool = 0.85 * (1 - it / 320);
+      for (let i = 0; i < N; i++) {
+        const an = nodeAnc[i];
+        force[i].x += (an.x - pos[i].x) * K_DOM - pos[i].x * K_CT;
+        force[i].y += (an.y - pos[i].y) * K_DOM - pos[i].y * K_CT;
+        force[i].z += (an.z - pos[i].z) * K_DOM - pos[i].z * K_CT;
+        pos[i].x += force[i].x * cool; pos[i].y += force[i].y * cool; pos[i].z += force[i].z * cool;
+      }
     }
   }
 
