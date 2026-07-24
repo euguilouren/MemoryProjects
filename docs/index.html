@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-SIJ+tRsYCzLD9afY1x8CjBi1lnYGImlU/Ddlv8VUvtA=' 'sha256-1yvnH29VT6SvG/tGoNfuKL3PfgQC2PuybzkQ2c6rgyA=' 'sha256-qhcRRaaNVHO0VNkiCnRdupULTtIlBlc8rOQZdZe4ivE='; connect-src 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-SIJ+tRsYCzLD9afY1x8CjBi1lnYGImlU/Ddlv8VUvtA=' 'sha256-1yvnH29VT6SvG/tGoNfuKL3PfgQC2PuybzkQ2c6rgyA=' 'sha256-2ZZqev/3EmL5PimKKKLTvxvxYbrmHKbHHIfJfAIn6pI='; connect-src 'self'" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MemoryCode • Portal Neural 3D</title>
 <meta name="author" content="Luan Guilherme Lourenço (euguilouren)" />
@@ -248,6 +248,29 @@
     padding:6px 14px; border-radius:20px; font-size:12.5px; white-space:nowrap; }
   #filtro-tag b { cursor:pointer; margin-left:10px; color:#fff; }
   #filtro-tag b:hover { color:var(--gold); }
+  /* Legenda de dominios: decodifica a cor de cada ilha sem abrir o Stats. Discreta, sempre
+     visivel no HUD (canto inferior esquerdo), colapsavel (<details>: colapso acessivel nativo,
+     foco de teclado). Mesma fonte de cor/rotulo do grafo (dominios[d] / LABELS[d]). */
+  #legenda { position:fixed; left:14px; bottom:14px; z-index:10; width:212px; max-width:46vw;
+    background:var(--panel); border:1px solid var(--linha); border-radius:12px; overflow:hidden;
+    box-shadow:0 12px 44px rgba(0,0,0,.45); transition:opacity .6s ease; }
+  #legenda > summary { list-style:none; cursor:pointer; padding:8px 12px; display:flex; align-items:center;
+    justify-content:space-between; gap:8px; font-size:11px; font-weight:600; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--muted); }
+  #legenda > summary::-webkit-details-marker { display:none; }
+  #legenda > summary:hover { color:var(--gold-soft); }
+  #legenda .leg-caret { color:var(--gold-soft); font-size:10px; transition:transform .25s ease; }
+  #legenda[open] .leg-caret { transform:rotate(180deg); }
+  #legenda .leg-lista { padding:2px 8px 8px; max-height:46vh; overflow:auto; }
+  #legenda .leg-row { display:flex; align-items:center; gap:8px; padding:3px 5px; border-radius:6px;
+    font-size:12px; color:#D7E1EF; cursor:pointer; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  #legenda .leg-row:hover { color:var(--gold); background:rgba(224,160,90,.08); }
+  #legenda .leg-row.on { color:var(--gold-bright); background:rgba(224,160,90,.15); }
+  #legenda .leg-row > i { width:9px; height:9px; border-radius:50%; flex:none; box-shadow:0 0 6px currentColor; }
+  #legenda > summary:focus-visible, #legenda .leg-row:focus-visible {
+    outline:2px solid var(--gold-bright); outline-offset:1px; border-radius:6px; }
+  body:not(.interagindo) #legenda { opacity:0; pointer-events:none; }
+  @media (prefers-reduced-motion:reduce) { #legenda, #legenda .leg-caret { transition:none; } }
 
   /* ===== Micro-transicoes premium na entrada dos paineis =====
      O JS revela estes elementos trocando display:none -> block. Uma `animation` no proprio
@@ -280,6 +303,10 @@
     #painel { top:auto; bottom:10px; left:10px; right:10px; width:auto; max-width:none; max-height:60vh; overflow:auto; }
     #stats { top:auto; bottom:10px; left:10px; right:10px; width:auto; max-width:none; max-height:60vh; }
     #filtro-tag { top:auto; bottom:25vh; }
+    /* Legenda compacta e colapsada por padrao no mobile (JS remove o [open]); nao cobre o grafo.
+       Paineis de nota/stats (z-index 11) abrem por cima quando acionados — sobreposicao aceitavel. */
+    #legenda { left:10px; bottom:10px; width:auto; max-width:62vw; }
+    #legenda .leg-lista { max-height:40vh; }
   }
 
   /* ===== Cena "mostre, nao conte": copy + mockup de telefone com screencast em CSS/JS puro =====
@@ -508,6 +535,10 @@
 <div id="tip"></div>
 <div id="filtro-tag"></div>
 <div id="stats"></div>
+<details id="legenda">
+  <summary><span class="leg-tit">Domínios</span><span class="leg-caret" aria-hidden="true">▾</span></summary>
+  <div class="leg-lista" role="list" aria-label="Legenda de domínios (cor de cada ilha)"></div>
+</details>
 <div id="painel"></div>
 <div id="carregando">
   <svg class="carg-sin" viewBox="0 0 32 32" width="76" height="76" aria-hidden="true" focusable="false">
@@ -860,6 +891,19 @@ function iniciar(nodes, links) {
     if (reduzirMov) { controls.target.copy(v); return; }
     alvoDesejado = v.clone();
   }
+  // EIXO 2b — VOO de enquadramento ao abrir um no: alem de re-centrar o alvo (focarSuave),
+  // a camera aproxima ao longo da MESMA linha de visada (dolly-in, sem swing brusco) ate uma
+  // distancia que torna o no protagonista, preservando um offset que mantem as conexoes legiveis.
+  // Analogo a alvoDesejado: um ponto-alvo interpolado no loop; nunca salto. Sob reduzirMov NAO
+  // voa (regua: enquadramento por voo desligado em reduced-motion — so o alvo e re-centrado).
+  let camPosDesejada = null;
+  function enquadrarNo(m) {
+    if (reduzirMov) return;
+    const dir = camera.position.clone().sub(m.position);
+    if (dir.lengthSq() < 1e-4) dir.set(0, 0, 1);         // camera colada no no: usa eixo padrao
+    const dist = Math.min(120, Math.max(controls.minDistance + 8, 46 + m.userData.baseR * 7));
+    camPosDesejada = dir.normalize().multiplyScalar(dist).add(m.position);
+  }
 
   // arestas separadas: "dentro do mesmo domínio" (frias, discretas) x "entre domínios"
   // (as PONTES — mais visíveis e quentes; é o que dá valor ao cérebro: conhecimento emergente)
@@ -989,6 +1033,7 @@ function iniciar(nodes, links) {
   const raycaster = new THREE.Raycaster();
   const mouse = new THREE.Vector2(-10, -10);
   let hover = null, destacado = null, focoSet = null;
+  let hoverViz = null;   // vizinhanca direta do no sob o cursor: previa LEVE do foco (some ao sair)
   let modoCaminho = false, selCam = [null, null];   // [origem, destino]
 
   // ----- histórico de navegação (botão "Voltar" entre Stats / nota / caminho) -----
@@ -1119,12 +1164,13 @@ function iniciar(nodes, links) {
     const hit = raycaster.intersectObjects(meshes, false)[0];
     if (hit) {
       hover = hit.object;
+      hoverViz = viz[hover.userData.i];       // acende a vizinhanca direta ao passar (previa do foco)
       elTip.style.display = 'block';
       elTip.textContent = hover.userData.n.titulo;
       elTip.style.left = (t.clientX + 14) + 'px';
       elTip.style.top = (t.clientY + 14) + 'px';
       cv.style.cursor = 'pointer';
-    } else { hover = null; elTip.style.display = 'none'; cv.style.cursor = 'grab'; }
+    } else { hover = null; hoverViz = null; elTip.style.display = 'none'; cv.style.cursor = 'grab'; }
   });
 
   // distingue clique de arraste: só abre painel em toque curto e parado
@@ -1158,6 +1204,7 @@ function iniciar(nodes, links) {
     linhasHL.visible = false; linhasPath.visible = false; sairCaminho();
     controls.autoRotate = ROT_REPOUSO;        // rotação contínua
     alvoDesejado = null;                      // cancela tween de camera pendente
+    camPosDesejada = null;                     // cancela voo de enquadramento pendente
     vistaAtual = null; navHist.length = 0;    // zera a trilha de navegação
   }
 
@@ -1198,6 +1245,7 @@ function iniciar(nodes, links) {
     linhasPath.visible = false;
     aplicarFoco(i);
     focarSuave(m.position);
+    enquadrarNo(m);                           // voa a camera p/ enquadrar o no (cancelado ao fechar)
     const meta = [n.tipo, n.nivel].filter(Boolean).join(' · ');
     const vizinhos = [...viz[i]].map(j => meshes[j])
       .sort((x, y) => (y.userData.n.grau || 0) - (x.userData.n.grau || 0));
@@ -1286,6 +1334,32 @@ function iniciar(nodes, links) {
     else aplicarVista({ t: 'stats' });
   };
 
+  // ----- legenda de domínios: decodifica a cor de cada ilha (sempre visível no HUD) -----
+  // Mesma fonte de cor/rótulo do grafo: dominios[d] (cor original do domínio) e LABELS[d].
+  // Interativa: clicar um domínio filtra a rede (reusa filtroDom, como o Stats). O estado
+  // ".on" é sincronizado no loop por detecção de mudança — correto seja qual for a origem do filtro.
+  const elLegenda = document.getElementById('legenda');
+  const elLegLista = elLegenda.querySelector('.leg-lista');
+  function sincronizarLegenda() {
+    elLegLista.querySelectorAll('.leg-row').forEach(el =>
+      el.classList.toggle('on', el.dataset.dom === filtroDom));
+  }
+  (function montarLegenda() {
+    const cont = {};
+    for (const n of nodes) cont[n.dominio] = (cont[n.dominio] || 0) + 1;
+    const domsOrd = Object.keys(cont).sort((a, b) => cont[b] - cont[a]);
+    elLegLista.innerHTML = domsOrd.map(d =>
+      `<div class="leg-row" role="button" tabindex="0" data-dom="${d}" title="Filtrar a rede por ${esc(LABELS[d] || d)}">` +
+      `<i style="background:${dominios[d]}"></i>${esc(LABELS[d] || d)}</div>`).join('');
+    elLegLista.querySelectorAll('.leg-row').forEach(el => aoAtivar(el, () => {
+      const d = el.dataset.dom;
+      filtroDom = (filtroDom === d) ? null : d;   // toggle do filtro por domínio
+    }));
+    // colapsada por padrão no mobile (economiza espaço); expandida no desktop
+    if (matchMedia('(max-width:640px)').matches) elLegenda.removeAttribute('open');
+    else elLegenda.setAttribute('open', '');
+  })();
+
   // ----- deep-link: #nota=<id> abre a nota; o botão "copiar link" gera essa URL -----
   let ignoraHash = false;
   function setHash(id) {
@@ -1347,6 +1421,7 @@ function iniciar(nodes, links) {
   // ----- loop -----
   const relogio = new THREE.Clock();
   let cenaRevelada = false;
+  let filtroDomPintado = null;   // último filtroDom refletido na legenda (detector de mudança)
   function animar() {
     requestAnimationFrame(animar);
     // aba oculta: não gasta GPU/CPU com bloom/render (o rAF já é limitado pelo navegador,
@@ -1401,6 +1476,14 @@ function iniciar(nodes, links) {
       controls.target.lerp(alvoDesejado, 0.06);
       if (controls.target.distanceTo(alvoDesejado) < 0.05) { controls.target.copy(alvoDesejado); alvoDesejado = null; }
     }
+    // EIXO 2b — voo de enquadramento: aproxima a camera do no aberto (dolly ao longo da visada).
+    // controls.update() (fim do loop) mantem/orbita a partir desta posicao. Nunca sob reduzirMov.
+    if (camPosDesejada) {
+      camera.position.lerp(camPosDesejada, 0.06);
+      if (camera.position.distanceTo(camPosDesejada) < 0.4) camPosDesejada = null;
+    }
+    // legenda: reflete o filtro por domínio ativo (seja qual for a origem) — só quando muda
+    if (filtroDom !== filtroDomPintado) { filtroDomPintado = filtroDom; sincronizarLegenda(); }
     // EIXO 2 — auto-rotacao com leve drift organico (respiracao da camera), nao mecanico
     if (ROT_REPOUSO) controls.autoRotateSpeed = 0.35 + 0.12 * Math.sin(t * 0.13);
     // pulso de vida + destaque + esmaecer fora do foco/filtro
@@ -1410,13 +1493,18 @@ function iniciar(nodes, links) {
         && (!filtroDom || m.userData.n.ilha === filtroDom || m.userData.n.dominio === filtroDom)
         && (!filtroTag || (m.userData.n.tags || []).includes(filtroTag));
       const ativo = (m === hover || m === destacado);
+      // previa leve do foco no hover: vizinho direto do no sob o cursor ganha brilho sutil
+      // (e um micro-aumento de escala, so quando ha movimento) — some ao sair, sem competir
+      // com o realce forte/persistente do clique (destacado).
+      const vizHover = hoverViz != null && !ativo && hoverViz.has(i);
       // pulso organico: duas senoides defasadas — respiracao menos uniforme que uma so
       const pulso = reduzirMov ? 1 : 1 + 0.045 * Math.sin(t * 1.5 + m.position.x * 0.05) + 0.018 * Math.sin(t * 0.7 + m.position.y * 0.08);
       const entra = Math.min(1, Math.max(0, t * 1.3 - i * 0.0035));
       const eased = reduzirMov ? 1 : entra * entra * (3 - 2 * entra);  // pop-in escalonado: a rede se monta
-      m.scale.setScalar(m.userData.baseR * pulso * (ativo ? 1.6 : 1) * eased);
+      const realce = ativo ? 1.6 : (vizHover && !reduzirMov ? 1.16 : 1);   // escala do hover-vizinho so com movimento
+      m.scale.setScalar(m.userData.baseR * pulso * realce * eased);
       m.material.opacity = vis ? 1 : 0.1;
-      m.material.emissiveIntensity = ativo ? 1.25 : (vis ? 0.55 : 0.1);
+      m.material.emissiveIntensity = ativo ? 1.25 : (vizHover && vis ? 0.92 : (vis ? 0.55 : 0.1));
     }
     // mover os pulsos sinápticos ao longo das arestas (parados sob prefers-reduced-motion)
     if (!reduzirMov) {
