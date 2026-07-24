@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-SIJ+tRsYCzLD9afY1x8CjBi1lnYGImlU/Ddlv8VUvtA=' 'sha256-1yvnH29VT6SvG/tGoNfuKL3PfgQC2PuybzkQ2c6rgyA=' 'sha256-lrdsloGpaKMOWSYjdU3OHOgWd8wtJBWhO/8Bf5H4bts='; connect-src 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-SIJ+tRsYCzLD9afY1x8CjBi1lnYGImlU/Ddlv8VUvtA=' 'sha256-1yvnH29VT6SvG/tGoNfuKL3PfgQC2PuybzkQ2c6rgyA=' 'sha256-qhcRRaaNVHO0VNkiCnRdupULTtIlBlc8rOQZdZe4ivE='; connect-src 'self'" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MemoryCode • Portal Neural 3D</title>
 <meta name="author" content="Luan Guilherme Lourenço (euguilouren)" />
@@ -625,6 +625,14 @@ function iniciar(nodes, links) {
   const ilhaDe = n => n.ilha || n.dominio;
   const domsLista = [...new Set(nodes.map(ilhaDe))];
 
+  // PRNG determinístico (seed fixo, minimal standard). Vive no escopo do render porque é
+  // usado nos DOIS caminhos abaixo: o layout de fallback E a priorização de pontes / init dos
+  // pulsos (mais adiante). Antes ficava dentro do `else`, e o fast-path (x/y/z pré-calculados)
+  // pulava sua definição — quebrando o render com "rnd is not defined" quando a vitrine já traz
+  // as posições. Içado para cá para existir independentemente do caminho de layout.
+  let seed = 7;
+  const rnd = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
+
   const temPosicoes = nodes.every(n => Number.isFinite(n.x) && Number.isFinite(n.y) && Number.isFinite(n.z));
   if (temPosicoes) {
     // caminho rápido: lê as posições pré-calculadas no build (sem O(N²))
@@ -635,8 +643,6 @@ function iniciar(nodes, links) {
     // (distribuída numa esfera de Fibonacci), formando ilhas separadas em vez de uma
     // bola única. Repulsão espaça os nós, as molas mantêm as notas ligadas juntas, e
     // as pontes entre domínios aparecem como linhas entre ilhas.
-    let seed = 7;
-    const rnd = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
     for (let i = 0; i < N; i++) {
       const u = rnd() * 2 - 1, th = rnd() * 6.2832, r = 40 * Math.cbrt(rnd()), s = Math.sqrt(1 - u * u);
       pos[i] = new THREE.Vector3(r * s * Math.cos(th), r * s * Math.sin(th), r * u);
