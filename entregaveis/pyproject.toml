@@ -7,7 +7,15 @@
 # pyflakes) — o mesmo com que a base foi validada a zero erro. line-length=100
 # acomoda o codigo atual sem reflow; E501 nao esta no select padrao, entao nao
 # reprova por comprimento (regua de estilo, nao de formatacao automatica).
+#
+# select EXPLICITO (nao o default implicito): o ruff nao e pinado (ruff>=0.5),
+# e o default do ruff pode MUDAR entre versoes — a 0.16.0 ampliou o default e
+# passou a acusar UP/I/EXE/SIM, reprovando codigo que a base validou a zero. Fixar
+# o select aqui trava a regua na intencao documentada, imune a drift de versao.
 
 [tool.ruff]
 line-length = 100
 target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
