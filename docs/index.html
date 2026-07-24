@@ -39,8 +39,17 @@
     --sans:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   }
   * { box-sizing:border-box; }
-  html,body { margin:0; min-height:100%; background:var(--bg); color:var(--ink);
-    font-family:var(--sans); -webkit-tap-highlight-color:transparent; }
+  html,body { margin:0; min-height:100%; color:var(--ink);
+    font-family:var(--sans); -webkit-tap-highlight-color:transparent;
+    /* Atmosfera de profundidade atras do grafo: brilho central frio + vinheta radial, dando
+       ar cinematografico ("cerebro flutuando no escuro"). Fica ATRAS do #cv (canvas z-index:0),
+       aparece nos estados sem grafo (carregando/erro) e emoldura a copy da intro. Sutil de
+       proposito: nao compete com o grafo nem reduz o contraste do texto. Ancorada ao viewport. */
+    background:
+      radial-gradient(115% 85% at 50% 30%, rgba(43,74,116,.40) 0%, rgba(18,35,56,.12) 42%, rgba(12,26,43,0) 62%),
+      radial-gradient(150% 130% at 50% 44%, rgba(12,26,43,0) 46%, rgba(5,11,20,.55) 82%, rgba(4,9,17,.82) 100%),
+      var(--bg);
+    background-attachment:fixed; }
   /* O corpo passa a ROLAR (a experiencia de entrada e dirigida por scroll, estilo Apple).
      Quando a intro termina e a rede vira interativa, travamos o scroll (classe .interagindo). */
   body.interagindo { overflow:hidden; height:100%; }
@@ -65,7 +74,9 @@
   .cena h1 { font-family:var(--display); font-weight:800; letter-spacing:-.03em; line-height:.98;
     font-size:clamp(40px,8.5vw,128px); margin:0; color:var(--ink);
     text-shadow:0 1px 3px rgba(5,11,20,.85), 0 2px 40px rgba(6,12,22,.6); max-width:16ch; }
-  .cena h1 .ouro { color:var(--gold-bright); }
+  /* Disciplina do ouro: o realce inline da headline usa o ouro padrao (secundario). O ouro mais
+     brilhante (--gold-bright) fica reservado ao foco de cada cena: o numero gigante e o CTA. */
+  .cena h1 .ouro { color:var(--gold); }
   .cena .lead { font-family:var(--display); font-weight:500; font-size:clamp(16px,2.3vw,30px);
     line-height:1.4; color:#C8D4E4; margin:26px 0 0; max-width:30ch;
     text-shadow:0 1px 3px rgba(5,11,20,.95), 0 1px 16px rgba(5,11,20,.85); }
@@ -150,8 +161,27 @@
   #fechar { float:right; cursor:pointer; color:var(--muted); font-size:20px; line-height:1; }
   #tip { position:fixed; z-index:12; pointer-events:none; display:none; padding:5px 9px; border-radius:8px;
     background:rgba(8,16,26,.95); border:1px solid var(--linha); color:#EAEFF6; font-size:12.5px; max-width:260px; }
-  #carregando { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; z-index:20; color:var(--muted); }
+  #carregando { position:fixed; inset:0; display:flex; flex-direction:column; gap:20px;
+    align-items:center; justify-content:center; z-index:20; color:var(--muted); }
   #erro { position:fixed; inset:0; display:none; align-items:center; justify-content:center; z-index:20; color:#ff8a80; padding:24px; text-align:center; }
+  /* Spinner de marca do carregamento: o motivo neural do favicon (no central + 4 satelites ligados
+     por sinapses), ambar sobre navy. O conjunto gira devagar e os satelites pulsam em sequencia
+     (sensacao de sinapse disparando). O texto abaixo permanece legivel/acessivel ao leitor de tela. */
+  .carg-sin { display:block; overflow:visible; transform-origin:50% 50%; animation:carg-girar 7s linear infinite; }
+  .carg-sin .carg-linhas { opacity:.55; }
+  .carg-sin circle { filter:drop-shadow(0 0 3px rgba(232,168,94,.7)); transform-box:fill-box; transform-origin:center; }
+  .carg-sin .carg-centro { animation:carg-nucleo 2.4s ease-in-out infinite; }
+  .carg-sin .carg-sat { animation:carg-sinapse 2s ease-in-out infinite; }
+  .carg-sin .s1 { animation-delay:0s; } .carg-sin .s2 { animation-delay:.5s; }
+  .carg-sin .s3 { animation-delay:1s; } .carg-sin .s4 { animation-delay:1.5s; }
+  .carg-txt { font-family:var(--sans); font-size:12.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
+  @keyframes carg-girar { to { transform:rotate(360deg); } }
+  @keyframes carg-nucleo { 0%,100% { opacity:.85; transform:scale(1); } 50% { opacity:1; transform:scale(1.14); } }
+  @keyframes carg-sinapse { 0%,100% { opacity:.45; transform:scale(.78); } 50% { opacity:1; transform:scale(1.28); } }
+  @media (prefers-reduced-motion:reduce) {
+    .carg-sin, .carg-sin .carg-centro, .carg-sin .carg-sat { animation:none; }
+    .carg-sin .carg-sat { opacity:.9; }
+  }
   #rotulos { position:fixed; inset:0; z-index:5; pointer-events:none; overflow:hidden; }
   .rotulo { color:#EAEFF6; font-size:11px; font-weight:600; white-space:nowrap; pointer-events:none;
     background:rgba(8,16,26,.64); padding:1px 6px; border-radius:6px; transform:translateY(-14px);
@@ -219,6 +249,26 @@
   #filtro-tag b { cursor:pointer; margin-left:10px; color:#fff; }
   #filtro-tag b:hover { color:var(--gold); }
 
+  /* ===== Micro-transicoes premium na entrada dos paineis =====
+     O JS revela estes elementos trocando display:none -> block. Uma `animation` no proprio
+     elemento dispara nesse instante (quando ele passa a renderizar) — via CSS pura, sem tocar
+     o JS. Dois keyframes: os paineis de canto terminam em transform:none; os centralizados
+     preservam o translateX(-50%) no quadro final para nao "saltar" ao terminar a animacao.
+     Easing caro (ease-out-expo) para um assentar suave. */
+  #painel, #stats { animation:hud-entra .42s cubic-bezier(.16,1,.3,1); }
+  #modo-caminho, #toast, #filtro-tag { animation:hud-entra-c .42s cubic-bezier(.16,1,.3,1); }
+  @keyframes hud-entra {
+    from { opacity:0; transform:translateY(-9px) scale(.985); }
+    to   { opacity:1; transform:none; }
+  }
+  @keyframes hud-entra-c {
+    from { opacity:0; transform:translateX(-50%) translateY(-9px) scale(.985); }
+    to   { opacity:1; transform:translateX(-50%); }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    #painel, #stats, #modo-caminho, #toast, #filtro-tag { animation:none; }
+  }
+
   /* Mobile (retrato): empilha o HUD, alinhado e sem espremer. */
   @media (max-width:640px) {
     #topo { flex-direction:row; flex-wrap:wrap; align-items:center; gap:7px; top:10px; left:10px; right:10px; }
@@ -257,7 +307,7 @@
     gap:6px; padding:0 9% 6px; z-index:2; }
   .tela .scr-marca { font-family:var(--display); font-weight:800; font-size:clamp(9px,1vw,12px); color:var(--ink);
     letter-spacing:-.02em; }
-  .tela .scr-marca b { color:var(--gold-bright); }
+  .tela .scr-marca b { color:var(--gold); }   /* marca do mockup e chrome secundario: ouro contido, deixando o brilho para o chip da nota ativa (.sp-chip) */
   .tela .scr-busca { position:absolute; top:18%; left:9%; right:9%; height:8.5%; border-radius:8px;
     border:1px solid rgba(214,228,248,.16); background:rgba(10,21,36,.8); display:flex; align-items:center;
     padding:0 8px; z-index:3; overflow:hidden; }
@@ -459,7 +509,24 @@
 <div id="filtro-tag"></div>
 <div id="stats"></div>
 <div id="painel"></div>
-<div id="carregando">Carregando rede neural...</div>
+<div id="carregando">
+  <svg class="carg-sin" viewBox="0 0 32 32" width="76" height="76" aria-hidden="true" focusable="false">
+    <g class="carg-linhas" stroke="#E8A85E" stroke-width="1.3" stroke-linecap="round">
+      <line x1="16" y1="16" x2="8" y2="9" />
+      <line x1="16" y1="16" x2="24" y2="10" />
+      <line x1="16" y1="16" x2="10" y2="24" />
+      <line x1="16" y1="16" x2="23" y2="23" />
+    </g>
+    <g fill="#E8A85E">
+      <circle class="carg-centro" cx="16" cy="16" r="3.4" />
+      <circle class="carg-sat s1" cx="8" cy="9" r="2" />
+      <circle class="carg-sat s2" cx="24" cy="10" r="2" />
+      <circle class="carg-sat s3" cx="10" cy="24" r="2" />
+      <circle class="carg-sat s4" cx="23" cy="23" r="2" />
+    </g>
+  </svg>
+  <span class="carg-txt">Carregando rede neural...</span>
+</div>
 <div id="erro"></div>
 
 <script>
