@@ -25,6 +25,10 @@ jobs:
         with:
           python-version: '3.x'
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Dependências do pipeline (best-effort; check.sh degrada sem render)
         run: pip install -r entregaveis/requirements.txt || true
 
@@ -63,3 +67,15 @@ jobs:
       - name: Portal — CSP por hash (script-src sem 'unsafe-inline')
         if: ${{ hashFiles('docs/index.html') != '' }}
         run: python3 docs/check-csp-hashes.py
+
+      # Smoke de RENDER: carrega o portal num Chromium de verdade e falha se o grafo
+      # nao montar (erro de pagina / tela de erro / contador vazio). O check de bytes/CSP
+      # acima NAO pega crash de runtime — licao do "rnd is not defined" (2026-07-24), que
+      # servia o HTML certo mas quebrava o JavaScript ao rodar. Playwright PINADO (sem
+      # drift de versao). WebGL por software (swiftshader) no runner headless.
+      - name: Portal — smoke de render headless (o grafo monta de verdade)
+        if: ${{ hashFiles('docs/index.html') != '' }}
+        run: |
+          npm i --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+          node docs/smoke-render.cjs
